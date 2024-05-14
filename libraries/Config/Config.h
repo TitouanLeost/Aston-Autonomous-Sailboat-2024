@@ -13,5 +13,8 @@
 
 //////////////////////////
 
+/* ====Observer config==== */
+
+#define YAW_FILTER 0.5
 
 #endif

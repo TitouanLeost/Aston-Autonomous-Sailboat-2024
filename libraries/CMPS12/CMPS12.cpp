@@ -25,11 +25,7 @@ void CMPS12::update()
     angle16 = high_byte;           // Calculate 16 bit angle
     angle16 <<= 8;
     angle16 += low_byte;
-    m_angle = angle16/10 + (float)(angle16%10)/10;
-    
-    m_cmps.write(CMPS_GET_ANGLE8);   // Request and read 8 bit angle
-    while(m_cmps.available() < 1);
-    m_angle8 = m_cmps.read();
+    m_yaw_raw = angle16/10 + (float)(angle16%10)/10;
     
     m_cmps.write(CMPS_GET_PITCH);    // Request and read pitch value
     while(m_cmps.available() < 1);
@@ -41,15 +37,15 @@ void CMPS12::update()
 }
 
 
-int CMPS12::getAngle8()
+float CMPS12::getYaw()
 {
-    return m_angle8;
+    return m_yaw;
 }
 
 
-float CMPS12::getAngle()
+float CMPS12::getYawRaw()
 {
-    return m_angle;
+    return m_yaw_raw;
 }
 
 
@@ -62,4 +58,10 @@ int CMPS12::getPitch()
 int CMPS12::getRoll()
 {
     return m_roll;
+}
+
+
+void CMPS12::setFilteredYaw(float yaw)
+{
+    m_yaw = yaw;
 }

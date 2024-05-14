@@ -14,17 +14,18 @@ class CMPS12
         void init();
         void update();
 
-        int getAngle8();
-        float getAngle();
+        float getYaw();
+        float getYawRaw();
         int getPitch();
         int getRoll();
+
+        void setFilteredYaw(float yaw);
 
     private:
         SoftwareSerial m_cmps;
 
         char m_pitch, m_roll;
-        unsigned char m_angle8;
-        float m_angle;
+        float m_yaw, m_yaw_raw;
 };
 
 #endif

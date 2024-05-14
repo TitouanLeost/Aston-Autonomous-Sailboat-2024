@@ -1,23 +1,28 @@
-#include <CMPS12.h>
+#include <time.h>
+#include <Observer.h>
 
-
-CMPS12 cmps;
+Observer obs;
+unsigned long last_time = 0;
 
 void setup() {
     Serial.begin(9600);
-    cmps.init();
+    obs.init();
+    Serial.println("init succesfull");
+
+    last_time = millis();
 }
 
 
 void loop() {
-    cmps.update();
-    Serial.print("Angle 8: ");
-    Serial.print(cmps.getAngle8());
-    Serial.print("   Angle full: ");
-    Serial.print(cmps.getAngle());
-    Serial.print("   Pitch: ");
-    Serial.print(cmps.getPitch());
-    Serial.print("   Roll: ");
-    Serial.println(cmps.getRoll());
-    delay(1000);
+    obs.updateSensors();
+    obs.fusion();
+
+    if (millis() - last_time > 100) {
+        Serial.print("Yaw (filtered): ");
+        Serial.print(obs.cmps().getYaw());
+        Serial.print("     Yaw (raw): ");
+        Serial.println(obs.cmps().getYawRaw());
+
+        last_time = millis();
+    }
 }
