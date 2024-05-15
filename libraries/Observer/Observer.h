@@ -1,8 +1,10 @@
 #ifndef OBSERVER_H
 #define OBSERVER_H
 
+#include <Arduino.h>
 #include <Config.h>
 #include <CMPS12.h>
+#include <GPS.h>
 
 
 class Observer
@@ -16,9 +18,11 @@ class Observer
         void fusion();
 
         CMPS12 cmps();
+        GPS gps();
 
     private:
         CMPS12 m_cmps;
+        GPS m_gps;
 
 
 };

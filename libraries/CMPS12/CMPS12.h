@@ -1,6 +1,7 @@
 #ifndef CMPS12_H
 #define CMPS12_H
 
+#include <Arduino.h>
 #include <SoftwareSerial.h>
 #include <Config.h>
 
@@ -22,7 +23,7 @@ class CMPS12
         void setFilteredYaw(float yaw);
 
     private:
-        SoftwareSerial m_cmps;
+        SoftwareSerial ss_cmps;
 
         char m_pitch, m_roll;
         float m_yaw, m_yaw_raw;

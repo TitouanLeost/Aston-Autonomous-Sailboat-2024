@@ -7,7 +7,6 @@ unsigned long last_time = 0;
 void setup() {
     Serial.begin(9600);
     obs.init();
-    Serial.println("init succesfull");
 
     last_time = millis();
 }
@@ -17,11 +16,30 @@ void loop() {
     obs.updateSensors();
     obs.fusion();
 
-    if (millis() - last_time > 100) {
+    if (millis() - last_time > 1000) {
         Serial.print("Yaw (filtered): ");
         Serial.print(obs.cmps().getYaw());
         Serial.print("     Yaw (raw): ");
-        Serial.println(obs.cmps().getYawRaw());
+        Serial.print(obs.cmps().getYawRaw());
+        Serial.print("     Pitch: ");
+        Serial.print(obs.cmps().getPitch());
+        Serial.print("     Roll: ");
+        Serial.println(obs.cmps().getRoll());
+
+        Serial.print("Satellites: ");
+        Serial.print(obs.gps().getSatellites());
+        Serial.print("     Lat: ");
+        Serial.print(obs.gps().getLat());
+        Serial.print("     Lon: ");
+        Serial.print(obs.gps().getLon());
+        Serial.print("     Course: ");
+        Serial.print(obs.gps().getCourse());
+        Serial.print("     Speed: ");
+        Serial.print(obs.gps().getSpeed());
+        Serial.print("     Date: ");
+        Serial.print(obs.gps().getDate());
+        Serial.print("     Time: ");
+        Serial.println(obs.gps().getTime());
 
         last_time = millis();
     }

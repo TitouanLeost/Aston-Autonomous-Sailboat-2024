@@ -11,13 +11,19 @@ Observer::~Observer() {}
 
 void Observer::init()
 {
+    Serial.println("#########################");
+    Serial.println("Initializing sensors...");
     m_cmps.init();
+    m_gps.init();
+    Serial.println("Sensors initialized");
+    Serial.println("######################### \n");
 }
 
 
 void Observer::updateSensors()
 {
     m_cmps.update();
+    m_gps.update();
 }
 
 
@@ -29,3 +35,4 @@ void Observer::fusion()
 
 
 CMPS12 Observer::cmps() {return m_cmps;}
+GPS Observer::gps() {return m_gps;}
