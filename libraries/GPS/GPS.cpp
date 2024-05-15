@@ -38,7 +38,7 @@ String GPS::getDate(){
     if (dateStr.length() == 5) {
         dateStr = "0" + dateStr;
     }
-    return dateStr;
+    return dateStr;  
 }
 
 
@@ -70,7 +70,7 @@ CoordLatLon GPS::getCoordLatLon()
 CoordXY GPS::getCoordXY()
 {
     CoordXY coord;
-    // coord = latLonToXY(getCoordLatLon());
+    coord = latLonToXY(getCoordLatLon());
     return coord;
 }
 
@@ -78,6 +78,14 @@ CoordXY GPS::getCoordXY()
 CoordXY latLonToXY(CoordLatLon coordLatLon) 
 {
     CoordXY coord;
+    double lat = coordLatLon.lat;
+    double lon = coordLatLon.lon;
+
+    double x = EARTH_RADIUS * cos(lat*M_PI/180) * (lon - REF_LON) * M_PI/180;
+    double y = EARTH_RADIUS * (lat - REF_LAT) * M_PI/180;
+
+    coord.x = x;
+    coord.y = y;
 
     return coord;
 }

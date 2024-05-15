@@ -2,6 +2,15 @@
 #define CONFIG_H
 
 
+/*======GENERAL CONFIG=====*/
+
+#define EARTH_RADIUS 6371000
+
+#define REF_LON 0.0
+#define REF_LAT 0.0
+
+/*=========================*/
+/////////////////////////////
 /*======CMPS12 CONFIG======*/
 
 #define CMPS_GET_ANGLE8 0x12

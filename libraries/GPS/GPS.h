@@ -2,6 +2,7 @@
 #define GPS_H
 
 #include <Arduino.h>
+#include <math.h>
 #include <TinyGPS++.h>
 #include <Config.h>
 
@@ -23,8 +24,8 @@ class GPS
 
         int getSatellites();
 
-        String getDate();
-        String getTime();
+        String getDate();  // Format: DDMMYY
+        String getTime();  // Format: HHMMSS
 
         CoordLatLon getCoordLatLon();
         CoordXY getCoordXY();
@@ -32,6 +33,8 @@ class GPS
     private:
         TinyGPSPlus m_gps;
 };
+
+CoordXY latLonToXY(CoordLatLon coordLatLon);
 
 
 #endif
