@@ -28,7 +28,7 @@ void WindSpeed::rotation()
 
     if((millis() - m_average_time) > 3000)
     {
-        m_wind_speed = m_nb_rotations * 0.75;
+        m_wind_speed = m_nb_rotations * 0.75 * 1.609;  // Speed in kph
         m_nb_rotations = 0;
         m_average_time = millis();
     }
