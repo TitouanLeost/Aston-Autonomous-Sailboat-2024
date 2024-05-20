@@ -5,6 +5,7 @@
 #include <Config.h>
 #include <CMPS12.h>
 #include <GPS.h>
+#include <WindSpeed.h>
 
 
 class Observer
@@ -17,12 +18,14 @@ class Observer
         void updateSensors();
         void fusion();
 
-        CMPS12 cmps();
-        GPS gps();
+        CMPS12* cmps();
+        GPS* gps();
+        WindSpeed* ws();
 
     private:
-        CMPS12 m_cmps;
-        GPS m_gps;
+        CMPS12* m_cmps;
+        GPS* m_gps;
+        WindSpeed* m_ws;
 
 
 };

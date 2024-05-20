@@ -40,6 +40,13 @@ struct CoordXY
 
 /*=========================*/
 /////////////////////////////
+/*====WIND SPEED CONFIG====*/
+
+#define SERIAL_WIND Serial1
+#define WIND_SPEED_PIN 19
+
+/*=========================*/
+/////////////////////////////
 /*=====OBSERVER CONFIG=====*/
 
 #define YAW_FILTER 0.5
