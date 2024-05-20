@@ -12,16 +12,17 @@ class WindSpeed
         WindSpeed();
         ~WindSpeed();
 
+        void init();
         void update();
 
         void rotation();
         double getWindSpeed();
 
     private:
-        volatile int m_nb_rotations = 0;
-        volatile unsigned long m_contact_time = 0;
-        volatile unsigned long m_average_time = 0;
-        volatile double m_wind_speed = 0;
+        volatile int m_nb_rotations;
+        volatile unsigned long m_contact_time;
+        volatile unsigned long m_average_time;
+        volatile double m_wind_speed;
 };
 
 #endif

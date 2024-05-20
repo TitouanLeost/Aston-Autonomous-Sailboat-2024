@@ -40,10 +40,11 @@ struct CoordXY
 
 /*=========================*/
 /////////////////////////////
-/*====WIND SPEED CONFIG====*/
+/*====ANEMOMETER CONFIG====*/
 
 #define SERIAL_WIND Serial1
 #define WIND_SPEED_PIN 19
+#define WIND_DIRECTION_PIN A14
 
 /*=========================*/
 /////////////////////////////

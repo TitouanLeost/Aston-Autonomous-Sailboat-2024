@@ -7,6 +7,15 @@ WindSpeed::WindSpeed(){}
 WindSpeed::~WindSpeed(){}
 
 
+void WindSpeed::init()
+{
+    m_nb_rotations = 0;
+    m_contact_time = 0;
+    m_average_time = millis();
+    m_wind_speed = 0;
+}
+
+
 void WindSpeed::update()
 {
     if((millis() - m_average_time) > 5000)  // No rotations for more than 5 seconds
