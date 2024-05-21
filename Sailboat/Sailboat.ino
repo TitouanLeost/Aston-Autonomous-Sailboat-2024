@@ -27,7 +27,7 @@ void loop() {
     obs.updateSensors();
     obs.fusion();
 
-    if (millis() - last_time > 500) {
+    if (millis() - last_time > 100) {
         Serial.print("Yaw (filtered): ");
         Serial.print(obs.cmps()->getYaw());
         Serial.print("     Yaw (raw): ");
@@ -56,6 +56,8 @@ void loop() {
         Serial.print(obs.ws()->getWindSpeed());
         Serial.print("     Wind direction: ");
         Serial.println(obs.wd()->getWindDirection());
+
+        Serial.println("------------------------------- \n");
 
         last_time = millis();
     }

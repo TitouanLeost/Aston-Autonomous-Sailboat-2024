@@ -52,6 +52,7 @@ struct CoordXY
 /*=====OBSERVER CONFIG=====*/
 
 #define YAW_FILTER 0.5
+#define WIND_DIRECTION_FILTER 0.5
 
 /*=========================*/
 /////////////////////////////

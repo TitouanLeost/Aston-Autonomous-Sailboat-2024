@@ -13,10 +13,14 @@ class WindDirection
         void init();
         void update();
 
-        double getWindDirection();
+        float getWindDirection();
+        float getRawWindDirection();
+
+        void setFilteredWindDirection(float wind_direction);
 
     private:
-        int m_wind_direction;
+        float m_raw_wind_direction;
+        float m_wind_direction;
 };
 
 #endif

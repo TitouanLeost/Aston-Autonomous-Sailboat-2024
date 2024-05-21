@@ -45,6 +45,9 @@ void Observer::fusion()
 { 
     float yaw = YAW_FILTER * m_cmps->getYawRaw() + (1 - YAW_FILTER) * m_cmps->getYaw();  // Low pass filter for yaw
     m_cmps->setFilteredYaw(yaw);
+
+    float wind_direction = WIND_DIRECTION_FILTER * m_wd->getRawWindDirection() + (1 - WIND_DIRECTION_FILTER) * m_wd->getWindDirection();  // Low pass filter for wind direction
+    m_wd->setFilteredWindDirection(wind_direction);
 }
 
 
