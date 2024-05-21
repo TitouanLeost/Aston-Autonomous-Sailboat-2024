@@ -17,6 +17,7 @@
 #define CMPS_GET_ANGLE16 0x13
 #define CMPS_GET_PITCH 0x14
 #define CMPS_GET_ROLL 0x15
+#define CMPS_CALIBRATION_STATUS 0x24
 #define CMPS_RX 10
 #define CMPS_TX 11
 

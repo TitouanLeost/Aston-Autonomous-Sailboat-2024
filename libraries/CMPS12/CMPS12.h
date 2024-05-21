@@ -15,6 +15,8 @@ class CMPS12
         void init();
         void update();
 
+        void calibration();
+
         float getYaw();
         float getYawRaw();
         int getPitch();
