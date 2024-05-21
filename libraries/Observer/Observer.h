@@ -30,7 +30,6 @@ class Observer
         WindSpeed* m_ws;
         WindDirection* m_wd;
 
-
 };
 
 

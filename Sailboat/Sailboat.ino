@@ -1,7 +1,9 @@
 #include <time.h>
 #include <Observer.h>
+#include <Controller.h>
 
 Observer obs;
+Controller ctrl;
 unsigned long last_time = 0;
 
 
@@ -11,6 +13,9 @@ void anemometerRotation() {obs.ws()->rotation();}
 void setup() {
     Serial.begin(9600);
     obs.init();
+    delay(5000);
+    ctrl.init();
+    delay(1000);
 
     attachInterrupt(digitalPinToInterrupt(WIND_SPEED_PIN), anemometerRotation, FALLING);
 

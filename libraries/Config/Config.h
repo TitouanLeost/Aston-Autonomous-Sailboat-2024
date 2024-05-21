@@ -53,5 +53,19 @@ struct CoordXY
 #define YAW_FILTER 0.5
 
 /*=========================*/
+/////////////////////////////
+/*=======SERVO CONFIG======*/
+
+#define SERVO_FREQ 50
+
+#define SERVO_RUDDER_PIN 0
+#define RUDDER_PWMMIN 220
+#define RUDDER_PWMMAX 420
+
+#define SERVO_SAIL_PIN 1
+#define SAIL_PWMMIN 340
+#define SAIL_PWMMAX 460
+
+/*=========================*/
 
 #endif
