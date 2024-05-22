@@ -5,6 +5,7 @@
 #include <math.h>
 #include <TinyGPS++.h>
 #include <Config.h>
+#include <Tools.h>
 
 
 class GPS
@@ -33,8 +34,5 @@ class GPS
     private:
         TinyGPSPlus m_gps;
 };
-
-CoordXY latLonToXY(CoordLatLon coordLatLon);
-
 
 #endif

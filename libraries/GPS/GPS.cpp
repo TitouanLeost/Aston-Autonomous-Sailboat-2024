@@ -27,8 +27,8 @@ void GPS::update()
 double GPS::getLat() {return m_gps.location.isValid() ? m_gps.location.lat() : 99999;}
 double GPS::getLon() {return m_gps.location.isValid() ? m_gps.location.lng() : 99999;}
 
-double GPS::getCourse() {return m_gps.course.isValid() ? m_gps.course.deg() : -1;}
-double GPS::getSpeed() {return m_gps.speed.isValid() ? m_gps.speed.kmph() : -1;}
+double GPS::getCourse() {return m_gps.course.isValid() ? m_gps.course.deg() : 99999;}
+double GPS::getSpeed() {return m_gps.speed.isValid() ? m_gps.speed.kmph() : 0;}
 
 int GPS::getSatellites() {return m_gps.satellites.value();}
 
@@ -72,21 +72,5 @@ CoordXY GPS::getCoordXY()
 {
     CoordXY coord;
     coord = latLonToXY(getCoordLatLon());
-    return coord;
-}
-
-
-CoordXY latLonToXY(CoordLatLon coordLatLon) 
-{
-    CoordXY coord;
-    double lat = coordLatLon.lat;
-    double lon = coordLatLon.lon;
-
-    double x = EARTH_RADIUS * cos(lat*M_PI/180) * (lon - REF_LON) * M_PI/180;
-    double y = EARTH_RADIUS * (lat - REF_LAT) * M_PI/180;
-
-    coord.x = x;
-    coord.y = y;
-
     return coord;
 }
