@@ -11,6 +11,19 @@
 
 /*=========================*/
 /////////////////////////////
+/*====ALGORITHMS CONFIG====*/
+
+#define ANGLE_RUDDER_MAX M_PI/4
+#define ANGLE_SAIL_MAX M_PI/2
+
+#define R 50  // Cutoff distance from the line
+#define GAMMA M_PI/4  // Incidence angle
+#define ZETA M_PI/4  // Close haul angle
+#define BETA 0.3
+
+
+/*=========================*/
+/////////////////////////////
 /*======CMPS12 CONFIG======*/
 
 #define CMPS_GET_ANGLE8 0x12
