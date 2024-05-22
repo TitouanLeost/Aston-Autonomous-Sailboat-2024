@@ -1,9 +1,12 @@
 #include <time.h>
 #include <Observer.h>
 #include <Controller.h>
+#include <Algorithms.h>
 
 Observer obs;
 Controller ctrl;
+LineFollowing lf;
+
 unsigned long last_time = 0;
 
 
@@ -13,6 +16,7 @@ void anemometerRotation() {obs.ws()->rotation();}
 void setup() {
     Serial.begin(9600);
     obs.init();
+    lf.init(&obs);
     delay(5000);
     ctrl.init();
     delay(1000);
@@ -25,9 +29,8 @@ void setup() {
 
 void loop() {
     obs.updateSensors();
-    obs.fusion();
 
-    if (millis() - last_time > 100) {
+    if (millis() - last_time > 200) {
         Serial.print("Yaw (filtered): ");
         Serial.print(obs.cmps()->getYaw());
         Serial.print("     Yaw (raw): ");
