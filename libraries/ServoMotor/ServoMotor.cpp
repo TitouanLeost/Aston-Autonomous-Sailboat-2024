@@ -37,12 +37,6 @@ void ServoMotor::setPWM(uint16_t pwm)
 
 void ServoMotor::setPercent(float percent)
 {
-    percent = percent/100.0;
-    if(percent < 0.0)
-        percent = 0.0;
-    else if(percent > 1.0)
-        percent = 1.0;
-
     uint16_t pwm = (int) (m_pwm_max - m_pwm_min)*percent + m_pwm_min;
     setPWM(pwm);
 }
