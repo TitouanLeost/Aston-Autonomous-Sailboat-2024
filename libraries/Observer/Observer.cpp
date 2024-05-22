@@ -38,6 +38,9 @@ void Observer::updateSensors()
     m_gps->update();
     m_ws->update();
     m_wd->update();
+
+    fusion();
+    updateTrueWindAngle();
 }
 
 
@@ -49,6 +52,26 @@ void Observer::fusion()
     float wind_direction = WIND_DIRECTION_FILTER * m_wd->getRawWindDirection() + (1 - WIND_DIRECTION_FILTER) * m_wd->getWindDirection();  // Low pass filter for wind direction
     m_wd->setFilteredWindDirection(wind_direction);
 }
+
+
+void Observer::updateTrueWindAngle()
+{
+    float SOG = gps()->getSpeed();
+    float COG = gps()->getCourse();
+    if(COG == 99999)
+        COG = cmps()->getYaw();
+
+    float AWD = ((float)(((int)(wd()->getWindDirection() + cmps()->getYaw()))%360))/180*M_PI;
+    float AWS = ws()->getWindSpeed();
+
+    float u = -SOG*sin(COG) + AWS*sin(AWD);
+    float v = -SOG*cos(COG) + AWS*cos(AWD);
+
+    m_true_wind_angle = (float)(((int)((atan2(u,v)+2*M_PI)*180/M_PI))%360);
+}
+
+
+float Observer::getTrueWindAngle() {return m_true_wind_angle;}
 
 
 CMPS12* Observer::cmps() {return m_cmps;}

@@ -19,6 +19,9 @@ class Observer
         void updateSensors();
         void fusion();
 
+        void updateTrueWindAngle();
+        float getTrueWindAngle();
+
         CMPS12* cmps();
         GPS* gps();
         WindSpeed* ws();
@@ -29,6 +32,8 @@ class Observer
         GPS* m_gps;
         WindSpeed* m_ws;
         WindDirection* m_wd;
+
+        float m_true_wind_angle;
 
 };
 
