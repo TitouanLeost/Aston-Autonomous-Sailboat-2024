@@ -1,21 +1,19 @@
 #include <Controller.h>
 
 
-Controller::Controller()
+ControllerLF::ControllerLF()
 {
-    m_mr = new ServoMotor(SERVO_RUDDER_PIN, RUDDER_PWMMIN, RUDDER_PWMMAX);
-    m_ms = new ServoMotor(SERVO_SAIL_PIN, SAIL_PWMMIN, SAIL_PWMMAX);
+    m_algo = new LineFollowing();
 }
 
 
-Controller::~Controller()
+ControllerLF::~ControllerLF()
 {
-    delete m_mr;
-    delete m_ms;
+    delete m_algo;
 }
 
 
-void Controller::init()
+void ControllerLF::init()
 {
     Serial.println("#########################");
     Serial.println("Initializing servo motors...");
@@ -26,11 +24,9 @@ void Controller::init()
 }
 
 
-void Controller::updateServos()
+void ControllerLF::updateServos()
 {
-    // TODO
+    m_algo->updateCmd();
+    m_mr->setPercent(m_algo->getCmdRudder());
+    m_ms->setPercent(m_algo->getCmdSail());
 }
-
-
-ServoMotor* Controller::mr() {return m_mr;}
-ServoMotor* Controller::ms() {return m_ms;}

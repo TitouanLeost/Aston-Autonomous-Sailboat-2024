@@ -2,25 +2,23 @@
 #define CONTROLLER_H
 
 #include <Arduino.h>
+#include <math.h>
+
 #include <Config.h>
+#include <ControllerInterface.h>
 #include <ServoMotor.h>
 
 
-class Controller
+class ControllerLF : public ControllerInterface
 {
     public:
-        Controller();
-        ~Controller();
+        ControllerLF();
+        ~ControllerLF();
 
         void init();
         void updateServos();
 
-        ServoMotor* mr();
-        ServoMotor* ms();
-
     private:
-        ServoMotor* m_mr;
-        ServoMotor* m_ms;
 
 };
 
