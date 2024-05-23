@@ -1,11 +1,12 @@
 #include <time.h>
+
 #include <Observer.h>
+#include <Supervisor.h>
 #include <Controller.h>
-#include <Algorithms.h>
 
 Observer obs;
-Controller ctrl;
-LineFollowing lf;
+Supervisor sp;
+CONTROLLER ctrl;
 
 unsigned long last_time = 0;
 
@@ -16,10 +17,8 @@ void anemometerRotation() {obs.ws()->rotation();}
 void setup() {
     Serial.begin(9600);
     obs.init();
-    lf.init(&obs);
-    delay(5000);
+    sp.init(&obs, &ctrl);
     ctrl.init();
-    delay(1000);
 
     attachInterrupt(digitalPinToInterrupt(WIND_SPEED_PIN), anemometerRotation, FALLING);
 
@@ -29,6 +28,8 @@ void setup() {
 
 void loop() {
     obs.updateSensors();
+    sp.updateMission();
+    ctrl.updateServos();
 
     if (millis() - last_time > 200) {
         Serial.print("Yaw (filtered): ");

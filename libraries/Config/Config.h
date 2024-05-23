@@ -11,6 +11,15 @@
 
 /*=========================*/
 /////////////////////////////
+/*====SUPERVISOR CONFIG====*/
+
+#define CONTROLLER ControllerLF
+#define NB_WP 3
+#define WP { {52.485, 1.889709594213}, {52.4854920485, 1.889248254262}, {52.4844804397, 1.890610816442} }
+#define WP_RADIUS 10
+
+/*=========================*/
+/////////////////////////////
 /*====ALGORITHMS CONFIG====*/
 
 #define ANGLE_RUDDER_MAX M_PI/4
