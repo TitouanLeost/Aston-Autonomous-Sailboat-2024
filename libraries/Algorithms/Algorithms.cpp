@@ -13,16 +13,6 @@ LineFollowing::~LineFollowing()
 }
 
 
-void LineFollowing::setLine(float alat, float alon, float blat, float blon)
-{
-    CoordLatLon a = {alat, alon};
-    CoordLatLon b = {blat, blon};
-
-    m_a = latLonToXY(a);
-    m_b = latLonToXY(b);
-}
-
-
 void LineFollowing::setLine(CoordLatLon a, CoordLatLon b)
 {
     m_a = latLonToXY(a);

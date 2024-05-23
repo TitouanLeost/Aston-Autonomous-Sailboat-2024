@@ -12,6 +12,8 @@ class ControlAlgorithm
 
         void init(Observer* obs) {m_obs = obs;}; 
         virtual void updateCmd() = 0;
+        
+        virtual void setLine(CoordLatLon a, CoordLatLon b) = 0;
 
         float getCmdRudder() {return m_cmd_rudder;};
         float getCmdSail() {return m_cmd_sail;};

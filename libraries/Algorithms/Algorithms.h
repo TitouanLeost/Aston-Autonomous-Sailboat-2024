@@ -15,7 +15,6 @@ class LineFollowing : public ControlAlgorithm
 
         void updateCmd();
 
-        void setLine(float alat, float alon, float blat, float blon);
         void setLine(CoordLatLon a, CoordLatLon b);
 
     private:
