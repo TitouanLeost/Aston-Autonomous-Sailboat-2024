@@ -1,19 +1,19 @@
-#ifndef CONTROLALGORITHM_H
-#define CONTROLALGORITHM_H
+#ifndef ALGORITHMINTERFACE_H
+#define ALGORITHMINTERFACE_H
 
 #include <Observer.h>
 
 
-class ControlAlgorithm
+class AlgorithmInterface
 {
     public:
-        ControlAlgorithm() {};
-        ~ControlAlgorithm() {};
+        AlgorithmInterface() {};
+        ~AlgorithmInterface() {};
 
         void init(Observer* obs) {m_obs = obs;}; 
         virtual void updateCmd() = 0;
         
-        virtual void setLine(CoordLatLon a, CoordLatLon b) = 0;
+        virtual void setLine(CoordLatLon a, CoordLatLon b) {};
 
         float getCmdRudder() {return m_cmd_rudder;};
         float getCmdSail() {return m_cmd_sail;};

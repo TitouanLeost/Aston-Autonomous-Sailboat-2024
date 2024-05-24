@@ -4,10 +4,10 @@
 #include <Arduino.h>
 #include <Config.h>
 #include <Tools.h>
-#include <ControlAlgorithm.h>
+#include <AlgorithmInterface.h>
 
 
-class LineFollowing : public ControlAlgorithm
+class LineFollowing : public AlgorithmInterface
 {
     public:
         LineFollowing();

@@ -25,12 +25,12 @@ class ControllerInterface
 
         ServoMotor* mr() {return m_mr;};
         ServoMotor* ms() {return m_ms;};
-        ControlAlgorithm* algo() {return m_algo;};
+        AlgorithmInterface* algo() {return m_algo;};
 
     protected:
         ServoMotor* m_mr = nullptr;
         ServoMotor* m_ms = nullptr;
-        ControlAlgorithm* m_algo = nullptr;
+        AlgorithmInterface* m_algo = nullptr;
 
 };
 
