@@ -13,17 +13,18 @@
 /////////////////////////////
 /*====SUPERVISOR CONFIG====*/
 
-#define CONTROLLER ControllerLF
-#define NB_WP 3
+#define CONTROLLER ControllerLF  // Line Following controller
+#define NB_WP 3  // Number of waypoints
+// List of waypoints (latitude, longitude)
 #define WP { {52.485, 1.889709594213}, {52.4854920485, 1.889248254262}, {52.4844804397, 1.890610816442} }
-#define WP_RADIUS 10
+#define WP_RADIUS 10  // Radius of the waypoint to validate it
 
 /*=========================*/
 /////////////////////////////
 /*====ALGORITHMS CONFIG====*/
 
-#define ANGLE_RUDDER_MAX M_PI/4
-#define ANGLE_SAIL_MAX M_PI/2
+#define ANGLE_RUDDER_MAX M_PI/4  // Maximum angle of the rudder
+#define ANGLE_SAIL_MAX M_PI/2  // Maximum angle of the sail
 
 #define R 50  // Cutoff distance from the line
 #define GAMMA M_PI/4  // Incidence angle
@@ -40,14 +41,14 @@
 #define CMPS_GET_PITCH 0x14
 #define CMPS_GET_ROLL 0x15
 #define CMPS_CALIBRATION_STATUS 0x24
-#define CMPS_RX 10
-#define CMPS_TX 11
+#define CMPS_RX 10  // RX pin for the CMPS
+#define CMPS_TX 11  // TX pin for the CMPS
 
 /*=========================*/
 /////////////////////////////
 /*========GPS CONFIG=======*/
 
-#define SERIAL_GPS Serial2
+#define SERIAL_GPS Serial2  // Serial port for the GPS
 
 struct CoordLatLon
 {
@@ -65,16 +66,16 @@ struct CoordXY
 /////////////////////////////
 /*====ANEMOMETER CONFIG====*/
 
-#define SERIAL_WIND Serial1
-#define WIND_SPEED_PIN 19
-#define WIND_DIRECTION_PIN A14
+#define SERIAL_WIND Serial1  // Serial port for the anemometer
+#define WIND_SPEED_PIN 19  // Pin for the wind speed sensor
+#define WIND_DIRECTION_PIN A14  // Pin for the wind direction sensor
 
 /*=========================*/
 /////////////////////////////
 /*=====OBSERVER CONFIG=====*/
 
-#define YAW_FILTER 0.5
-#define WIND_DIRECTION_FILTER 0.5
+#define YAW_FILTER 0.5  // Coefficient of the filter for the yaw
+#define WIND_DIRECTION_FILTER 0.5  // Coefficient of the filter for the wind direction
 
 /*=========================*/
 /////////////////////////////
@@ -82,13 +83,13 @@ struct CoordXY
 
 #define SERVO_FREQ 50
 
-#define SERVO_RUDDER_PIN 0
-#define RUDDER_PWMMIN 220
-#define RUDDER_PWMMAX 420
+#define SERVO_RUDDER_PIN 0  // Pin for the rudder servo
+#define RUDDER_PWMMIN 220  // Minimum PWM for the rudder servo
+#define RUDDER_PWMMAX 420  // Maximum PWM for the rudder servo
 
-#define SERVO_SAIL_PIN 1
-#define SAIL_PWMMIN 340
-#define SAIL_PWMMAX 460
+#define SERVO_SAIL_PIN 1  // Pin for the sail servo
+#define SAIL_PWMMIN 340  // Minimum PWM for the sail servo
+#define SAIL_PWMMAX 460  // Maximum PWM for the sail servo
 
 /*=========================*/
 
