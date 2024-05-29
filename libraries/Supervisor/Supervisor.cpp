@@ -1,16 +1,10 @@
 #include <Supervisor.h>
 
 
-Supervisor::Supervisor() : m_wp(WP)
-{
-
-}
+Supervisor::Supervisor() : m_wp(WP){}
 
 
-Supervisor::~Supervisor()
-{
-
-}
+Supervisor::~Supervisor(){}
 
 
 void Supervisor::init(Observer* obs, ControllerInterface* ctrl)

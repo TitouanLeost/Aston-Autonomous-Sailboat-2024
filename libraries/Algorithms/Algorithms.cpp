@@ -1,16 +1,10 @@
 #include <Algorithms.h>
 
 
-LineFollowing::LineFollowing()
-{
-    
-}
+LineFollowing::LineFollowing(){}
 
 
-LineFollowing::~LineFollowing()
-{
-    
-}
+LineFollowing::~LineFollowing(){}
 
 
 void LineFollowing::setLine(CoordLatLon a, CoordLatLon b)
