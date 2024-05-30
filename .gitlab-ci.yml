@@ -1,12 +1,8 @@
-stages:
-  - test
-
-test-job:
-  stage: test
+pages:
+  stage: deploy
   script:
-    - echo "Running test job"
     - mkdir -p public
-    - echo "<html><body><h1>Test Page</h1></body></html>" > public/index.html
+    - cp -r doc/html/* public
   artifacts:
     paths:
       - public
