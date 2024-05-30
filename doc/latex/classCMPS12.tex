@@ -1,0 +1,141 @@
+\hypertarget{classCMPS12}{}\doxysection{CMPS12 Class Reference}
+\label{classCMPS12}\index{CMPS12@{CMPS12}}
+
+
+A class to handle the \mbox{\hyperlink{classCMPS12}{CMPS12}}.  
+
+
+
+
+{\ttfamily \#include $<$CMPS12.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCMPS12_aa5652bdd556a799224aacbea956b5ef5}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the \mbox{\hyperlink{classCMPS12}{CMPS12}} compass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCMPS12_a56626c06ae6f9abeb527e15ce3c6a38d}\label{classCMPS12_a56626c06ae6f9abeb527e15ce3c6a38d}} 
+void \mbox{\hyperlink{classCMPS12_a56626c06ae6f9abeb527e15ce3c6a38d}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the yaw, pitch and roll of the \mbox{\hyperlink{classCMPS12}{CMPS12}} compass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCMPS12_a6e1ce39b4f977a2787f78f66eae06a46}\label{classCMPS12_a6e1ce39b4f977a2787f78f66eae06a46}} 
+void \mbox{\hyperlink{classCMPS12_a6e1ce39b4f977a2787f78f66eae06a46}{calibration}} ()
+\begin{DoxyCompactList}\small\item\em Check the calibration status of the \mbox{\hyperlink{classCMPS12}{CMPS12}} compass. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classCMPS12_aabe03d27b59e3a3ca0c40e73dbff7f50}{get\+Yaw}} ()
+\begin{DoxyCompactList}\small\item\em Get the filtered yaw of the boat. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classCMPS12_ae72ca202fcf73fef04e58ac7305848f3}{get\+Yaw\+Raw}} ()
+\begin{DoxyCompactList}\small\item\em Get the raw yaw of the boat. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCMPS12_a61fd56a19fa52c4bcef1825a238b7a3a}{get\+Pitch}} ()
+\begin{DoxyCompactList}\small\item\em Get the pitch of the boat. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCMPS12_a4d21de3ea6e7b781948aecdf5daf94db}{get\+Roll}} ()
+\begin{DoxyCompactList}\small\item\em Get the roll of the boat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCMPS12_a54d0af35e38aec3d35b7395e8173e8fb}{set\+Filtered\+Yaw}} (float yaw)
+\begin{DoxyCompactList}\small\item\em Set the filtered yaw. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCMPS12_a596474507b08bdc317d7d70e1d59d6ab}\label{classCMPS12_a596474507b08bdc317d7d70e1d59d6ab}} 
+Software\+Serial \mbox{\hyperlink{classCMPS12_a596474507b08bdc317d7d70e1d59d6ab}{ss\+\_\+cmps}}
+\begin{DoxyCompactList}\small\item\em The serial connection of the \mbox{\hyperlink{classCMPS12}{CMPS12}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCMPS12_aee3bc2e6bf07aad50646bc5911e0951e}\label{classCMPS12_aee3bc2e6bf07aad50646bc5911e0951e}} 
+char \mbox{\hyperlink{classCMPS12_aee3bc2e6bf07aad50646bc5911e0951e}{m\+\_\+pitch}}
+\begin{DoxyCompactList}\small\item\em The pitch of the boat in degrees (-\/90 to 90) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCMPS12_addcfcb6cbdcc4213d5bc65bfbd1205df}\label{classCMPS12_addcfcb6cbdcc4213d5bc65bfbd1205df}} 
+char \mbox{\hyperlink{classCMPS12_addcfcb6cbdcc4213d5bc65bfbd1205df}{m\+\_\+roll}}
+\begin{DoxyCompactList}\small\item\em The roll of the boat in degrees (-\/90 to 90) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCMPS12_ab249fe2d78db4c8d9442221c800e1e04}\label{classCMPS12_ab249fe2d78db4c8d9442221c800e1e04}} 
+float \mbox{\hyperlink{classCMPS12_ab249fe2d78db4c8d9442221c800e1e04}{m\+\_\+yaw}}
+\begin{DoxyCompactList}\small\item\em The filtered yaw of the boat in degrees (0 to 360) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCMPS12_a896aea3cfa05b3015bc1bda7ad64536f}\label{classCMPS12_a896aea3cfa05b3015bc1bda7ad64536f}} 
+float \mbox{\hyperlink{classCMPS12_a896aea3cfa05b3015bc1bda7ad64536f}{m\+\_\+yaw\+\_\+raw}}
+\begin{DoxyCompactList}\small\item\em The raw yaw of the boat in degrees (0 to 360) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to handle the \mbox{\hyperlink{classCMPS12}{CMPS12}}. 
+
+This class allows to get the yaw (filtered or not), pitch and roll of the \mbox{\hyperlink{classCMPS12}{CMPS12}} compass. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCMPS12_a61fd56a19fa52c4bcef1825a238b7a3a}\label{classCMPS12_a61fd56a19fa52c4bcef1825a238b7a3a}} 
+\index{CMPS12@{CMPS12}!getPitch@{getPitch}}
+\index{getPitch@{getPitch}!CMPS12@{CMPS12}}
+\doxysubsubsection{\texorpdfstring{getPitch()}{getPitch()}}
+{\footnotesize\ttfamily int CMPS12\+::get\+Pitch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the pitch of the boat. 
+
+\begin{DoxyReturn}{Returns}
+The pitch in degrees (-\/90 to 90) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCMPS12_a4d21de3ea6e7b781948aecdf5daf94db}\label{classCMPS12_a4d21de3ea6e7b781948aecdf5daf94db}} 
+\index{CMPS12@{CMPS12}!getRoll@{getRoll}}
+\index{getRoll@{getRoll}!CMPS12@{CMPS12}}
+\doxysubsubsection{\texorpdfstring{getRoll()}{getRoll()}}
+{\footnotesize\ttfamily int CMPS12\+::get\+Roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the roll of the boat. 
+
+\begin{DoxyReturn}{Returns}
+The roll in degrees (-\/90 to 90) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCMPS12_aabe03d27b59e3a3ca0c40e73dbff7f50}\label{classCMPS12_aabe03d27b59e3a3ca0c40e73dbff7f50}} 
+\index{CMPS12@{CMPS12}!getYaw@{getYaw}}
+\index{getYaw@{getYaw}!CMPS12@{CMPS12}}
+\doxysubsubsection{\texorpdfstring{getYaw()}{getYaw()}}
+{\footnotesize\ttfamily float CMPS12\+::get\+Yaw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the filtered yaw of the boat. 
+
+\begin{DoxyReturn}{Returns}
+The filtered yaw in degrees (0 to 360) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCMPS12_ae72ca202fcf73fef04e58ac7305848f3}\label{classCMPS12_ae72ca202fcf73fef04e58ac7305848f3}} 
+\index{CMPS12@{CMPS12}!getYawRaw@{getYawRaw}}
+\index{getYawRaw@{getYawRaw}!CMPS12@{CMPS12}}
+\doxysubsubsection{\texorpdfstring{getYawRaw()}{getYawRaw()}}
+{\footnotesize\ttfamily float CMPS12\+::get\+Yaw\+Raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the raw yaw of the boat. 
+
+\begin{DoxyReturn}{Returns}
+The raw yaw in degrees (0 to 360) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCMPS12_aa5652bdd556a799224aacbea956b5ef5}\label{classCMPS12_aa5652bdd556a799224aacbea956b5ef5}} 
+\index{CMPS12@{CMPS12}!init@{init}}
+\index{init@{init}!CMPS12@{CMPS12}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void CMPS12\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the \mbox{\hyperlink{classCMPS12}{CMPS12}} compass. 
+
+This function initializes the serial connection with the \mbox{\hyperlink{classCMPS12}{CMPS12}} and check that the \mbox{\hyperlink{classCMPS12}{CMPS12}} is calibrated. \mbox{\Hypertarget{classCMPS12_a54d0af35e38aec3d35b7395e8173e8fb}\label{classCMPS12_a54d0af35e38aec3d35b7395e8173e8fb}} 
+\index{CMPS12@{CMPS12}!setFilteredYaw@{setFilteredYaw}}
+\index{setFilteredYaw@{setFilteredYaw}!CMPS12@{CMPS12}}
+\doxysubsubsection{\texorpdfstring{setFilteredYaw()}{setFilteredYaw()}}
+{\footnotesize\ttfamily void CMPS12\+::set\+Filtered\+Yaw (\begin{DoxyParamCaption}\item[{float}]{yaw }\end{DoxyParamCaption})}
+
+
+
+Set the filtered yaw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yaw} & The filtered yaw \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+CMPS12/CMPS12.\+h\item 
+libraries/\+CMPS12/CMPS12.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,111 @@
+\hypertarget{classAlgorithmInterface}{}\doxysection{Algorithm\+Interface Class Reference}
+\label{classAlgorithmInterface}\index{AlgorithmInterface@{AlgorithmInterface}}
+
+
+A base class to handle all algorithms class.  
+
+
+
+
+{\ttfamily \#include $<$Algorithm\+Interface.\+h$>$}
+
+
+
+Inheritance diagram for Algorithm\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classAlgorithmInterface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Algorithm\+Interface\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAlgorithmInterface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classAlgorithmInterface_a624f37e1804e52df3fa3de018574c971}{init}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$obs)
+\begin{DoxyCompactList}\small\item\em Initialize the algorithm. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAlgorithmInterface_a0a050d4c5fdb7d31cd8be30b4f4d0306}\label{classAlgorithmInterface_a0a050d4c5fdb7d31cd8be30b4f4d0306}} 
+virtual void {\bfseries update\+Cmd} ()=0
+\item 
+\mbox{\Hypertarget{classAlgorithmInterface_a510ef80b2d11a7110b4384965ae55c29}\label{classAlgorithmInterface_a510ef80b2d11a7110b4384965ae55c29}} 
+virtual void {\bfseries set\+Line} (\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} a, \mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} b)
+\item 
+float \mbox{\hyperlink{classAlgorithmInterface_ad1ed069605f52ab787dab5caf5cd69fc}{get\+Cmd\+Rudder}} ()
+\begin{DoxyCompactList}\small\item\em Get the rudder command. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classAlgorithmInterface_a579a0643b0be6ecdd5ebe743a4e66abd}{get\+Cmd\+Sail}} ()
+\begin{DoxyCompactList}\small\item\em Get the sail command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlgorithmInterface_a23bb5a336dc6f653adc446e9ffab5ff2}\label{classAlgorithmInterface_a23bb5a336dc6f653adc446e9ffab5ff2}} 
+\mbox{\hyperlink{classObserver}{Observer}} $\ast$ \mbox{\hyperlink{classAlgorithmInterface_a23bb5a336dc6f653adc446e9ffab5ff2}{m\+\_\+obs}} = nullptr
+\begin{DoxyCompactList}\small\item\em The observer used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAlgorithmInterface_af8252ee9952d85c3fe3368b53032d175}\label{classAlgorithmInterface_af8252ee9952d85c3fe3368b53032d175}} 
+float \mbox{\hyperlink{classAlgorithmInterface_af8252ee9952d85c3fe3368b53032d175}{m\+\_\+cmd\+\_\+rudder}} = 0.\+5
+\begin{DoxyCompactList}\small\item\em The rudder command (0.\+0 to 1.\+0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAlgorithmInterface_a9286c325e033231e91edfe62db29cdeb}\label{classAlgorithmInterface_a9286c325e033231e91edfe62db29cdeb}} 
+float \mbox{\hyperlink{classAlgorithmInterface_a9286c325e033231e91edfe62db29cdeb}{m\+\_\+cmd\+\_\+sail}} = 0.\+5
+\begin{DoxyCompactList}\small\item\em The sail command (0.\+0 to 1.\+0) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base class to handle all algorithms class. 
+
+This class contain basic functions for all algorithms to use. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAlgorithmInterface_ad1ed069605f52ab787dab5caf5cd69fc}\label{classAlgorithmInterface_ad1ed069605f52ab787dab5caf5cd69fc}} 
+\index{AlgorithmInterface@{AlgorithmInterface}!getCmdRudder@{getCmdRudder}}
+\index{getCmdRudder@{getCmdRudder}!AlgorithmInterface@{AlgorithmInterface}}
+\doxysubsubsection{\texorpdfstring{getCmdRudder()}{getCmdRudder()}}
+{\footnotesize\ttfamily float Algorithm\+Interface\+::get\+Cmd\+Rudder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the rudder command. 
+
+\begin{DoxyReturn}{Returns}
+The rudder command (0.\+0 to 1.\+0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAlgorithmInterface_a579a0643b0be6ecdd5ebe743a4e66abd}\label{classAlgorithmInterface_a579a0643b0be6ecdd5ebe743a4e66abd}} 
+\index{AlgorithmInterface@{AlgorithmInterface}!getCmdSail@{getCmdSail}}
+\index{getCmdSail@{getCmdSail}!AlgorithmInterface@{AlgorithmInterface}}
+\doxysubsubsection{\texorpdfstring{getCmdSail()}{getCmdSail()}}
+{\footnotesize\ttfamily float Algorithm\+Interface\+::get\+Cmd\+Sail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the sail command. 
+
+\begin{DoxyReturn}{Returns}
+The sail command (0.\+0 to 1.\+0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAlgorithmInterface_a624f37e1804e52df3fa3de018574c971}\label{classAlgorithmInterface_a624f37e1804e52df3fa3de018574c971}} 
+\index{AlgorithmInterface@{AlgorithmInterface}!init@{init}}
+\index{init@{init}!AlgorithmInterface@{AlgorithmInterface}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Algorithm\+Interface\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{obs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the algorithm. 
+
+This function initialize the algorithm with the observer. 
+\begin{DoxyParams}{Parameters}
+{\em obs} & A pointer to the observer used \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Algorithms/Algorithm\+Interface.\+h\end{DoxyCompactItemize}

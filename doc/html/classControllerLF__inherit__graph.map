@@ -1,0 +1,4 @@
+<map id="ControllerLF" name="ControllerLF">
+<area shape="rect" id="node1" title="A class to handle the Line Following controller." alt="" coords="23,80,117,107"/>
+<area shape="rect" id="node2" href="$classControllerInterface.html" title="A base class to handle all controllers class." alt="" coords="5,5,135,32"/>
+</map>

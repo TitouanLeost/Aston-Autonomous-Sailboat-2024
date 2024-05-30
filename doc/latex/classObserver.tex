@@ -1,0 +1,103 @@
+\hypertarget{classObserver}{}\doxysection{Observer Class Reference}
+\label{classObserver}\index{Observer@{Observer}}
+
+
+A class to handle the observer.  
+
+
+
+
+{\ttfamily \#include $<$Observer.\+h$>$}
+
+
+
+Collaboration diagram for Observer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObserver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classObserver_a326081cb1a9d77bdbbb23dd9c41a6653}\label{classObserver_a326081cb1a9d77bdbbb23dd9c41a6653}} 
+void \mbox{\hyperlink{classObserver_a326081cb1a9d77bdbbb23dd9c41a6653}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the sensors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserver_a4c3f8cebcb8c6acea453d607805aa553}\label{classObserver_a4c3f8cebcb8c6acea453d607805aa553}} 
+void \mbox{\hyperlink{classObserver_a4c3f8cebcb8c6acea453d607805aa553}{update\+Sensors}} ()
+\begin{DoxyCompactList}\small\item\em Update the sensors and process the data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObserver_a59fe48a81a3ab8abb4a16aabb7301eab}{fusion}} ()
+\begin{DoxyCompactList}\small\item\em Process the data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserver_a438c4349adbdfc8cee2b46d1bf345364}\label{classObserver_a438c4349adbdfc8cee2b46d1bf345364}} 
+void \mbox{\hyperlink{classObserver_a438c4349adbdfc8cee2b46d1bf345364}{update\+True\+Wind\+Angle}} ()
+\begin{DoxyCompactList}\small\item\em Update the true wind angle. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classObserver_a00e2177ad350135790e4522c5d33db8b}{get\+True\+Wind\+Angle}} ()
+\begin{DoxyCompactList}\small\item\em Get the true wind angle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserver_a1d5614599457ae3484d2cdae5bc408ab}\label{classObserver_a1d5614599457ae3484d2cdae5bc408ab}} 
+\mbox{\hyperlink{classCMPS12}{CMPS12}} $\ast$ \mbox{\hyperlink{classObserver_a1d5614599457ae3484d2cdae5bc408ab}{cmps}} ()
+\begin{DoxyCompactList}\small\item\em Get the CMPS sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserver_afd09c4308f2131228e807dab7cc50ac7}\label{classObserver_afd09c4308f2131228e807dab7cc50ac7}} 
+\mbox{\hyperlink{classGPS}{GPS}} $\ast$ \mbox{\hyperlink{classObserver_afd09c4308f2131228e807dab7cc50ac7}{gps}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classGPS}{GPS}} sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserver_a77f85698a1ae0aa016400ccc4a0bce5d}\label{classObserver_a77f85698a1ae0aa016400ccc4a0bce5d}} 
+\mbox{\hyperlink{classWindSpeed}{Wind\+Speed}} $\ast$ \mbox{\hyperlink{classObserver_a77f85698a1ae0aa016400ccc4a0bce5d}{ws}} ()
+\begin{DoxyCompactList}\small\item\em Get the wind speed sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserver_a2690c25f7ab8bff9e152c3f5ee64a9c1}\label{classObserver_a2690c25f7ab8bff9e152c3f5ee64a9c1}} 
+\mbox{\hyperlink{classWindDirection}{Wind\+Direction}} $\ast$ \mbox{\hyperlink{classObserver_a2690c25f7ab8bff9e152c3f5ee64a9c1}{wd}} ()
+\begin{DoxyCompactList}\small\item\em Get the wind direction sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classObserver_a08ab89a85a79acf5be580e461d96e8c1}\label{classObserver_a08ab89a85a79acf5be580e461d96e8c1}} 
+\mbox{\hyperlink{classCMPS12}{CMPS12}} $\ast$ \mbox{\hyperlink{classObserver_a08ab89a85a79acf5be580e461d96e8c1}{m\+\_\+cmps}}
+\begin{DoxyCompactList}\small\item\em The CMPS sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserver_ab9fb1acf7f4ac1097e6701471f7896a7}\label{classObserver_ab9fb1acf7f4ac1097e6701471f7896a7}} 
+\mbox{\hyperlink{classGPS}{GPS}} $\ast$ \mbox{\hyperlink{classObserver_ab9fb1acf7f4ac1097e6701471f7896a7}{m\+\_\+gps}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classGPS}{GPS}} sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserver_ab6e9afcb09cf1d1bf3d42d708a859eba}\label{classObserver_ab6e9afcb09cf1d1bf3d42d708a859eba}} 
+\mbox{\hyperlink{classWindSpeed}{Wind\+Speed}} $\ast$ \mbox{\hyperlink{classObserver_ab6e9afcb09cf1d1bf3d42d708a859eba}{m\+\_\+ws}}
+\begin{DoxyCompactList}\small\item\em The wind speed sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserver_acb0038c4cef3bde40b06985a94a22a9c}\label{classObserver_acb0038c4cef3bde40b06985a94a22a9c}} 
+\mbox{\hyperlink{classWindDirection}{Wind\+Direction}} $\ast$ \mbox{\hyperlink{classObserver_acb0038c4cef3bde40b06985a94a22a9c}{m\+\_\+wd}}
+\begin{DoxyCompactList}\small\item\em The wind direction sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserver_a1e1574602983dec0aa081603bd36d2c8}\label{classObserver_a1e1574602983dec0aa081603bd36d2c8}} 
+float \mbox{\hyperlink{classObserver_a1e1574602983dec0aa081603bd36d2c8}{m\+\_\+true\+\_\+wind\+\_\+angle}}
+\begin{DoxyCompactList}\small\item\em The true wind angle in degrees (0 to 360) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to handle the observer. 
+
+This class allow to update the sensors and to process the data. Those data are then used to feed the controller. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classObserver_a59fe48a81a3ab8abb4a16aabb7301eab}\label{classObserver_a59fe48a81a3ab8abb4a16aabb7301eab}} 
+\index{Observer@{Observer}!fusion@{fusion}}
+\index{fusion@{fusion}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{fusion()}{fusion()}}
+{\footnotesize\ttfamily void Observer\+::fusion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Process the data. 
+
+This function is used to filtered the data from the CMPS and the wind direction sensor. \mbox{\Hypertarget{classObserver_a00e2177ad350135790e4522c5d33db8b}\label{classObserver_a00e2177ad350135790e4522c5d33db8b}} 
+\index{Observer@{Observer}!getTrueWindAngle@{getTrueWindAngle}}
+\index{getTrueWindAngle@{getTrueWindAngle}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{getTrueWindAngle()}{getTrueWindAngle()}}
+{\footnotesize\ttfamily float Observer\+::get\+True\+Wind\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the true wind angle. 
+
+\begin{DoxyReturn}{Returns}
+The true wind angle in degrees (0 to 360) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Observer/Observer.\+h\item 
+libraries/\+Observer/Observer.\+cpp\end{DoxyCompactItemize}

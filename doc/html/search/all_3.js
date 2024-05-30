@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['getcmdrudder_10',['getCmdRudder',['../classAlgorithmInterface.html#ad1ed069605f52ab787dab5caf5cd69fc',1,'AlgorithmInterface']]],
+  ['getcmdsail_11',['getCmdSail',['../classAlgorithmInterface.html#a579a0643b0be6ecdd5ebe743a4e66abd',1,'AlgorithmInterface']]],
+  ['getcoordlatlon_12',['getCoordLatLon',['../classGPS.html#a336a14efeaa59bf18c31a08c87fbbd94',1,'GPS']]],
+  ['getcoordxy_13',['getCoordXY',['../classGPS.html#a45d9546f3c9f73532f1cb1aa172a6477',1,'GPS']]],
+  ['getcourse_14',['getCourse',['../classGPS.html#a8be1d549049d73aeca950c62bc735c45',1,'GPS']]],
+  ['getdate_15',['getDate',['../classGPS.html#ac54b0bd91e076facdd1c09126e325723',1,'GPS']]],
+  ['getlat_16',['getLat',['../classGPS.html#a149e915031616475b3ae56436849cd02',1,'GPS']]],
+  ['getlon_17',['getLon',['../classGPS.html#a2c4e202961a4211fb39a660055efb735',1,'GPS']]],
+  ['getpitch_18',['getPitch',['../classCMPS12.html#a61fd56a19fa52c4bcef1825a238b7a3a',1,'CMPS12']]],
+  ['getrawwinddirection_19',['getRawWindDirection',['../classWindDirection.html#ac1a70f415b8215e269a5f831c18c2446',1,'WindDirection']]],
+  ['getroll_20',['getRoll',['../classCMPS12.html#a4d21de3ea6e7b781948aecdf5daf94db',1,'CMPS12']]],
+  ['getsatellites_21',['getSatellites',['../classGPS.html#aba3c25472a55096c66031061b185ed65',1,'GPS']]],
+  ['getspeed_22',['getSpeed',['../classGPS.html#a3fe477168b51c1d49ee9eb188ee1812c',1,'GPS']]],
+  ['gettime_23',['getTime',['../classGPS.html#acf5c173beba1f4cecbcb5890b66917f3',1,'GPS']]],
+  ['gettruewindangle_24',['getTrueWindAngle',['../classObserver.html#a00e2177ad350135790e4522c5d33db8b',1,'Observer']]],
+  ['getwinddirection_25',['getWindDirection',['../classWindDirection.html#a241cdca91bd53980fc92a658b22ace20',1,'WindDirection']]],
+  ['getwindspeed_26',['getWindSpeed',['../classWindSpeed.html#abc6a2e5e2c29298dc26a45d0ea154ba6',1,'WindSpeed']]],
+  ['getyaw_27',['getYaw',['../classCMPS12.html#aabe03d27b59e3a3ca0c40e73dbff7f50',1,'CMPS12']]],
+  ['getyawraw_28',['getYawRaw',['../classCMPS12.html#ae72ca202fcf73fef04e58ac7305848f3',1,'CMPS12']]],
+  ['gps_29',['GPS',['../classGPS.html',1,'']]],
+  ['gps_30',['gps',['../classObserver.html#afd09c4308f2131228e807dab7cc50ac7',1,'Observer']]]
+];

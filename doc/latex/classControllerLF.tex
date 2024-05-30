@@ -1,0 +1,79 @@
+\hypertarget{classControllerLF}{}\doxysection{Controller\+LF Class Reference}
+\label{classControllerLF}\index{ControllerLF@{ControllerLF}}
+
+
+A class to handle the Line Following controller.  
+
+
+
+
+{\ttfamily \#include $<$Controller.\+h$>$}
+
+
+
+Inheritance diagram for Controller\+LF\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classControllerLF__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Controller\+LF\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classControllerLF__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classControllerLF_a0f423d61afd91b5f29e39ed4b74c66a3}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the controller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classControllerLF_a923acdb5a8b629512162e6791c3da958}{update\+Servos}} ()
+\begin{DoxyCompactList}\small\item\em Update the servo motors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A class to handle the Line Following controller. 
+
+This class allow to update the servos motors with the Line Following algorithm by using the data from the observer. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classControllerLF_a0f423d61afd91b5f29e39ed4b74c66a3}\label{classControllerLF_a0f423d61afd91b5f29e39ed4b74c66a3}} 
+\index{ControllerLF@{ControllerLF}!init@{init}}
+\index{init@{init}!ControllerLF@{ControllerLF}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Controller\+LF\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize the controller. 
+
+This function initialize the two servo motors. 
+
+Implements \mbox{\hyperlink{classControllerInterface}{Controller\+Interface}}.
+
+\mbox{\Hypertarget{classControllerLF_a923acdb5a8b629512162e6791c3da958}\label{classControllerLF_a923acdb5a8b629512162e6791c3da958}} 
+\index{ControllerLF@{ControllerLF}!updateServos@{updateServos}}
+\index{updateServos@{updateServos}!ControllerLF@{ControllerLF}}
+\doxysubsubsection{\texorpdfstring{updateServos()}{updateServos()}}
+{\footnotesize\ttfamily void Controller\+LF\+::update\+Servos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Update the servo motors. 
+
+This function update the servo motors with the data from the Line Following algorithm. 
+
+Implements \mbox{\hyperlink{classControllerInterface}{Controller\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Controller/Controller.\+h\item 
+libraries/\+Controller/Controller.\+cpp\end{DoxyCompactItemize}
