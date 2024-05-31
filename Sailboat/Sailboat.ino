@@ -3,10 +3,12 @@
 #include <Observer.h>
 #include <Supervisor.h>
 #include <Controller.h>
+#include <Logger.h>
 
 Observer obs;
 Supervisor sp;
 CONTROLLER ctrl;
+Logger logger;
 
 unsigned long last_time = 0;
 
@@ -19,6 +21,7 @@ void setup() {
     obs.init();
     sp.init(&obs, &ctrl);
     ctrl.init();
+    logger.init(&obs);
 
     attachInterrupt(digitalPinToInterrupt(WIND_SPEED_PIN), anemometerRotation, FALLING);
 
@@ -30,6 +33,7 @@ void loop() {
     obs.updateSensors();
     sp.updateMission();
     ctrl.updateServos();
+    logger.update();
 
     if (millis() - last_time > 200) {
         Serial.print("Yaw (filtered): ");

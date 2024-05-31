@@ -31,6 +31,12 @@
 #define ZETA M_PI/4  // Close haul angle
 #define BETA 0.3
 
+/*=========================*/
+/////////////////////////////
+/*=====OBSERVER CONFIG=====*/
+
+#define YAW_FILTER 0.5  // Coefficient of the filter for the yaw
+#define WIND_DIRECTION_FILTER 0.5  // Coefficient of the filter for the wind direction
 
 /*=========================*/
 /////////////////////////////
@@ -72,13 +78,6 @@ struct CoordXY
 
 /*=========================*/
 /////////////////////////////
-/*=====OBSERVER CONFIG=====*/
-
-#define YAW_FILTER 0.5  // Coefficient of the filter for the yaw
-#define WIND_DIRECTION_FILTER 0.5  // Coefficient of the filter for the wind direction
-
-/*=========================*/
-/////////////////////////////
 /*=======SERVO CONFIG======*/
 
 #define SERVO_FREQ 50
@@ -90,6 +89,12 @@ struct CoordXY
 #define SERVO_SAIL_PIN 1  // Pin for the sail servo
 #define SAIL_PWMMIN 340  // Minimum PWM for the sail servo
 #define SAIL_PWMMAX 460  // Maximum PWM for the sail servo
+
+/*=========================*/
+/////////////////////////////
+/*======LOGGER CONFIG======*/
+
+#define SD_PIN 53  // Pin for the SD card
 
 /*=========================*/
 
