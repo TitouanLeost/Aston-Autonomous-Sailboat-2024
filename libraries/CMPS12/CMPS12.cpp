@@ -13,6 +13,7 @@ void CMPS12::init()
     ss_cmps.begin(9600);
     if(ss_cmps.isListening())
         Serial.println(" => CMPS12 initialized");
+    calibration();
 }
 
 
@@ -40,31 +41,29 @@ void CMPS12::update()
 }
 
 
-float CMPS12::getYaw()
+void CMPS12::calibration()
 {
-    return m_yaw;
+    Serial.println(" -> Checking calibration status...");
+    ss_cmps.write(CMPS_CALIBRATION_STATUS);
+    while(ss_cmps.available() < 1);
+    unsigned char status = ss_cmps.read();
+    while(int(status) != 255){
+        status = ss_cmps.read();
+    }
+    Serial.println(" => Calibration done");
 }
 
 
-float CMPS12::getYawRaw()
-{
-    return m_yaw_raw;
-}
+float CMPS12::getYaw() {return m_yaw;}
 
 
-int CMPS12::getPitch()
-{
-    return m_pitch;
-}
+float CMPS12::getYawRaw() {return m_yaw_raw;}
 
 
-int CMPS12::getRoll()
-{
-    return m_roll;
-}
+int CMPS12::getPitch() {return m_pitch;}
 
 
-void CMPS12::setFilteredYaw(float yaw)
-{
-    m_yaw = yaw;
-}
+int CMPS12::getRoll() {return m_roll;}
+
+
+void CMPS12::setFilteredYaw(float yaw) {m_yaw = yaw;}

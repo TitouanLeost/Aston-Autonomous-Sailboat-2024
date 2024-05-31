@@ -1,0 +1,100 @@
+\hypertarget{classLineFollowing}{}\doxysection{Line\+Following Class Reference}
+\label{classLineFollowing}\index{LineFollowing@{LineFollowing}}
+
+
+A class to handle the line following algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Algorithms.\+h$>$}
+
+
+
+Inheritance diagram for Line\+Following\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classLineFollowing__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Line\+Following\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLineFollowing__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLineFollowing_a9901fd62d906555c0c4830c46b8f9f03}{update\+Cmd}} ()
+\begin{DoxyCompactList}\small\item\em Update the command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLineFollowing_a4f536637b6f7f5f19d56fcbeb686d126}{set\+Line}} (\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} a, \mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} b)
+\begin{DoxyCompactList}\small\item\em Set the line to follow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLineFollowing_ad0805933931fec9cee2244eb0cd28cde}\label{classLineFollowing_ad0805933931fec9cee2244eb0cd28cde}} 
+\mbox{\hyperlink{structCoordXY}{Coord\+XY}} \mbox{\hyperlink{classLineFollowing_ad0805933931fec9cee2244eb0cd28cde}{m\+\_\+a}}
+\begin{DoxyCompactList}\small\item\em The starting point of the line. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLineFollowing_ae3a7b7df9bd3c998067163ea39748324}\label{classLineFollowing_ae3a7b7df9bd3c998067163ea39748324}} 
+\mbox{\hyperlink{structCoordXY}{Coord\+XY}} \mbox{\hyperlink{classLineFollowing_ae3a7b7df9bd3c998067163ea39748324}{m\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em The ending point of the line. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLineFollowing_af0f29f25ec61edefdfbbd27913af2bc5}\label{classLineFollowing_af0f29f25ec61edefdfbbd27913af2bc5}} 
+int \mbox{\hyperlink{classLineFollowing_af0f29f25ec61edefdfbbd27913af2bc5}{m\+\_\+q}}
+\begin{DoxyCompactList}\small\item\em The sign of the error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A class to handle the line following algorithm. 
+
+This class allows to follow a line with the boat. The algorithm is based on the use of potential fields. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLineFollowing_a4f536637b6f7f5f19d56fcbeb686d126}\label{classLineFollowing_a4f536637b6f7f5f19d56fcbeb686d126}} 
+\index{LineFollowing@{LineFollowing}!setLine@{setLine}}
+\index{setLine@{setLine}!LineFollowing@{LineFollowing}}
+\doxysubsubsection{\texorpdfstring{setLine()}{setLine()}}
+{\footnotesize\ttfamily void Line\+Following\+::set\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}}}]{a,  }\item[{\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the line to follow. 
+
+This function set the line to follow with two points. 
+\begin{DoxyParams}{Parameters}
+{\em a} & The starting point of the line \\
+\hline
+{\em b} & The ending point of the line \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classAlgorithmInterface}{Algorithm\+Interface}}.
+
+\mbox{\Hypertarget{classLineFollowing_a9901fd62d906555c0c4830c46b8f9f03}\label{classLineFollowing_a9901fd62d906555c0c4830c46b8f9f03}} 
+\index{LineFollowing@{LineFollowing}!updateCmd@{updateCmd}}
+\index{updateCmd@{updateCmd}!LineFollowing@{LineFollowing}}
+\doxysubsubsection{\texorpdfstring{updateCmd()}{updateCmd()}}
+{\footnotesize\ttfamily void Line\+Following\+::update\+Cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Update the command. 
+
+This function update the command to send to the boat using a line following algorithm. 
+
+Implements \mbox{\hyperlink{classAlgorithmInterface}{Algorithm\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Algorithms/Algorithms.\+h\item 
+libraries/\+Algorithms/Algorithms.\+cpp\end{DoxyCompactItemize}

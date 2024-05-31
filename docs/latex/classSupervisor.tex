@@ -1,0 +1,129 @@
+\hypertarget{classSupervisor}{}\doxysection{Supervisor Class Reference}
+\label{classSupervisor}\index{Supervisor@{Supervisor}}
+
+
+A class to handle the supervisor.  
+
+
+
+
+{\ttfamily \#include $<$Supervisor.\+h$>$}
+
+
+
+Collaboration diagram for Supervisor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSupervisor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSupervisor_abf3f2fc868eda2e556627b1b84bcb8fb}{init}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$obs, \mbox{\hyperlink{classControllerInterface}{Controller\+Interface}} $\ast$ctrl)
+\begin{DoxyCompactList}\small\item\em Initialize the supervisor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSupervisor_a6b2a3d699a9dbb4a3286b707bd5483dd}{update\+Mission}} ()
+\begin{DoxyCompactList}\small\item\em Update the mission. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSupervisor_a38746d29e716eabe7e40fa56cebdbabe}{start\+LF}} ()
+\begin{DoxyCompactList}\small\item\em Start the line following controller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSupervisor_a3f5f4ecdede91e690058f8dd65e8e65d}{update\+LF}} ()
+\begin{DoxyCompactList}\small\item\em Update the line following controller. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSupervisor_a24d0faad16f598171ab27e70a2a2c869}{is\+Waypoint\+Reached}} ()
+\begin{DoxyCompactList}\small\item\em Check if the waypoint is reached. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSupervisor_aac86a94b376139ef15ebb881e971fb7e}\label{classSupervisor_aac86a94b376139ef15ebb881e971fb7e}} 
+\mbox{\hyperlink{classObserver}{Observer}} $\ast$ \mbox{\hyperlink{classSupervisor_aac86a94b376139ef15ebb881e971fb7e}{m\+\_\+obs}} = nullptr
+\begin{DoxyCompactList}\small\item\em The observer used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSupervisor_a3d69e7b9e36540a32240aa60e4144692}\label{classSupervisor_a3d69e7b9e36540a32240aa60e4144692}} 
+\mbox{\hyperlink{classControllerInterface}{Controller\+Interface}} $\ast$ \mbox{\hyperlink{classSupervisor_a3d69e7b9e36540a32240aa60e4144692}{m\+\_\+ctrl}} = nullptr
+\begin{DoxyCompactList}\small\item\em The controller used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSupervisor_a1daf2e02707dd6de64f570d1cc0a3bd0}\label{classSupervisor_a1daf2e02707dd6de64f570d1cc0a3bd0}} 
+\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} \mbox{\hyperlink{classSupervisor_a1daf2e02707dd6de64f570d1cc0a3bd0}{m\+\_\+wp}} \mbox{[}NB\+\_\+\+WP\mbox{]}
+\begin{DoxyCompactList}\small\item\em The waypoints. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSupervisor_a1c523ee48c3e532802c3bd6c7975098f}\label{classSupervisor_a1c523ee48c3e532802c3bd6c7975098f}} 
+int \mbox{\hyperlink{classSupervisor_a1c523ee48c3e532802c3bd6c7975098f}{m\+\_\+current\+\_\+wp}} = 0
+\begin{DoxyCompactList}\small\item\em The current waypoint index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSupervisor_a69d8880643c20e8283d4ee0db880fb11}\label{classSupervisor_a69d8880643c20e8283d4ee0db880fb11}} 
+void(Supervisor\+::$\ast$ {\bfseries update\+Ptr} )()
+\item 
+\mbox{\Hypertarget{classSupervisor_ada6ceffbb456568cc61443600c9f77c9}\label{classSupervisor_ada6ceffbb456568cc61443600c9f77c9}} 
+void(Supervisor\+::$\ast$ {\bfseries start\+Ptr} )()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to handle the supervisor. 
+
+This class allow to update the mission of the boat and to determine which controller should be use. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSupervisor_abf3f2fc868eda2e556627b1b84bcb8fb}\label{classSupervisor_abf3f2fc868eda2e556627b1b84bcb8fb}} 
+\index{Supervisor@{Supervisor}!init@{init}}
+\index{init@{init}!Supervisor@{Supervisor}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Supervisor\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{obs,  }\item[{\mbox{\hyperlink{classControllerInterface}{Controller\+Interface}} $\ast$}]{ctrl }\end{DoxyParamCaption})}
+
+
+
+Initialize the supervisor. 
+
+This function initialize the supervisor with the observer and the controller. 
+\begin{DoxyParams}{Parameters}
+{\em obs} & A pointer to the observer used \\
+\hline
+{\em ctrl} & A pointer to the controller used \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSupervisor_a24d0faad16f598171ab27e70a2a2c869}\label{classSupervisor_a24d0faad16f598171ab27e70a2a2c869}} 
+\index{Supervisor@{Supervisor}!isWaypointReached@{isWaypointReached}}
+\index{isWaypointReached@{isWaypointReached}!Supervisor@{Supervisor}}
+\doxysubsubsection{\texorpdfstring{isWaypointReached()}{isWaypointReached()}}
+{\footnotesize\ttfamily bool Supervisor\+::is\+Waypoint\+Reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if the waypoint is reached. 
+
+This function check if the boat has reached the current waypoint. \begin{DoxyReturn}{Returns}
+True if the waypoint is reached, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSupervisor_a38746d29e716eabe7e40fa56cebdbabe}\label{classSupervisor_a38746d29e716eabe7e40fa56cebdbabe}} 
+\index{Supervisor@{Supervisor}!startLF@{startLF}}
+\index{startLF@{startLF}!Supervisor@{Supervisor}}
+\doxysubsubsection{\texorpdfstring{startLF()}{startLF()}}
+{\footnotesize\ttfamily void Supervisor\+::start\+LF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start the line following controller. 
+
+This function initialize the line following controller by taking the current position of the boat as the first waypoint. \mbox{\Hypertarget{classSupervisor_a3f5f4ecdede91e690058f8dd65e8e65d}\label{classSupervisor_a3f5f4ecdede91e690058f8dd65e8e65d}} 
+\index{Supervisor@{Supervisor}!updateLF@{updateLF}}
+\index{updateLF@{updateLF}!Supervisor@{Supervisor}}
+\doxysubsubsection{\texorpdfstring{updateLF()}{updateLF()}}
+{\footnotesize\ttfamily void Supervisor\+::update\+LF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the line following controller. 
+
+This function update the line following controller by checking if the boat has reached the current waypoint. \mbox{\Hypertarget{classSupervisor_a6b2a3d699a9dbb4a3286b707bd5483dd}\label{classSupervisor_a6b2a3d699a9dbb4a3286b707bd5483dd}} 
+\index{Supervisor@{Supervisor}!updateMission@{updateMission}}
+\index{updateMission@{updateMission}!Supervisor@{Supervisor}}
+\doxysubsubsection{\texorpdfstring{updateMission()}{updateMission()}}
+{\footnotesize\ttfamily void Supervisor\+::update\+Mission (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the mission. 
+
+This function update the mission of the boat depending on the controler selected. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Supervisor/Supervisor.\+h\item 
+libraries/\+Supervisor/Supervisor.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,135 @@
+\hypertarget{classControllerInterface}{}\doxysection{Controller\+Interface Class Reference}
+\label{classControllerInterface}\index{ControllerInterface@{ControllerInterface}}
+
+
+A base class to handle all controllers class.  
+
+
+
+
+{\ttfamily \#include $<$Controller\+Interface.\+h$>$}
+
+
+
+Inheritance diagram for Controller\+Interface\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classControllerInterface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Controller\+Interface\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classControllerInterface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classControllerInterface_a6b0780664561bf69af0f12f6bbed5602}{Controller\+Interface}} ()
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classControllerInterface_a20b3828f5cdf646daf649f316495a007}{$\sim$\+Controller\+Interface}} ()
+\begin{DoxyCompactList}\small\item\em Destructor of the class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classControllerInterface_a4b859a1616670df03cc8aa2c53e11ab8}\label{classControllerInterface_a4b859a1616670df03cc8aa2c53e11ab8}} 
+virtual void {\bfseries init} ()=0
+\item 
+\mbox{\Hypertarget{classControllerInterface_a1d0c625a8320ff70a68ff82b6996f9c8}\label{classControllerInterface_a1d0c625a8320ff70a68ff82b6996f9c8}} 
+virtual void {\bfseries update\+Servos} ()=0
+\item 
+\mbox{\hyperlink{classServoMotor}{Servo\+Motor}} $\ast$ \mbox{\hyperlink{classControllerInterface_a27d17b60de13bea7d119b7cf9bf50e42}{mr}} ()
+\begin{DoxyCompactList}\small\item\em Get the rudder servo motor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServoMotor}{Servo\+Motor}} $\ast$ \mbox{\hyperlink{classControllerInterface_a46ec97e9b16b9cfd81bb48ecb88c83e3}{ms}} ()
+\begin{DoxyCompactList}\small\item\em Get the sail servo motor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAlgorithmInterface}{Algorithm\+Interface}} $\ast$ \mbox{\hyperlink{classControllerInterface_a5fdea92bb2a367ac1a824fba14f0be84}{algo}} ()
+\begin{DoxyCompactList}\small\item\em Get the algorithm used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classControllerInterface_a09688dcb459a6e21918bc0dcfcbce7cd}\label{classControllerInterface_a09688dcb459a6e21918bc0dcfcbce7cd}} 
+\mbox{\hyperlink{classServoMotor}{Servo\+Motor}} $\ast$ \mbox{\hyperlink{classControllerInterface_a09688dcb459a6e21918bc0dcfcbce7cd}{m\+\_\+mr}} = nullptr
+\begin{DoxyCompactList}\small\item\em The rudder servo motor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classControllerInterface_acedc44509d05ddda0e8619ffcd51e908}\label{classControllerInterface_acedc44509d05ddda0e8619ffcd51e908}} 
+\mbox{\hyperlink{classServoMotor}{Servo\+Motor}} $\ast$ \mbox{\hyperlink{classControllerInterface_acedc44509d05ddda0e8619ffcd51e908}{m\+\_\+ms}} = nullptr
+\begin{DoxyCompactList}\small\item\em The sail servo motor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classControllerInterface_acf18157c3a2364a17c5916ae01faff6c}\label{classControllerInterface_acf18157c3a2364a17c5916ae01faff6c}} 
+\mbox{\hyperlink{classAlgorithmInterface}{Algorithm\+Interface}} $\ast$ \mbox{\hyperlink{classControllerInterface_acf18157c3a2364a17c5916ae01faff6c}{m\+\_\+algo}} = nullptr
+\begin{DoxyCompactList}\small\item\em The algorithm to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base class to handle all controllers class. 
+
+This class contain basic functions for all controllers to use. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classControllerInterface_a6b0780664561bf69af0f12f6bbed5602}\label{classControllerInterface_a6b0780664561bf69af0f12f6bbed5602}} 
+\index{ControllerInterface@{ControllerInterface}!ControllerInterface@{ControllerInterface}}
+\index{ControllerInterface@{ControllerInterface}!ControllerInterface@{ControllerInterface}}
+\doxysubsubsection{\texorpdfstring{ControllerInterface()}{ControllerInterface()}}
+{\footnotesize\ttfamily Controller\+Interface\+::\+Controller\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor of the class. 
+
+This constructor initialize the two servo motors. \mbox{\Hypertarget{classControllerInterface_a20b3828f5cdf646daf649f316495a007}\label{classControllerInterface_a20b3828f5cdf646daf649f316495a007}} 
+\index{ControllerInterface@{ControllerInterface}!````~ControllerInterface@{$\sim$ControllerInterface}}
+\index{````~ControllerInterface@{$\sim$ControllerInterface}!ControllerInterface@{ControllerInterface}}
+\doxysubsubsection{\texorpdfstring{$\sim$ControllerInterface()}{~ControllerInterface()}}
+{\footnotesize\ttfamily Controller\+Interface\+::$\sim$\+Controller\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor of the class. 
+
+This destructor delete the two servo motors to free up memory space. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classControllerInterface_a5fdea92bb2a367ac1a824fba14f0be84}\label{classControllerInterface_a5fdea92bb2a367ac1a824fba14f0be84}} 
+\index{ControllerInterface@{ControllerInterface}!algo@{algo}}
+\index{algo@{algo}!ControllerInterface@{ControllerInterface}}
+\doxysubsubsection{\texorpdfstring{algo()}{algo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAlgorithmInterface}{Algorithm\+Interface}}$\ast$ Controller\+Interface\+::algo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the algorithm used. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the algorithm used 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classControllerInterface_a27d17b60de13bea7d119b7cf9bf50e42}\label{classControllerInterface_a27d17b60de13bea7d119b7cf9bf50e42}} 
+\index{ControllerInterface@{ControllerInterface}!mr@{mr}}
+\index{mr@{mr}!ControllerInterface@{ControllerInterface}}
+\doxysubsubsection{\texorpdfstring{mr()}{mr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classServoMotor}{Servo\+Motor}}$\ast$ Controller\+Interface\+::mr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the rudder servo motor. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the rudder servo motor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classControllerInterface_a46ec97e9b16b9cfd81bb48ecb88c83e3}\label{classControllerInterface_a46ec97e9b16b9cfd81bb48ecb88c83e3}} 
+\index{ControllerInterface@{ControllerInterface}!ms@{ms}}
+\index{ms@{ms}!ControllerInterface@{ControllerInterface}}
+\doxysubsubsection{\texorpdfstring{ms()}{ms()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classServoMotor}{Servo\+Motor}}$\ast$ Controller\+Interface\+::ms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the sail servo motor. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the sail servo motor 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Controller/Controller\+Interface.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="Observer" name="Observer">
+<area shape="rect" id="node1" title="A class to handle the observer." alt="" coords="158,95,233,121"/>
+<area shape="rect" id="node2" href="$classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,5,95,32"/>
+<area shape="rect" id="node3" href="$classGPS.html" title="A class to handle the GPS." alt="" coords="119,5,170,32"/>
+<area shape="rect" id="node4" href="$classWindDirection.html" title="A class to handle the wind direction." alt="" coords="194,5,298,32"/>
+<area shape="rect" id="node5" href="$classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="322,5,397,32"/>
+</map>

@@ -1,3 +1,4 @@
 brouillons/
 .vscode/
-Logs/
+logs/
+Doxyfile
