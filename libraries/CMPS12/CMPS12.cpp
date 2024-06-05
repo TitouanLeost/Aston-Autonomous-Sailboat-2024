@@ -14,6 +14,9 @@ void CMPS12::init()
     if(ss_cmps.isListening())
         Serial.println(" => CMPS12 initialized");
     calibration();
+
+    m_yaw = 0;
+    m_yaw_raw = 0;
 }
 
 
