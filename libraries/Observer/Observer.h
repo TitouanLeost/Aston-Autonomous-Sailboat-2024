@@ -2,6 +2,7 @@
 #define OBSERVER_H
 
 #include <Arduino.h>
+
 #include <Config.h>
 #include <CMPS12.h>
 #include <GPS.h>
