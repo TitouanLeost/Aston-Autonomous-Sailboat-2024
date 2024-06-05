@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['wd_86',['wd',['../classObserver.html#a2690c25f7ab8bff9e152c3f5ee64a9c1',1,'Observer']]],
-  ['winddirection_87',['WindDirection',['../classWindDirection.html',1,'']]],
-  ['windspeed_88',['WindSpeed',['../classWindSpeed.html',1,'']]],
-  ['ws_89',['ws',['../classObserver.html#a77f85698a1ae0aa016400ccc4a0bce5d',1,'Observer']]]
+  ['wd_93',['wd',['../classObserver.html#a2690c25f7ab8bff9e152c3f5ee64a9c1',1,'Observer']]],
+  ['winddirection_94',['WindDirection',['../classWindDirection.html',1,'']]],
+  ['windspeed_95',['WindSpeed',['../classWindSpeed.html',1,'']]],
+  ['write_96',['write',['../classLogger.html#a097aec995c0928eb8ac003a056d2cf3e',1,'Logger::write(float data)'],['../classLogger.html#aadc565fb066ed16d8dac70ce52683c12',1,'Logger::write(unsigned long int data)'],['../classLogger.html#ab63629b45ea2911d918e4dab95aaa560',1,'Logger::write(String msg)']]],
+  ['ws_97',['ws',['../classObserver.html#a77f85698a1ae0aa016400ccc4a0bce5d',1,'Observer']]]
 ];

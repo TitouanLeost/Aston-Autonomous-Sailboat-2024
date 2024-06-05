@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['_7econtrollerinterface_151',['~ControllerInterface',['../classControllerInterface.html#a20b3828f5cdf646daf649f316495a007',1,'ControllerInterface']]]
+  ['wd_160',['wd',['../classObserver.html#a2690c25f7ab8bff9e152c3f5ee64a9c1',1,'Observer']]],
+  ['write_161',['write',['../classLogger.html#a097aec995c0928eb8ac003a056d2cf3e',1,'Logger::write(float data)'],['../classLogger.html#aadc565fb066ed16d8dac70ce52683c12',1,'Logger::write(unsigned long int data)'],['../classLogger.html#ab63629b45ea2911d918e4dab95aaa560',1,'Logger::write(String msg)']]],
+  ['ws_162',['ws',['../classObserver.html#a77f85698a1ae0aa016400ccc4a0bce5d',1,'Observer']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rotation_134',['rotation',['../classWindSpeed.html#a27d5aa3f6d42cb5783ca1fb422a8ce5f',1,'WindSpeed']]]
+  ['open_144',['open',['../classLogger.html#a751cd1a942f2bfce73ec61feaa439d22',1,'Logger']]]
 ];

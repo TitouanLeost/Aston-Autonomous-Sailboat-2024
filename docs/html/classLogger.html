@@ -63,23 +63,289 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classLogger-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Logger Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class to handle the data logging.  
+ <a href="classLogger.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Logger_8h_source.html">Logger.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Logger:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLogger__coll__graph.png" border="0" usemap="#aLogger_coll__map" alt="Collaboration graph"/></div>
+<map name="aLogger_coll__map" id="aLogger_coll__map">
+<area shape="rect" title="A class to handle the data logging." alt="" coords="165,184,226,211"/>
+<area shape="rect" href="classObserver.html" title="A class to handle the observer." alt="" coords="158,95,233,121"/>
+<area shape="rect" href="classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,5,95,32"/>
+<area shape="rect" href="classGPS.html" title="A class to handle the GPS." alt="" coords="119,5,170,32"/>
+<area shape="rect" href="classWindDirection.html" title="A class to handle the wind direction." alt="" coords="194,5,298,32"/>
+<area shape="rect" href="classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="322,5,397,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad9f38f9cc2d75a6207f4972427aa74f1"><td class="memItemLeft" align="right" valign="top"><a id="ad9f38f9cc2d75a6207f4972427aa74f1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
-<tr class="separator:ad9f38f9cc2d75a6207f4972427aa74f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad44f46593cb8c4c87c1178eb326e2f64"><td class="memItemLeft" align="right" valign="top"><a id="ad44f46593cb8c4c87c1178eb326e2f64"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> ()</td></tr>
-<tr class="separator:ad44f46593cb8c4c87c1178eb326e2f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a440ec133163dfaaaebc2b09317c7d681"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a440ec133163dfaaaebc2b09317c7d681">init</a> (<a class="el" href="classObserver.html">Observer</a> *obs)</td></tr>
+<tr class="memdesc:a440ec133163dfaaaebc2b09317c7d681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the logger.  <a href="classLogger.html#a440ec133163dfaaaebc2b09317c7d681">More...</a><br /></td></tr>
+<tr class="separator:a440ec133163dfaaaebc2b09317c7d681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad905325c0f6a7f835e7e54c66e7300b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ad905325c0f6a7f835e7e54c66e7300b2">update</a> ()</td></tr>
+<tr class="memdesc:ad905325c0f6a7f835e7e54c66e7300b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the logger.  <a href="classLogger.html#ad905325c0f6a7f835e7e54c66e7300b2">More...</a><br /></td></tr>
+<tr class="separator:ad905325c0f6a7f835e7e54c66e7300b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a751cd1a942f2bfce73ec61feaa439d22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a751cd1a942f2bfce73ec61feaa439d22">open</a> ()</td></tr>
+<tr class="memdesc:a751cd1a942f2bfce73ec61feaa439d22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open the file.  <a href="classLogger.html#a751cd1a942f2bfce73ec61feaa439d22">More...</a><br /></td></tr>
+<tr class="separator:a751cd1a942f2bfce73ec61feaa439d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee2bab560c2db0190c980884d33868c"><td class="memItemLeft" align="right" valign="top"><a id="afee2bab560c2db0190c980884d33868c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#afee2bab560c2db0190c980884d33868c">close</a> ()</td></tr>
+<tr class="memdesc:afee2bab560c2db0190c980884d33868c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the file. <br /></td></tr>
+<tr class="separator:afee2bab560c2db0190c980884d33868c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae39867c8897c1ee675e5181576438402"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ae39867c8897c1ee675e5181576438402">generateFilename</a> ()</td></tr>
+<tr class="memdesc:ae39867c8897c1ee675e5181576438402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the filename.  <a href="classLogger.html#ae39867c8897c1ee675e5181576438402">More...</a><br /></td></tr>
+<tr class="separator:ae39867c8897c1ee675e5181576438402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a097aec995c0928eb8ac003a056d2cf3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a097aec995c0928eb8ac003a056d2cf3e">write</a> (float data)</td></tr>
+<tr class="memdesc:a097aec995c0928eb8ac003a056d2cf3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to the file.  <a href="classLogger.html#a097aec995c0928eb8ac003a056d2cf3e">More...</a><br /></td></tr>
+<tr class="separator:a097aec995c0928eb8ac003a056d2cf3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadc565fb066ed16d8dac70ce52683c12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#aadc565fb066ed16d8dac70ce52683c12">write</a> (unsigned long int data)</td></tr>
+<tr class="memdesc:aadc565fb066ed16d8dac70ce52683c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to the file.  <a href="classLogger.html#aadc565fb066ed16d8dac70ce52683c12">More...</a><br /></td></tr>
+<tr class="separator:aadc565fb066ed16d8dac70ce52683c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab63629b45ea2911d918e4dab95aaa560"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ab63629b45ea2911d918e4dab95aaa560">write</a> (String msg)</td></tr>
+<tr class="memdesc:ab63629b45ea2911d918e4dab95aaa560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to the file.  <a href="classLogger.html#ab63629b45ea2911d918e4dab95aaa560">More...</a><br /></td></tr>
+<tr class="separator:ab63629b45ea2911d918e4dab95aaa560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad0389fdcd2398d649a0a10184206c621"><td class="memItemLeft" align="right" valign="top"><a id="ad0389fdcd2398d649a0a10184206c621"></a>
+<a class="el" href="classObserver.html">Observer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ad0389fdcd2398d649a0a10184206c621">m_obs</a></td></tr>
+<tr class="memdesc:ad0389fdcd2398d649a0a10184206c621"><td class="mdescLeft">&#160;</td><td class="mdescRight">The observer to log the data from. <br /></td></tr>
+<tr class="separator:ad0389fdcd2398d649a0a10184206c621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c9afd37fac48d1c120240dd77c5e5c"><td class="memItemLeft" align="right" valign="top"><a id="ad0c9afd37fac48d1c120240dd77c5e5c"></a>
+File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ad0c9afd37fac48d1c120240dd77c5e5c">m_file</a></td></tr>
+<tr class="memdesc:ad0c9afd37fac48d1c120240dd77c5e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The file to write the data. <br /></td></tr>
+<tr class="separator:ad0c9afd37fac48d1c120240dd77c5e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad192b845e6d76a70fe0546e3a24d61a8"><td class="memItemLeft" align="right" valign="top"><a id="ad192b845e6d76a70fe0546e3a24d61a8"></a>
+String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ad192b845e6d76a70fe0546e3a24d61a8">m_filename</a></td></tr>
+<tr class="memdesc:ad192b845e6d76a70fe0546e3a24d61a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The filename. <br /></td></tr>
+<tr class="separator:ad192b845e6d76a70fe0546e3a24d61a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab128e8eb74984d189430545e560b7645"><td class="memItemLeft" align="right" valign="top"><a id="ab128e8eb74984d189430545e560b7645"></a>
+String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ab128e8eb74984d189430545e560b7645">m_date</a></td></tr>
+<tr class="memdesc:ab128e8eb74984d189430545e560b7645"><td class="mdescLeft">&#160;</td><td class="mdescRight">The date of the experiment. <br /></td></tr>
+<tr class="separator:ab128e8eb74984d189430545e560b7645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ba5df7936e5da02e5251394bc1523e"><td class="memItemLeft" align="right" valign="top"><a id="ae6ba5df7936e5da02e5251394bc1523e"></a>
+String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ae6ba5df7936e5da02e5251394bc1523e">m_time</a></td></tr>
+<tr class="memdesc:ae6ba5df7936e5da02e5251394bc1523e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time of the experiment. <br /></td></tr>
+<tr class="separator:ae6ba5df7936e5da02e5251394bc1523e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class to handle the data logging. </p>
+<p>This class allow to log data from the sensors of the boat. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae39867c8897c1ee675e5181576438402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39867c8897c1ee675e5181576438402">&#9670;&nbsp;</a></span>generateFilename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::generateFilename </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate the filename. </p>
+<p>Generate the filename with the date and the time. Only the day and month for the date and the hour and minute for the time are used to keep a file name of 8 caracters (maximum length allowed). </p>
+
+</div>
+</div>
+<a id="a440ec133163dfaaaebc2b09317c7d681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a440ec133163dfaaaebc2b09317c7d681">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classObserver.html">Observer</a> *&#160;</td>
+          <td class="paramname"><em>obs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the logger. </p>
+<p>Check the connection with the SD card and initialize the observer to use, then open the file. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obs</td><td>The observer to log the data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a751cd1a942f2bfce73ec61feaa439d22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751cd1a942f2bfce73ec61feaa439d22">&#9670;&nbsp;</a></span>open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open the file. </p>
+<p>Generate the filename, open the file and initialize it with the date and the time. </p>
+
+</div>
+</div>
+<a id="ad905325c0f6a7f835e7e54c66e7300b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad905325c0f6a7f835e7e54c66e7300b2">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the logger. </p>
+<p>Log the data from the observer. The data are the time, the yaw, the wind direction, the true wind angle and the wind speed. </p>
+
+</div>
+</div>
+<a id="a097aec995c0928eb8ac003a056d2cf3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a097aec995c0928eb8ac003a056d2cf3e">&#9670;&nbsp;</a></span>write() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::write </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write data to the file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to write. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab63629b45ea2911d918e4dab95aaa560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab63629b45ea2911d918e4dab95aaa560">&#9670;&nbsp;</a></span>write() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::write </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write data to the file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>The message to write. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aadc565fb066ed16d8dac70ce52683c12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadc565fb066ed16d8dac70ce52683c12">&#9670;&nbsp;</a></span>write() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::write </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long int&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write data to the file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to write. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>libraries/Logger/<a class="el" href="Logger_8h_source.html">Logger.h</a></li>
+<li>libraries/Logger/Logger.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

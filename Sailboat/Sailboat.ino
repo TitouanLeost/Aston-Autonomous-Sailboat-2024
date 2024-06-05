@@ -26,6 +26,12 @@ void setup() {
     attachInterrupt(digitalPinToInterrupt(WIND_SPEED_PIN), anemometerRotation, FALLING);
 
     last_time = millis();
+    // while(millis() - last_time < 5000) {
+    //     obs.updateSensors();
+    //     logger.update();
+    // }
+    // logger.close();
+    // Serial.println("finished");
 }
 
 
@@ -35,39 +41,39 @@ void loop() {
     ctrl.updateServos();
     logger.update();
 
-    if (millis() - last_time > 200) {
-        Serial.print("Yaw (filtered): ");
-        Serial.print(obs.cmps()->getYaw());
-        Serial.print("     Yaw (raw): ");
-        Serial.print(obs.cmps()->getYawRaw());
-        Serial.print("     Pitch: ");
-        Serial.print(obs.cmps()->getPitch());
-        Serial.print("     Roll: ");
-        Serial.println(obs.cmps()->getRoll());
+    // if (millis() - last_time > 200) {
+    //     Serial.print("Yaw (filtered): ");
+    //     Serial.print(obs.cmps()->getYaw());
+    //     Serial.print("     Yaw (raw): ");
+    //     Serial.print(obs.cmps()->getYawRaw());
+    //     Serial.print("     Pitch: ");
+    //     Serial.print(obs.cmps()->getPitch());
+    //     Serial.print("     Roll: ");
+    //     Serial.println(obs.cmps()->getRoll());
 
-        Serial.print("Satellites: ");
-        Serial.print(obs.gps()->getSatellites());
-        Serial.print("     Lat: ");
-        Serial.print(obs.gps()->getLat());
-        Serial.print("     Lon: ");
-        Serial.print(obs.gps()->getLon());
-        Serial.print("     Course: ");
-        Serial.print(obs.gps()->getCourse());
-        Serial.print("     Speed: ");
-        Serial.print(obs.gps()->getSpeed());
-        Serial.print("     Date: ");
-        Serial.print(obs.gps()->getDate());
-        Serial.print("     Time: ");
-        Serial.println(obs.gps()->getTime());
+        // Serial.print("Satellites: ");
+        // Serial.print(obs.gps()->getSatellites());
+        // Serial.print("     Lat: ");
+        // Serial.print(obs.gps()->getLat());
+        // Serial.print("     Lon: ");
+        // Serial.print(obs.gps()->getLon());
+        // Serial.print("     Course: ");
+        // Serial.print(obs.gps()->getCourse());
+        // Serial.print("     Speed: ");
+        // Serial.print(obs.gps()->getSpeed());
+        // Serial.print("     Date: ");
+        // Serial.print(obs.gps()->getDate());
+        // Serial.print("     Time: ");
+        // Serial.println(obs.gps()->getTime());
 
-        Serial.print("Wind speed: ");
-        Serial.print(obs.ws()->getWindSpeed());
-        Serial.print("     Wind direction: ");
-        Serial.println(obs.wd()->getWindDirection());
+        // Serial.print("Wind speed: ");
+        // Serial.print(obs.ws()->getWindSpeed());
+        // Serial.print("     Wind direction: ");
+        // Serial.println(obs.wd()->getWindDirection());
 
-        Serial.println("------------------------------- \n");
+    //     Serial.println("------------------------------- \n");
 
-        last_time = millis();
-    }
+    //     last_time = millis();
+    // }
 
 }

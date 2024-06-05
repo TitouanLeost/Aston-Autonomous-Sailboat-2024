@@ -1,16 +1,166 @@
 \hypertarget{classLogger}{}\doxysection{Logger Class Reference}
 \label{classLogger}\index{Logger@{Logger}}
+
+
+A class to handle the data logging.  
+
+
+
+
+{\ttfamily \#include $<$Logger.\+h$>$}
+
+
+
+Collaboration diagram for Logger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLogger__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classLogger_ad9f38f9cc2d75a6207f4972427aa74f1}\label{classLogger_ad9f38f9cc2d75a6207f4972427aa74f1}} 
-void {\bfseries init} ()
+void \mbox{\hyperlink{classLogger_a440ec133163dfaaaebc2b09317c7d681}{init}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$obs)
+\begin{DoxyCompactList}\small\item\em Initialize the logger. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLogger_ad905325c0f6a7f835e7e54c66e7300b2}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the logger. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLogger_a751cd1a942f2bfce73ec61feaa439d22}{open}} ()
+\begin{DoxyCompactList}\small\item\em Open the file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLogger_afee2bab560c2db0190c980884d33868c}\label{classLogger_afee2bab560c2db0190c980884d33868c}} 
+void \mbox{\hyperlink{classLogger_afee2bab560c2db0190c980884d33868c}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classLogger_ad44f46593cb8c4c87c1178eb326e2f64}\label{classLogger_ad44f46593cb8c4c87c1178eb326e2f64}} 
-void {\bfseries log} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classLogger_ae39867c8897c1ee675e5181576438402}{generate\+Filename}} ()
+\begin{DoxyCompactList}\small\item\em Generate the filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLogger_a097aec995c0928eb8ac003a056d2cf3e}{write}} (float data)
+\begin{DoxyCompactList}\small\item\em Write data to the file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLogger_aadc565fb066ed16d8dac70ce52683c12}{write}} (unsigned long int data)
+\begin{DoxyCompactList}\small\item\em Write data to the file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLogger_ab63629b45ea2911d918e4dab95aaa560}{write}} (String msg)
+\begin{DoxyCompactList}\small\item\em Write data to the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLogger_ad0389fdcd2398d649a0a10184206c621}\label{classLogger_ad0389fdcd2398d649a0a10184206c621}} 
+\mbox{\hyperlink{classObserver}{Observer}} $\ast$ \mbox{\hyperlink{classLogger_ad0389fdcd2398d649a0a10184206c621}{m\+\_\+obs}}
+\begin{DoxyCompactList}\small\item\em The observer to log the data from. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLogger_ad0c9afd37fac48d1c120240dd77c5e5c}\label{classLogger_ad0c9afd37fac48d1c120240dd77c5e5c}} 
+File \mbox{\hyperlink{classLogger_ad0c9afd37fac48d1c120240dd77c5e5c}{m\+\_\+file}}
+\begin{DoxyCompactList}\small\item\em The file to write the data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLogger_ad192b845e6d76a70fe0546e3a24d61a8}\label{classLogger_ad192b845e6d76a70fe0546e3a24d61a8}} 
+String \mbox{\hyperlink{classLogger_ad192b845e6d76a70fe0546e3a24d61a8}{m\+\_\+filename}}
+\begin{DoxyCompactList}\small\item\em The filename. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLogger_ab128e8eb74984d189430545e560b7645}\label{classLogger_ab128e8eb74984d189430545e560b7645}} 
+String \mbox{\hyperlink{classLogger_ab128e8eb74984d189430545e560b7645}{m\+\_\+date}}
+\begin{DoxyCompactList}\small\item\em The date of the experiment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLogger_ae6ba5df7936e5da02e5251394bc1523e}\label{classLogger_ae6ba5df7936e5da02e5251394bc1523e}} 
+String \mbox{\hyperlink{classLogger_ae6ba5df7936e5da02e5251394bc1523e}{m\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em The time of the experiment. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+A class to handle the data logging. 
+
+This class allow to log data from the sensors of the boat. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLogger_ae39867c8897c1ee675e5181576438402}\label{classLogger_ae39867c8897c1ee675e5181576438402}} 
+\index{Logger@{Logger}!generateFilename@{generateFilename}}
+\index{generateFilename@{generateFilename}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{generateFilename()}{generateFilename()}}
+{\footnotesize\ttfamily void Logger\+::generate\+Filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Generate the filename. 
+
+Generate the filename with the date and the time. Only the day and month for the date and the hour and minute for the time are used to keep a file name of 8 caracters (maximum length allowed). \mbox{\Hypertarget{classLogger_a440ec133163dfaaaebc2b09317c7d681}\label{classLogger_a440ec133163dfaaaebc2b09317c7d681}} 
+\index{Logger@{Logger}!init@{init}}
+\index{init@{init}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Logger\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{obs }\end{DoxyParamCaption})}
+
+
+
+Initialize the logger. 
+
+Check the connection with the SD card and initialize the observer to use, then open the file. 
+\begin{DoxyParams}{Parameters}
+{\em obs} & The observer to log the data from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLogger_a751cd1a942f2bfce73ec61feaa439d22}\label{classLogger_a751cd1a942f2bfce73ec61feaa439d22}} 
+\index{Logger@{Logger}!open@{open}}
+\index{open@{open}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Logger\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Open the file. 
+
+Generate the filename, open the file and initialize it with the date and the time. \mbox{\Hypertarget{classLogger_ad905325c0f6a7f835e7e54c66e7300b2}\label{classLogger_ad905325c0f6a7f835e7e54c66e7300b2}} 
+\index{Logger@{Logger}!update@{update}}
+\index{update@{update}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Logger\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the logger. 
+
+Log the data from the observer. The data are the time, the yaw, the wind direction, the true wind angle and the wind speed. \mbox{\Hypertarget{classLogger_a097aec995c0928eb8ac003a056d2cf3e}\label{classLogger_a097aec995c0928eb8ac003a056d2cf3e}} 
+\index{Logger@{Logger}!write@{write}}
+\index{write@{write}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Logger\+::write (\begin{DoxyParamCaption}\item[{float}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Write data to the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to write. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLogger_ab63629b45ea2911d918e4dab95aaa560}\label{classLogger_ab63629b45ea2911d918e4dab95aaa560}} 
+\index{Logger@{Logger}!write@{write}}
+\index{write@{write}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Logger\+::write (\begin{DoxyParamCaption}\item[{String}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Write data to the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to write. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLogger_aadc565fb066ed16d8dac70ce52683c12}\label{classLogger_aadc565fb066ed16d8dac70ce52683c12}} 
+\index{Logger@{Logger}!write@{write}}
+\index{write@{write}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Logger\+::write (\begin{DoxyParamCaption}\item[{unsigned long int}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Write data to the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to write. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-libraries/\+Logger/Logger.\+h\end{DoxyCompactItemize}
+libraries/\+Logger/Logger.\+h\item 
+libraries/\+Logger/Logger.\+cpp\end{DoxyCompactItemize}
