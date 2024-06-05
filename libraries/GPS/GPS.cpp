@@ -12,6 +12,10 @@ void GPS::init()
     Serial.println(" -> Initializing GPS...");
     SERIAL_GPS.begin(9600);
     while(SERIAL_GPS.available() == 0);
+    while(getDate().length() != 6 || getTime() == "-1"){
+        update();
+    }
+    Serial.print(getDate()); Serial.print(" "); Serial.println(getTime());
     Serial.println(" => GPS initialized");
 }
 
