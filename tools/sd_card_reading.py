@@ -5,7 +5,6 @@ import os
 
 arduino_port = '/dev/ttyACM0'  # Modify according to the port used by your Arduino
 baud_rate = 9600
-# output_file = "brouillons/data_from_sd.txt"
 timeout_duration = 5  # Time in seconds without reception before considering the end of the transmission
 
 try:
