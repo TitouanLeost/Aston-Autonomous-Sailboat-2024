@@ -1,16 +1,11 @@
-/*
- *  Arduino SD Card Tutorial Example
- *  
- *  by Dejan Nedelkovski, www.HowToMechatronics.com
- */
-
 #include <SD.h>
 #include <SPI.h>
 
-String filename = "LOG/06010003.TXT";
+
+String filename = "LOG/06010003.TXT";  // Put the name of the file you want to read here at the format "LOG/DDMMhhmm.TXT"
 File myFile;
 
-int pinCS = 53; // Pin 10 on Arduino Uno
+int pinCS = 53;
 
 void setup() {
       
