@@ -1,0 +1,187 @@
+@startuml classDiagram
+
+package Environment <<Frame>> {
+
+    class       GPS {
+        - TinyGPSPlus m_gps
+        + GPS()
+        + ~GPS()
+        + void init()
+        + void update()
+        + double getLat()
+        + double getLon()
+        + double getCourse()
+        + double getSpeed()
+        + int getSatellites()
+        + String getDate()
+        + String getTime()
+        + CoordLatLon getCoordLatLon()
+        + CoordXY getCoordXY()
+    }
+
+    class       CMPS12 {
+        - SoftwareSerial ss_cmps
+        - char m_pitch
+        - char m_roll
+        - float m_yaw
+        - float m_yaw_raw
+        + CMPS12()
+        + ~CMPS12()
+        + void init()
+        + void update()
+        + void calibration()
+        + float getYaw()
+        + float getYawRaw()
+        + int getPitch()
+        + int getRoll()
+        + void setFilteredYaw(float yaw)  
+    }
+
+    class       WindSpeed {
+        - volatile int m_nb_rotations
+        - volatile unsigned long m_contact_time
+        - volatile unsigned long m_average_time
+        - volatile double m_wind_speed
+        + WindSpeed()
+        + ~WindSpeed()
+        + void init()
+        + void update()
+        + void rotation()
+        + double getWindSpeed() 
+    }
+
+    class       WindDirection {
+        - float m_raw_wind_direction
+        - float m_wind_direction
+        + WindSpeed()
+        + ~WindSpeed()
+        + void init()
+        + void update()
+        + float getWindDirection()
+        + float getRawWindDirection()
+        + void setFilteredWindDirection(float wind_direction)    
+    }
+
+    class       ServoMotor {
+        - Adafruit_PWMServoDriver* m_servo
+        - uint16_t m_pwm_min
+        - uint16_t m_pwm_max
+        - uint8_t m_pin
+        + ServoMotor(uint8_t pin, uint16_t pwm_min, uint16_t pwm_max)
+        + ~ServoMotor()
+        + void init()
+        + void setPWM(uint16_t pwm)
+        + void setPercent(float percent)
+    }
+}
+
+package Observer <<Frame>> {
+
+    class       Observer {
+        - float m_true_wind_angle
+        + Observer()
+        + ~Observer()
+        + void init()
+        + void updateSensors()
+        + void Fusion()
+        + void updateTrueWindAngle()
+        + float getTrueWindAngle()
+        + CMPS12* cmps()
+        + GPS* gps()
+        + WindDirection* wd()
+        + WindSpeed* ws()
+    }
+}
+
+package Recorder <<Frame>> {
+
+    class       Logger {
+        - File m_file
+        - String m_filename
+        - String m_date
+        - String m_time
+        + Logger()
+        + ~Logger()
+        + void init(Observer obs)
+        + void update()
+        - void generateFilename()
+        - void write(float data)
+        - void write(unsigned long int data)
+        - void write(String msg)
+    }
+}
+
+package Supervisor <<Frame>> {
+
+    class       Supervisor {
+        - int m_current_wp
+        - void(Supervisor::*updatePtr)
+        - void(Supervisor::*startPtr)
+        + Supervisor()
+        + ~Supervisor()   
+        + void init(Observer* obs, ControllerInterface* ctrl)
+        + void updateMission()
+        + void startLF()    
+        + void updateLF()
+        + bool isWaypointReached() 
+    }
+}
+
+package Command <<Frame>> {
+
+    abstract    ControllerInterface {
+        # ServoMotor* m_mr 
+        # ServoMotor* m_ms
+        # AlgorithmInterface* m_algo
+        + ControllerInterface()
+        + ~ControllerInterface()
+        + virtual void init() {static}
+        + virtual void updateServos() {static}
+        + ServoMotor* mr() 
+        + ServoMotor* ms()
+        + AlgorithmInterface* algo() 
+    }
+
+    class       ControllerLF {
+        + ControllerLF()
+        + ~ControllerLF()  
+        + void init()
+        + void updateServos()  
+    }
+
+    abstract    AlgorithmInterface {
+        # float m_cmd_rudder
+        # float m_cmd_sail
+        + AlgorithmInterface()
+        + ~AlgorithmInterface() 
+        + void init(Observer obs)
+        + virtual void updateCmd() {static}
+        + virtual void setLine(CoordLatLon a, CoordLatLon b)
+        + float getCmdRudder()
+        + float getCmdSail()
+    }
+
+    class       LineFollowing {
+        - int m_q
+        + LineFollowing()
+        + ~LineFollowing()
+        + void updateCmd()
+        + void setLine(CoordLatLon a, CoordLatLon b)    
+    }
+}
+
+
+Observer            o-- GPS
+Observer            o-- CMPS12
+Observer            o-- WindSpeed
+Observer            o-- WindDirection
+ControllerInterface o-- ControllerLF
+ControllerInterface o-- ServoMotor
+Logger              o-- Observer
+AlgorithmInterface  o-- Observer
+AlgorithmInterface  o-- LineFollowing
+ControllerInterface o-- AlgorithmInterface
+Supervisor          o-- Observer
+Supervisor          o-- ControllerInterface
+
+@enduml
