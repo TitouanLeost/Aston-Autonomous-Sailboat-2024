@@ -11,6 +11,19 @@
 
 /*=========================*/
 /////////////////////////////
+/*====RCRECEIVER CONFIG====*/
+
+#define RUDDER_CH_PIN 3  // Pin for the rudder channel
+#define SAIL_CH_PIN 2  // Pin for the sail channel
+#define NB_CHANNELS 2  // Number of channels
+enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
+#define RUDDER_OFFSET_MIN 1076  // Minimum offset for the rudder
+#define RUDDER_OFFSET_MAX 1979  // Maximum offset for the rudder
+#define SAIL_OFFSET_MIN 1051  // Minimum offset for the sail
+#define SAIL_OFFSET_MAX 1873  // Maximum offset for the sail
+
+/*=========================*/
+/////////////////////////////
 /*====SUPERVISOR CONFIG====*/
 
 #define CONTROLLER ControllerLF  // Line Following controller

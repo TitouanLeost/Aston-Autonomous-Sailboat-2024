@@ -4,42 +4,48 @@
 #include <Supervisor.h>
 #include <Controller.h>
 #include <Logger.h>
+#include <RCReceiver.h>
 
 Observer obs;
 Supervisor sp;
 CONTROLLER ctrl;
 Logger logger;
+RCReceiver rc;
 
 unsigned long last_time = 0;
 
 
 void anemometerRotation() {obs.ws()->rotation();}
+void checkRC() {rc.checkRC();}
 
 
 void setup() {
     Serial.begin(9600);
     obs.init();
-    sp.init(&obs, &ctrl);
-    ctrl.init();
-    logger.init(&obs);
+    // sp.init(&obs, &ctrl);
+    // ctrl.init();
+    rc.init();
+    // logger.init(&obs);
+
+    pinMode(RUDDER_CH_PIN, INPUT);
+    pinMode(SAIL_CH_PIN, INPUT);
 
     attachInterrupt(digitalPinToInterrupt(WIND_SPEED_PIN), anemometerRotation, FALLING);
+    attachInterrupt(digitalPinToInterrupt(RUDDER_CH_PIN), checkRC, CHANGE);
 
     last_time = millis();
-    // while(millis() - last_time < 5000) {
-    //     obs.updateSensors();
-    //     logger.update();
-    // }
-    // logger.close();
-    // Serial.println("finished");
 }
 
 
 void loop() {
     obs.updateSensors();
-    sp.updateMission();
-    ctrl.updateServos();
-    logger.update();
+    // sp.updateMission();
+    // ctrl.updateServos();
+    // logger.update();
+
+    // Serial.println(rc.isReceiving());
+    rc.update();
+    Serial.print("Rudder: "); Serial.print(rc.getCmdRudder()); Serial.print("     Sail: "); Serial.println(rc.getCmdSail());
 
     // if (millis() - last_time > 200) {
     //     Serial.print("Yaw (filtered): ");
