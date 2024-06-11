@@ -96,12 +96,12 @@ struct CoordXY
 #define SERVO_FREQ 50
 
 #define SERVO_RUDDER_PIN 0  // Pin for the rudder servo
-#define RUDDER_PWMMIN 220  // Minimum PWM for the rudder servo
-#define RUDDER_PWMMAX 420  // Maximum PWM for the rudder servo
+#define RUDDER_PWMMIN 200  // Minimum PWM for the rudder servo
+#define RUDDER_PWMMAX 380  // Maximum PWM for the rudder servo
 
 #define SERVO_SAIL_PIN 1  // Pin for the sail servo
-#define SAIL_PWMMIN 340  // Minimum PWM for the sail servo
-#define SAIL_PWMMAX 460  // Maximum PWM for the sail servo
+#define SAIL_PWMMIN 245  // Minimum PWM for the sail servo
+#define SAIL_PWMMAX 330  // Maximum PWM for the sail servo
 
 /*=========================*/
 /////////////////////////////
