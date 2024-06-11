@@ -1,10 +1,10 @@
 #include <RCReceiver.h>
 
 
-RCReceiver::RCReceiver() {}
+RCReceiver::RCReceiver(){}
 
 
-RCReceiver::~RCReceiver() {}
+RCReceiver::~RCReceiver(){}
 
 
 void RCReceiver::init()
@@ -25,7 +25,7 @@ void RCReceiver::update()
     m_sail_pulse = pulseIn(SAIL_CH_PIN, HIGH);
 }
 
-void RCReceiver::checkRC(int pin)
+void RCReceiver::checkRC()
 {
     m_last_pulse = millis();
 }

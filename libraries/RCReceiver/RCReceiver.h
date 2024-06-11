@@ -15,7 +15,7 @@ class RCReceiver
         void init();
         void update();
 
-        void checkRC(int pin);
+        void checkRC();
         bool isReceiving();
         float convertToPercent(unsigned long pulse, int ch);
 
