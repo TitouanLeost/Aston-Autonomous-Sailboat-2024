@@ -11,6 +11,16 @@
 
 /*=========================*/
 /////////////////////////////
+/*======MISSION CONFIG=====*/
+
+#define ALGO LineFollowing()  // Algorithm used
+#define NB_WP 3  // Number of waypoints
+// List of waypoints (latitude, longitude)
+#define WP { {52.485, 1.889709594213}, {52.4854920485, 1.889248254262}, {52.4844804397, 1.890610816442} }
+#define WP_RADIUS 10  // Radius of the waypoint to validate it
+
+/*=========================*/
+/////////////////////////////
 /*====RCRECEIVER CONFIG====*/
 
 #define RUDDER_CH_PIN 3  // Pin for the rudder channel
@@ -21,16 +31,6 @@ enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
 #define RUDDER_OFFSET_MAX 1979  // Maximum offset for the rudder
 #define SAIL_OFFSET_MIN 1051  // Minimum offset for the sail
 #define SAIL_OFFSET_MAX 1873  // Maximum offset for the sail
-
-/*=========================*/
-/////////////////////////////
-/*====SUPERVISOR CONFIG====*/
-
-#define CONTROLLER ControllerLF  // Line Following controller
-#define NB_WP 3  // Number of waypoints
-// List of waypoints (latitude, longitude)
-#define WP { {52.485, 1.889709594213}, {52.4854920485, 1.889248254262}, {52.4844804397, 1.890610816442} }
-#define WP_RADIUS 10  // Radius of the waypoint to validate it
 
 /*=========================*/
 /////////////////////////////

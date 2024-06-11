@@ -6,14 +6,15 @@
 #include <Config.h>
 #include <Observer.h>
 #include <Controller.h>
+#include <RCReceiver.h>
 
 using namespace std;
 
 
 /**************************************************************************
  * A class to handle the supervisor.
- * This class allow to update the mission of the boat and to determine
- * which controller should be use.
+ * This class allow to update the mission of the boat according to the 
+ * section "MISSION CONFIG" in the file Config.h.
 ***************************************************************************/
 class Supervisor
 {
@@ -23,35 +24,26 @@ class Supervisor
         
         /*************************************************************
          * Initialize the supervisor.
-         * This function initialize the supervisor with the observer
-         * and the controller.
+         * This function initialize the supervisor with the observer,
+         * the controller and the RC receiver.
          * @param obs A pointer to the observer used
          * @param ctrl A pointer to the controller used
+         * @param rc A pointer to the RC receiver used
         *************************************************************/
-        void init(Observer* obs, ControllerInterface* ctrl);
+        void init(Observer* obs, Controller* ctrl, RCReceiver* rc);
+
+        /*************************************************************
+         * Start the mission.
+         * This function start the mission of the boat by taking
+         * the current position of the boat as the first waypoint.
+        *************************************************************/
+        void startMission();
 
         /*************************************************************
          * Update the mission.
-         * This function update the mission of the boat depending on
-         * the controler selected.
+         * This function update the mission of the boat.
         *************************************************************/
         void updateMission();
-
-
-        /*************************************************************
-         * Start the line following controller.
-         * This function initialize the line following controller by
-         * taking the current position of the boat as the first
-         * waypoint.
-        *************************************************************/
-        void startLF();
-
-        /*************************************************************
-         * Update the line following controller.
-         * This function update the line following controller by
-         * checking if the boat has reached the current waypoint.
-        *************************************************************/
-        void updateLF();
 
 
         /*************************************************************
@@ -64,13 +56,10 @@ class Supervisor
 
     private:
         Observer* m_obs = nullptr;  ///< The observer used
-        ControllerInterface* m_ctrl = nullptr;  ///< The controller used
-        CoordLatLon m_wp[NB_WP];  ///< The waypoints
+        Controller* m_ctrl = nullptr;  ///< The controller used
+        RCReceiver* m_rc = nullptr;  ///< The RC receiver used
+        CoordLatLon m_wp[NB_WP];  ///< The list of waypoints
         int m_current_wp = 0;  ///< The current waypoint index
-
-        void (Supervisor::*updatePtr)();
-        void (Supervisor::*startPtr)();
-
 };
 
 #endif

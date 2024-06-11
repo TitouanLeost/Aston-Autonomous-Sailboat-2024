@@ -8,7 +8,7 @@
 
 Observer obs;
 Supervisor sp;
-CONTROLLER ctrl;
+Controller ctrl;
 Logger logger;
 RCReceiver rc;
 
@@ -22,9 +22,9 @@ void checkRC() {rc.checkRC();}
 void setup() {
     Serial.begin(9600);
     obs.init();
-    // sp.init(&obs, &ctrl);
-    // ctrl.init();
     rc.init();
+    sp.init(&obs, &ctrl, &rc);
+    ctrl.init();
     // logger.init(&obs);
 
     pinMode(RUDDER_CH_PIN, INPUT);
@@ -39,13 +39,13 @@ void setup() {
 
 void loop() {
     obs.updateSensors();
-    // sp.updateMission();
-    // ctrl.updateServos();
+    rc.update();
+    sp.updateMission();
+    ctrl.updateServos();
     // logger.update();
 
     // Serial.println(rc.isReceiving());
-    rc.update();
-    Serial.print("Rudder: "); Serial.print(rc.getCmdRudder()); Serial.print("     Sail: "); Serial.println(rc.getCmdSail());
+    // Serial.print("Rudder: "); Serial.print(rc.getCmdRudder()); Serial.print("     Sail: "); Serial.println(rc.getCmdSail());
 
     // if (millis() - last_time > 200) {
     //     Serial.print("Yaw (filtered): ");
