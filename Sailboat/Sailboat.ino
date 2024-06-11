@@ -39,23 +39,19 @@ void setup() {
 
 void loop() {
     obs.updateSensors();
-    rc.update();
     sp.updateMission();
     ctrl.updateServos();
     // logger.update();
 
-    // Serial.println(rc.isReceiving());
-    // Serial.print("Rudder: "); Serial.print(rc.getCmdRudder()); Serial.print("     Sail: "); Serial.println(rc.getCmdSail());
-
     // if (millis() - last_time > 200) {
-    //     Serial.print("Yaw (filtered): ");
-    //     Serial.print(obs.cmps()->getYaw());
-    //     Serial.print("     Yaw (raw): ");
-    //     Serial.print(obs.cmps()->getYawRaw());
-    //     Serial.print("     Pitch: ");
-    //     Serial.print(obs.cmps()->getPitch());
-    //     Serial.print("     Roll: ");
-    //     Serial.println(obs.cmps()->getRoll());
+        // Serial.print("Yaw (filtered): ");
+        // Serial.print(obs.cmps()->getYaw());
+        // Serial.print("     Yaw (raw): ");
+        // Serial.print(obs.cmps()->getYawRaw());
+        // Serial.print("     Pitch: ");
+        // Serial.print(obs.cmps()->getPitch());
+        // Serial.print("     Roll: ");
+        // Serial.println(obs.cmps()->getRoll());
 
         // Serial.print("Satellites: ");
         // Serial.print(obs.gps()->getSatellites());

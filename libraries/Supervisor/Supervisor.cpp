@@ -27,19 +27,16 @@ void Supervisor::startMission()
 
 void Supervisor::updateMission()
 {
-    Serial.println(m_rc->isReceiving());
-
     if (m_rc->isReceiving()){
-        Serial.print("### RC ###  ");
+        m_rc->update();
         Serial.print("Rudder: ");
         m_ctrl->mr()->setPercent(m_rc->getCmdRudder());
-        Serial.print("     Sail: ");
+        Serial.print("    Sail: ");
         m_ctrl->ms()->setPercent(m_rc->getCmdSail());
         Serial.println();
     }
 
     else if (isWaypointReached()){
-        Serial.println("### Auto ###");
         m_current_wp++;
         if (m_current_wp >= NB_WP)
             m_current_wp = 0;
