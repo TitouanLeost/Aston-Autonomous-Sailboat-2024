@@ -4,15 +4,14 @@
 CMPS12::CMPS12() : ss_cmps(CMPS_RX, CMPS_TX) {}
 
 
-CMPS12::~CMPS12() {}
+CMPS12::~CMPS12(){}
 
 
 void CMPS12::init()
 {
     Serial.println(" -> Initializing CMPS12...");
     ss_cmps.begin(9600);
-    if(ss_cmps.isListening())
-        Serial.println(" => CMPS12 initialized");
+    Serial.println(" => CMPS12 initialized");
     calibration();
 
     m_yaw = 0;
