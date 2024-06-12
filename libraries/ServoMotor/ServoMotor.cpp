@@ -20,7 +20,7 @@ void ServoMotor::init()
 {
     m_servo->begin();
     m_servo->setPWMFreq(SERVO_FREQ);
-    m_servo->setPWM(m_pin, 0, (m_pwm_max - m_pwm_min)/2);
+    setPWM((int)(m_pwm_max + m_pwm_min)/2);
 }
 
 
