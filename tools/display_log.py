@@ -11,6 +11,13 @@ def readLog(file):
     wind_dir_raw = []
     true_wind_dir = []
     wind_speed = []
+    satellites = []
+    course = []
+    speed = []
+    lat = []
+    lon = []
+    x = []
+    y = []
 
     file.readline()
     for line in file:
@@ -23,7 +30,14 @@ def readLog(file):
         wind_dir.append(float(line.split(',')[3]))
         wind_dir_raw.append(float(line.split(',')[4]))
         true_wind_dir.append(float(line.split(',')[5]))
-        wind_speed.append(float(line.split(',')[6].strip()))
+        wind_speed.append(float(line.split(',')[6]))
+        satellites.append(int(line.split(',')[7]))
+        course.append(float(line.split(',')[8]))
+        speed.append(float(line.split(',')[9]))
+        lat.append(float(line.split(',')[10]))
+        lon.append(float(line.split(',')[11]))
+        x.append(float(line.split(',')[12]))
+        y.append(float(line.split(',')[13]).strip())
 
     timestamp = [t - timestamp[0] for t in timestamp]
     
@@ -47,6 +61,7 @@ def plotYaw(data, date, time):
 
     plt.plot(data[0][:], data[2][:], label='Yaw raw')
     plt.plot(data[0][:], data[1][:], label='Yaw filtered')
+    plt.plot(data[0][:], data[8][:], label='GPS Course')
 
     plt.legend()
 
@@ -87,15 +102,19 @@ def plotXY(data, date, time):
     plt.xlabel('X (m)')
     plt.ylabel('Y (m)')
 
-    plt.plot(data[3][:], data[4][:])
-    plt.plot(data[3][0], data[4][0], 'ro', label='Start point')
-    plt.plot(data[3][-1], data[4][-1], 'go', label='End point')
+    plt.plot(data[12][:], data[13][:])
+    plt.plot(data[12][0], data[13][0], 'ro', label='Start point')
+    plt.plot(data[12][-1], data[13][-1], 'go', label='End point')
+
+    for i, sat in enumerate(data[7][:]):
+        if sat < 3:
+            plt.plot(data[12][i], data[13][i], 'rx', label='Satellite lost')
 
     plt.legend()
 
     plt.savefig(f'logs/plots/{date}/{time}/xy.png')
 
-    plt.legend()
+
 def displayLog(file, date, time):
     data = readLog(file)
 
@@ -105,6 +124,7 @@ def displayLog(file, date, time):
     plotYaw(data, date, time)
     plotWindDir(data, date, time)
     plotWindSpeed(data, date, time)
+    plotXY(data, date, time)
 
     plt.show()
 
