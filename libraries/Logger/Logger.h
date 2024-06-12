@@ -72,6 +72,18 @@ class Logger
 
         /********************************************************
          * Write data to the file.
+         * @param data The data to write.
+        ********************************************************/
+        void write(int data);
+
+        /********************************************************
+         * Write data to the file.
+         * @param data The data to write.
+        ********************************************************/
+        void write(double data);
+
+        /********************************************************
+         * Write data to the file.
          * @param msg The message to write.
         ********************************************************/
         void write(String msg);

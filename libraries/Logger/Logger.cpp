@@ -32,6 +32,11 @@ void Logger::update()
     float wind_direction_raw = m_obs->wd()->getRawWindDirection();
     float true_wind_direction = m_obs->getTrueWindAngle();
     float wind_speed = m_obs->ws()->getWindSpeed();
+    int satellites = m_obs->gps()->getSatellites();
+    double course = m_obs->gps()->getCourse();
+    double speed = m_obs->gps()->getSpeed();
+    CoordLatLon latlon = m_obs->gps()->getCoordLatLon();
+    CoordXY xy = m_obs->gps()->getCoordXY();
 
     write(time); write(",");
     write(yaw); write(",");
@@ -39,7 +44,14 @@ void Logger::update()
     write(wind_direction); write(",");
     write(wind_direction_raw); write(",");
     write(true_wind_direction); write(",");
-    write(wind_speed); write("\n");
+    write(wind_speed); write(",");
+    write(satellites); write(",");
+    write(course); write(",");
+    write(speed); write(",");
+    write(latlon.lat); write(",");
+    write(latlon.lon); write(",");
+    write(xy.x); write(",");
+    write(xy.y); write("\n");
     
     m_file.flush();
 }
@@ -49,14 +61,17 @@ void Logger::open()
 {
     generateFilename();
 
+    Serial.println("#########################");
     Serial.print("Opening file: "); Serial.println(m_filename);
+    Serial.println("#########################\n");
 
     SD.remove(m_filename);
     m_file = SD.open(m_filename, FILE_WRITE);
 
     write(m_date); write("_"); write(m_time); write("\n");
     write("Time (ms), Yaw Filtered (deg), Yaw Raw (deg), Wind Direction Filtered (deg), ");
-    write("Wind Direction Raw (deg), True Wind Direction (deg), Wind Speed (kph)\n");
+    write("Wind Direction Raw (deg), True Wind Direction (deg), Wind Speed (kph), ");
+    write("Satellites, Course (deg), Speed (kph), Latitude (deg), Longitude (deg), X (m), Y (m)\n");
 }
 
 
@@ -84,4 +99,6 @@ void Logger::generateFilename()
 
 void Logger::write(float data) {m_file.print(data, 3);}
 void Logger::write(unsigned long int data) {m_file.print(data);}
+void Logger::write(int data) {m_file.print(data);}
+void Logger::write(double data) {m_file.print(data, 5);}
 void Logger::write(String msg) {m_file.print(msg);}
