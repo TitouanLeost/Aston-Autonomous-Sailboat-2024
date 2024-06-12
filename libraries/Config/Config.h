@@ -27,10 +27,11 @@
 #define SAIL_CH_PIN 2  // Pin for the sail channel
 #define NB_CHANNELS 2  // Number of channels
 enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
-#define RUDDER_OFFSET_MIN 1076  // Minimum offset for the rudder
-#define RUDDER_OFFSET_MAX 1979  // Maximum offset for the rudder
-#define SAIL_OFFSET_MIN 1051  // Minimum offset for the sail
-#define SAIL_OFFSET_MAX 1873  // Maximum offset for the sail
+#define RUDDER_OFFSET_MIN 1079  // Minimum offset for the rudder
+#define RUDDER_OFFSET_MAX 1975  // Maximum offset for the rudder
+#define SAIL_OFFSET_MIN 1057  // Minimum offset for the sail
+#define SAIL_OFFSET_MAX 1878  // Maximum offset for the sail
+#define PULSE_FILTER 0.95  // Coefficient of the filter for the pulse
 
 /*=========================*/
 /////////////////////////////
@@ -55,6 +56,7 @@ enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
 /////////////////////////////
 /*======CMPS12 CONFIG======*/
 
+#define SERIAL_CMPS Serial3  // Serial port for the CMPS
 #define CMPS_GET_ANGLE8 0x12
 #define CMPS_GET_ANGLE16 0x13
 #define CMPS_GET_PITCH 0x14
