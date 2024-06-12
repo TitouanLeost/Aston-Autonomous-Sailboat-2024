@@ -1,0 +1,165 @@
+\hypertarget{classRCReceiver}{}\doxysection{RCReceiver Class Reference}
+\label{classRCReceiver}\index{RCReceiver@{RCReceiver}}
+
+
+A class to handle the RC receiver.  
+
+
+
+
+{\ttfamily \#include $<$RCReceiver.\+h$>$}
+
+
+
+Collaboration diagram for RCReceiver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classRCReceiver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRCReceiver_a546535e1d52da9cd8cb5a7cd5e300dff}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the RC receiver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRCReceiver_a9d37db920eca762b438ded31ad457d6e}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the RC receiver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRCReceiver_a88e823d109bc777fc1c1b2ba703e260c}{check\+RC}} ()
+\begin{DoxyCompactList}\small\item\em Reset the last pulse time. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRCReceiver_a27ddde3e68908aa367ff72e71d3e0f6c}{is\+Receiving}} ()
+\begin{DoxyCompactList}\small\item\em Check if the RC receiver is receiving. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRCReceiver_af86c8e54b436e1bce374ca5f71299803}{convert\+To\+Percent}} (unsigned long pulse, int ch)
+\begin{DoxyCompactList}\small\item\em Convert a pulse to a percentage between 0.\+0 and 1.\+0. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRCReceiver_aadaa830f78f7abda9d7141c9adc5ab7b}{get\+Cmd\+Rudder}} ()
+\begin{DoxyCompactList}\small\item\em Get the command of the rudder. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRCReceiver_affa52b9ec8df86d479197f9e00608e6a}{get\+Cmd\+Sail}} ()
+\begin{DoxyCompactList}\small\item\em Get the command of the sail. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRCReceiver_a6e7dd64d8fc304124157339b7c3facf7}\label{classRCReceiver_a6e7dd64d8fc304124157339b7c3facf7}} 
+unsigned long {\bfseries m\+\_\+last\+\_\+pulse}
+\item 
+\mbox{\Hypertarget{classRCReceiver_ad58e8abb81b0e557c21291076a4851a4}\label{classRCReceiver_ad58e8abb81b0e557c21291076a4851a4}} 
+unsigned long {\bfseries m\+\_\+rudder\+\_\+pulse}
+\item 
+\mbox{\Hypertarget{classRCReceiver_ace39585a935fc5ba1b07672ed78bc72b}\label{classRCReceiver_ace39585a935fc5ba1b07672ed78bc72b}} 
+unsigned long {\bfseries m\+\_\+rudder\+\_\+pulse\+\_\+raw}
+\item 
+\mbox{\Hypertarget{classRCReceiver_a08765cdc785814130168009ba2be85fc}\label{classRCReceiver_a08765cdc785814130168009ba2be85fc}} 
+unsigned long {\bfseries m\+\_\+sail\+\_\+pulse}
+\item 
+\mbox{\Hypertarget{classRCReceiver_a566c5e7d39d0a7da4c3a44b17b9deab0}\label{classRCReceiver_a566c5e7d39d0a7da4c3a44b17b9deab0}} 
+unsigned long {\bfseries m\+\_\+sail\+\_\+pulse\+\_\+raw}
+\item 
+\mbox{\Hypertarget{classRCReceiver_ad9f66167fe2de2c202e292de2c180a75}\label{classRCReceiver_ad9f66167fe2de2c202e292de2c180a75}} 
+unsigned long {\bfseries m\+\_\+offset\+\_\+min} \mbox{[}NB\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{classRCReceiver_a0f0f4fc52e82c51347122b1f803433d5}\label{classRCReceiver_a0f0f4fc52e82c51347122b1f803433d5}} 
+unsigned long {\bfseries m\+\_\+offset\+\_\+max} \mbox{[}NB\+\_\+\+CHANNELS\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to handle the RC receiver. 
+
+This class allows to get the commands of the rudder and the sail from the RC receiver. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRCReceiver_a88e823d109bc777fc1c1b2ba703e260c}\label{classRCReceiver_a88e823d109bc777fc1c1b2ba703e260c}} 
+\index{RCReceiver@{RCReceiver}!checkRC@{checkRC}}
+\index{checkRC@{checkRC}!RCReceiver@{RCReceiver}}
+\doxysubsubsection{\texorpdfstring{checkRC()}{checkRC()}}
+{\footnotesize\ttfamily void RCReceiver\+::check\+RC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the last pulse time. 
+
+This function is called when a pulse is received via an interrupt. It is used to check if the RC receiver is still receiving. \mbox{\Hypertarget{classRCReceiver_af86c8e54b436e1bce374ca5f71299803}\label{classRCReceiver_af86c8e54b436e1bce374ca5f71299803}} 
+\index{RCReceiver@{RCReceiver}!convertToPercent@{convertToPercent}}
+\index{convertToPercent@{convertToPercent}!RCReceiver@{RCReceiver}}
+\doxysubsubsection{\texorpdfstring{convertToPercent()}{convertToPercent()}}
+{\footnotesize\ttfamily float RCReceiver\+::convert\+To\+Percent (\begin{DoxyParamCaption}\item[{unsigned long}]{pulse,  }\item[{int}]{ch }\end{DoxyParamCaption})}
+
+
+
+Convert a pulse to a percentage between 0.\+0 and 1.\+0. 
+
+This function converts a pulse to a percentage using the minimum and maximum offsets of the channel. 
+\begin{DoxyParams}{Parameters}
+{\em pulse} & The pulse to convert \\
+\hline
+{\em ch} & The channel that gives the pulse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The percentage of the pulse (between 0.\+0 and 1.\+0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRCReceiver_aadaa830f78f7abda9d7141c9adc5ab7b}\label{classRCReceiver_aadaa830f78f7abda9d7141c9adc5ab7b}} 
+\index{RCReceiver@{RCReceiver}!getCmdRudder@{getCmdRudder}}
+\index{getCmdRudder@{getCmdRudder}!RCReceiver@{RCReceiver}}
+\doxysubsubsection{\texorpdfstring{getCmdRudder()}{getCmdRudder()}}
+{\footnotesize\ttfamily float RCReceiver\+::get\+Cmd\+Rudder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the command of the rudder. 
+
+\begin{DoxyReturn}{Returns}
+The command of the rudder between 0.\+0 and 1.\+0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRCReceiver_affa52b9ec8df86d479197f9e00608e6a}\label{classRCReceiver_affa52b9ec8df86d479197f9e00608e6a}} 
+\index{RCReceiver@{RCReceiver}!getCmdSail@{getCmdSail}}
+\index{getCmdSail@{getCmdSail}!RCReceiver@{RCReceiver}}
+\doxysubsubsection{\texorpdfstring{getCmdSail()}{getCmdSail()}}
+{\footnotesize\ttfamily float RCReceiver\+::get\+Cmd\+Sail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the command of the sail. 
+
+\begin{DoxyReturn}{Returns}
+The command of the sail between 0.\+0 and 1.\+0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRCReceiver_a546535e1d52da9cd8cb5a7cd5e300dff}\label{classRCReceiver_a546535e1d52da9cd8cb5a7cd5e300dff}} 
+\index{RCReceiver@{RCReceiver}!init@{init}}
+\index{init@{init}!RCReceiver@{RCReceiver}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void RCReceiver\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the RC receiver. 
+
+This function initializes all the class variables. \mbox{\Hypertarget{classRCReceiver_a27ddde3e68908aa367ff72e71d3e0f6c}\label{classRCReceiver_a27ddde3e68908aa367ff72e71d3e0f6c}} 
+\index{RCReceiver@{RCReceiver}!isReceiving@{isReceiving}}
+\index{isReceiving@{isReceiving}!RCReceiver@{RCReceiver}}
+\doxysubsubsection{\texorpdfstring{isReceiving()}{isReceiving()}}
+{\footnotesize\ttfamily bool RCReceiver\+::is\+Receiving (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if the RC receiver is receiving. 
+
+\begin{DoxyReturn}{Returns}
+True if the RC receiver is receiving, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRCReceiver_a9d37db920eca762b438ded31ad457d6e}\label{classRCReceiver_a9d37db920eca762b438ded31ad457d6e}} 
+\index{RCReceiver@{RCReceiver}!update@{update}}
+\index{update@{update}!RCReceiver@{RCReceiver}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void RCReceiver\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the RC receiver. 
+
+This function updates the pulse of the rudder and the sail and filters the received pulses. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+RCReceiver/RCReceiver.\+h\item 
+libraries/\+RCReceiver/RCReceiver.\+cpp\end{DoxyCompactItemize}

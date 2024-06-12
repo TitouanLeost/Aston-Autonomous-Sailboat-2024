@@ -76,33 +76,57 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Config.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;ControllerInterface.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;Algorithms.h&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;ServoMotor.h&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classControllerLF.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classControllerLF.html">ControllerLF</a> : <span class="keyword">public</span> <a class="code" href="classControllerInterface.html">ControllerInterface</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="classControllerLF.html">ControllerLF</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        ~<a class="code" href="classControllerLF.html">ControllerLF</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classControllerLF.html#a0f423d61afd91b5f29e39ed4b74c66a3">init</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classControllerLF.html#a923acdb5a8b629512162e6791c3da958">updateServos</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classController.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classController.html">Controller</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="classController.html#a95c56822d667e94b031451729ce069a9">Controller</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classController.html#a0ab87934c4f7a266cfdb86e0f36bc1b5">~Controller</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassControllerInterface_html"><div class="ttname"><a href="classControllerInterface.html">ControllerInterface</a></div><div class="ttdoc">A base class to handle all controllers class.</div><div class="ttdef"><b>Definition:</b> ControllerInterface.h:16</div></div>
-<div class="ttc" id="aclassControllerLF_html"><div class="ttname"><a href="classControllerLF.html">ControllerLF</a></div><div class="ttdoc">A class to handle the Line Following controller.</div><div class="ttdef"><b>Definition:</b> Controller.h:18</div></div>
-<div class="ttc" id="aclassControllerLF_html_a0f423d61afd91b5f29e39ed4b74c66a3"><div class="ttname"><a href="classControllerLF.html#a0f423d61afd91b5f29e39ed4b74c66a3">ControllerLF::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initialize the controller.</div><div class="ttdef"><b>Definition:</b> Controller.cpp:16</div></div>
-<div class="ttc" id="aclassControllerLF_html_a923acdb5a8b629512162e6791c3da958"><div class="ttname"><a href="classControllerLF.html#a923acdb5a8b629512162e6791c3da958">ControllerLF::updateServos</a></div><div class="ttdeci">void updateServos()</div><div class="ttdoc">Update the servo motors.</div><div class="ttdef"><b>Definition:</b> Controller.cpp:27</div></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classController.html#a9904f7fc1d538558a197157c24d69478">init</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classController.html#acdc2b51b02237f3ca486108b7ac391f1">updateServos</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classServoMotor.html">ServoMotor</a>* <a class="code" href="classController.html#a35912b31e25c109e8eb94424f9a35d33">mr</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classServoMotor.html">ServoMotor</a>* <a class="code" href="classController.html#a454c194eb3ccb1c656b2d3071206c8d6">ms</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="classAlgorithmInterface.html">AlgorithmInterface</a>* <a class="code" href="classController.html#a59578d24eec9bc6884906122b57a13cc">algo</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classController.html#a90f4c244dd5baec8795766a4e776202d">   69</a></span>&#160;        <a class="code" href="classServoMotor.html">ServoMotor</a>* <a class="code" href="classController.html#a90f4c244dd5baec8795766a4e776202d">m_mr</a> = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classController.html#a258b4d77aef4b25d76ec23feb558672d">   70</a></span>&#160;        <a class="code" href="classServoMotor.html">ServoMotor</a>* <a class="code" href="classController.html#a258b4d77aef4b25d76ec23feb558672d">m_ms</a> = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classController.html#a54599cbd0b19c7f303f6d68ee6785e4b">   71</a></span>&#160;        <a class="code" href="classAlgorithmInterface.html">AlgorithmInterface</a>* <a class="code" href="classController.html#a54599cbd0b19c7f303f6d68ee6785e4b">m_algo</a> = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassAlgorithmInterface_html"><div class="ttname"><a href="classAlgorithmInterface.html">AlgorithmInterface</a></div><div class="ttdoc">A base class to handle all algorithms class.</div><div class="ttdef"><b>Definition:</b> AlgorithmInterface.h:12</div></div>
+<div class="ttc" id="aclassController_html"><div class="ttname"><a href="classController.html">Controller</a></div><div class="ttdoc">A class to handle the controller.</div><div class="ttdef"><b>Definition:</b> Controller.h:19</div></div>
+<div class="ttc" id="aclassController_html_a0ab87934c4f7a266cfdb86e0f36bc1b5"><div class="ttname"><a href="classController.html#a0ab87934c4f7a266cfdb86e0f36bc1b5">Controller::~Controller</a></div><div class="ttdeci">~Controller()</div><div class="ttdoc">Destructor of the class.</div><div class="ttdef"><b>Definition:</b> Controller.cpp:12</div></div>
+<div class="ttc" id="aclassController_html_a258b4d77aef4b25d76ec23feb558672d"><div class="ttname"><a href="classController.html#a258b4d77aef4b25d76ec23feb558672d">Controller::m_ms</a></div><div class="ttdeci">ServoMotor * m_ms</div><div class="ttdoc">The sail servo motor.</div><div class="ttdef"><b>Definition:</b> Controller.h:70</div></div>
+<div class="ttc" id="aclassController_html_a35912b31e25c109e8eb94424f9a35d33"><div class="ttname"><a href="classController.html#a35912b31e25c109e8eb94424f9a35d33">Controller::mr</a></div><div class="ttdeci">ServoMotor * mr()</div><div class="ttdoc">Get the rudder servo motor.</div><div class="ttdef"><b>Definition:</b> Controller.cpp:39</div></div>
+<div class="ttc" id="aclassController_html_a454c194eb3ccb1c656b2d3071206c8d6"><div class="ttname"><a href="classController.html#a454c194eb3ccb1c656b2d3071206c8d6">Controller::ms</a></div><div class="ttdeci">ServoMotor * ms()</div><div class="ttdoc">Get the sail servo motor.</div><div class="ttdef"><b>Definition:</b> Controller.cpp:40</div></div>
+<div class="ttc" id="aclassController_html_a54599cbd0b19c7f303f6d68ee6785e4b"><div class="ttname"><a href="classController.html#a54599cbd0b19c7f303f6d68ee6785e4b">Controller::m_algo</a></div><div class="ttdeci">AlgorithmInterface * m_algo</div><div class="ttdoc">The algorithm to use.</div><div class="ttdef"><b>Definition:</b> Controller.h:71</div></div>
+<div class="ttc" id="aclassController_html_a59578d24eec9bc6884906122b57a13cc"><div class="ttname"><a href="classController.html#a59578d24eec9bc6884906122b57a13cc">Controller::algo</a></div><div class="ttdeci">AlgorithmInterface * algo()</div><div class="ttdoc">Get the algorithm used.</div><div class="ttdef"><b>Definition:</b> Controller.cpp:41</div></div>
+<div class="ttc" id="aclassController_html_a90f4c244dd5baec8795766a4e776202d"><div class="ttname"><a href="classController.html#a90f4c244dd5baec8795766a4e776202d">Controller::m_mr</a></div><div class="ttdeci">ServoMotor * m_mr</div><div class="ttdoc">The rudder servo motor.</div><div class="ttdef"><b>Definition:</b> Controller.h:69</div></div>
+<div class="ttc" id="aclassController_html_a95c56822d667e94b031451729ce069a9"><div class="ttname"><a href="classController.html#a95c56822d667e94b031451729ce069a9">Controller::Controller</a></div><div class="ttdeci">Controller()</div><div class="ttdoc">Constructor of the class.</div><div class="ttdef"><b>Definition:</b> Controller.cpp:4</div></div>
+<div class="ttc" id="aclassController_html_a9904f7fc1d538558a197157c24d69478"><div class="ttname"><a href="classController.html#a9904f7fc1d538558a197157c24d69478">Controller::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initialize the controller.</div><div class="ttdef"><b>Definition:</b> Controller.cpp:20</div></div>
+<div class="ttc" id="aclassController_html_acdc2b51b02237f3ca486108b7ac391f1"><div class="ttname"><a href="classController.html#acdc2b51b02237f3ca486108b7ac391f1">Controller::updateServos</a></div><div class="ttdeci">void updateServos()</div><div class="ttdoc">Update the servo motors.</div><div class="ttdef"><b>Definition:</b> Controller.cpp:31</div></div>
+<div class="ttc" id="aclassServoMotor_html"><div class="ttname"><a href="classServoMotor.html">ServoMotor</a></div><div class="ttdoc">A class to handle a servo motor.</div><div class="ttdef"><b>Definition:</b> ServoMotor.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

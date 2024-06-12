@@ -1,12 +1,13 @@
 <map id="Supervisor" name="Supervisor">
-<area shape="rect" id="node1" title="A class to handle the supervisor." alt="" coords="461,1211,647,1464"/>
-<area shape="rect" id="node2" href="$classControllerInterface.html" title="A base class to handle all controllers class." alt="" coords="452,968,656,1148"/>
-<area shape="rect" id="node3" href="$classServoMotor.html" title="A class to handle a servo motor." alt="" coords="683,637,865,891"/>
-<area shape="rect" id="node4" href="$classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="450,659,658,869"/>
-<area shape="rect" id="node5" href="$classObserver.html" title="A class to handle the observer." alt="" coords="335,351,533,575"/>
-<area shape="rect" id="node6" href="$classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,27,188,266"/>
-<area shape="rect" id="node7" href="$classGPS.html" title="A class to handle the GPS." alt="" coords="212,20,424,273"/>
-<area shape="rect" id="node8" href="$classWindDirection.html" title="A class to handle the wind direction." alt="" coords="449,49,654,244"/>
-<area shape="rect" id="node9" href="$classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="679,5,851,288"/>
-<area shape="rect" id="node10" href="$structCoordLatLon.html" title=" " alt="" coords="681,1012,777,1104"/>
+<area shape="rect" id="node1" title="A class to handle the supervisor." alt="" coords="454,1416,641,1596"/>
+<area shape="rect" id="node2" href="$classObserver.html" title="A class to handle the observer." alt="" coords="335,351,533,575"/>
+<area shape="rect" id="node9" href="$classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="259,659,467,869"/>
+<area shape="rect" id="node3" href="$classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,27,188,266"/>
+<area shape="rect" id="node4" href="$classGPS.html" title="A class to handle the GPS." alt="" coords="212,20,424,273"/>
+<area shape="rect" id="node5" href="$classWindDirection.html" title="A class to handle the wind direction." alt="" coords="449,49,654,244"/>
+<area shape="rect" id="node6" href="$classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="679,5,851,288"/>
+<area shape="rect" id="node7" href="$classController.html" title="A class to handle the controller." alt="" coords="288,1071,439,1251"/>
+<area shape="rect" id="node8" href="$classServoMotor.html" title="A class to handle a servo motor." alt="" coords="52,637,235,891"/>
+<area shape="rect" id="node10" href="$structCoordLatLon.html" title=" " alt="" coords="542,1115,638,1207"/>
+<area shape="rect" id="node11" href="$classRCReceiver.html" title="A class to handle the RC receiver." alt="" coords="662,968,859,1353"/>
 </map>

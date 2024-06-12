@@ -1,5 +1,5 @@
 <map id="Logger" name="Logger">
-<area shape="rect" id="node1" title="A class to handle the data logging." alt="" coords="349,637,519,920"/>
+<area shape="rect" id="node1" title="A class to handle the data logging." alt="" coords="349,637,519,949"/>
 <area shape="rect" id="node2" href="$classObserver.html" title="A class to handle the observer." alt="" coords="335,351,533,575"/>
 <area shape="rect" id="node3" href="$classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,27,188,266"/>
 <area shape="rect" id="node4" href="$classGPS.html" title="A class to handle the GPS." alt="" coords="212,20,424,273"/>

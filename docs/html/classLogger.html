@@ -80,7 +80,7 @@ Collaboration diagram for Logger:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLogger__coll__graph.png" border="0" usemap="#aLogger_coll__map" alt="Collaboration graph"/></div>
 <map name="aLogger_coll__map" id="aLogger_coll__map">
-<area shape="rect" title="A class to handle the data logging." alt="" coords="349,637,519,920"/>
+<area shape="rect" title="A class to handle the data logging." alt="" coords="349,637,519,949"/>
 <area shape="rect" href="classObserver.html" title="A class to handle the observer." alt="" coords="335,351,533,575"/>
 <area shape="rect" href="classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,27,188,266"/>
 <area shape="rect" href="classGPS.html" title="A class to handle the GPS." alt="" coords="212,20,424,273"/>
@@ -116,6 +116,12 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:aadc565fb066ed16d8dac70ce52683c12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#aadc565fb066ed16d8dac70ce52683c12">write</a> (unsigned long int data)</td></tr>
 <tr class="memdesc:aadc565fb066ed16d8dac70ce52683c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to the file.  <a href="classLogger.html#aadc565fb066ed16d8dac70ce52683c12">More...</a><br /></td></tr>
 <tr class="separator:aadc565fb066ed16d8dac70ce52683c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5585dd1199e80d1b701456c705c4338"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ad5585dd1199e80d1b701456c705c4338">write</a> (int data)</td></tr>
+<tr class="memdesc:ad5585dd1199e80d1b701456c705c4338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to the file.  <a href="classLogger.html#ad5585dd1199e80d1b701456c705c4338">More...</a><br /></td></tr>
+<tr class="separator:ad5585dd1199e80d1b701456c705c4338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d277ee173ae25e47dc371702642b9e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a4d277ee173ae25e47dc371702642b9e6">write</a> (double data)</td></tr>
+<tr class="memdesc:a4d277ee173ae25e47dc371702642b9e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to the file.  <a href="classLogger.html#a4d277ee173ae25e47dc371702642b9e6">More...</a><br /></td></tr>
+<tr class="separator:a4d277ee173ae25e47dc371702642b9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab63629b45ea2911d918e4dab95aaa560"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ab63629b45ea2911d918e4dab95aaa560">write</a> (String msg)</td></tr>
 <tr class="memdesc:ab63629b45ea2911d918e4dab95aaa560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to the file.  <a href="classLogger.html#ab63629b45ea2911d918e4dab95aaa560">More...</a><br /></td></tr>
 <tr class="separator:ab63629b45ea2911d918e4dab95aaa560"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,8 +247,42 @@ String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 
 </div>
 </div>
+<a id="a4d277ee173ae25e47dc371702642b9e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d277ee173ae25e47dc371702642b9e6">&#9670;&nbsp;</a></span>write() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::write </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write data to the file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to write. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a097aec995c0928eb8ac003a056d2cf3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a097aec995c0928eb8ac003a056d2cf3e">&#9670;&nbsp;</a></span>write() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a097aec995c0928eb8ac003a056d2cf3e">&#9670;&nbsp;</a></span>write() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -275,8 +315,42 @@ String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 
 </div>
 </div>
+<a id="ad5585dd1199e80d1b701456c705c4338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5585dd1199e80d1b701456c705c4338">&#9670;&nbsp;</a></span>write() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write data to the file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to write. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab63629b45ea2911d918e4dab95aaa560"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab63629b45ea2911d918e4dab95aaa560">&#9670;&nbsp;</a></span>write() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab63629b45ea2911d918e4dab95aaa560">&#9670;&nbsp;</a></span>write() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,7 +384,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </div>
 </div>
 <a id="aadc565fb066ed16d8dac70ce52683c12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadc565fb066ed16d8dac70ce52683c12">&#9670;&nbsp;</a></span>write() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aadc565fb066ed16d8dac70ce52683c12">&#9670;&nbsp;</a></span>write() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

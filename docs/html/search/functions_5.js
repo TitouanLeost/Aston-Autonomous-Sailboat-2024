@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mr_142',['mr',['../classControllerInterface.html#a27d17b60de13bea7d119b7cf9bf50e42',1,'ControllerInterface']]],
-  ['ms_143',['ms',['../classControllerInterface.html#a46ec97e9b16b9cfd81bb48ecb88c83e3',1,'ControllerInterface']]]
+  ['mr_148',['mr',['../classController.html#a35912b31e25c109e8eb94424f9a35d33',1,'Controller']]],
+  ['ms_149',['ms',['../classController.html#a454c194eb3ccb1c656b2d3071206c8d6',1,'Controller']]]
 ];

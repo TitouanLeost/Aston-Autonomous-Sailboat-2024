@@ -40,6 +40,10 @@ void \mbox{\hyperlink{classLogger_a097aec995c0928eb8ac003a056d2cf3e}{write}} (fl
 \begin{DoxyCompactList}\small\item\em Write data to the file. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLogger_aadc565fb066ed16d8dac70ce52683c12}{write}} (unsigned long int data)
 \begin{DoxyCompactList}\small\item\em Write data to the file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLogger_ad5585dd1199e80d1b701456c705c4338}{write}} (int data)
+\begin{DoxyCompactList}\small\item\em Write data to the file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLogger_a4d277ee173ae25e47dc371702642b9e6}{write}} (double data)
+\begin{DoxyCompactList}\small\item\em Write data to the file. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLogger_ab63629b45ea2911d918e4dab95aaa560}{write}} (String msg)
 \begin{DoxyCompactList}\small\item\em Write data to the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
@@ -113,11 +117,41 @@ Generate the filename, open the file and initialize it with the date and the tim
 
 Update the logger. 
 
-Log the data from the observer. The data are the time, the yaw, the wind direction, the true wind angle and the wind speed. \mbox{\Hypertarget{classLogger_a097aec995c0928eb8ac003a056d2cf3e}\label{classLogger_a097aec995c0928eb8ac003a056d2cf3e}} 
+Log the data from the observer. The data are the time, the yaw, the wind direction, the true wind angle and the wind speed. \mbox{\Hypertarget{classLogger_a4d277ee173ae25e47dc371702642b9e6}\label{classLogger_a4d277ee173ae25e47dc371702642b9e6}} 
 \index{Logger@{Logger}!write@{write}}
 \index{write@{write}!Logger@{Logger}}
-\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void Logger\+::write (\begin{DoxyParamCaption}\item[{double}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Write data to the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to write. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLogger_a097aec995c0928eb8ac003a056d2cf3e}\label{classLogger_a097aec995c0928eb8ac003a056d2cf3e}} 
+\index{Logger@{Logger}!write@{write}}
+\index{write@{write}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
 {\footnotesize\ttfamily void Logger\+::write (\begin{DoxyParamCaption}\item[{float}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Write data to the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to write. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLogger_ad5585dd1199e80d1b701456c705c4338}\label{classLogger_ad5585dd1199e80d1b701456c705c4338}} 
+\index{Logger@{Logger}!write@{write}}
+\index{write@{write}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void Logger\+::write (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -131,7 +165,7 @@ Write data to the file.
 \mbox{\Hypertarget{classLogger_ab63629b45ea2911d918e4dab95aaa560}\label{classLogger_ab63629b45ea2911d918e4dab95aaa560}} 
 \index{Logger@{Logger}!write@{write}}
 \index{write@{write}!Logger@{Logger}}
-\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
 {\footnotesize\ttfamily void Logger\+::write (\begin{DoxyParamCaption}\item[{String}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
@@ -146,7 +180,7 @@ Write data to the file.
 \mbox{\Hypertarget{classLogger_aadc565fb066ed16d8dac70ce52683c12}\label{classLogger_aadc565fb066ed16d8dac70ce52683c12}} 
 \index{Logger@{Logger}!write@{write}}
 \index{write@{write}!Logger@{Logger}}
-\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
 {\footnotesize\ttfamily void Logger\+::write (\begin{DoxyParamCaption}\item[{unsigned long int}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 

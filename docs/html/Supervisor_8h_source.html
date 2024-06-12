@@ -77,50 +77,45 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Config.h&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Observer.h&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;Controller.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;RCReceiver.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classSupervisor.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSupervisor.html">Supervisor</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="classSupervisor.html">Supervisor</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        ~<a class="code" href="classSupervisor.html">Supervisor</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> init(<a class="code" href="classObserver.html">Observer</a>* obs, <a class="code" href="classControllerInterface.html">ControllerInterface</a>* ctrl);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">void</span> updateMission();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classSupervisor.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSupervisor.html">Supervisor</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="classSupervisor.html">Supervisor</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        ~<a class="code" href="classSupervisor.html">Supervisor</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">void</span> init(<a class="code" href="classObserver.html">Observer</a>* obs, <a class="code" href="classController.html">Controller</a>* ctrl, <a class="code" href="classRCReceiver.html">RCReceiver</a>* rc);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> startMission();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> startLF();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> updateMission();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> updateLF();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">bool</span> isWaypointReached();</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">bool</span> isWaypointReached();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classSupervisor.html#aac86a94b376139ef15ebb881e971fb7e">   58</a></span>&#160;        <a class="code" href="classObserver.html">Observer</a>* m_obs = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classSupervisor.html#a93ba1983187767f6cf14bef4618f05a6">   59</a></span>&#160;        <a class="code" href="classController.html">Controller</a>* m_ctrl = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classSupervisor.html#a1b740515f38cc1daf09ca8bb43f6819d">   60</a></span>&#160;        <a class="code" href="classRCReceiver.html">RCReceiver</a>* m_rc = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classSupervisor.html#a1daf2e02707dd6de64f570d1cc0a3bd0">   61</a></span>&#160;        <a class="code" href="structCoordLatLon.html">CoordLatLon</a> m_wp[NB_WP];  </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classSupervisor.html#a1c523ee48c3e532802c3bd6c7975098f">   62</a></span>&#160;        <span class="keywordtype">int</span> m_current_wp = 0;  </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classSupervisor.html#aac86a94b376139ef15ebb881e971fb7e">   66</a></span>&#160;        <a class="code" href="classObserver.html">Observer</a>* m_obs = <span class="keyword">nullptr</span>;  </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classSupervisor.html#a3d69e7b9e36540a32240aa60e4144692">   67</a></span>&#160;        <a class="code" href="classControllerInterface.html">ControllerInterface</a>* m_ctrl = <span class="keyword">nullptr</span>;  </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classSupervisor.html#a1daf2e02707dd6de64f570d1cc0a3bd0">   68</a></span>&#160;        <a class="code" href="structCoordLatLon.html">CoordLatLon</a> m_wp[NB_WP];  </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classSupervisor.html#a1c523ee48c3e532802c3bd6c7975098f">   69</a></span>&#160;        <span class="keywordtype">int</span> m_current_wp = 0;  </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        void (<a class="code" href="classSupervisor.html">Supervisor</a>::*updatePtr)();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        void (<a class="code" href="classSupervisor.html">Supervisor</a>::*startPtr)();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassControllerInterface_html"><div class="ttname"><a href="classControllerInterface.html">ControllerInterface</a></div><div class="ttdoc">A base class to handle all controllers class.</div><div class="ttdef"><b>Definition:</b> ControllerInterface.h:16</div></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassController_html"><div class="ttname"><a href="classController.html">Controller</a></div><div class="ttdoc">A class to handle the controller.</div><div class="ttdef"><b>Definition:</b> Controller.h:19</div></div>
 <div class="ttc" id="aclassObserver_html"><div class="ttname"><a href="classObserver.html">Observer</a></div><div class="ttdoc">A class to handle the observer.</div><div class="ttdef"><b>Definition:</b> Observer.h:19</div></div>
-<div class="ttc" id="aclassSupervisor_html"><div class="ttname"><a href="classSupervisor.html">Supervisor</a></div><div class="ttdoc">A class to handle the supervisor.</div><div class="ttdef"><b>Definition:</b> Supervisor.h:19</div></div>
-<div class="ttc" id="astructCoordLatLon_html"><div class="ttname"><a href="structCoordLatLon.html">CoordLatLon</a></div><div class="ttdef"><b>Definition:</b> Config.h:60</div></div>
+<div class="ttc" id="aclassRCReceiver_html"><div class="ttname"><a href="classRCReceiver.html">RCReceiver</a></div><div class="ttdoc">A class to handle the RC receiver.</div><div class="ttdef"><b>Definition:</b> RCReceiver.h:14</div></div>
+<div class="ttc" id="aclassSupervisor_html"><div class="ttname"><a href="classSupervisor.html">Supervisor</a></div><div class="ttdoc">A class to handle the supervisor.</div><div class="ttdef"><b>Definition:</b> Supervisor.h:20</div></div>
+<div class="ttc" id="astructCoordLatLon_html"><div class="ttname"><a href="structCoordLatLon.html">CoordLatLon</a></div><div class="ttdef"><b>Definition:</b> Config.h:75</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

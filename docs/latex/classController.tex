@@ -1,0 +1,146 @@
+\hypertarget{classController}{}\doxysection{Controller Class Reference}
+\label{classController}\index{Controller@{Controller}}
+
+
+A class to handle the controller.  
+
+
+
+
+{\ttfamily \#include $<$Controller.\+h$>$}
+
+
+
+Collaboration diagram for Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classController_a95c56822d667e94b031451729ce069a9}{Controller}} ()
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}{$\sim$\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Destructor of the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classController_a9904f7fc1d538558a197157c24d69478}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the controller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classController_acdc2b51b02237f3ca486108b7ac391f1}{update\+Servos}} ()
+\begin{DoxyCompactList}\small\item\em Update the servo motors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServoMotor}{Servo\+Motor}} $\ast$ \mbox{\hyperlink{classController_a35912b31e25c109e8eb94424f9a35d33}{mr}} ()
+\begin{DoxyCompactList}\small\item\em Get the rudder servo motor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServoMotor}{Servo\+Motor}} $\ast$ \mbox{\hyperlink{classController_a454c194eb3ccb1c656b2d3071206c8d6}{ms}} ()
+\begin{DoxyCompactList}\small\item\em Get the sail servo motor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAlgorithmInterface}{Algorithm\+Interface}} $\ast$ \mbox{\hyperlink{classController_a59578d24eec9bc6884906122b57a13cc}{algo}} ()
+\begin{DoxyCompactList}\small\item\em Get the algorithm used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classController_a90f4c244dd5baec8795766a4e776202d}\label{classController_a90f4c244dd5baec8795766a4e776202d}} 
+\mbox{\hyperlink{classServoMotor}{Servo\+Motor}} $\ast$ \mbox{\hyperlink{classController_a90f4c244dd5baec8795766a4e776202d}{m\+\_\+mr}} = nullptr
+\begin{DoxyCompactList}\small\item\em The rudder servo motor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classController_a258b4d77aef4b25d76ec23feb558672d}\label{classController_a258b4d77aef4b25d76ec23feb558672d}} 
+\mbox{\hyperlink{classServoMotor}{Servo\+Motor}} $\ast$ \mbox{\hyperlink{classController_a258b4d77aef4b25d76ec23feb558672d}{m\+\_\+ms}} = nullptr
+\begin{DoxyCompactList}\small\item\em The sail servo motor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classController_a54599cbd0b19c7f303f6d68ee6785e4b}\label{classController_a54599cbd0b19c7f303f6d68ee6785e4b}} 
+\mbox{\hyperlink{classAlgorithmInterface}{Algorithm\+Interface}} $\ast$ \mbox{\hyperlink{classController_a54599cbd0b19c7f303f6d68ee6785e4b}{m\+\_\+algo}} = nullptr
+\begin{DoxyCompactList}\small\item\em The algorithm to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to handle the controller. 
+
+This class contain functions to initialize and update the servo motors based on the data from the algorithm used for the mission. The algorithm to use is defined in \mbox{\hyperlink{Config_8h_source}{Config.\+h}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classController_a95c56822d667e94b031451729ce069a9}\label{classController_a95c56822d667e94b031451729ce069a9}} 
+\index{Controller@{Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{Controller()}{Controller()}}
+{\footnotesize\ttfamily Controller\+::\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+This constructor initialize the two servo motors and the algorithm to use defined in \mbox{\hyperlink{Config_8h_source}{Config.\+h}}. \mbox{\Hypertarget{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}\label{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}} 
+\index{Controller@{Controller}!````~Controller@{$\sim$Controller}}
+\index{````~Controller@{$\sim$Controller}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{$\sim$Controller()}{~Controller()}}
+{\footnotesize\ttfamily Controller\+::$\sim$\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor of the class. 
+
+This destructor delete the two servo motors and the algorithm to free up memory space. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classController_a59578d24eec9bc6884906122b57a13cc}\label{classController_a59578d24eec9bc6884906122b57a13cc}} 
+\index{Controller@{Controller}!algo@{algo}}
+\index{algo@{algo}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{algo()}{algo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAlgorithmInterface}{Algorithm\+Interface}} $\ast$ Controller\+::algo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the algorithm used. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the algorithm used 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classController_a9904f7fc1d538558a197157c24d69478}\label{classController_a9904f7fc1d538558a197157c24d69478}} 
+\index{Controller@{Controller}!init@{init}}
+\index{init@{init}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Controller\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the controller. 
+
+This function initialize the two servo motors. \mbox{\Hypertarget{classController_a35912b31e25c109e8eb94424f9a35d33}\label{classController_a35912b31e25c109e8eb94424f9a35d33}} 
+\index{Controller@{Controller}!mr@{mr}}
+\index{mr@{mr}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{mr()}{mr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classServoMotor}{Servo\+Motor}} $\ast$ Controller\+::mr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the rudder servo motor. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the rudder servo motor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classController_a454c194eb3ccb1c656b2d3071206c8d6}\label{classController_a454c194eb3ccb1c656b2d3071206c8d6}} 
+\index{Controller@{Controller}!ms@{ms}}
+\index{ms@{ms}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{ms()}{ms()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classServoMotor}{Servo\+Motor}} $\ast$ Controller\+::ms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the sail servo motor. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the sail servo motor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classController_acdc2b51b02237f3ca486108b7ac391f1}\label{classController_acdc2b51b02237f3ca486108b7ac391f1}} 
+\index{Controller@{Controller}!updateServos@{updateServos}}
+\index{updateServos@{updateServos}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{updateServos()}{updateServos()}}
+{\footnotesize\ttfamily void Controller\+::update\+Servos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the servo motors. 
+
+This function update the servo motors with the data from the algorithm. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Controller/Controller.\+h\item 
+libraries/\+Controller/Controller.\+cpp\end{DoxyCompactItemize}

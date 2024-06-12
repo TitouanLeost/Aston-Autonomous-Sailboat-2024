@@ -81,89 +81,103 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define REF_LAT 0.0</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/*====SUPERVISOR CONFIG====*/</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/*======MISSION CONFIG=====*/</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define CONTROLLER ControllerLF  </span><span class="comment">// Line Following controller</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define ALGO LineFollowing()  </span><span class="comment">// Algorithm used</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define NB_WP 3  </span><span class="comment">// Number of waypoints</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// List of waypoints (latitude, longitude)</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define WP { {52.485, 1.889709594213}, {52.4854920485, 1.889248254262}, {52.4844804397, 1.890610816442} }</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define WP_RADIUS 10  </span><span class="comment">// Radius of the waypoint to validate it</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/*====ALGORITHMS CONFIG====*/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/*====RCRECEIVER CONFIG====*/</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define ANGLE_RUDDER_MAX M_PI/4  </span><span class="comment">// Maximum angle of the rudder</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define ANGLE_SAIL_MAX M_PI/2  </span><span class="comment">// Maximum angle of the sail</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define R 50  </span><span class="comment">// Cutoff distance from the line</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define GAMMA M_PI/4  </span><span class="comment">// Incidence angle</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define ZETA M_PI/4  </span><span class="comment">// Close haul angle</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define BETA 0.3</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/*=====OBSERVER CONFIG=====*/</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define YAW_FILTER 0.5  </span><span class="comment">// Coefficient of the filter for the yaw</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define WIND_DIRECTION_FILTER 0.5  </span><span class="comment">// Coefficient of the filter for the wind direction</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/*======CMPS12 CONFIG======*/</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define CMPS_GET_ANGLE8 0x12</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define CMPS_GET_ANGLE16 0x13</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#define CMPS_GET_PITCH 0x14</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define CMPS_GET_ROLL 0x15</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define CMPS_CALIBRATION_STATUS 0x24</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define CMPS_RX 10  </span><span class="comment">// RX pin for the CMPS</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define CMPS_TX 11  </span><span class="comment">// TX pin for the CMPS</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">/*========GPS CONFIG=======*/</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#define SERIAL_GPS Serial2  </span><span class="comment">// Serial port for the GPS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define RUDDER_CH_PIN 3  </span><span class="comment">// Pin for the rudder channel</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define SAIL_CH_PIN 2  </span><span class="comment">// Pin for the sail channel</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define NB_CHANNELS 2  </span><span class="comment">// Number of channels</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">enum</span> RC_CHANNELS {RUDDER_CH, SAIL_CH};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define RUDDER_OFFSET_MIN 1079  </span><span class="comment">// Minimum offset for the rudder</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define RUDDER_OFFSET_MAX 1975  </span><span class="comment">// Maximum offset for the rudder</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define SAIL_OFFSET_MIN 1057  </span><span class="comment">// Minimum offset for the sail</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define SAIL_OFFSET_MAX 1878  </span><span class="comment">// Maximum offset for the sail</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define PULSE_FILTER 0.95  </span><span class="comment">// Coefficient of the filter for the pulse</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">/*====ALGORITHMS CONFIG====*/</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define ANGLE_RUDDER_MAX M_PI/4  </span><span class="comment">// Maximum angle of the rudder</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define ANGLE_SAIL_MAX M_PI/2  </span><span class="comment">// Maximum angle of the sail</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define R 50  </span><span class="comment">// Cutoff distance from the line</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define GAMMA M_PI/4  </span><span class="comment">// Incidence angle</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define ZETA M_PI/4  </span><span class="comment">// Close haul angle</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define BETA 0.3</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/*=====OBSERVER CONFIG=====*/</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#define YAW_FILTER 0.5  </span><span class="comment">// Coefficient of the filter for the yaw</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#define WIND_DIRECTION_FILTER 0.5  </span><span class="comment">// Coefficient of the filter for the wind direction</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">/*======CMPS12 CONFIG======*/</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structCoordLatLon.html">   59</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structCoordLatLon.html">CoordLatLon</a></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">double</span> lat;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">double</span> lon;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="structCoordXY.html">   65</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structCoordXY.html">CoordXY</a></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">double</span> x;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">double</span> y;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">/*====ANEMOMETER CONFIG====*/</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#define SERIAL_WIND Serial1  </span><span class="comment">// Serial port for the anemometer</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#define WIND_SPEED_PIN 19  </span><span class="comment">// Pin for the wind speed sensor</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#define WIND_DIRECTION_PIN A14  </span><span class="comment">// Pin for the wind direction sensor</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">/*=======SERVO CONFIG======*/</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#define SERVO_FREQ 50</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#define SERVO_RUDDER_PIN 0  </span><span class="comment">// Pin for the rudder servo</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#define RUDDER_PWMMIN 220  </span><span class="comment">// Minimum PWM for the rudder servo</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#define RUDDER_PWMMAX 420  </span><span class="comment">// Maximum PWM for the rudder servo</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#define SERVO_SAIL_PIN 1  </span><span class="comment">// Pin for the sail servo</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#define SAIL_PWMMIN 340  </span><span class="comment">// Minimum PWM for the sail servo</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#define SAIL_PWMMAX 460  </span><span class="comment">// Maximum PWM for the sail servo</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">/*======LOGGER CONFIG======*/</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#define SD_PIN 53  </span><span class="comment">// Pin for the SD card</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructCoordLatLon_html"><div class="ttname"><a href="structCoordLatLon.html">CoordLatLon</a></div><div class="ttdef"><b>Definition:</b> Config.h:60</div></div>
-<div class="ttc" id="astructCoordXY_html"><div class="ttname"><a href="structCoordXY.html">CoordXY</a></div><div class="ttdef"><b>Definition:</b> Config.h:66</div></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#define SERIAL_CMPS Serial3  </span><span class="comment">// Serial port for the CMPS</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#define CMPS_GET_ANGLE8 0x12</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#define CMPS_GET_ANGLE16 0x13</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#define CMPS_GET_PITCH 0x14</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#define CMPS_GET_ROLL 0x15</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#define CMPS_CALIBRATION_STATUS 0x24</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#define CMPS_RX 10  </span><span class="comment">// RX pin for the CMPS</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#define CMPS_TX 11  </span><span class="comment">// TX pin for the CMPS</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">/*========GPS CONFIG=======*/</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#define SERIAL_GPS Serial2  </span><span class="comment">// Serial port for the GPS</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="structCoordLatLon.html">   74</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structCoordLatLon.html">CoordLatLon</a></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">double</span> lat;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">double</span> lon;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="structCoordXY.html">   80</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structCoordXY.html">CoordXY</a></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">double</span> x;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">double</span> y;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">/*====ANEMOMETER CONFIG====*/</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#define SERIAL_WIND Serial1  </span><span class="comment">// Serial port for the anemometer</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#define WIND_SPEED_PIN 19  </span><span class="comment">// Pin for the wind speed sensor</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#define WIND_DIRECTION_PIN A14  </span><span class="comment">// Pin for the wind direction sensor</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">/*=======SERVO CONFIG======*/</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#define SERVO_FREQ 50</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#define SERVO_RUDDER_PIN 0  </span><span class="comment">// Pin for the rudder servo</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#define RUDDER_PWMMIN 200  </span><span class="comment">// Minimum PWM for the rudder servo</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#define RUDDER_PWMMAX 380  </span><span class="comment">// Maximum PWM for the rudder servo</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#define SERVO_SAIL_PIN 1  </span><span class="comment">// Pin for the sail servo</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#define SAIL_PWMMIN 245  </span><span class="comment">// Minimum PWM for the sail servo</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define SAIL_PWMMAX 330  </span><span class="comment">// Maximum PWM for the sail servo</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">/*======LOGGER CONFIG======*/</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#define SD_PIN 53  </span><span class="comment">// Pin for the SD card</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="astructCoordLatLon_html"><div class="ttname"><a href="structCoordLatLon.html">CoordLatLon</a></div><div class="ttdef"><b>Definition:</b> Config.h:75</div></div>
+<div class="ttc" id="astructCoordXY_html"><div class="ttname"><a href="structCoordXY.html">CoordXY</a></div><div class="ttdef"><b>Definition:</b> Config.h:81</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -65,7 +65,7 @@ $(function() {
 
 <h3><a id="index_a"></a>- a -</h3><ul>
 <li>algo()
-: <a class="el" href="classControllerInterface.html#a5fdea92bb2a367ac1a824fba14f0be84">ControllerInterface</a>
+: <a class="el" href="classController.html#a59578d24eec9bc6884906122b57a13cc">Controller</a>
 </li>
 </ul>
 
@@ -74,14 +74,20 @@ $(function() {
 <li>calibration()
 : <a class="el" href="classCMPS12.html#a6e1ce39b4f977a2787f78f66eae06a46">CMPS12</a>
 </li>
+<li>checkRC()
+: <a class="el" href="classRCReceiver.html#a88e823d109bc777fc1c1b2ba703e260c">RCReceiver</a>
+</li>
 <li>close()
 : <a class="el" href="classLogger.html#afee2bab560c2db0190c980884d33868c">Logger</a>
 </li>
 <li>cmps()
 : <a class="el" href="classObserver.html#a1d5614599457ae3484d2cdae5bc408ab">Observer</a>
 </li>
-<li>ControllerInterface()
-: <a class="el" href="classControllerInterface.html#a6b0780664561bf69af0f12f6bbed5602">ControllerInterface</a>
+<li>Controller()
+: <a class="el" href="classController.html#a95c56822d667e94b031451729ce069a9">Controller</a>
+</li>
+<li>convertToPercent()
+: <a class="el" href="classRCReceiver.html#af86c8e54b436e1bce374ca5f71299803">RCReceiver</a>
 </li>
 </ul>
 
@@ -99,9 +105,11 @@ $(function() {
 </li>
 <li>getCmdRudder()
 : <a class="el" href="classAlgorithmInterface.html#ad1ed069605f52ab787dab5caf5cd69fc">AlgorithmInterface</a>
+, <a class="el" href="classRCReceiver.html#aadaa830f78f7abda9d7141c9adc5ab7b">RCReceiver</a>
 </li>
 <li>getCmdSail()
 : <a class="el" href="classAlgorithmInterface.html#a579a0643b0be6ecdd5ebe743a4e66abd">AlgorithmInterface</a>
+, <a class="el" href="classRCReceiver.html#affa52b9ec8df86d479197f9e00608e6a">RCReceiver</a>
 </li>
 <li>getCoordLatLon()
 : <a class="el" href="classGPS.html#a336a14efeaa59bf18c31a08c87fbbd94">GPS</a>
@@ -164,14 +172,18 @@ $(function() {
 <li>init()
 : <a class="el" href="classAlgorithmInterface.html#a624f37e1804e52df3fa3de018574c971">AlgorithmInterface</a>
 , <a class="el" href="classCMPS12.html#aa5652bdd556a799224aacbea956b5ef5">CMPS12</a>
-, <a class="el" href="classControllerLF.html#a0f423d61afd91b5f29e39ed4b74c66a3">ControllerLF</a>
+, <a class="el" href="classController.html#a9904f7fc1d538558a197157c24d69478">Controller</a>
 , <a class="el" href="classGPS.html#a860b3a74c9ce51ff305416d70e623693">GPS</a>
 , <a class="el" href="classLogger.html#a440ec133163dfaaaebc2b09317c7d681">Logger</a>
 , <a class="el" href="classObserver.html#a326081cb1a9d77bdbbb23dd9c41a6653">Observer</a>
+, <a class="el" href="classRCReceiver.html#a546535e1d52da9cd8cb5a7cd5e300dff">RCReceiver</a>
 , <a class="el" href="classServoMotor.html#a71f50f25913d7c8b49e96a86e8189e01">ServoMotor</a>
-, <a class="el" href="classSupervisor.html#abf3f2fc868eda2e556627b1b84bcb8fb">Supervisor</a>
+, <a class="el" href="classSupervisor.html#a21aa9d0f2a7c7761c6658232e040566d">Supervisor</a>
 , <a class="el" href="classWindDirection.html#ae89dd5541d024ba27e8541e0b5bb458f">WindDirection</a>
 , <a class="el" href="classWindSpeed.html#a72c0928a320e3cf8bd72323c23b3b623">WindSpeed</a>
+</li>
+<li>isReceiving()
+: <a class="el" href="classRCReceiver.html#a27ddde3e68908aa367ff72e71d3e0f6c">RCReceiver</a>
 </li>
 <li>isWaypointReached()
 : <a class="el" href="classSupervisor.html#a24d0faad16f598171ab27e70a2a2c869">Supervisor</a>
@@ -181,10 +193,10 @@ $(function() {
 
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>mr()
-: <a class="el" href="classControllerInterface.html#a27d17b60de13bea7d119b7cf9bf50e42">ControllerInterface</a>
+: <a class="el" href="classController.html#a35912b31e25c109e8eb94424f9a35d33">Controller</a>
 </li>
 <li>ms()
-: <a class="el" href="classControllerInterface.html#a46ec97e9b16b9cfd81bb48ecb88c83e3">ControllerInterface</a>
+: <a class="el" href="classController.html#a454c194eb3ccb1c656b2d3071206c8d6">Controller</a>
 </li>
 </ul>
 
@@ -222,8 +234,8 @@ $(function() {
 <li>setPWM()
 : <a class="el" href="classServoMotor.html#a955e3ddeca6a6cfac5cc34021d93ae2f">ServoMotor</a>
 </li>
-<li>startLF()
-: <a class="el" href="classSupervisor.html#a38746d29e716eabe7e40fa56cebdbabe">Supervisor</a>
+<li>startMission()
+: <a class="el" href="classSupervisor.html#a9855dc686a3b3ee59ab086c31e570ed0">Supervisor</a>
 </li>
 </ul>
 
@@ -233,14 +245,12 @@ $(function() {
 : <a class="el" href="classCMPS12.html#a56626c06ae6f9abeb527e15ce3c6a38d">CMPS12</a>
 , <a class="el" href="classGPS.html#a5b903e61f93bc5db0d9f78bec35730d4">GPS</a>
 , <a class="el" href="classLogger.html#ad905325c0f6a7f835e7e54c66e7300b2">Logger</a>
+, <a class="el" href="classRCReceiver.html#a9d37db920eca762b438ded31ad457d6e">RCReceiver</a>
 , <a class="el" href="classWindDirection.html#ae2b2f9427d95e60def46e68aee2bd5fe">WindDirection</a>
 , <a class="el" href="classWindSpeed.html#a4450257f2640e6baf7f28d2bfc8a28ca">WindSpeed</a>
 </li>
 <li>updateCmd()
 : <a class="el" href="classLineFollowing.html#a9901fd62d906555c0c4830c46b8f9f03">LineFollowing</a>
-</li>
-<li>updateLF()
-: <a class="el" href="classSupervisor.html#a3f5f4ecdede91e690058f8dd65e8e65d">Supervisor</a>
 </li>
 <li>updateMission()
 : <a class="el" href="classSupervisor.html#a6b2a3d699a9dbb4a3286b707bd5483dd">Supervisor</a>
@@ -249,7 +259,7 @@ $(function() {
 : <a class="el" href="classObserver.html#a4c3f8cebcb8c6acea453d607805aa553">Observer</a>
 </li>
 <li>updateServos()
-: <a class="el" href="classControllerLF.html#a923acdb5a8b629512162e6791c3da958">ControllerLF</a>
+: <a class="el" href="classController.html#acdc2b51b02237f3ca486108b7ac391f1">Controller</a>
 </li>
 <li>updateTrueWindAngle()
 : <a class="el" href="classObserver.html#a438c4349adbdfc8cee2b46d1bf345364">Observer</a>
@@ -271,8 +281,8 @@ $(function() {
 
 
 <h3><a id="index__7E"></a>- ~ -</h3><ul>
-<li>~ControllerInterface()
-: <a class="el" href="classControllerInterface.html#a20b3828f5cdf646daf649f316495a007">ControllerInterface</a>
+<li>~Controller()
+: <a class="el" href="classController.html#a0ab87934c4f7a266cfdb86e0f36bc1b5">Controller</a>
 </li>
 </ul>
 </div><!-- contents -->
