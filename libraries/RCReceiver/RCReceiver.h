@@ -25,7 +25,9 @@ class RCReceiver
     private:
         unsigned long m_last_pulse;
         unsigned long m_rudder_pulse;
+        unsigned long m_rudder_pulse_raw;
         unsigned long m_sail_pulse;
+        unsigned long m_sail_pulse_raw;
         unsigned long m_offset_min[NB_CHANNELS];
         unsigned long m_offset_max[NB_CHANNELS];
 };
