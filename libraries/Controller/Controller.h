@@ -37,7 +37,7 @@ class Controller
          * Initialize the controller.
          * This function initialize the two servo motors.
         ***********************************************************/
-        void init();
+        void init(Observer* obs);
 
         /***********************************************************
          * Update the servo motors.
@@ -45,6 +45,9 @@ class Controller
          * from the algorithm.
         ***********************************************************/
         void updateServos();
+
+
+        void setUpdate(bool update);
 
 
         /***********************************************************
@@ -69,6 +72,8 @@ class Controller
         ServoMotor* m_mr = nullptr;  ///< The rudder servo motor
         ServoMotor* m_ms = nullptr;  ///< The sail servo motor
         AlgorithmInterface* m_algo = nullptr;  ///< The algorithm to use
+
+        bool m_update = true;  ///< A flag to update the servo motors
 };
 
 #endif

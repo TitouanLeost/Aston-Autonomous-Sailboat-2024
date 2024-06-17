@@ -17,12 +17,13 @@ Controller::~Controller()
 }
 
 
-void Controller::init()
+void Controller::init(Observer* obs)
 {
     Serial.println("#########################");
     Serial.println("Initializing servo motors...");
     m_mr->init();
     m_ms->init();
+    m_algo->init(obs);
     Serial.println("Servo motors initialized");
     Serial.println("######################### \n");
 }
@@ -30,11 +31,15 @@ void Controller::init()
 
 void Controller::updateServos()
 {
-    m_algo->updateCmd();
-    m_mr->setPercent(m_algo->getCmdRudder());
-    m_ms->setPercent(m_algo->getCmdSail());
+    if(m_update){
+        m_algo->updateCmd();
+        m_mr->setPercent(m_algo->getCmdRudder());
+        m_ms->setPercent(m_algo->getCmdSail());
+    }
 }
 
+
+void Controller::setUpdate(bool update) {m_update = update;}
 
 ServoMotor* Controller::mr() {return m_mr;}
 ServoMotor* Controller::ms() {return m_ms;}
