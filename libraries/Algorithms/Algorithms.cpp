@@ -35,12 +35,10 @@ void LineFollowing::updateCmd()
     
     float angle_target = atan2(dy, dx);
     float angle_nominal = angle_target - 2*GAMMA*atan(e/R)/M_PI;
-    float angle_actual;
+    float angle_actual = angle_nominal;
 
     if((cos(angle_truewind - angle_nominal) + cos(ZETA) < 0) or (abs(e) < R and cos(angle_truewind - angle_target) + cos(ZETA) < 0))
         angle_actual = -angle_truewind - m_q*ZETA;
-    else
-        angle_actual = angle_nominal;
 
     float angle_rudder = ANGLE_RUDDER_MAX/M_PI * sawtooth(theta - angle_actual);
     float angle_sail = M_PI/2 * pow(((cos(angle_truewind - angle_actual) + 1)/2), (log(M_PI/(2*BETA)) / log(2)));
