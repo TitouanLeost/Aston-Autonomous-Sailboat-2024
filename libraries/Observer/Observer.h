@@ -56,6 +56,8 @@ class Observer
         WindDirection* wd();  ///< Get the wind direction sensor
 
     private:
+        float angleFilter(float x, float y, float alpha);  ///< Low pass filter (used to filter the data from the CMPS and the wind direction sensor
+
         CMPS12* m_cmps;  ///< The CMPS sensor
         GPS* m_gps;  ///< The GPS sensor
         WindSpeed* m_ws;  ///< The wind speed sensor
