@@ -13,22 +13,28 @@ try:
 
     line = ser.readline().decode('utf-8')
     log_date = line.split('_')[0]
-    log_time = line.split('_')[1]
+    log_time = line.split('_')[1].strip()
     output_dir = f"logs/{log_date}"
     output_file = f"logs/{log_date}/{log_time}.txt"
 
     os.makedirs(output_dir, exist_ok=True)
 
     with open(output_file, 'w') as file:
+
+        print(f"Saving log to {output_file}...")
+
         start_time = time.time()
+        file.write(line)
         while True:
             if ser.in_waiting > 0:
                 line = ser.readline().decode('utf-8')
                 file.write(line)
-                print(line, end='')
+                # print(line, end='')
                 start_time = time.time()
             elif time.time() - start_time > timeout_duration:
                 break
+    
+    print(f"Log saved successfully to {output_file}")
 
 except serial.SerialException as e:
     print(f"Error connecting to the serial port: {e}")
