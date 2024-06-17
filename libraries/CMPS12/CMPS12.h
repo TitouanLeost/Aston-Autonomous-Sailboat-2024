@@ -68,8 +68,6 @@ class CMPS12
         void setFilteredYaw(float yaw);
 
     private:
-        SoftwareSerial ss_cmps;  ///< The serial connection of the CMPS12
-
         char m_pitch;  ///< The pitch of the boat in degrees (-90 to 90)
         char m_roll;  ///< The roll of the boat in degrees (-90 to 90)
         float m_yaw;  ///< The filtered yaw of the boat in degrees (0 to 360)
