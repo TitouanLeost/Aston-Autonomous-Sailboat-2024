@@ -27,13 +27,13 @@ void Supervisor::startMission()
 
 void Supervisor::updateMission()
 {
+    m_ctrl->setUpdate(true);
+
     if (m_rc->isReceiving()){
+        m_ctrl->setUpdate(false);
         m_rc->update();
-        Serial.print("Rudder: ");
         m_ctrl->mr()->setPercent(m_rc->getCmdRudder());
-        Serial.print("    Sail: ");
         m_ctrl->ms()->setPercent(m_rc->getCmdSail());
-        Serial.println();
     }
 
     else if (isWaypointReached()){
@@ -44,6 +44,9 @@ void Supervisor::updateMission()
         CoordLatLon a = m_wp[m_current_wp-1];
         CoordLatLon b = m_wp[m_current_wp];
         m_ctrl->algo()->setLine(a, b);
+
+        Serial.println("Waypoint reached");
+        Serial.print("Next waypoint: "); Serial.print(m_wp[m_current_wp].lat); Serial.print(", "); Serial.println(m_wp[m_current_wp].lon);
     }
 }
 
