@@ -7,6 +7,8 @@
 
 #include <Config.h>
 #include <Observer.h>
+#include <Controller.h>
+#include <RCReceiver.h>
 
 
 /**************************************************************************
@@ -22,10 +24,13 @@ class Logger
         /********************************************************
          * Initialize the logger.
          * Check the connection with the SD card and initialize
-         * the observer to use, then open the file.
+         * the observer, controller and RC receiver to use, 
+         * then open the file.
          * @param obs The observer to log the data from.
+         * @param ctrl The controller to log the data from.
+         * @param rc The RC receiver to log the data from.
         ********************************************************/
-        void init(Observer* obs);
+        void init(Observer* obs, Controller* ctrl, RCReceiver* rc);
 
         /********************************************************
          * Update the logger.
@@ -89,6 +94,8 @@ class Logger
         void write(String msg);
 
         Observer* m_obs;  ///< The observer to log the data from
+        Controller* m_ctrl;  ///< The controller to log the data from
+        RCReceiver* m_rc;  ///< The RC receiver to log the data from
 
         File m_file;  ///< The file to write the data
         String m_filename;  ///< The filename
