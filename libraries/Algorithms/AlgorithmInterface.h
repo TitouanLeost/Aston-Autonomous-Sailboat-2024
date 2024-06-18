@@ -21,9 +21,22 @@ class AlgorithmInterface
          * @param obs A pointer to the observer used
         *************************************************************/
         void init(Observer* obs) {m_obs = obs;}; 
+
+        /*************************************************************
+         * Update the command.
+         * This function update the command to send to the boat. It 
+         * needs specific implementation for each algorithm.
+        *************************************************************/    
         virtual void updateCmd() = 0;
-        
-        virtual void setLine(CoordLatLon a, CoordLatLon b) {};
+
+        /*************************************************************
+         * Update the waypoint.
+         * This function update the waypoint to reach. It needs specific
+         * implementation for each type 1 algorithm.
+         * @param a The previous waypoint
+         * @param b The new waypoint to reach
+        *************************************************************/
+        void updateWaypoint(CoordLatLon a, CoordLatLon b) {};
 
 
         /*************************************************************

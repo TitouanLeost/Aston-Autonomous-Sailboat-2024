@@ -1,17 +1,13 @@
 #include <Algorithms.h>
 
+/*=======================================================*/
+/*==================== LineFollowing ====================*/
+/*=======================================================*/
 
 LineFollowing::LineFollowing(){}
 
 
 LineFollowing::~LineFollowing(){}
-
-
-void LineFollowing::setLine(CoordLatLon a, CoordLatLon b)
-{
-    m_a = latLonToXY(a);
-    m_b = latLonToXY(b);
-}
 
 
 void LineFollowing::updateCmd()
@@ -46,3 +42,35 @@ void LineFollowing::updateCmd()
     m_cmd_rudder = 1 - (angle_rudder + ANGLE_RUDDER_MAX) / (2*ANGLE_RUDDER_MAX);
     m_cmd_sail = (angle_sail + ANGLE_SAIL_MAX) / (2*ANGLE_SAIL_MAX);
 }
+
+
+void LineFollowing::updateWaypoint(CoordLatLon a, CoordLatLon b)
+{
+    setLine(a, b);
+}
+
+
+void LineFollowing::setLine(CoordLatLon a, CoordLatLon b)
+{
+    m_a = latLonToXY(a);
+    m_b = latLonToXY(b);
+}
+
+
+/*=======================================================*/
+/*==================== SationKeeping ====================*/
+/*=======================================================*/
+
+StationKeeping::StationKeeping(){}
+
+
+StationKeeping::~StationKeeping(){}
+
+
+void StationKeeping::updateCmd()
+{
+    Serial.println("StationKeeping::updateCmd()");
+    m_cmd_rudder = 0.5;
+    m_cmd_sail = 0.5;
+}
+
