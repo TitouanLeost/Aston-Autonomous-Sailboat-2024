@@ -17,37 +17,51 @@ void Supervisor::init(Observer* obs, Controller* ctrl, RCReceiver* rc)
 }
 
 
-void Supervisor::startMission()
+void Supervisor::updateMission()
 {
-    CoordLatLon a = m_obs->gps()->getCoordLatLon();
-    CoordLatLon b = m_wp[m_current_wp];
-    m_ctrl->algo()->setLine(a, b);   
+    switch(m_rc->isReceiving()){
+        case true:
+            m_ctrl->setUpdate(false);
+            m_rc->update();
+            m_ctrl->mr()->setPercent(m_rc->getCmdRudder());
+            m_ctrl->ms()->setPercent(m_rc->getCmdSail());
+            break;
+
+        case false:
+            m_ctrl->setUpdate(true);
+            if(isWaypointReached()){
+                #if ALGO2 == NoAlgorithm
+                    nextWaypoint();
+                #else
+                    m_num_algo = m_ctrl->setAlgo(2);
+                    m_algo2_start_time = millis();
+                #endif
+            }
+            if(isAlgo2Finished())
+                nextWaypoint();
+            break;
+    }
 }
 
 
-void Supervisor::updateMission()
+void Supervisor::startMission()
 {
-    m_ctrl->setUpdate(true);
+    m_num_algo = m_ctrl->setAlgo(1);
+    CoordLatLon a = m_obs->gps()->getCoordLatLon();
+    CoordLatLon b = m_wp[m_current_wp];
+    m_ctrl->algo()->updateWaypoint(a, b);   
+}
 
-    if (m_rc->isReceiving()){
-        m_ctrl->setUpdate(false);
-        m_rc->update();
-        m_ctrl->mr()->setPercent(m_rc->getCmdRudder());
-        m_ctrl->ms()->setPercent(m_rc->getCmdSail());
-    }
 
-    else if (isWaypointReached()){
-        m_current_wp++;
-        if (m_current_wp >= NB_WP)
-            m_current_wp = 0;
-        
-        CoordLatLon a = m_wp[m_current_wp-1];
-        CoordLatLon b = m_wp[m_current_wp];
-        m_ctrl->algo()->setLine(a, b);
+void Supervisor::nextWaypoint()
+{
+    m_current_wp++;
+    if(m_num_algo == 2) 
+        m_num_algo = m_ctrl->setAlgo(1);
 
-        Serial.println("Waypoint reached");
-        Serial.print("Next waypoint: "); Serial.print(m_wp[m_current_wp].lat); Serial.print(", "); Serial.println(m_wp[m_current_wp].lon);
-    }
+    CoordLatLon a = m_wp[m_current_wp-1];
+    CoordLatLon b = m_wp[m_current_wp];
+    m_ctrl->algo()->updateWaypoint(a, b);
 }
 
 
@@ -59,3 +73,8 @@ bool Supervisor::isWaypointReached()
     return (dist < WP_RADIUS ? true : false);
 }
 
+
+bool Supervisor::isAlgo2Finished()
+{
+    return (((m_num_algo == 2) && (millis() - m_algo2_start_time > ALGO2_DURATION)) ? true : false);
+}
