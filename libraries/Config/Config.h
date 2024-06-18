@@ -13,11 +13,13 @@
 /////////////////////////////
 /*======MISSION CONFIG=====*/
 
-#define ALGO LineFollowing()  // Algorithm used
+#define ALGO1 LineFollowing  // Algorithm used to go from waypoint to waypoint (type 1)
+#define ALGO2 StationKeeping  // Algorithm used when a waypoint is reached (type 2)
 #define NB_WP 3  // Number of waypoints
 // List of waypoints (latitude, longitude)
 #define WP { {52.486599, -1.889232}, {52.486302, -1.889515}, {52.486382, -1.889144} }
 #define WP_RADIUS 10  // Radius of the waypoint to validate it
+#define ALGO2_DURATION 10  // Duration (in seconds) of the type 2 algorithm before going to the next waypoint
 
 /*=========================*/
 /////////////////////////////
