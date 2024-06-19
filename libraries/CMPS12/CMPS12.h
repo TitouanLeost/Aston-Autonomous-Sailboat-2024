@@ -9,7 +9,7 @@
 
 /***********************************************************************************************
  * A class to handle the CMPS12.
- * This class allows to get the yaw (filtered or not), pitch and roll of the CMPS12 compass.
+ * This class allows to get the yaw (filtered or not), pitch and roll of the CMPS12.
 ***********************************************************************************************/
 class CMPS12
 {
@@ -18,22 +18,24 @@ class CMPS12
         ~CMPS12();
 
         /***********************************************************************
-         * Initialize the CMPS12 compass.
+         * Initialize the CMPS12.
          * This function initializes the serial connection with the CMPS12 and 
-         * check that the CMPS12 is calibrated.
+         * check that the CMPS12 is calibrated by calling the calibration() 
+         * method.
         ***********************************************************************/
         void init();
 
         /***********************************************************************
-         * Update the yaw, pitch and roll of the CMPS12 compass.
+         * Update the yaw, pitch and roll of the CMPS12.
         ***********************************************************************/
         void update();
 
 
         /***********************************************************************
-         * Check the calibration status of the CMPS12 compass.
+         * Set the filtered yaw.
+         * @param yaw The filtered yaw
         ***********************************************************************/
-        void calibration();
+        void setFilteredYaw(float yaw);
 
 
         /***********************************************************************
@@ -60,14 +62,13 @@ class CMPS12
         ***********************************************************************/
         int getRoll();
 
-
-        /***********************************************************************
-         * Set the filtered yaw.
-         * @param yaw The filtered yaw
-        ***********************************************************************/
-        void setFilteredYaw(float yaw);
-
     private:
+        /***********************************************************************
+         * Check the calibration status of the CMPS12 compass.
+        ***********************************************************************/
+        void calibration();
+
+
         char m_pitch;  ///< The pitch of the boat in degrees (-90 to 90)
         char m_roll;  ///< The roll of the boat in degrees (-90 to 90)
         float m_yaw;  ///< The filtered yaw of the boat in degrees (0 to 360)

@@ -1,0 +1,10 @@
+<map id="Controller" name="Controller">
+<area shape="rect" id="node1" title="A class to handle the controller." alt="" coords="175,983,325,1251"/>
+<area shape="rect" id="node2" href="$classServoMotor.html" title="A class to handle a servo motor." alt="" coords="123,652,305,905"/>
+<area shape="rect" id="node3" href="$classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="330,674,538,883"/>
+<area shape="rect" id="node4" href="$classObserver.html" title="A class to handle the observer." alt="" coords="337,336,531,589"/>
+<area shape="rect" id="node5" href="$classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,20,188,259"/>
+<area shape="rect" id="node6" href="$classGPS.html" title="A class to handle the GPS." alt="" coords="212,13,424,266"/>
+<area shape="rect" id="node7" href="$classWindDirection.html" title="A class to handle the wind direction." alt="" coords="449,42,654,237"/>
+<area shape="rect" id="node8" href="$classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="679,5,827,273"/>
+</map>

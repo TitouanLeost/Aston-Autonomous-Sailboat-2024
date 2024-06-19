@@ -1,4 +1,6 @@
 <map id="AlgorithmInterface" name="AlgorithmInterface">
-<area shape="rect" id="node1" title="A base class to handle all algorithms class." alt="" coords="5,5,213,229"/>
-<area shape="rect" id="node2" href="$classLineFollowing.html" title="A class to handle the line following algorithm." alt="" coords="18,277,201,443"/>
+<area shape="rect" id="node1" title="A base class to handle all algorithms class." alt="" coords="203,5,411,229"/>
+<area shape="rect" id="node2" href="$classLineFollowing.html" title="A class to handle a simple line following algorithm." alt="" coords="5,277,213,472"/>
+<area shape="rect" id="node3" href="$classNoAlgorithm.html" title="A class which is used when you do not want to have a type 2 algorithm." alt="" coords="238,321,375,428"/>
+<area shape="rect" id="node4" href="$classStationKeeping.html" title="A class to handle a station keeping algorithm." alt="" coords="400,321,539,428"/>
 </map>

@@ -9,13 +9,14 @@
 
 /***************************************************************************************
  * A class to handle the wind speed.
- * This class allow to get the wind speed in kph.
+ * This class allows to get the wind speed in kph.
  ***************************************************************************************/
 class WindSpeed
 {
     public:
         WindSpeed();
         ~WindSpeed();
+
 
         /******************************************************************
          * Initialize the different variables of the class.
@@ -24,17 +25,19 @@ class WindSpeed
 
         /******************************************************************
          * Update the wind speed if the anemometer is not rotating.
-         * This function set the wind speed to 0 if the anemometer is
+         * This function sets the wind speed to 0 if the anemometer is
          * not rotating for more than 5 seconds.
         ******************************************************************/
         void update();
 
+
         /******************************************************************
          * Compute the wind speed.
-         * This function increment the number of rotations of the 
-         * anemometer and calculate the wind speed in kph.
+         * This function increments the number of rotations of the 
+         * anemometer and computes the wind speed in kph.
         ******************************************************************/
         void rotation();
+
 
         /******************************************************************
          * Get the wind speed.

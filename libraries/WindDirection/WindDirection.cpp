@@ -21,8 +21,8 @@ void WindDirection::update()
 }
 
 
+void WindDirection::setFilteredWindDirection(float wind_direction) {m_wind_direction = wind_direction;}
+
+
 float WindDirection::getWindDirection() {return m_wind_direction;}
 float WindDirection::getRawWindDirection() {return m_raw_wind_direction;}
-
-
-void WindDirection::setFilteredWindDirection(float wind_direction) {m_wind_direction = wind_direction;}

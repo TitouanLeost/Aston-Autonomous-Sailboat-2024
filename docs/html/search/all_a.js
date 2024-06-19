@@ -1,10 +1,15 @@
 var searchData=
 [
-  ['update_86',['update',['../classCMPS12.html#a56626c06ae6f9abeb527e15ce3c6a38d',1,'CMPS12::update()'],['../classGPS.html#a5b903e61f93bc5db0d9f78bec35730d4',1,'GPS::update()'],['../classLogger.html#ad905325c0f6a7f835e7e54c66e7300b2',1,'Logger::update()'],['../classWindDirection.html#ae2b2f9427d95e60def46e68aee2bd5fe',1,'WindDirection::update()'],['../classWindSpeed.html#a4450257f2640e6baf7f28d2bfc8a28ca',1,'WindSpeed::update()']]],
-  ['updatecmd_87',['updateCmd',['../classLineFollowing.html#a9901fd62d906555c0c4830c46b8f9f03',1,'LineFollowing']]],
-  ['updatelf_88',['updateLF',['../classSupervisor.html#a3f5f4ecdede91e690058f8dd65e8e65d',1,'Supervisor']]],
-  ['updatemission_89',['updateMission',['../classSupervisor.html#a6b2a3d699a9dbb4a3286b707bd5483dd',1,'Supervisor']]],
-  ['updatesensors_90',['updateSensors',['../classObserver.html#a4c3f8cebcb8c6acea453d607805aa553',1,'Observer']]],
-  ['updateservos_91',['updateServos',['../classControllerLF.html#a923acdb5a8b629512162e6791c3da958',1,'ControllerLF']]],
-  ['updatetruewindangle_92',['updateTrueWindAngle',['../classObserver.html#a438c4349adbdfc8cee2b46d1bf345364',1,'Observer']]]
+  ['servomotor_90',['ServoMotor',['../classServoMotor.html',1,'ServoMotor'],['../classServoMotor.html#a4a0548ee1f438521c67449c7ab7056be',1,'ServoMotor::ServoMotor()']]],
+  ['setalgo_91',['setAlgo',['../classController.html#aebde57336a28e61b6330bafb859fb2cd',1,'Controller']]],
+  ['setfilteredwinddirection_92',['setFilteredWindDirection',['../classWindDirection.html#acc5876b17eb8f35ba09a95be00df095a',1,'WindDirection']]],
+  ['setfilteredyaw_93',['setFilteredYaw',['../classCMPS12.html#a54d0af35e38aec3d35b7395e8173e8fb',1,'CMPS12']]],
+  ['setline_94',['setLine',['../classLineFollowing.html#a4f536637b6f7f5f19d56fcbeb686d126',1,'LineFollowing']]],
+  ['setpercent_95',['setPercent',['../classServoMotor.html#a8f4178077763089c129064226361b1e3',1,'ServoMotor']]],
+  ['setpwm_96',['setPWM',['../classServoMotor.html#a955e3ddeca6a6cfac5cc34021d93ae2f',1,'ServoMotor']]],
+  ['setupdate_97',['setUpdate',['../classController.html#aa7cf7b84be24c987dfa1ba6e5af65e13',1,'Controller']]],
+  ['startmission_98',['startMission',['../classSupervisor.html#a9855dc686a3b3ee59ab086c31e570ed0',1,'Supervisor']]],
+  ['stationkeeping_99',['StationKeeping',['../classStationKeeping.html',1,'']]],
+  ['status_100',['status',['../classRCReceiver.html#a0f3d399d0450f8b41b259542e5f9aee5',1,'RCReceiver']]],
+  ['supervisor_101',['Supervisor',['../classSupervisor.html',1,'Supervisor'],['../classSupervisor.html#a9d7eafc36b5429092ba0f758bc7841c4',1,'Supervisor::Supervisor()']]]
 ];

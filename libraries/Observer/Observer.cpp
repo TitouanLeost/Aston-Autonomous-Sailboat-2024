@@ -44,6 +44,13 @@ void Observer::updateSensors()
 }
 
 
+float Observer::getTrueWindAngle() {return m_true_wind_angle;}
+CMPS12* Observer::cmps() {return m_cmps;}
+GPS* Observer::gps() {return m_gps;}
+WindSpeed* Observer::ws() {return m_ws;}
+WindDirection* Observer::wd() {return m_wd;}
+
+
 void Observer::fusion()
 { 
     float yaw = angleFilter(m_cmps->getYaw(), m_cmps->getYawRaw(), YAW_FILTER);  // Low pass filter for yaw
@@ -69,9 +76,6 @@ void Observer::updateTrueWindAngle()
 }
 
 
-float Observer::getTrueWindAngle() {return m_true_wind_angle;}
-
-
 float Observer::angleFilter(float filtered, float raw, float alpha)
 {
     float x = alpha * cos(filtered*M_PI/180) + (1-alpha) * cos(raw*M_PI/180);
@@ -81,9 +85,3 @@ float Observer::angleFilter(float filtered, float raw, float alpha)
         z += 360;
     return z;
 }
-
-
-CMPS12* Observer::cmps() {return m_cmps;}
-GPS* Observer::gps() {return m_gps;}
-WindSpeed* Observer::ws() {return m_ws;}
-WindDirection* Observer::wd() {return m_wd;}

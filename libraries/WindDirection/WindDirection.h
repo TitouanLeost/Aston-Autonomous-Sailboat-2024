@@ -7,7 +7,7 @@
 
 /************************************************************************************************
  * A class to handle the wind direction.
- * This class allow to get the wind direction (raw and filtered) in degrees (between 0 and 360).
+ * This class allows to get the wind direction (raw and filtered) in degrees (0 to 360).
 ************************************************************************************************/
 class WindDirection
 {
@@ -30,6 +30,13 @@ class WindDirection
 
 
         /********************************************************************
+         * Set the filtered wind direction.
+         * @param wind_direction The filtered wind direction in degrees
+        ********************************************************************/
+        void setFilteredWindDirection(float wind_direction);
+
+
+        /********************************************************************
          * Get the filtered wind direction.
          * @return Thefiltered wind direction in degrees (0 to 360)
         ********************************************************************/
@@ -40,13 +47,6 @@ class WindDirection
          * @return The raw wind direction in degrees (0 to 360)
         ********************************************************************/
         float getRawWindDirection();
-
-
-        /********************************************************************
-         * Set the filtered wind direction.
-         * @param wind_direction The filtered wind direction in degrees
-        ********************************************************************/
-        void setFilteredWindDirection(float wind_direction);
 
     private:
         float m_raw_wind_direction;  ///< Raw wind direction in degrees (0 to 360)

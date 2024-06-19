@@ -1,10 +1,10 @@
 <map id="LineFollowing" name="LineFollowing">
-<area shape="rect" id="node1" title="A class to handle the line following algorithm." alt="" coords="427,924,609,1060"/>
-<area shape="rect" id="node2" href="$classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="330,637,538,847"/>
-<area shape="rect" id="node3" href="$classObserver.html" title="A class to handle the observer." alt="" coords="335,351,533,575"/>
-<area shape="rect" id="node4" href="$classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,27,188,266"/>
-<area shape="rect" id="node5" href="$classGPS.html" title="A class to handle the GPS." alt="" coords="212,20,424,273"/>
-<area shape="rect" id="node6" href="$classWindDirection.html" title="A class to handle the wind direction." alt="" coords="449,49,654,244"/>
-<area shape="rect" id="node7" href="$classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="679,5,851,288"/>
-<area shape="rect" id="node8" href="$structCoordXY.html" title=" " alt="" coords="562,696,645,788"/>
+<area shape="rect" id="node1" title="A class to handle a simple line following algorithm." alt="" coords="414,939,622,1104"/>
+<area shape="rect" id="node2" href="$classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="330,652,538,861"/>
+<area shape="rect" id="node3" href="$classObserver.html" title="A class to handle the observer." alt="" coords="337,336,531,589"/>
+<area shape="rect" id="node4" href="$classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,20,188,259"/>
+<area shape="rect" id="node5" href="$classGPS.html" title="A class to handle the GPS." alt="" coords="212,13,424,266"/>
+<area shape="rect" id="node6" href="$classWindDirection.html" title="A class to handle the wind direction." alt="" coords="449,42,654,237"/>
+<area shape="rect" id="node7" href="$classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="679,5,827,273"/>
+<area shape="rect" id="node8" href="$structCoordXY.html" title=" " alt="" coords="562,711,645,803"/>
 </map>

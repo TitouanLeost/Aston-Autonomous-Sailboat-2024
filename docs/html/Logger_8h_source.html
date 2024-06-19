@@ -78,64 +78,78 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;Config.h&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;Observer.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;Controller.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;RCReceiver.h&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classLogger.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLogger.html">Logger</a> </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classLogger.html">Logger</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        ~<a class="code" href="classLogger.html">Logger</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a440ec133163dfaaaebc2b09317c7d681">init</a>(<a class="code" href="classObserver.html">Observer</a>* obs);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#ad905325c0f6a7f835e7e54c66e7300b2">update</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a751cd1a942f2bfce73ec61feaa439d22">open</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classLogger.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLogger.html">Logger</a> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="classLogger.html">Logger</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        ~<a class="code" href="classLogger.html">Logger</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a5e4fa26afc5f26854eec6b342fe32a1c">init</a>(<a class="code" href="classObserver.html">Observer</a>* obs, <a class="code" href="classController.html">Controller</a>* ctrl, <a class="code" href="classRCReceiver.html">RCReceiver</a>* rc);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#ad905325c0f6a7f835e7e54c66e7300b2">update</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#afee2bab560c2db0190c980884d33868c">close</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#ae39867c8897c1ee675e5181576438402">generateFilename</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a751cd1a942f2bfce73ec61feaa439d22">open</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#afee2bab560c2db0190c980884d33868c">close</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a097aec995c0928eb8ac003a056d2cf3e">write</a>(<span class="keywordtype">float</span> data);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a097aec995c0928eb8ac003a056d2cf3e">write</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> data);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a097aec995c0928eb8ac003a056d2cf3e">write</a>(String msg);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classLogger.html#ad0389fdcd2398d649a0a10184206c621">   79</a></span>&#160;        <a class="code" href="classObserver.html">Observer</a>* <a class="code" href="classLogger.html#ad0389fdcd2398d649a0a10184206c621">m_obs</a>;  </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#ae39867c8897c1ee675e5181576438402">generateFilename</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a097aec995c0928eb8ac003a056d2cf3e">write</a>(<span class="keywordtype">float</span> data);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a097aec995c0928eb8ac003a056d2cf3e">write</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> data);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classLogger.html#ad0c9afd37fac48d1c120240dd77c5e5c">   81</a></span>&#160;        File <a class="code" href="classLogger.html#ad0c9afd37fac48d1c120240dd77c5e5c">m_file</a>;  </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classLogger.html#ad192b845e6d76a70fe0546e3a24d61a8">   82</a></span>&#160;        String <a class="code" href="classLogger.html#ad192b845e6d76a70fe0546e3a24d61a8">m_filename</a>;  </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classLogger.html#ab128e8eb74984d189430545e560b7645">   83</a></span>&#160;        String <a class="code" href="classLogger.html#ab128e8eb74984d189430545e560b7645">m_date</a>;  </div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classLogger.html#ae6ba5df7936e5da02e5251394bc1523e">   84</a></span>&#160;        String <a class="code" href="classLogger.html#ae6ba5df7936e5da02e5251394bc1523e">m_time</a>;  </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a097aec995c0928eb8ac003a056d2cf3e">write</a>(<span class="keywordtype">int</span> data);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassLogger_html"><div class="ttname"><a href="classLogger.html">Logger</a></div><div class="ttdoc">A class to handle the data logging.</div><div class="ttdef"><b>Definition:</b> Logger.h:17</div></div>
-<div class="ttc" id="aclassLogger_html_a097aec995c0928eb8ac003a056d2cf3e"><div class="ttname"><a href="classLogger.html#a097aec995c0928eb8ac003a056d2cf3e">Logger::write</a></div><div class="ttdeci">void write(float data)</div><div class="ttdoc">Write data to the file.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:85</div></div>
-<div class="ttc" id="aclassLogger_html_a440ec133163dfaaaebc2b09317c7d681"><div class="ttname"><a href="classLogger.html#a440ec133163dfaaaebc2b09317c7d681">Logger::init</a></div><div class="ttdeci">void init(Observer *obs)</div><div class="ttdoc">Initialize the logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:13</div></div>
-<div class="ttc" id="aclassLogger_html_a751cd1a942f2bfce73ec61feaa439d22"><div class="ttname"><a href="classLogger.html#a751cd1a942f2bfce73ec61feaa439d22">Logger::open</a></div><div class="ttdeci">void open()</div><div class="ttdoc">Open the file.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:48</div></div>
-<div class="ttc" id="aclassLogger_html_ab128e8eb74984d189430545e560b7645"><div class="ttname"><a href="classLogger.html#ab128e8eb74984d189430545e560b7645">Logger::m_date</a></div><div class="ttdeci">String m_date</div><div class="ttdoc">The date of the experiment.</div><div class="ttdef"><b>Definition:</b> Logger.h:83</div></div>
-<div class="ttc" id="aclassLogger_html_ad0389fdcd2398d649a0a10184206c621"><div class="ttname"><a href="classLogger.html#ad0389fdcd2398d649a0a10184206c621">Logger::m_obs</a></div><div class="ttdeci">Observer * m_obs</div><div class="ttdoc">The observer to log the data from.</div><div class="ttdef"><b>Definition:</b> Logger.h:79</div></div>
-<div class="ttc" id="aclassLogger_html_ad0c9afd37fac48d1c120240dd77c5e5c"><div class="ttname"><a href="classLogger.html#ad0c9afd37fac48d1c120240dd77c5e5c">Logger::m_file</a></div><div class="ttdeci">File m_file</div><div class="ttdoc">The file to write the data.</div><div class="ttdef"><b>Definition:</b> Logger.h:81</div></div>
-<div class="ttc" id="aclassLogger_html_ad192b845e6d76a70fe0546e3a24d61a8"><div class="ttname"><a href="classLogger.html#ad192b845e6d76a70fe0546e3a24d61a8">Logger::m_filename</a></div><div class="ttdeci">String m_filename</div><div class="ttdoc">The filename.</div><div class="ttdef"><b>Definition:</b> Logger.h:82</div></div>
-<div class="ttc" id="aclassLogger_html_ad905325c0f6a7f835e7e54c66e7300b2"><div class="ttname"><a href="classLogger.html#ad905325c0f6a7f835e7e54c66e7300b2">Logger::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Update the logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:26</div></div>
-<div class="ttc" id="aclassLogger_html_ae39867c8897c1ee675e5181576438402"><div class="ttname"><a href="classLogger.html#ae39867c8897c1ee675e5181576438402">Logger::generateFilename</a></div><div class="ttdeci">void generateFilename()</div><div class="ttdoc">Generate the filename.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:72</div></div>
-<div class="ttc" id="aclassLogger_html_ae6ba5df7936e5da02e5251394bc1523e"><div class="ttname"><a href="classLogger.html#ae6ba5df7936e5da02e5251394bc1523e">Logger::m_time</a></div><div class="ttdeci">String m_time</div><div class="ttdoc">The time of the experiment.</div><div class="ttdef"><b>Definition:</b> Logger.h:84</div></div>
-<div class="ttc" id="aclassLogger_html_afee2bab560c2db0190c980884d33868c"><div class="ttname"><a href="classLogger.html#afee2bab560c2db0190c980884d33868c">Logger::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Close the file.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:63</div></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a097aec995c0928eb8ac003a056d2cf3e">write</a>(<span class="keywordtype">double</span> data);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogger.html#a097aec995c0928eb8ac003a056d2cf3e">write</a>(String msg);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classLogger.html#ad0389fdcd2398d649a0a10184206c621">   99</a></span>&#160;        <a class="code" href="classObserver.html">Observer</a>* <a class="code" href="classLogger.html#ad0389fdcd2398d649a0a10184206c621">m_obs</a>;  </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classLogger.html#af7fcae2289b88079ffc23b2bd45491e5">  100</a></span>&#160;        <a class="code" href="classController.html">Controller</a>* <a class="code" href="classLogger.html#af7fcae2289b88079ffc23b2bd45491e5">m_ctrl</a>;  </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classLogger.html#a906259c9629d5c61d9141b69a2819985">  101</a></span>&#160;        <a class="code" href="classRCReceiver.html">RCReceiver</a>* <a class="code" href="classLogger.html#a906259c9629d5c61d9141b69a2819985">m_rc</a>;  </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classLogger.html#ad0c9afd37fac48d1c120240dd77c5e5c">  103</a></span>&#160;        File <a class="code" href="classLogger.html#ad0c9afd37fac48d1c120240dd77c5e5c">m_file</a>;  </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classLogger.html#ad192b845e6d76a70fe0546e3a24d61a8">  104</a></span>&#160;        String <a class="code" href="classLogger.html#ad192b845e6d76a70fe0546e3a24d61a8">m_filename</a>;  </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classLogger.html#ab128e8eb74984d189430545e560b7645">  105</a></span>&#160;        String <a class="code" href="classLogger.html#ab128e8eb74984d189430545e560b7645">m_date</a>;  </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classLogger.html#ae6ba5df7936e5da02e5251394bc1523e">  106</a></span>&#160;        String <a class="code" href="classLogger.html#ae6ba5df7936e5da02e5251394bc1523e">m_time</a>;  </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;};</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassController_html"><div class="ttname"><a href="classController.html">Controller</a></div><div class="ttdoc">A class to handle the controller.</div><div class="ttdef"><b>Definition:</b> Controller.h:19</div></div>
+<div class="ttc" id="aclassLogger_html"><div class="ttname"><a href="classLogger.html">Logger</a></div><div class="ttdoc">A class to handle the data logging.</div><div class="ttdef"><b>Definition:</b> Logger.h:19</div></div>
+<div class="ttc" id="aclassLogger_html_a097aec995c0928eb8ac003a056d2cf3e"><div class="ttname"><a href="classLogger.html#a097aec995c0928eb8ac003a056d2cf3e">Logger::write</a></div><div class="ttdeci">void write(float data)</div><div class="ttdoc">Write data to the file.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:120</div></div>
+<div class="ttc" id="aclassLogger_html_a5e4fa26afc5f26854eec6b342fe32a1c"><div class="ttname"><a href="classLogger.html#a5e4fa26afc5f26854eec6b342fe32a1c">Logger::init</a></div><div class="ttdeci">void init(Observer *obs, Controller *ctrl, RCReceiver *rc)</div><div class="ttdoc">Initialize the logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:13</div></div>
+<div class="ttc" id="aclassLogger_html_a751cd1a942f2bfce73ec61feaa439d22"><div class="ttname"><a href="classLogger.html#a751cd1a942f2bfce73ec61feaa439d22">Logger::open</a></div><div class="ttdeci">void open()</div><div class="ttdoc">Open the file.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:70</div></div>
+<div class="ttc" id="aclassLogger_html_a906259c9629d5c61d9141b69a2819985"><div class="ttname"><a href="classLogger.html#a906259c9629d5c61d9141b69a2819985">Logger::m_rc</a></div><div class="ttdeci">RCReceiver * m_rc</div><div class="ttdoc">The RC receiver to log the data from.</div><div class="ttdef"><b>Definition:</b> Logger.h:101</div></div>
+<div class="ttc" id="aclassLogger_html_ab128e8eb74984d189430545e560b7645"><div class="ttname"><a href="classLogger.html#ab128e8eb74984d189430545e560b7645">Logger::m_date</a></div><div class="ttdeci">String m_date</div><div class="ttdoc">The date of the experiment.</div><div class="ttdef"><b>Definition:</b> Logger.h:105</div></div>
+<div class="ttc" id="aclassLogger_html_ad0389fdcd2398d649a0a10184206c621"><div class="ttname"><a href="classLogger.html#ad0389fdcd2398d649a0a10184206c621">Logger::m_obs</a></div><div class="ttdeci">Observer * m_obs</div><div class="ttdoc">The observer to log the data from.</div><div class="ttdef"><b>Definition:</b> Logger.h:99</div></div>
+<div class="ttc" id="aclassLogger_html_ad0c9afd37fac48d1c120240dd77c5e5c"><div class="ttname"><a href="classLogger.html#ad0c9afd37fac48d1c120240dd77c5e5c">Logger::m_file</a></div><div class="ttdeci">File m_file</div><div class="ttdoc">The file to write the data.</div><div class="ttdef"><b>Definition:</b> Logger.h:103</div></div>
+<div class="ttc" id="aclassLogger_html_ad192b845e6d76a70fe0546e3a24d61a8"><div class="ttname"><a href="classLogger.html#ad192b845e6d76a70fe0546e3a24d61a8">Logger::m_filename</a></div><div class="ttdeci">String m_filename</div><div class="ttdoc">The filename.</div><div class="ttdef"><b>Definition:</b> Logger.h:104</div></div>
+<div class="ttc" id="aclassLogger_html_ad905325c0f6a7f835e7e54c66e7300b2"><div class="ttname"><a href="classLogger.html#ad905325c0f6a7f835e7e54c66e7300b2">Logger::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Update the logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:29</div></div>
+<div class="ttc" id="aclassLogger_html_ae39867c8897c1ee675e5181576438402"><div class="ttname"><a href="classLogger.html#ae39867c8897c1ee675e5181576438402">Logger::generateFilename</a></div><div class="ttdeci">void generateFilename()</div><div class="ttdoc">Generate the filename.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:107</div></div>
+<div class="ttc" id="aclassLogger_html_ae6ba5df7936e5da02e5251394bc1523e"><div class="ttname"><a href="classLogger.html#ae6ba5df7936e5da02e5251394bc1523e">Logger::m_time</a></div><div class="ttdeci">String m_time</div><div class="ttdoc">The time of the experiment.</div><div class="ttdef"><b>Definition:</b> Logger.h:106</div></div>
+<div class="ttc" id="aclassLogger_html_af7fcae2289b88079ffc23b2bd45491e5"><div class="ttname"><a href="classLogger.html#af7fcae2289b88079ffc23b2bd45491e5">Logger::m_ctrl</a></div><div class="ttdeci">Controller * m_ctrl</div><div class="ttdoc">The controller to log the data from.</div><div class="ttdef"><b>Definition:</b> Logger.h:100</div></div>
+<div class="ttc" id="aclassLogger_html_afee2bab560c2db0190c980884d33868c"><div class="ttname"><a href="classLogger.html#afee2bab560c2db0190c980884d33868c">Logger::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Close the file.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:98</div></div>
 <div class="ttc" id="aclassObserver_html"><div class="ttname"><a href="classObserver.html">Observer</a></div><div class="ttdoc">A class to handle the observer.</div><div class="ttdef"><b>Definition:</b> Observer.h:19</div></div>
+<div class="ttc" id="aclassRCReceiver_html"><div class="ttname"><a href="classRCReceiver.html">RCReceiver</a></div><div class="ttdoc">A class to handle the RC receiver.</div><div class="ttdef"><b>Definition:</b> RCReceiver.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

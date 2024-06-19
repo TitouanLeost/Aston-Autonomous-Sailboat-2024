@@ -11,8 +11,7 @@ A class to handle a servo motor.
 
 
 
-Collaboration diagram for Servo\+Motor\+:
-\nopagebreak
+Collaboration diagram for Servo\+Motor\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,6 +23,8 @@ Collaboration diagram for Servo\+Motor\+:
 \item 
 \mbox{\hyperlink{classServoMotor_a4a0548ee1f438521c67449c7ab7056be}{Servo\+Motor}} (uint8\+\_\+t pin, uint16\+\_\+t pwm\+\_\+min, uint16\+\_\+t pwm\+\_\+max)
 \begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServoMotor_a13ae02109c52def30f2ab15a8114436c}{$\sim$\+Servo\+Motor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor of the class. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classServoMotor_a71f50f25913d7c8b49e96a86e8189e01}{init}} ()
 \begin{DoxyCompactList}\small\item\em Initialize the servo motor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classServoMotor_a955e3ddeca6a6cfac5cc34021d93ae2f}{set\+PWM}} (uint16\+\_\+t pwm)
@@ -50,7 +51,7 @@ uint8\+\_\+t \mbox{\hyperlink{classServoMotor_a4b39c899312ef03273f833a86aae5822}
 \doxysubsection{Detailed Description}
 A class to handle a servo motor. 
 
-This class allow to control a servo motor with a PWM signal between 0 and 4096 or a float between 0.\+0 and 1.\+0. 
+This class allows to control a servo motor with a PWM signal between 0 and 4096 or a float between 0.\+0 and 1.\+0. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classServoMotor_a4a0548ee1f438521c67449c7ab7056be}\label{classServoMotor_a4a0548ee1f438521c67449c7ab7056be}} 
@@ -63,7 +64,7 @@ This class allow to control a servo motor with a PWM signal between 0 and 4096 o
 
 Constructor of the class. 
 
-
+This constructor initializes the servo motor, the minimum PWM value and the maximum PWM value, and the pin used by the servo motor. 
 \begin{DoxyParams}{Parameters}
 {\em pin} & The pin of the servo motor \\
 \hline
@@ -72,7 +73,17 @@ Constructor of the class.
 {\em pwm\+\_\+max} & The maximum PWM value of the servo motor \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classServoMotor_a13ae02109c52def30f2ab15a8114436c}\label{classServoMotor_a13ae02109c52def30f2ab15a8114436c}} 
+\index{ServoMotor@{ServoMotor}!````~ServoMotor@{$\sim$ServoMotor}}
+\index{````~ServoMotor@{$\sim$ServoMotor}!ServoMotor@{ServoMotor}}
+\doxysubsubsection{\texorpdfstring{$\sim$ServoMotor()}{~ServoMotor()}}
+{\footnotesize\ttfamily Servo\+Motor\+::$\sim$\+Servo\+Motor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Destructor of the class. 
+
+This destructor deletes the servo motor object to free up memory. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classServoMotor_a71f50f25913d7c8b49e96a86e8189e01}\label{classServoMotor_a71f50f25913d7c8b49e96a86e8189e01}} 
@@ -85,7 +96,7 @@ Constructor of the class.
 
 Initialize the servo motor. 
 
-This function set the frequence of the motor and set its PWM to its mean value. \mbox{\Hypertarget{classServoMotor_a8f4178077763089c129064226361b1e3}\label{classServoMotor_a8f4178077763089c129064226361b1e3}} 
+This function sets the frequence of the motor and sets its PWM to its mean value. \mbox{\Hypertarget{classServoMotor_a8f4178077763089c129064226361b1e3}\label{classServoMotor_a8f4178077763089c129064226361b1e3}} 
 \index{ServoMotor@{ServoMotor}!setPercent@{setPercent}}
 \index{setPercent@{setPercent}!ServoMotor@{ServoMotor}}
 \doxysubsubsection{\texorpdfstring{setPercent()}{setPercent()}}
@@ -97,7 +108,7 @@ Set the PWM of the servo motor with a percent.
 
 
 \begin{DoxyParams}{Parameters}
-{\em percent} & The percent (between 0.\+0 and 1.\+0) of the PWM to set to the servo motor \\
+{\em percent} & The percent (0.\+0 to 1.\+0) of the PWM to set to the servo motor \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classServoMotor_a955e3ddeca6a6cfac5cc34021d93ae2f}\label{classServoMotor_a955e3ddeca6a6cfac5cc34021d93ae2f}} 

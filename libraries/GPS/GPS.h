@@ -11,7 +11,7 @@
 
 /***************************************************************************************
  * A class to handle the GPS.
- * This class allow to get the coordinates, the course and the speed of the boat. 
+ * This class allows to get the coordinates, the course and the speed of the boat. 
  * Moreover, it contains a method to get the number of satellites used by the GPS and
  * two methods to get the date and the time (usefull for logging data).
 ***************************************************************************************/
@@ -48,7 +48,7 @@ class GPS
 
         /********************************************************************
          * Get the course of the GPS.
-         * @return The course of the GPS in degrees
+         * @return The course of the GPS in degrees (0 to 360)
         ********************************************************************/
         double getCourse();
 

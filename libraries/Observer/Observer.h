@@ -12,13 +12,24 @@
 
 /**************************************************************************
  * A class to handle the observer.
- * This class allow to update the sensors and to process the data. Those
+ * This class allows to update the sensors and to process the data. These
  * data are then used to feed the controller.
 **************************************************************************/
 class Observer
 {
     public:
+        /********************************************************
+         * Constructor of the class.
+         * This constructor initializes the sensors used by the
+         * observer.
+        ********************************************************/
         Observer();
+
+        /********************************************************
+         * Destructor of the class.
+         * This destructor deletes the pointers to the sensors
+         * to free up memory space.
+        ********************************************************/
         ~Observer();
 
         /********************************************************
@@ -31,18 +42,6 @@ class Observer
         ********************************************************/
         void updateSensors();
 
-        /********************************************************
-         * Process the data.
-         * This function is used to filtered the data from the
-         * CMPS and the wind direction sensor.
-        ********************************************************/
-        void fusion();
-
-
-        /********************************************************
-         * Update the true wind angle.
-        ********************************************************/
-        void updateTrueWindAngle();
 
         /********************************************************
          * Get the true wind angle.
@@ -50,13 +49,55 @@ class Observer
         ********************************************************/
         float getTrueWindAngle();
 
-        CMPS12* cmps();  ///< Get the CMPS sensor
-        GPS* gps();  ///< Get the GPS sensor
-        WindSpeed* ws();  ///< Get the wind speed sensor
-        WindDirection* wd();  ///< Get the wind direction sensor
+        /********************************************************
+         * Get the CMPS12 sensor.
+         * @return A pointer to the CMPS12
+        ********************************************************/
+        CMPS12* cmps();
+
+        /********************************************************
+         * Get the GPS sensor.
+         * @return A pointer to the GPS
+        ********************************************************/
+        GPS* gps();
+
+        /********************************************************
+         * Get the wind speed sensor.
+         * @return A pointer to the wind speed sensor
+        ********************************************************/
+        WindSpeed* ws();
+
+        /********************************************************
+         * Get the wind direction sensor.
+         * @return A pointer to the wind direction sensor
+        ********************************************************/
+        WindDirection* wd();
 
     private:
-        float angleFilter(float x, float y, float alpha);  ///< Low pass filter (used to filter the data from the CMPS and the wind direction sensor
+        /********************************************************
+         * Process the data.
+         * This function is used to filtered the data from the
+         * CMPS and the wind direction sensor.
+        ********************************************************/
+        void fusion();
+
+        /********************************************************
+         * Update the true wind angle.
+        ********************************************************/
+        void updateTrueWindAngle();
+
+        /********************************************************
+         * Filter the angle.
+         * This function is used to filter the angle between two
+         * values. A higher alpha value will give more weight to 
+         * the current angle and less to the previous angle.
+         * @param x The current angle
+         * @param y The previous angle
+         * @param alpha The filter coefficient
+         * @return The filtered angle in degrees (0 to 360)
+        ********************************************************/
+        float angleFilter(float x, float y, float alpha);
+
 
         CMPS12* m_cmps;  ///< The CMPS sensor
         GPS* m_gps;  ///< The GPS sensor

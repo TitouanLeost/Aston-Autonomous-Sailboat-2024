@@ -88,6 +88,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4a0548ee1f438521c67449c7ab7056be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoMotor.html#a4a0548ee1f438521c67449c7ab7056be">ServoMotor</a> (uint8_t pin, uint16_t pwm_min, uint16_t pwm_max)</td></tr>
 <tr class="memdesc:a4a0548ee1f438521c67449c7ab7056be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the class.  <a href="classServoMotor.html#a4a0548ee1f438521c67449c7ab7056be">More...</a><br /></td></tr>
 <tr class="separator:a4a0548ee1f438521c67449c7ab7056be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ae02109c52def30f2ab15a8114436c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoMotor.html#a13ae02109c52def30f2ab15a8114436c">~ServoMotor</a> ()</td></tr>
+<tr class="memdesc:a13ae02109c52def30f2ab15a8114436c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of the class.  <a href="classServoMotor.html#a13ae02109c52def30f2ab15a8114436c">More...</a><br /></td></tr>
+<tr class="separator:a13ae02109c52def30f2ab15a8114436c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71f50f25913d7c8b49e96a86e8189e01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoMotor.html#a71f50f25913d7c8b49e96a86e8189e01">init</a> ()</td></tr>
 <tr class="memdesc:a71f50f25913d7c8b49e96a86e8189e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the servo motor.  <a href="classServoMotor.html#a71f50f25913d7c8b49e96a86e8189e01">More...</a><br /></td></tr>
 <tr class="separator:a71f50f25913d7c8b49e96a86e8189e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,7 +122,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class to handle a servo motor. </p>
-<p>This class allow to control a servo motor with a PWM signal between 0 and 4096 or a float between 0.0 and 1.0. </p>
+<p>This class allows to control a servo motor with a PWM signal between 0 and 4096 or a float between 0.0 and 1.0. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4a0548ee1f438521c67449c7ab7056be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a0548ee1f438521c67449c7ab7056be">&#9670;&nbsp;</a></span>ServoMotor()</h2>
@@ -154,7 +157,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Constructor of the class. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This constructor initializes the servo motor, the minimum PWM value and the maximum PWM value, and the pin used by the servo motor. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pin</td><td>The pin of the servo motor </td></tr>
     <tr><td class="paramname">pwm_min</td><td>The minimum PWM value of the servo motor </td></tr>
@@ -162,6 +165,26 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a13ae02109c52def30f2ab15a8114436c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13ae02109c52def30f2ab15a8114436c">&#9670;&nbsp;</a></span>~ServoMotor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ServoMotor::~ServoMotor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor of the class. </p>
+<p>This destructor deletes the servo motor object to free up memory. </p>
 
 </div>
 </div>
@@ -182,7 +205,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Initialize the servo motor. </p>
-<p>This function set the frequence of the motor and set its PWM to its mean value. </p>
+<p>This function sets the frequence of the motor and sets its PWM to its mean value. </p>
 
 </div>
 </div>
@@ -205,7 +228,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Set the PWM of the servo motor with a percent. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">percent</td><td>The percent (between 0.0 and 1.0) of the PWM to set to the servo motor </td></tr>
+    <tr><td class="paramname">percent</td><td>The percent (0.0 to 1.0) of the PWM to set to the servo motor </td></tr>
   </table>
   </dd>
 </dl>

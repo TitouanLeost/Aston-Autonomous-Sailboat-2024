@@ -2,7 +2,7 @@
 \label{classLineFollowing}\index{LineFollowing@{LineFollowing}}
 
 
-A class to handle the line following algorithm.  
+A class to handle a simple line following algorithm.  
 
 
 
@@ -34,6 +34,11 @@ Collaboration diagram for Line\+Following\+:
 \item 
 void \mbox{\hyperlink{classLineFollowing_a9901fd62d906555c0c4830c46b8f9f03}{update\+Cmd}} ()
 \begin{DoxyCompactList}\small\item\em Update the command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLineFollowing_acfef33e2bb5dd040ebc5202e7f5957d9}{update\+Waypoint}} (\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} a, \mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} b)
+\begin{DoxyCompactList}\small\item\em Update the waypoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
 void \mbox{\hyperlink{classLineFollowing_a4f536637b6f7f5f19d56fcbeb686d126}{set\+Line}} (\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} a, \mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} b)
 \begin{DoxyCompactList}\small\item\em Set the line to follow. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
@@ -52,7 +57,7 @@ int \mbox{\hyperlink{classLineFollowing_af0f29f25ec61edefdfbbd27913af2bc5}{m\+\_
 
 
 \doxysubsection{Detailed Description}
-A class to handle the line following algorithm. 
+A class to handle a simple line following algorithm. 
 
 This class allows to follow a line with the boat. The algorithm is based on the use of potential fields. 
 
@@ -61,23 +66,19 @@ This class allows to follow a line with the boat. The algorithm is based on the 
 \index{LineFollowing@{LineFollowing}!setLine@{setLine}}
 \index{setLine@{setLine}!LineFollowing@{LineFollowing}}
 \doxysubsubsection{\texorpdfstring{setLine()}{setLine()}}
-{\footnotesize\ttfamily void Line\+Following\+::set\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}}}]{a,  }\item[{\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Line\+Following\+::set\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}}}]{a,  }\item[{\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Set the line to follow. 
 
-This function set the line to follow with two points. 
+This function sets the line to follow with two points. 
 \begin{DoxyParams}{Parameters}
 {\em a} & The starting point of the line \\
 \hline
 {\em b} & The ending point of the line \\
 \hline
 \end{DoxyParams}
-
-
-Reimplemented from \mbox{\hyperlink{classAlgorithmInterface}{Algorithm\+Interface}}.
-
 \mbox{\Hypertarget{classLineFollowing_a9901fd62d906555c0c4830c46b8f9f03}\label{classLineFollowing_a9901fd62d906555c0c4830c46b8f9f03}} 
 \index{LineFollowing@{LineFollowing}!updateCmd@{updateCmd}}
 \index{updateCmd@{updateCmd}!LineFollowing@{LineFollowing}}
@@ -88,10 +89,27 @@ Reimplemented from \mbox{\hyperlink{classAlgorithmInterface}{Algorithm\+Interfac
 
 Update the command. 
 
-This function update the command to send to the boat using a line following algorithm. 
+This function updates the command to send to the boat using a line following algorithm. 
 
-Implements \mbox{\hyperlink{classAlgorithmInterface}{Algorithm\+Interface}}.
+Implements \mbox{\hyperlink{classAlgorithmInterface_a0a050d4c5fdb7d31cd8be30b4f4d0306}{Algorithm\+Interface}}.
 
+\mbox{\Hypertarget{classLineFollowing_acfef33e2bb5dd040ebc5202e7f5957d9}\label{classLineFollowing_acfef33e2bb5dd040ebc5202e7f5957d9}} 
+\index{LineFollowing@{LineFollowing}!updateWaypoint@{updateWaypoint}}
+\index{updateWaypoint@{updateWaypoint}!LineFollowing@{LineFollowing}}
+\doxysubsubsection{\texorpdfstring{updateWaypoint()}{updateWaypoint()}}
+{\footnotesize\ttfamily void Line\+Following\+::update\+Waypoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}}}]{a,  }\item[{\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Update the waypoint. 
+
+This function updates the waypoint to reach. 
+\begin{DoxyParams}{Parameters}
+{\em a} & The previous waypoint \\
+\hline
+{\em b} & The new waypoint to reach \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

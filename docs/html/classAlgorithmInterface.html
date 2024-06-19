@@ -79,8 +79,10 @@ Inheritance diagram for AlgorithmInterface:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAlgorithmInterface__inherit__graph.png" border="0" usemap="#aAlgorithmInterface_inherit__map" alt="Inheritance graph"/></div>
 <map name="aAlgorithmInterface_inherit__map" id="aAlgorithmInterface_inherit__map">
-<area shape="rect" title="A base class to handle all algorithms class." alt="" coords="5,5,213,229"/>
-<area shape="rect" href="classLineFollowing.html" title="A class to handle the line following algorithm." alt="" coords="18,277,201,443"/>
+<area shape="rect" title="A base class to handle all algorithms class." alt="" coords="203,5,411,229"/>
+<area shape="rect" href="classLineFollowing.html" title="A class to handle a simple line following algorithm." alt="" coords="5,277,213,472"/>
+<area shape="rect" href="classNoAlgorithm.html" title="A class which is used when you do not want to have a type 2 algorithm." alt="" coords="238,321,375,428"/>
+<area shape="rect" href="classStationKeeping.html" title="A class to handle a station keeping algorithm." alt="" coords="400,321,539,428"/>
 </map>
 </div>
 <div class="dynheader">
@@ -88,12 +90,12 @@ Collaboration diagram for AlgorithmInterface:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAlgorithmInterface__coll__graph.png" border="0" usemap="#aAlgorithmInterface_coll__map" alt="Collaboration graph"/></div>
 <map name="aAlgorithmInterface_coll__map" id="aAlgorithmInterface_coll__map">
-<area shape="rect" title="A base class to handle all algorithms class." alt="" coords="330,637,538,847"/>
-<area shape="rect" href="classObserver.html" title="A class to handle the observer." alt="" coords="335,351,533,575"/>
-<area shape="rect" href="classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,27,188,266"/>
-<area shape="rect" href="classGPS.html" title="A class to handle the GPS." alt="" coords="212,20,424,273"/>
-<area shape="rect" href="classWindDirection.html" title="A class to handle the wind direction." alt="" coords="449,49,654,244"/>
-<area shape="rect" href="classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="679,5,851,288"/>
+<area shape="rect" title="A base class to handle all algorithms class." alt="" coords="330,652,538,861"/>
+<area shape="rect" href="classObserver.html" title="A class to handle the observer." alt="" coords="337,336,531,589"/>
+<area shape="rect" href="classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,20,188,259"/>
+<area shape="rect" href="classGPS.html" title="A class to handle the GPS." alt="" coords="212,13,424,266"/>
+<area shape="rect" href="classWindDirection.html" title="A class to handle the wind direction." alt="" coords="449,42,654,237"/>
+<area shape="rect" href="classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="679,5,827,273"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -102,12 +104,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a624f37e1804e52df3fa3de018574c971"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithmInterface.html#a624f37e1804e52df3fa3de018574c971">init</a> (<a class="el" href="classObserver.html">Observer</a> *obs)</td></tr>
 <tr class="memdesc:a624f37e1804e52df3fa3de018574c971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the algorithm.  <a href="classAlgorithmInterface.html#a624f37e1804e52df3fa3de018574c971">More...</a><br /></td></tr>
 <tr class="separator:a624f37e1804e52df3fa3de018574c971"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a050d4c5fdb7d31cd8be30b4f4d0306"><td class="memItemLeft" align="right" valign="top"><a id="a0a050d4c5fdb7d31cd8be30b4f4d0306"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateCmd</b> ()=0</td></tr>
+<tr class="memitem:a0a050d4c5fdb7d31cd8be30b4f4d0306"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithmInterface.html#a0a050d4c5fdb7d31cd8be30b4f4d0306">updateCmd</a> ()=0</td></tr>
+<tr class="memdesc:a0a050d4c5fdb7d31cd8be30b4f4d0306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the command.  <a href="classAlgorithmInterface.html#a0a050d4c5fdb7d31cd8be30b4f4d0306">More...</a><br /></td></tr>
 <tr class="separator:a0a050d4c5fdb7d31cd8be30b4f4d0306"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a510ef80b2d11a7110b4384965ae55c29"><td class="memItemLeft" align="right" valign="top"><a id="a510ef80b2d11a7110b4384965ae55c29"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setLine</b> (<a class="el" href="structCoordLatLon.html">CoordLatLon</a> a, <a class="el" href="structCoordLatLon.html">CoordLatLon</a> b)</td></tr>
-<tr class="separator:a510ef80b2d11a7110b4384965ae55c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a499e78628bd93d0643a9dcaec5124ad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithmInterface.html#a499e78628bd93d0643a9dcaec5124ad7">updateWaypoint</a> (<a class="el" href="structCoordLatLon.html">CoordLatLon</a> a, <a class="el" href="structCoordLatLon.html">CoordLatLon</a> b)</td></tr>
+<tr class="memdesc:a499e78628bd93d0643a9dcaec5124ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the waypoint.  <a href="classAlgorithmInterface.html#a499e78628bd93d0643a9dcaec5124ad7">More...</a><br /></td></tr>
+<tr class="separator:a499e78628bd93d0643a9dcaec5124ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1ed069605f52ab787dab5caf5cd69fc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithmInterface.html#ad1ed069605f52ab787dab5caf5cd69fc">getCmdRudder</a> ()</td></tr>
 <tr class="memdesc:ad1ed069605f52ab787dab5caf5cd69fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rudder command.  <a href="classAlgorithmInterface.html#ad1ed069605f52ab787dab5caf5cd69fc">More...</a><br /></td></tr>
 <tr class="separator:ad1ed069605f52ab787dab5caf5cd69fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,7 +134,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A base class to handle all algorithms class. </p>
-<p>This class contain basic functions for all algorithms to use. </p>
+<p>This class contains basic functions for all algorithms to use. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad1ed069605f52ab787dab5caf5cd69fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad1ed069605f52ab787dab5caf5cd69fc">&#9670;&nbsp;</a></span>getCmdRudder()</h2>
@@ -215,9 +217,84 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </div><div class="memdoc">
 
 <p>Initialize the algorithm. </p>
-<p>This function initialize the algorithm with the observer. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This function initializes the algorithm with the observer to use. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obs</td><td>A pointer to the observer used </td></tr>
+    <tr><td class="paramname">obs</td><td>A pointer to the observer to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a050d4c5fdb7d31cd8be30b4f4d0306"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a050d4c5fdb7d31cd8be30b4f4d0306">&#9670;&nbsp;</a></span>updateCmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AlgorithmInterface::updateCmd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update the command. </p>
+<p>This function updates the command to send to the boat. It requires a specific implementation for each algorithm. </p>
+
+<p>Implemented in <a class="el" href="classNoAlgorithm.html#a55c6cb0039330461c176924d2b404a9a">NoAlgorithm</a>, <a class="el" href="classStationKeeping.html#ab6b85be5199197dc52af5a5857f77bb1">StationKeeping</a>, and <a class="el" href="classLineFollowing.html#a9901fd62d906555c0c4830c46b8f9f03">LineFollowing</a>.</p>
+
+</div>
+</div>
+<a id="a499e78628bd93d0643a9dcaec5124ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a499e78628bd93d0643a9dcaec5124ad7">&#9670;&nbsp;</a></span>updateWaypoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AlgorithmInterface::updateWaypoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCoordLatLon.html">CoordLatLon</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structCoordLatLon.html">CoordLatLon</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update the waypoint. </p>
+<p>This function update the waypoint to reach. It requires a specific implementation for each type 1 algorithm. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The previous waypoint </td></tr>
+    <tr><td class="paramname">b</td><td>The new waypoint to reach </td></tr>
   </table>
   </dd>
 </dl>

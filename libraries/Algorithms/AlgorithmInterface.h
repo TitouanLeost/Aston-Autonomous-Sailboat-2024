@@ -6,7 +6,7 @@
 
 /**************************************************************************
  * A base class to handle all algorithms class.
- * This class contain basic functions for all algorithms to use.
+ * This class contains basic functions for all algorithms to use.
 **************************************************************************/
 class AlgorithmInterface
 {
@@ -17,22 +17,23 @@ class AlgorithmInterface
 
         /*************************************************************
          * Initialize the algorithm.
-         * This function initialize the algorithm with the observer.
-         * @param obs A pointer to the observer used
+         * This function initializes the algorithm with the observer
+         * to use.
+         * @param obs A pointer to the observer to use
         *************************************************************/
         void init(Observer* obs) {m_obs = obs;}; 
 
         /*************************************************************
          * Update the command.
-         * This function update the command to send to the boat. It 
-         * needs specific implementation for each algorithm.
+         * This function updates the command to send to the boat. It 
+         * requires a specific implementation for each algorithm.
         *************************************************************/    
         virtual void updateCmd() = 0;
 
         /*************************************************************
          * Update the waypoint.
-         * This function update the waypoint to reach. It needs specific
-         * implementation for each type 1 algorithm.
+         * This function update the waypoint to reach. It requires a 
+         * specific implementation for each type 1 algorithm.
          * @param a The previous waypoint
          * @param b The new waypoint to reach
         *************************************************************/

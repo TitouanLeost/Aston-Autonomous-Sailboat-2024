@@ -10,7 +10,12 @@
 Supervisor::Supervisor() : m_wp(WP){}
 
 
-Supervisor::~Supervisor(){}
+Supervisor::~Supervisor()
+{
+    delete m_obs;
+    delete m_ctrl;
+    delete m_rc;
+}
 
 
 void Supervisor::init(Observer* obs, Controller* ctrl, RCReceiver* rc)
@@ -40,7 +45,7 @@ void Supervisor::updateMission()
                 if (IS_ALGO2_EQUAL_TO(NoAlgorithm))
                     nextWaypoint();
                 else{
-                    m_num_algo = m_ctrl->setAlgo(2);
+                    m_algo_type = m_ctrl->setAlgo(2);
                     m_algo2_start_time = millis();
                 }
             }
@@ -54,7 +59,7 @@ void Supervisor::updateMission()
 
 void Supervisor::startMission()
 {
-    m_num_algo = m_ctrl->setAlgo(1);
+    m_algo_type = m_ctrl->setAlgo(1);
     CoordLatLon a = m_obs->gps()->getCoordLatLon();
     CoordLatLon b = m_wp[m_current_wp];
     m_ctrl->algo()->updateWaypoint(a, b);   
@@ -64,8 +69,8 @@ void Supervisor::startMission()
 void Supervisor::nextWaypoint()
 {
     m_current_wp++;
-    if(m_num_algo == 2) 
-        m_num_algo = m_ctrl->setAlgo(1);
+    if(m_algo_type == 2) 
+        m_algo_type = m_ctrl->setAlgo(1);
 
     CoordLatLon a = m_wp[m_current_wp-1];
     CoordLatLon b = m_wp[m_current_wp];
@@ -84,5 +89,5 @@ bool Supervisor::isWaypointReached()
 
 bool Supervisor::isAlgo2Finished()
 {
-    return (((m_num_algo == 2) && ((millis() - m_algo2_start_time) > ALGO2_DURATION*1000)) ? true : false);
+    return (((m_algo_type == 2) && ((millis() - m_algo2_start_time) > ALGO2_DURATION*1000)) ? true : false);
 }

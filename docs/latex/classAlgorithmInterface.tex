@@ -16,7 +16,7 @@ Inheritance diagram for Algorithm\+Interface\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=236pt]{classAlgorithmInterface__inherit__graph}
+\includegraphics[width=350pt]{classAlgorithmInterface__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -34,12 +34,10 @@ Collaboration diagram for Algorithm\+Interface\+:
 \item 
 void \mbox{\hyperlink{classAlgorithmInterface_a624f37e1804e52df3fa3de018574c971}{init}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$obs)
 \begin{DoxyCompactList}\small\item\em Initialize the algorithm. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classAlgorithmInterface_a0a050d4c5fdb7d31cd8be30b4f4d0306}\label{classAlgorithmInterface_a0a050d4c5fdb7d31cd8be30b4f4d0306}} 
-virtual void {\bfseries update\+Cmd} ()=0
-\item 
-\mbox{\Hypertarget{classAlgorithmInterface_a510ef80b2d11a7110b4384965ae55c29}\label{classAlgorithmInterface_a510ef80b2d11a7110b4384965ae55c29}} 
-virtual void {\bfseries set\+Line} (\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} a, \mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} b)
-\item 
+virtual void \mbox{\hyperlink{classAlgorithmInterface_a0a050d4c5fdb7d31cd8be30b4f4d0306}{update\+Cmd}} ()=0
+\begin{DoxyCompactList}\small\item\em Update the command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAlgorithmInterface_a499e78628bd93d0643a9dcaec5124ad7}{update\+Waypoint}} (\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} a, \mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} b)
+\begin{DoxyCompactList}\small\item\em Update the waypoint. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classAlgorithmInterface_ad1ed069605f52ab787dab5caf5cd69fc}{get\+Cmd\+Rudder}} ()
 \begin{DoxyCompactList}\small\item\em Get the rudder command. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classAlgorithmInterface_a579a0643b0be6ecdd5ebe743a4e66abd}{get\+Cmd\+Sail}} ()
@@ -61,7 +59,7 @@ float \mbox{\hyperlink{classAlgorithmInterface_a9286c325e033231e91edfe62db29cdeb
 \doxysubsection{Detailed Description}
 A base class to handle all algorithms class. 
 
-This class contain basic functions for all algorithms to use. 
+This class contains basic functions for all algorithms to use. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classAlgorithmInterface_ad1ed069605f52ab787dab5caf5cd69fc}\label{classAlgorithmInterface_ad1ed069605f52ab787dab5caf5cd69fc}} 
@@ -100,9 +98,40 @@ The sail command (0.\+0 to 1.\+0)
 
 Initialize the algorithm. 
 
-This function initialize the algorithm with the observer. 
+This function initializes the algorithm with the observer to use. 
 \begin{DoxyParams}{Parameters}
-{\em obs} & A pointer to the observer used \\
+{\em obs} & A pointer to the observer to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAlgorithmInterface_a0a050d4c5fdb7d31cd8be30b4f4d0306}\label{classAlgorithmInterface_a0a050d4c5fdb7d31cd8be30b4f4d0306}} 
+\index{AlgorithmInterface@{AlgorithmInterface}!updateCmd@{updateCmd}}
+\index{updateCmd@{updateCmd}!AlgorithmInterface@{AlgorithmInterface}}
+\doxysubsubsection{\texorpdfstring{updateCmd()}{updateCmd()}}
+{\footnotesize\ttfamily virtual void Algorithm\+Interface\+::update\+Cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Update the command. 
+
+This function updates the command to send to the boat. It requires a specific implementation for each algorithm. 
+
+Implemented in \mbox{\hyperlink{classNoAlgorithm_a55c6cb0039330461c176924d2b404a9a}{No\+Algorithm}}, \mbox{\hyperlink{classStationKeeping_ab6b85be5199197dc52af5a5857f77bb1}{Station\+Keeping}}, and \mbox{\hyperlink{classLineFollowing_a9901fd62d906555c0c4830c46b8f9f03}{Line\+Following}}.
+
+\mbox{\Hypertarget{classAlgorithmInterface_a499e78628bd93d0643a9dcaec5124ad7}\label{classAlgorithmInterface_a499e78628bd93d0643a9dcaec5124ad7}} 
+\index{AlgorithmInterface@{AlgorithmInterface}!updateWaypoint@{updateWaypoint}}
+\index{updateWaypoint@{updateWaypoint}!AlgorithmInterface@{AlgorithmInterface}}
+\doxysubsubsection{\texorpdfstring{updateWaypoint()}{updateWaypoint()}}
+{\footnotesize\ttfamily void Algorithm\+Interface\+::update\+Waypoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}}}]{a,  }\item[{\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the waypoint. 
+
+This function update the waypoint to reach. It requires a specific implementation for each type 1 algorithm. 
+\begin{DoxyParams}{Parameters}
+{\em a} & The previous waypoint \\
+\hline
+{\em b} & The new waypoint to reach \\
 \hline
 \end{DoxyParams}
 
