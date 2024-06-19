@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['algorithminterface_102',['AlgorithmInterface',['../classAlgorithmInterface.html',1,'']]]
+  ['algorithminterface_118',['AlgorithmInterface',['../classAlgorithmInterface.html',1,'']]]
 ];

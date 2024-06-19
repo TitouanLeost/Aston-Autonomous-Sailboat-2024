@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['linefollowing_37',['LineFollowing',['../classLineFollowing.html',1,'']]],
-  ['logger_38',['Logger',['../classLogger.html',1,'']]]
+  ['linefollowing_39',['LineFollowing',['../classLineFollowing.html',1,'']]],
+  ['logger_40',['Logger',['../classLogger.html',1,'']]]
 ];

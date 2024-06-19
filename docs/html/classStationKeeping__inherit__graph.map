@@ -1,0 +1,4 @@
+<map id="StationKeeping" name="StationKeeping">
+<area shape="rect" id="node1" title="A class to handle a station keeping algorithm." alt="" coords="40,277,179,384"/>
+<area shape="rect" id="node2" href="$classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="5,5,213,229"/>
+</map>

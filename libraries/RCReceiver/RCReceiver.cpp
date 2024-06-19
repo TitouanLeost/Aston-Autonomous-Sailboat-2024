@@ -46,17 +46,12 @@ bool RCReceiver::isReceiving()
 }
 
 
-bool RCReceiver::status()
-{
-    return m_is_receiving;
-}
+bool RCReceiver::status() {return m_is_receiving;}
+float RCReceiver::getCmdRudder() {return convertToPercent(m_rudder_pulse, RUDDER_CH);}
+float RCReceiver::getCmdSail() {return convertToPercent(m_sail_pulse, SAIL_CH);}
 
 
 float RCReceiver::convertToPercent(unsigned long pulse, int ch)
 {
     return ((float)pulse - (float)m_offset_min[ch]) / ((float)m_offset_max[ch] - (float)m_offset_min[ch]);
 }
-
-
-float RCReceiver::getCmdRudder() {return convertToPercent(m_rudder_pulse, RUDDER_CH);}
-float RCReceiver::getCmdSail() {return convertToPercent(m_sail_pulse, SAIL_CH);}

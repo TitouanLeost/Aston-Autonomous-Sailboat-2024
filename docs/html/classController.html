@@ -79,14 +79,14 @@ Collaboration diagram for Controller:</div>
 <div class="dyncontent">
 <div class="center"><img src="classController__coll__graph.png" border="0" usemap="#aController_coll__map" alt="Collaboration graph"/></div>
 <map name="aController_coll__map" id="aController_coll__map">
-<area shape="rect" title="A class to handle the controller." alt="" coords="175,968,325,1148"/>
-<area shape="rect" href="classServoMotor.html" title="A class to handle a servo motor." alt="" coords="123,637,305,891"/>
-<area shape="rect" href="classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="330,659,538,869"/>
-<area shape="rect" href="classObserver.html" title="A class to handle the observer." alt="" coords="335,351,533,575"/>
-<area shape="rect" href="classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,27,188,266"/>
-<area shape="rect" href="classGPS.html" title="A class to handle the GPS." alt="" coords="212,20,424,273"/>
-<area shape="rect" href="classWindDirection.html" title="A class to handle the wind direction." alt="" coords="449,49,654,244"/>
-<area shape="rect" href="classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="679,5,851,288"/>
+<area shape="rect" title="A class to handle the controller." alt="" coords="175,983,325,1251"/>
+<area shape="rect" href="classServoMotor.html" title="A class to handle a servo motor." alt="" coords="123,652,305,905"/>
+<area shape="rect" href="classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="330,674,538,883"/>
+<area shape="rect" href="classObserver.html" title="A class to handle the observer." alt="" coords="337,336,531,589"/>
+<area shape="rect" href="classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,20,188,259"/>
+<area shape="rect" href="classGPS.html" title="A class to handle the GPS." alt="" coords="212,13,424,266"/>
+<area shape="rect" href="classWindDirection.html" title="A class to handle the wind direction." alt="" coords="449,42,654,237"/>
+<area shape="rect" href="classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="679,5,827,273"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -98,12 +98,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ab87934c4f7a266cfdb86e0f36bc1b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#a0ab87934c4f7a266cfdb86e0f36bc1b5">~Controller</a> ()</td></tr>
 <tr class="memdesc:a0ab87934c4f7a266cfdb86e0f36bc1b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of the class.  <a href="classController.html#a0ab87934c4f7a266cfdb86e0f36bc1b5">More...</a><br /></td></tr>
 <tr class="separator:a0ab87934c4f7a266cfdb86e0f36bc1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9904f7fc1d538558a197157c24d69478"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#a9904f7fc1d538558a197157c24d69478">init</a> ()</td></tr>
-<tr class="memdesc:a9904f7fc1d538558a197157c24d69478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the controller.  <a href="classController.html#a9904f7fc1d538558a197157c24d69478">More...</a><br /></td></tr>
-<tr class="separator:a9904f7fc1d538558a197157c24d69478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadea3548a8e51142181bae543191ff0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#aadea3548a8e51142181bae543191ff0f">init</a> (<a class="el" href="classObserver.html">Observer</a> *obs)</td></tr>
+<tr class="memdesc:aadea3548a8e51142181bae543191ff0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the controller.  <a href="classController.html#aadea3548a8e51142181bae543191ff0f">More...</a><br /></td></tr>
+<tr class="separator:aadea3548a8e51142181bae543191ff0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdc2b51b02237f3ca486108b7ac391f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#acdc2b51b02237f3ca486108b7ac391f1">updateServos</a> ()</td></tr>
 <tr class="memdesc:acdc2b51b02237f3ca486108b7ac391f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the servo motors.  <a href="classController.html#acdc2b51b02237f3ca486108b7ac391f1">More...</a><br /></td></tr>
 <tr class="separator:acdc2b51b02237f3ca486108b7ac391f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebde57336a28e61b6330bafb859fb2cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#aebde57336a28e61b6330bafb859fb2cd">setAlgo</a> (int type)</td></tr>
+<tr class="memdesc:aebde57336a28e61b6330bafb859fb2cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the algorithm to use.  <a href="classController.html#aebde57336a28e61b6330bafb859fb2cd">More...</a><br /></td></tr>
+<tr class="separator:aebde57336a28e61b6330bafb859fb2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7cf7b84be24c987dfa1ba6e5af65e13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#aa7cf7b84be24c987dfa1ba6e5af65e13">setUpdate</a> (bool update)</td></tr>
+<tr class="memdesc:aa7cf7b84be24c987dfa1ba6e5af65e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the update flag.  <a href="classController.html#aa7cf7b84be24c987dfa1ba6e5af65e13">More...</a><br /></td></tr>
+<tr class="separator:aa7cf7b84be24c987dfa1ba6e5af65e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35912b31e25c109e8eb94424f9a35d33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classServoMotor.html">ServoMotor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#a35912b31e25c109e8eb94424f9a35d33">mr</a> ()</td></tr>
 <tr class="memdesc:a35912b31e25c109e8eb94424f9a35d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rudder servo motor.  <a href="classController.html#a35912b31e25c109e8eb94424f9a35d33">More...</a><br /></td></tr>
 <tr class="separator:a35912b31e25c109e8eb94424f9a35d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,7 +124,7 @@ Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a90f4c244dd5baec8795766a4e776202d"><td class="memItemLeft" align="right" valign="top"><a id="a90f4c244dd5baec8795766a4e776202d"></a>
 <a class="el" href="classServoMotor.html">ServoMotor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#a90f4c244dd5baec8795766a4e776202d">m_mr</a> = nullptr</td></tr>
-<tr class="memdesc:a90f4c244dd5baec8795766a4e776202d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rudder servo motor. <br /></td></tr>
+<tr class="memdesc:a90f4c244dd5baec8795766a4e776202d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rudder servo motorm. <br /></td></tr>
 <tr class="separator:a90f4c244dd5baec8795766a4e776202d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a258b4d77aef4b25d76ec23feb558672d"><td class="memItemLeft" align="right" valign="top"><a id="a258b4d77aef4b25d76ec23feb558672d"></a>
 <a class="el" href="classServoMotor.html">ServoMotor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#a258b4d77aef4b25d76ec23feb558672d">m_ms</a> = nullptr</td></tr>
@@ -126,12 +132,24 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a258b4d77aef4b25d76ec23feb558672d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54599cbd0b19c7f303f6d68ee6785e4b"><td class="memItemLeft" align="right" valign="top"><a id="a54599cbd0b19c7f303f6d68ee6785e4b"></a>
 <a class="el" href="classAlgorithmInterface.html">AlgorithmInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#a54599cbd0b19c7f303f6d68ee6785e4b">m_algo</a> = nullptr</td></tr>
-<tr class="memdesc:a54599cbd0b19c7f303f6d68ee6785e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The algorithm to use. <br /></td></tr>
+<tr class="memdesc:a54599cbd0b19c7f303f6d68ee6785e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The algorithm used. <br /></td></tr>
 <tr class="separator:a54599cbd0b19c7f303f6d68ee6785e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a911d5611485d5e8e7977d65bac6bcac7"><td class="memItemLeft" align="right" valign="top"><a id="a911d5611485d5e8e7977d65bac6bcac7"></a>
+ALGO1 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#a911d5611485d5e8e7977d65bac6bcac7">m_algo1</a> = nullptr</td></tr>
+<tr class="memdesc:a911d5611485d5e8e7977d65bac6bcac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type 1 algorithm used. <br /></td></tr>
+<tr class="separator:a911d5611485d5e8e7977d65bac6bcac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5745bfb3882314a1c584e36e499e19d2"><td class="memItemLeft" align="right" valign="top"><a id="a5745bfb3882314a1c584e36e499e19d2"></a>
+ALGO2 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#a5745bfb3882314a1c584e36e499e19d2">m_algo2</a> = nullptr</td></tr>
+<tr class="memdesc:a5745bfb3882314a1c584e36e499e19d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type 2 algorithm used. <br /></td></tr>
+<tr class="separator:a5745bfb3882314a1c584e36e499e19d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3159c5fec93e1c5b3155fe3b9a42cec"><td class="memItemLeft" align="right" valign="top"><a id="ab3159c5fec93e1c5b3155fe3b9a42cec"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#ab3159c5fec93e1c5b3155fe3b9a42cec">m_update</a> = true</td></tr>
+<tr class="memdesc:ab3159c5fec93e1c5b3155fe3b9a42cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">A flag to update the servo motors. <br /></td></tr>
+<tr class="separator:ab3159c5fec93e1c5b3155fe3b9a42cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class to handle the controller. </p>
-<p>This class contain functions to initialize and update the servo motors based on the data from the algorithm used for the mission. The algorithm to use is defined in <a class="el" href="Config_8h_source.html">Config.h</a>. </p>
+<p>This class contains functions to initialize and update the servo motors based on the data from the algorithmz used for the mission. The algorithms to use are defined in <a class="el" href="Config_8h_source.html">Config.h</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a95c56822d667e94b031451729ce069a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95c56822d667e94b031451729ce069a9">&#9670;&nbsp;</a></span>Controller()</h2>
@@ -149,7 +167,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor of the class. </p>
-<p>This constructor initialize the two servo motors and the algorithm to use defined in <a class="el" href="Config_8h_source.html">Config.h</a>. </p>
+<p>This constructor initializes the two servo motors. </p>
 
 </div>
 </div>
@@ -169,7 +187,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destructor of the class. </p>
-<p>This destructor delete the two servo motors and the algorithm to free up memory space. </p>
+<p>This destructor deletes the two servo motors and the algorithm pointers to free up memory space. </p>
 
 </div>
 </div>
@@ -190,12 +208,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the algorithm used. </p>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the algorithm used </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the algorithm currently used </dd></dl>
 
 </div>
 </div>
-<a id="a9904f7fc1d538558a197157c24d69478"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9904f7fc1d538558a197157c24d69478">&#9670;&nbsp;</a></span>init()</h2>
+<a id="aadea3548a8e51142181bae543191ff0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadea3548a8e51142181bae543191ff0f">&#9670;&nbsp;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,14 +221,15 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Controller::init </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classObserver.html">Observer</a> *&#160;</td>
+          <td class="paramname"><em>obs</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Initialize the controller. </p>
-<p>This function initialize the two servo motors. </p>
+<p>This function initializes the two servo motors and the two algorithms used. </p>
 
 </div>
 </div>
@@ -254,6 +273,59 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aebde57336a28e61b6330bafb859fb2cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebde57336a28e61b6330bafb859fb2cd">&#9670;&nbsp;</a></span>setAlgo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Controller::setAlgo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the algorithm to use. </p>
+<p>This function sets the algorithm to use for the mission. It allows to switch between type 1 and type 2 algorithms during the mission. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of the algorithm to use </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The type of the algorithm used </dd></dl>
+
+</div>
+</div>
+<a id="aa7cf7b84be24c987dfa1ba6e5af65e13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7cf7b84be24c987dfa1ba6e5af65e13">&#9670;&nbsp;</a></span>setUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::setUpdate </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>update</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the update flag. </p>
+<p>This function sets the update flag to update the servo motors. If set to false, the servo motors will not be updated. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">update</td><td>The update flag </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="acdc2b51b02237f3ca486108b7ac391f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acdc2b51b02237f3ca486108b7ac391f1">&#9670;&nbsp;</a></span>updateServos()</h2>
 
@@ -270,7 +342,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Update the servo motors. </p>
-<p>This function update the servo motors with the data from the algorithm. </p>
+<p>This function updates the servo motors with the data from the algorithm currently used. </p>
 
 </div>
 </div>

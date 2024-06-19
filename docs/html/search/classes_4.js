@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['observer_110',['Observer',['../classObserver.html',1,'']]]
+  ['noalgorithm_126',['NoAlgorithm',['../classNoAlgorithm.html',1,'']]]
 ];

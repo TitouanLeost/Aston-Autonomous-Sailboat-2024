@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['winddirection_114',['WindDirection',['../classWindDirection.html',1,'']]],
-  ['windspeed_115',['WindSpeed',['../classWindSpeed.html',1,'']]]
+  ['servomotor_129',['ServoMotor',['../classServoMotor.html',1,'']]],
+  ['stationkeeping_130',['StationKeeping',['../classStationKeeping.html',1,'']]],
+  ['supervisor_131',['Supervisor',['../classSupervisor.html',1,'']]]
 ];

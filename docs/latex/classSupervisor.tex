@@ -22,14 +22,25 @@ Collaboration diagram for Supervisor\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classSupervisor_a9d7eafc36b5429092ba0f758bc7841c4}{Supervisor}} ()
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSupervisor_af601035bf11ba7ab70529f4dba14a391}{$\sim$\+Supervisor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor of the class. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSupervisor_a21aa9d0f2a7c7761c6658232e040566d}{init}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$obs, \mbox{\hyperlink{classController}{Controller}} $\ast$ctrl, \mbox{\hyperlink{classRCReceiver}{RCReceiver}} $\ast$rc)
 \begin{DoxyCompactList}\small\item\em Initialize the supervisor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSupervisor_a6b2a3d699a9dbb4a3286b707bd5483dd}{update\+Mission}} ()
+\begin{DoxyCompactList}\small\item\em Update the mission. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
 void \mbox{\hyperlink{classSupervisor_a9855dc686a3b3ee59ab086c31e570ed0}{start\+Mission}} ()
 \begin{DoxyCompactList}\small\item\em Start the mission. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSupervisor_a6b2a3d699a9dbb4a3286b707bd5483dd}{update\+Mission}} ()
-\begin{DoxyCompactList}\small\item\em Update the mission. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSupervisor_ac888dad92936051e3842e2d5982bbac1}{next\+Waypoint}} ()
+\begin{DoxyCompactList}\small\item\em Switch to the next waypoint. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classSupervisor_a24d0faad16f598171ab27e70a2a2c869}{is\+Waypoint\+Reached}} ()
-\begin{DoxyCompactList}\small\item\em Check if the waypoint is reached. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if the waypoint is reached. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSupervisor_a32b5b11983ba6097b3ed4ab6854aafc7}{is\+Algo2\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em Check if the type 2 algorithm is finished. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,13 +58,46 @@ bool \mbox{\hyperlink{classSupervisor_a24d0faad16f598171ab27e70a2a2c869}{is\+Way
 \begin{DoxyCompactList}\small\item\em The list of waypoints. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSupervisor_a1c523ee48c3e532802c3bd6c7975098f}\label{classSupervisor_a1c523ee48c3e532802c3bd6c7975098f}} 
 int \mbox{\hyperlink{classSupervisor_a1c523ee48c3e532802c3bd6c7975098f}{m\+\_\+current\+\_\+wp}} = 0
-\begin{DoxyCompactList}\small\item\em The current waypoint index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The current waypoint index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSupervisor_a15327bac45abc1d4aea6272f4f009fd9}\label{classSupervisor_a15327bac45abc1d4aea6272f4f009fd9}} 
+unsigned long \mbox{\hyperlink{classSupervisor_a15327bac45abc1d4aea6272f4f009fd9}{m\+\_\+algo2\+\_\+start\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em The start time of the algorithm 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSupervisor_a1e95179d893450422fd05f65b09142c4}\label{classSupervisor_a1e95179d893450422fd05f65b09142c4}} 
+int \mbox{\hyperlink{classSupervisor_a1e95179d893450422fd05f65b09142c4}{m\+\_\+algo\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em The type of the algorithm to use (1 or 2) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 A class to handle the supervisor. 
 
-This class allow to update the mission of the boat according to the section \char`\"{}\+MISSION CONFIG\char`\"{} in the file \mbox{\hyperlink{Config_8h_source}{Config.\+h}}. 
+This class allows updating the mission of the boat according to the section \char`\"{}\+MISSION CONFIG\char`\"{} in the file \mbox{\hyperlink{Config_8h_source}{Config.\+h}}. The mission is divided into two parts\+:
+\begin{DoxyItemize}
+\item the first part is to reach the next waypoint
+\item the second part is to perform a task from this waypoint To perform these tasks, the supervisor can select two kinds of algorithms\+: type 1 algorithms are used to perform the first part of the mission while type 2 algorithms are used to perform the second part. You can change the algorithms used for the mission, the waypoints to reach, and the duration of the type 2 algorithm in the file \mbox{\hyperlink{Config_8h_source}{Config.\+h}}. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSupervisor_a9d7eafc36b5429092ba0f758bc7841c4}\label{classSupervisor_a9d7eafc36b5429092ba0f758bc7841c4}} 
+\index{Supervisor@{Supervisor}!Supervisor@{Supervisor}}
+\index{Supervisor@{Supervisor}!Supervisor@{Supervisor}}
+\doxysubsubsection{\texorpdfstring{Supervisor()}{Supervisor()}}
+{\footnotesize\ttfamily Supervisor\+::\+Supervisor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+This constructor initializes the list of waypoints to reach. \mbox{\Hypertarget{classSupervisor_af601035bf11ba7ab70529f4dba14a391}\label{classSupervisor_af601035bf11ba7ab70529f4dba14a391}} 
+\index{Supervisor@{Supervisor}!````~Supervisor@{$\sim$Supervisor}}
+\index{````~Supervisor@{$\sim$Supervisor}!Supervisor@{Supervisor}}
+\doxysubsubsection{\texorpdfstring{$\sim$Supervisor()}{~Supervisor()}}
+{\footnotesize\ttfamily Supervisor\+::$\sim$\+Supervisor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor of the class. 
+
+This destructor deletes the pointers to the observer, controller, and RC receiver to free up memory space. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classSupervisor_a21aa9d0f2a7c7761c6658232e040566d}\label{classSupervisor_a21aa9d0f2a7c7761c6658232e040566d}} 
@@ -66,7 +110,7 @@ This class allow to update the mission of the boat according to the section \cha
 
 Initialize the supervisor. 
 
-This function initialize the supervisor with the observer, the controller and the RC receiver. 
+This function initializes the supervisor with the observer, the controller, and the RC receiver. It also starts the mission by calling the \mbox{\hyperlink{classSupervisor_a9855dc686a3b3ee59ab086c31e570ed0}{start\+Mission()}} method. 
 \begin{DoxyParams}{Parameters}
 {\em obs} & A pointer to the observer used \\
 \hline
@@ -75,30 +119,53 @@ This function initialize the supervisor with the observer, the controller and th
 {\em rc} & A pointer to the RC receiver used \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classSupervisor_a32b5b11983ba6097b3ed4ab6854aafc7}\label{classSupervisor_a32b5b11983ba6097b3ed4ab6854aafc7}} 
+\index{Supervisor@{Supervisor}!isAlgo2Finished@{isAlgo2Finished}}
+\index{isAlgo2Finished@{isAlgo2Finished}!Supervisor@{Supervisor}}
+\doxysubsubsection{\texorpdfstring{isAlgo2Finished()}{isAlgo2Finished()}}
+{\footnotesize\ttfamily bool Supervisor\+::is\+Algo2\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Check if the type 2 algorithm is finished. 
+
+This function checks if the type 2 algorithm has been run for its entire duration. \begin{DoxyReturn}{Returns}
+True if the type 2 algorithm is finished, false otherwise 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classSupervisor_a24d0faad16f598171ab27e70a2a2c869}\label{classSupervisor_a24d0faad16f598171ab27e70a2a2c869}} 
 \index{Supervisor@{Supervisor}!isWaypointReached@{isWaypointReached}}
 \index{isWaypointReached@{isWaypointReached}!Supervisor@{Supervisor}}
 \doxysubsubsection{\texorpdfstring{isWaypointReached()}{isWaypointReached()}}
-{\footnotesize\ttfamily bool Supervisor\+::is\+Waypoint\+Reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Supervisor\+::is\+Waypoint\+Reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Check if the waypoint is reached. 
 
-This function check if the boat has reached the current waypoint. \begin{DoxyReturn}{Returns}
+This function checks if the boat has reached the current waypoint. \begin{DoxyReturn}{Returns}
 True if the waypoint is reached, false otherwise 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSupervisor_a9855dc686a3b3ee59ab086c31e570ed0}\label{classSupervisor_a9855dc686a3b3ee59ab086c31e570ed0}} 
+\mbox{\Hypertarget{classSupervisor_ac888dad92936051e3842e2d5982bbac1}\label{classSupervisor_ac888dad92936051e3842e2d5982bbac1}} 
+\index{Supervisor@{Supervisor}!nextWaypoint@{nextWaypoint}}
+\index{nextWaypoint@{nextWaypoint}!Supervisor@{Supervisor}}
+\doxysubsubsection{\texorpdfstring{nextWaypoint()}{nextWaypoint()}}
+{\footnotesize\ttfamily void Supervisor\+::next\+Waypoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Switch to the next waypoint. 
+
+This function updates the current waypoint to reach by calling the \mbox{\hyperlink{classSupervisor_ac888dad92936051e3842e2d5982bbac1}{next\+Waypoint()}} method to update the goal of the type 1 algorithm. \mbox{\Hypertarget{classSupervisor_a9855dc686a3b3ee59ab086c31e570ed0}\label{classSupervisor_a9855dc686a3b3ee59ab086c31e570ed0}} 
 \index{Supervisor@{Supervisor}!startMission@{startMission}}
 \index{startMission@{startMission}!Supervisor@{Supervisor}}
 \doxysubsubsection{\texorpdfstring{startMission()}{startMission()}}
-{\footnotesize\ttfamily void Supervisor\+::start\+Mission (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Supervisor\+::start\+Mission (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Start the mission. 
 
-This function start the mission of the boat by taking the current position of the boat as the first waypoint. \mbox{\Hypertarget{classSupervisor_a6b2a3d699a9dbb4a3286b707bd5483dd}\label{classSupervisor_a6b2a3d699a9dbb4a3286b707bd5483dd}} 
+This function starts the mission of the boat by taking the current position of the boat as the first waypoint and calling the \mbox{\hyperlink{classSupervisor_ac888dad92936051e3842e2d5982bbac1}{next\+Waypoint()}} method to set the goal of the type 1 algorithm. \mbox{\Hypertarget{classSupervisor_a6b2a3d699a9dbb4a3286b707bd5483dd}\label{classSupervisor_a6b2a3d699a9dbb4a3286b707bd5483dd}} 
 \index{Supervisor@{Supervisor}!updateMission@{updateMission}}
 \index{updateMission@{updateMission}!Supervisor@{Supervisor}}
 \doxysubsubsection{\texorpdfstring{updateMission()}{updateMission()}}
@@ -108,7 +175,7 @@ This function start the mission of the boat by taking the current position of th
 
 Update the mission. 
 
-This function update the mission of the boat. 
+This function updates the mission first by checking the status of the RC receiver to determine whether the boat should be autonomous or remotely controlled. Then, it checks if the boat has reached the current waypoint. If it has, it either switches to the next waypoint or tells the controller to use the type 2 algorithm for the specified duration, before switching to the next waypoint and reusing the type 1 algorithm. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classObserver-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -79,16 +80,22 @@ Collaboration diagram for Observer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classObserver__coll__graph.png" border="0" usemap="#aObserver_coll__map" alt="Collaboration graph"/></div>
 <map name="aObserver_coll__map" id="aObserver_coll__map">
-<area shape="rect" title="A class to handle the observer." alt="" coords="335,351,533,575"/>
-<area shape="rect" href="classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,27,188,266"/>
-<area shape="rect" href="classGPS.html" title="A class to handle the GPS." alt="" coords="212,20,424,273"/>
-<area shape="rect" href="classWindDirection.html" title="A class to handle the wind direction." alt="" coords="449,49,654,244"/>
-<area shape="rect" href="classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="679,5,851,288"/>
+<area shape="rect" title="A class to handle the observer." alt="" coords="337,336,531,589"/>
+<area shape="rect" href="classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,20,188,259"/>
+<area shape="rect" href="classGPS.html" title="A class to handle the GPS." alt="" coords="212,13,424,266"/>
+<area shape="rect" href="classWindDirection.html" title="A class to handle the wind direction." alt="" coords="449,42,654,237"/>
+<area shape="rect" href="classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="679,5,827,273"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a19c43f80a38a332a6f694783df3c9835"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a19c43f80a38a332a6f694783df3c9835">Observer</a> ()</td></tr>
+<tr class="memdesc:a19c43f80a38a332a6f694783df3c9835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the class.  <a href="classObserver.html#a19c43f80a38a332a6f694783df3c9835">More...</a><br /></td></tr>
+<tr class="separator:a19c43f80a38a332a6f694783df3c9835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a450645e61c136826f09940a1334c7f34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a450645e61c136826f09940a1334c7f34">~Observer</a> ()</td></tr>
+<tr class="memdesc:a450645e61c136826f09940a1334c7f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of the class.  <a href="classObserver.html#a450645e61c136826f09940a1334c7f34">More...</a><br /></td></tr>
+<tr class="separator:a450645e61c136826f09940a1334c7f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a326081cb1a9d77bdbbb23dd9c41a6653"><td class="memItemLeft" align="right" valign="top"><a id="a326081cb1a9d77bdbbb23dd9c41a6653"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a326081cb1a9d77bdbbb23dd9c41a6653">init</a> ()</td></tr>
 <tr class="memdesc:a326081cb1a9d77bdbbb23dd9c41a6653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the sensors. <br /></td></tr>
@@ -97,6 +104,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a4c3f8cebcb8c6acea453d607805aa553">updateSensors</a> ()</td></tr>
 <tr class="memdesc:a4c3f8cebcb8c6acea453d607805aa553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the sensors and process the data. <br /></td></tr>
 <tr class="separator:a4c3f8cebcb8c6acea453d607805aa553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00e2177ad350135790e4522c5d33db8b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a00e2177ad350135790e4522c5d33db8b">getTrueWindAngle</a> ()</td></tr>
+<tr class="memdesc:a00e2177ad350135790e4522c5d33db8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the true wind angle.  <a href="classObserver.html#a00e2177ad350135790e4522c5d33db8b">More...</a><br /></td></tr>
+<tr class="separator:a00e2177ad350135790e4522c5d33db8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d5614599457ae3484d2cdae5bc408ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCMPS12.html">CMPS12</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a1d5614599457ae3484d2cdae5bc408ab">cmps</a> ()</td></tr>
+<tr class="memdesc:a1d5614599457ae3484d2cdae5bc408ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classCMPS12.html" title="A class to handle the CMPS12.">CMPS12</a> sensor.  <a href="classObserver.html#a1d5614599457ae3484d2cdae5bc408ab">More...</a><br /></td></tr>
+<tr class="separator:a1d5614599457ae3484d2cdae5bc408ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd09c4308f2131228e807dab7cc50ac7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGPS.html">GPS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#afd09c4308f2131228e807dab7cc50ac7">gps</a> ()</td></tr>
+<tr class="memdesc:afd09c4308f2131228e807dab7cc50ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classGPS.html" title="A class to handle the GPS.">GPS</a> sensor.  <a href="classObserver.html#afd09c4308f2131228e807dab7cc50ac7">More...</a><br /></td></tr>
+<tr class="separator:afd09c4308f2131228e807dab7cc50ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f85698a1ae0aa016400ccc4a0bce5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWindSpeed.html">WindSpeed</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a77f85698a1ae0aa016400ccc4a0bce5d">ws</a> ()</td></tr>
+<tr class="memdesc:a77f85698a1ae0aa016400ccc4a0bce5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the wind speed sensor.  <a href="classObserver.html#a77f85698a1ae0aa016400ccc4a0bce5d">More...</a><br /></td></tr>
+<tr class="separator:a77f85698a1ae0aa016400ccc4a0bce5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2690c25f7ab8bff9e152c3f5ee64a9c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWindDirection.html">WindDirection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a2690c25f7ab8bff9e152c3f5ee64a9c1">wd</a> ()</td></tr>
+<tr class="memdesc:a2690c25f7ab8bff9e152c3f5ee64a9c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the wind direction sensor.  <a href="classObserver.html#a2690c25f7ab8bff9e152c3f5ee64a9c1">More...</a><br /></td></tr>
+<tr class="separator:a2690c25f7ab8bff9e152c3f5ee64a9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
 <tr class="memitem:a59fe48a81a3ab8abb4a16aabb7301eab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a59fe48a81a3ab8abb4a16aabb7301eab">fusion</a> ()</td></tr>
 <tr class="memdesc:a59fe48a81a3ab8abb4a16aabb7301eab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the data.  <a href="classObserver.html#a59fe48a81a3ab8abb4a16aabb7301eab">More...</a><br /></td></tr>
 <tr class="separator:a59fe48a81a3ab8abb4a16aabb7301eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,25 +129,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a438c4349adbdfc8cee2b46d1bf345364">updateTrueWindAngle</a> ()</td></tr>
 <tr class="memdesc:a438c4349adbdfc8cee2b46d1bf345364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the true wind angle. <br /></td></tr>
 <tr class="separator:a438c4349adbdfc8cee2b46d1bf345364"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00e2177ad350135790e4522c5d33db8b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a00e2177ad350135790e4522c5d33db8b">getTrueWindAngle</a> ()</td></tr>
-<tr class="memdesc:a00e2177ad350135790e4522c5d33db8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the true wind angle.  <a href="classObserver.html#a00e2177ad350135790e4522c5d33db8b">More...</a><br /></td></tr>
-<tr class="separator:a00e2177ad350135790e4522c5d33db8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d5614599457ae3484d2cdae5bc408ab"><td class="memItemLeft" align="right" valign="top"><a id="a1d5614599457ae3484d2cdae5bc408ab"></a>
-<a class="el" href="classCMPS12.html">CMPS12</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a1d5614599457ae3484d2cdae5bc408ab">cmps</a> ()</td></tr>
-<tr class="memdesc:a1d5614599457ae3484d2cdae5bc408ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the CMPS sensor. <br /></td></tr>
-<tr class="separator:a1d5614599457ae3484d2cdae5bc408ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd09c4308f2131228e807dab7cc50ac7"><td class="memItemLeft" align="right" valign="top"><a id="afd09c4308f2131228e807dab7cc50ac7"></a>
-<a class="el" href="classGPS.html">GPS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#afd09c4308f2131228e807dab7cc50ac7">gps</a> ()</td></tr>
-<tr class="memdesc:afd09c4308f2131228e807dab7cc50ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classGPS.html" title="A class to handle the GPS.">GPS</a> sensor. <br /></td></tr>
-<tr class="separator:afd09c4308f2131228e807dab7cc50ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77f85698a1ae0aa016400ccc4a0bce5d"><td class="memItemLeft" align="right" valign="top"><a id="a77f85698a1ae0aa016400ccc4a0bce5d"></a>
-<a class="el" href="classWindSpeed.html">WindSpeed</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a77f85698a1ae0aa016400ccc4a0bce5d">ws</a> ()</td></tr>
-<tr class="memdesc:a77f85698a1ae0aa016400ccc4a0bce5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the wind speed sensor. <br /></td></tr>
-<tr class="separator:a77f85698a1ae0aa016400ccc4a0bce5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2690c25f7ab8bff9e152c3f5ee64a9c1"><td class="memItemLeft" align="right" valign="top"><a id="a2690c25f7ab8bff9e152c3f5ee64a9c1"></a>
-<a class="el" href="classWindDirection.html">WindDirection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a2690c25f7ab8bff9e152c3f5ee64a9c1">wd</a> ()</td></tr>
-<tr class="memdesc:a2690c25f7ab8bff9e152c3f5ee64a9c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the wind direction sensor. <br /></td></tr>
-<tr class="separator:a2690c25f7ab8bff9e152c3f5ee64a9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8f65fcd2aa9cc881705d9c62f7d721"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#ade8f65fcd2aa9cc881705d9c62f7d721">angleFilter</a> (float x, float y, float alpha)</td></tr>
+<tr class="memdesc:ade8f65fcd2aa9cc881705d9c62f7d721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter the angle.  <a href="classObserver.html#ade8f65fcd2aa9cc881705d9c62f7d721">More...</a><br /></td></tr>
+<tr class="separator:ade8f65fcd2aa9cc881705d9c62f7d721"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -149,13 +158,130 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class to handle the observer. </p>
-<p>This class allow to update the sensors and to process the data. Those data are then used to feed the controller. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p>This class allows to update the sensors and to process the data. These data are then used to feed the controller. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a19c43f80a38a332a6f694783df3c9835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19c43f80a38a332a6f694783df3c9835">&#9670;&nbsp;</a></span>Observer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Observer::Observer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor of the class. </p>
+<p>This constructor initializes the sensors used by the observer. </p>
+
+</div>
+</div>
+<a id="a450645e61c136826f09940a1334c7f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a450645e61c136826f09940a1334c7f34">&#9670;&nbsp;</a></span>~Observer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Observer::~Observer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor of the class. </p>
+<p>This destructor deletes the pointers to the sensors to free up memory space. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ade8f65fcd2aa9cc881705d9c62f7d721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8f65fcd2aa9cc881705d9c62f7d721">&#9670;&nbsp;</a></span>angleFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Observer::angleFilter </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Filter the angle. </p>
+<p>This function is used to filter the angle between two values. A higher alpha value will give more weight to the current angle and less to the previous angle. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The current angle </td></tr>
+    <tr><td class="paramname">y</td><td>The previous angle </td></tr>
+    <tr><td class="paramname">alpha</td><td>The filter coefficient </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The filtered angle in degrees (0 to 360) </dd></dl>
+
+</div>
+</div>
+<a id="a1d5614599457ae3484d2cdae5bc408ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d5614599457ae3484d2cdae5bc408ab">&#9670;&nbsp;</a></span>cmps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCMPS12.html">CMPS12</a> * Observer::cmps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the <a class="el" href="classCMPS12.html" title="A class to handle the CMPS12.">CMPS12</a> sensor. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the <a class="el" href="classCMPS12.html" title="A class to handle the CMPS12.">CMPS12</a> </dd></dl>
+
+</div>
+</div>
 <a id="a59fe48a81a3ab8abb4a16aabb7301eab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59fe48a81a3ab8abb4a16aabb7301eab">&#9670;&nbsp;</a></span>fusion()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Observer::fusion </td>
@@ -164,6 +290,11 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Process the data. </p>
@@ -188,6 +319,66 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 
 <p>Get the true wind angle. </p>
 <dl class="section return"><dt>Returns</dt><dd>The true wind angle in degrees (0 to 360) </dd></dl>
+
+</div>
+</div>
+<a id="afd09c4308f2131228e807dab7cc50ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd09c4308f2131228e807dab7cc50ac7">&#9670;&nbsp;</a></span>gps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGPS.html">GPS</a> * Observer::gps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the <a class="el" href="classGPS.html" title="A class to handle the GPS.">GPS</a> sensor. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the <a class="el" href="classGPS.html" title="A class to handle the GPS.">GPS</a> </dd></dl>
+
+</div>
+</div>
+<a id="a2690c25f7ab8bff9e152c3f5ee64a9c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2690c25f7ab8bff9e152c3f5ee64a9c1">&#9670;&nbsp;</a></span>wd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWindDirection.html">WindDirection</a> * Observer::wd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the wind direction sensor. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the wind direction sensor </dd></dl>
+
+</div>
+</div>
+<a id="a77f85698a1ae0aa016400ccc4a0bce5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77f85698a1ae0aa016400ccc4a0bce5d">&#9670;&nbsp;</a></span>ws()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWindSpeed.html">WindSpeed</a> * Observer::ws </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the wind speed sensor. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the wind speed sensor </dd></dl>
 
 </div>
 </div>

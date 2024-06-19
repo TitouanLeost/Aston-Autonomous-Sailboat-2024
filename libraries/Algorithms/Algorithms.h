@@ -22,14 +22,14 @@ class LineFollowing : public AlgorithmInterface
 
         /********************************************************
          * Update the command.
-         * This function update the command to send to the boat
+         * This function updates the command to send to the boat
          * using a line following algorithm.
         ********************************************************/
         void updateCmd();
 
         /********************************************************
          * Update the waypoint.
-         * This function update the waypoint to reach.
+         * This function updates the waypoint to reach.
          * @param a The previous waypoint
          * @param b The new waypoint to reach
         ********************************************************/
@@ -38,7 +38,7 @@ class LineFollowing : public AlgorithmInterface
     private:
         /********************************************************
          * Set the line to follow.
-         * This function set the line to follow with two points.
+         * This function sets the line to follow with two points.
          * @param a The starting point of the line
          * @param b The ending point of the line
         ********************************************************/

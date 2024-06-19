@@ -16,13 +16,13 @@ Collaboration diagram for Logger\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classLogger__coll__graph}
+\includegraphics[height=550pt]{classLogger__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classLogger_a440ec133163dfaaaebc2b09317c7d681}{init}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$obs)
+void \mbox{\hyperlink{classLogger_a5e4fa26afc5f26854eec6b342fe32a1c}{init}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$obs, \mbox{\hyperlink{classController}{Controller}} $\ast$ctrl, \mbox{\hyperlink{classRCReceiver}{RCReceiver}} $\ast$rc)
 \begin{DoxyCompactList}\small\item\em Initialize the logger. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLogger_ad905325c0f6a7f835e7e54c66e7300b2}{update}} ()
 \begin{DoxyCompactList}\small\item\em Update the logger. \end{DoxyCompactList}\item 
@@ -52,6 +52,12 @@ void \mbox{\hyperlink{classLogger_ab63629b45ea2911d918e4dab95aaa560}{write}} (St
 \mbox{\Hypertarget{classLogger_ad0389fdcd2398d649a0a10184206c621}\label{classLogger_ad0389fdcd2398d649a0a10184206c621}} 
 \mbox{\hyperlink{classObserver}{Observer}} $\ast$ \mbox{\hyperlink{classLogger_ad0389fdcd2398d649a0a10184206c621}{m\+\_\+obs}}
 \begin{DoxyCompactList}\small\item\em The observer to log the data from. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLogger_af7fcae2289b88079ffc23b2bd45491e5}\label{classLogger_af7fcae2289b88079ffc23b2bd45491e5}} 
+\mbox{\hyperlink{classController}{Controller}} $\ast$ \mbox{\hyperlink{classLogger_af7fcae2289b88079ffc23b2bd45491e5}{m\+\_\+ctrl}}
+\begin{DoxyCompactList}\small\item\em The controller to log the data from. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLogger_a906259c9629d5c61d9141b69a2819985}\label{classLogger_a906259c9629d5c61d9141b69a2819985}} 
+\mbox{\hyperlink{classRCReceiver}{RCReceiver}} $\ast$ \mbox{\hyperlink{classLogger_a906259c9629d5c61d9141b69a2819985}{m\+\_\+rc}}
+\begin{DoxyCompactList}\small\item\em The RC receiver to log the data from. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classLogger_ad0c9afd37fac48d1c120240dd77c5e5c}\label{classLogger_ad0c9afd37fac48d1c120240dd77c5e5c}} 
 File \mbox{\hyperlink{classLogger_ad0c9afd37fac48d1c120240dd77c5e5c}{m\+\_\+file}}
 \begin{DoxyCompactList}\small\item\em The file to write the data. \end{DoxyCompactList}\item 
@@ -69,7 +75,7 @@ String \mbox{\hyperlink{classLogger_ae6ba5df7936e5da02e5251394bc1523e}{m\+\_\+ti
 \doxysubsection{Detailed Description}
 A class to handle the data logging. 
 
-This class allow to log data from the sensors of the boat. 
+This class allows to log data from the sensors of the boat. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classLogger_ae39867c8897c1ee675e5181576438402}\label{classLogger_ae39867c8897c1ee675e5181576438402}} 
@@ -82,19 +88,23 @@ This class allow to log data from the sensors of the boat.
 
 Generate the filename. 
 
-Generate the filename with the date and the time. Only the day and month for the date and the hour and minute for the time are used to keep a file name of 8 caracters (maximum length allowed). \mbox{\Hypertarget{classLogger_a440ec133163dfaaaebc2b09317c7d681}\label{classLogger_a440ec133163dfaaaebc2b09317c7d681}} 
+Generates the filename with the date and the time. Only the day and month for the date and the hour and minute for the time are used to keep a file name of 8 caracters (maximum length allowed). \mbox{\Hypertarget{classLogger_a5e4fa26afc5f26854eec6b342fe32a1c}\label{classLogger_a5e4fa26afc5f26854eec6b342fe32a1c}} 
 \index{Logger@{Logger}!init@{init}}
 \index{init@{init}!Logger@{Logger}}
 \doxysubsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily void Logger\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{obs }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Logger\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{obs,  }\item[{\mbox{\hyperlink{classController}{Controller}} $\ast$}]{ctrl,  }\item[{\mbox{\hyperlink{classRCReceiver}{RCReceiver}} $\ast$}]{rc }\end{DoxyParamCaption})}
 
 
 
 Initialize the logger. 
 
-Check the connection with the SD card and initialize the observer to use, then open the file. 
+Checks the connection with the SD card and initializes the observer, controller and RC receiver to use, then open the file. 
 \begin{DoxyParams}{Parameters}
 {\em obs} & The observer to log the data from. \\
+\hline
+{\em ctrl} & The controller to log the data from. \\
+\hline
+{\em rc} & The RC receiver to log the data from. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classLogger_a751cd1a942f2bfce73ec61feaa439d22}\label{classLogger_a751cd1a942f2bfce73ec61feaa439d22}} 
@@ -107,7 +117,7 @@ Check the connection with the SD card and initialize the observer to use, then o
 
 Open the file. 
 
-Generate the filename, open the file and initialize it with the date and the time. \mbox{\Hypertarget{classLogger_ad905325c0f6a7f835e7e54c66e7300b2}\label{classLogger_ad905325c0f6a7f835e7e54c66e7300b2}} 
+Generates the filename by calling the \mbox{\hyperlink{classLogger_ae39867c8897c1ee675e5181576438402}{generate\+Filename()}} method, opens the file and initializes it with the date and the time of the experimentation. \mbox{\Hypertarget{classLogger_ad905325c0f6a7f835e7e54c66e7300b2}\label{classLogger_ad905325c0f6a7f835e7e54c66e7300b2}} 
 \index{Logger@{Logger}!update@{update}}
 \index{update@{update}!Logger@{Logger}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
@@ -117,7 +127,7 @@ Generate the filename, open the file and initialize it with the date and the tim
 
 Update the logger. 
 
-Log the data from the observer. The data are the time, the yaw, the wind direction, the true wind angle and the wind speed. \mbox{\Hypertarget{classLogger_a4d277ee173ae25e47dc371702642b9e6}\label{classLogger_a4d277ee173ae25e47dc371702642b9e6}} 
+Logs the data from the observer. The data are the time, the yaw, the wind direction, the true wind angle, the wind speed, the number of satellites, the latitude, the longitude, the x and y coordinates, the rudder and sail commands, and the status of the RC receiver. \mbox{\Hypertarget{classLogger_a4d277ee173ae25e47dc371702642b9e6}\label{classLogger_a4d277ee173ae25e47dc371702642b9e6}} 
 \index{Logger@{Logger}!write@{write}}
 \index{write@{write}!Logger@{Logger}}
 \doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}

@@ -43,9 +43,9 @@ void Controller::updateServos()
 }
 
 
-int Controller::setAlgo(int num) 
+int Controller::setAlgo(int type) 
 {
-    switch(num){
+    switch(type){
         case 1:
             m_algo = m_algo1;
             break;
@@ -53,7 +53,7 @@ int Controller::setAlgo(int num)
             m_algo = m_algo2;
             break;
     }
-    return num;
+    return type;
 }
 
 
