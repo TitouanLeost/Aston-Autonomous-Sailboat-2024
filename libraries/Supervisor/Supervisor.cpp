@@ -1,6 +1,12 @@
 #include <Supervisor.h>
 
 
+#define STRINGIFY(x) #x
+#define TOSTRING(x) STRINGIFY(x)
+
+#define IS_ALGO2_EQUAL_TO(value) (String(TOSTRING(ALGO2)) == String(#value))
+
+
 Supervisor::Supervisor() : m_wp(WP){}
 
 
@@ -30,15 +36,17 @@ void Supervisor::updateMission()
         case false:
             m_ctrl->setUpdate(true);
             if(isWaypointReached()){
-                #if ALGO2 == NoAlgorithm
+                m_start_time = millis();
+                if (IS_ALGO2_EQUAL_TO(NoAlgorithm))
                     nextWaypoint();
-                #else
+                else{
                     m_num_algo = m_ctrl->setAlgo(2);
                     m_algo2_start_time = millis();
-                #endif
+                }
             }
             if(isAlgo2Finished())
                 nextWaypoint();
+
             break;
     }
 }
@@ -76,5 +84,5 @@ bool Supervisor::isWaypointReached()
 
 bool Supervisor::isAlgo2Finished()
 {
-    return (((m_num_algo == 2) && (millis() - m_algo2_start_time > ALGO2_DURATION)) ? true : false);
+    return (((m_num_algo == 2) && ((millis() - m_algo2_start_time) > ALGO2_DURATION*1000)) ? true : false);
 }

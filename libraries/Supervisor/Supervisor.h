@@ -76,7 +76,7 @@ class Supervisor
 
         CoordLatLon m_wp[NB_WP];  ///< The list of waypoints
         int m_current_wp = 0;  ///< The current waypoint index
-        unsigned long m_algo2_start_time = 0;  ///< The start time of the algorithm 2
+        unsigned long m_algo2_start_time;  ///< The start time of the algorithm 2
         int m_num_algo;  ///< The number of the algorithm to use
 };
 

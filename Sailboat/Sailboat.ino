@@ -34,6 +34,7 @@ void setup() {
     while(!rc.isReceiving());
     while(rc.isReceiving());
 
+
     obs.init();
     ctrl.init(&obs);
     sp.init(&obs, &ctrl, &rc);

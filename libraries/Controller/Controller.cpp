@@ -27,7 +27,7 @@ void Controller::init(Observer* obs)
     m_mr->init();
     m_ms->init();
     m_algo1->init(obs);
-    m_algo2->init(obs);   
+    m_algo2->init(obs); 
     Serial.println("Servo motors initialized");
     Serial.println("######################### \n");
 }
@@ -45,7 +45,6 @@ void Controller::updateServos()
 
 int Controller::setAlgo(int num) 
 {
-    delete m_algo;
     switch(num){
         case 1:
             m_algo = m_algo1;

@@ -70,7 +70,7 @@ StationKeeping::~StationKeeping(){}
 void StationKeeping::updateCmd()
 {
     Serial.println("StationKeeping::updateCmd()");
-    m_cmd_rudder = 0.5;
-    m_cmd_sail = 0.5;
+    m_cmd_rudder = 0.6;
+    m_cmd_sail = 0.4;
 }
 
