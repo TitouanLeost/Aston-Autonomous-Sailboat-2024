@@ -1,6 +1,12 @@
 #include <Supervisor.h>
 
 
+#define STRINGIFY(x) #x
+#define TOSTRING(x) STRINGIFY(x)
+
+#define IS_ALGO2_EQUAL_TO(value) (String(TOSTRING(ALGO2)) == String(#value))
+
+
 Supervisor::Supervisor() : m_wp(WP){}
 
 
@@ -17,34 +23,53 @@ void Supervisor::init(Observer* obs, Controller* ctrl, RCReceiver* rc)
 }
 
 
-void Supervisor::startMission()
+void Supervisor::updateMission()
 {
-    CoordLatLon a = m_obs->gps()->getCoordLatLon();
-    CoordLatLon b = m_wp[m_current_wp];
-    m_ctrl->algo()->setLine(a, b);   
+    switch(m_rc->isReceiving()){
+        case true:
+            m_ctrl->setUpdate(false);
+            m_rc->update();
+            m_ctrl->mr()->setPercent(m_rc->getCmdRudder());
+            m_ctrl->ms()->setPercent(m_rc->getCmdSail());
+            break;
+
+        case false:
+            m_ctrl->setUpdate(true);
+            if(isWaypointReached()){
+                m_start_time = millis();
+                if (IS_ALGO2_EQUAL_TO(NoAlgorithm))
+                    nextWaypoint();
+                else{
+                    m_num_algo = m_ctrl->setAlgo(2);
+                    m_algo2_start_time = millis();
+                }
+            }
+            if(isAlgo2Finished())
+                nextWaypoint();
+
+            break;
+    }
 }
 
 
-void Supervisor::updateMission()
+void Supervisor::startMission()
 {
-    if (m_rc->isReceiving()){
-        m_rc->update();
-        Serial.print("Rudder: ");
-        m_ctrl->mr()->setPercent(m_rc->getCmdRudder());
-        Serial.print("    Sail: ");
-        m_ctrl->ms()->setPercent(m_rc->getCmdSail());
-        Serial.println();
-    }
+    m_num_algo = m_ctrl->setAlgo(1);
+    CoordLatLon a = m_obs->gps()->getCoordLatLon();
+    CoordLatLon b = m_wp[m_current_wp];
+    m_ctrl->algo()->updateWaypoint(a, b);   
+}
 
-    else if (isWaypointReached()){
-        m_current_wp++;
-        if (m_current_wp >= NB_WP)
-            m_current_wp = 0;
-        
-        CoordLatLon a = m_wp[m_current_wp-1];
-        CoordLatLon b = m_wp[m_current_wp];
-        m_ctrl->algo()->setLine(a, b);
-    }
+
+void Supervisor::nextWaypoint()
+{
+    m_current_wp++;
+    if(m_num_algo == 2) 
+        m_num_algo = m_ctrl->setAlgo(1);
+
+    CoordLatLon a = m_wp[m_current_wp-1];
+    CoordLatLon b = m_wp[m_current_wp];
+    m_ctrl->algo()->updateWaypoint(a, b);
 }
 
 
@@ -56,3 +81,8 @@ bool Supervisor::isWaypointReached()
     return (dist < WP_RADIUS ? true : false);
 }
 
+
+bool Supervisor::isAlgo2Finished()
+{
+    return (((m_num_algo == 2) && ((millis() - m_algo2_start_time) > ALGO2_DURATION*1000)) ? true : false);
+}

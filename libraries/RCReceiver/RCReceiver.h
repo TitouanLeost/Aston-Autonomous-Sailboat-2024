@@ -43,6 +43,8 @@ class RCReceiver
         ************************************************************************/
         bool isReceiving();
 
+        bool status();
+
         /***********************************************************************
          * Convert a pulse to a percentage between 0.0 and 1.0.
          * This function converts a pulse to a percentage using the minimum and
@@ -74,6 +76,7 @@ class RCReceiver
         unsigned long m_sail_pulse_raw;  // Raw pulse of the sail
         unsigned long m_offset_min[NB_CHANNELS];  // Minimum offset of the channels
         unsigned long m_offset_max[NB_CHANNELS];  // Maximum offset of the channels
+        bool m_is_receiving;  // True if the RC receiver is receiving
 };
 
 #endif

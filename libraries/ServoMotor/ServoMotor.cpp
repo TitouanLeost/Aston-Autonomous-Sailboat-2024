@@ -32,8 +32,6 @@ void ServoMotor::setPWM(uint16_t pwm)
         pwm = m_pwm_max;
 
     m_servo->setPWM(m_pin, 0, pwm);
-
-    Serial.print(pwm);
 }
 
 
@@ -43,8 +41,6 @@ void ServoMotor::setPercent(float percent)
         percent = 0.0;
     else if(percent > 1.0)
         percent = 1.0;
-
-    Serial.print(percent); Serial.print(" -> ");
 
     uint16_t pwm = (int) (m_pwm_max - m_pwm_min)*percent + m_pwm_min;
     setPWM(pwm);

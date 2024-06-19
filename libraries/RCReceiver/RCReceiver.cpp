@@ -18,13 +18,16 @@ void RCReceiver::init()
     m_offset_max[RUDDER_CH] = RUDDER_OFFSET_MAX;
     m_offset_min[SAIL_CH] = SAIL_OFFSET_MIN;
     m_offset_max[SAIL_CH] = SAIL_OFFSET_MAX;
+
+    pinMode(RUDDER_CH_PIN, INPUT);
+    pinMode(SAIL_CH_PIN, INPUT);
 }
 
 
 void RCReceiver::update()
 {
-    m_rudder_pulse_raw = pulseIn(RUDDER_CH_PIN, HIGH);
-    m_sail_pulse_raw = pulseIn(SAIL_CH_PIN, HIGH);
+    m_rudder_pulse_raw = pulseIn(RUDDER_CH_PIN, HIGH, 10000);
+    m_sail_pulse_raw = pulseIn(SAIL_CH_PIN, HIGH, 10000);
 
     m_rudder_pulse = PULSE_FILTER * m_rudder_pulse + (1 - PULSE_FILTER) * m_rudder_pulse_raw;
     m_sail_pulse = PULSE_FILTER * m_sail_pulse + (1 - PULSE_FILTER) * m_sail_pulse_raw;
@@ -38,7 +41,14 @@ void RCReceiver::checkRC()
 
 bool RCReceiver::isReceiving()
 {
-    return ((millis() - m_last_pulse) < 100  ? true : false);
+    m_is_receiving = (millis() - m_last_pulse < 100 ? true : false);
+    return m_is_receiving;
+}
+
+
+bool RCReceiver::status()
+{
+    return m_is_receiving;
 }
 
 

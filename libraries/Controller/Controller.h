@@ -20,8 +20,7 @@ class Controller
     public:
         /***********************************************************
          * Constructor of the class.
-         * This constructor initialize the two servo motors and the
-         * algorithm to use defined in Config.h.
+         * This constructor initialize the two servo motors.
         ***********************************************************/
         Controller();
 
@@ -37,7 +36,7 @@ class Controller
          * Initialize the controller.
          * This function initialize the two servo motors.
         ***********************************************************/
-        void init();
+        void init(Observer* obs);
 
         /***********************************************************
          * Update the servo motors.
@@ -45,6 +44,26 @@ class Controller
          * from the algorithm.
         ***********************************************************/
         void updateServos();
+
+
+        /***********************************************************
+         * Set the algorithm to use.
+         * This function set the algorithm to use for the mission.
+         * It allows to switch between type 1 and type 2 algorithms
+         * during the mission.
+         * @param num The number of the algorithm to use
+         * @return The number of the algorithm used
+        ***********************************************************/
+        int setAlgo(int num);
+
+        /***********************************************************
+         * Set the update flag.
+         * This function set the update flag to update the servo
+         * motors. If set to false, the servo motors will not be
+         * updated.
+         * @param update The update flag
+        ***********************************************************/
+        void setUpdate(bool update);
 
 
         /***********************************************************
@@ -61,14 +80,18 @@ class Controller
 
         /***********************************************************
          * Get the algorithm used.
-         * @return A pointer to the algorithm used
+         * @return A pointer to the algorithm currently used
         ***********************************************************/
         AlgorithmInterface* algo();
 
     private:
-        ServoMotor* m_mr = nullptr;  ///< The rudder servo motor
+        ServoMotor* m_mr = nullptr;  ///< The rudder servo motorm
         ServoMotor* m_ms = nullptr;  ///< The sail servo motor
-        AlgorithmInterface* m_algo = nullptr;  ///< The algorithm to use
+        AlgorithmInterface* m_algo = nullptr;  ///< The algorithm used
+        ALGO1* m_algo1 = nullptr;  ///< The type 1 algorithm used
+        ALGO2* m_algo2 = nullptr;  ///< The type 2 algorithm used
+
+        bool m_update = true;  ///< A flag to update the servo motors
 };
 
 #endif

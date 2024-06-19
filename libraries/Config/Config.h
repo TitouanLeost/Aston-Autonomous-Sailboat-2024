@@ -6,18 +6,20 @@
 
 #define EARTH_RADIUS 6371000
 
-#define REF_LON 0.0
-#define REF_LAT 0.0
+#define REF_LAT 52.486252  // Reference latitude
+#define REF_LON -1.889658  // Reference longitude
 
 /*=========================*/
 /////////////////////////////
 /*======MISSION CONFIG=====*/
 
-#define ALGO LineFollowing()  // Algorithm used
+#define ALGO1 LineFollowing  // Algorithm used to go from waypoint to waypoint (type 1)
+#define ALGO2 StationKeeping  // Algorithm used when a waypoint is reached (type 2)
 #define NB_WP 3  // Number of waypoints
 // List of waypoints (latitude, longitude)
-#define WP { {52.485, 1.889709594213}, {52.4854920485, 1.889248254262}, {52.4844804397, 1.890610816442} }
+#define WP { {52.486599, -1.889232}, {52.486302, -1.889515}, {52.486382, -1.889144} }
 #define WP_RADIUS 10  // Radius of the waypoint to validate it
+#define ALGO2_DURATION 10  // Duration (in seconds) of the type 2 algorithm before going to the next waypoint
 
 /*=========================*/
 /////////////////////////////
@@ -49,8 +51,8 @@ enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
 /////////////////////////////
 /*=====OBSERVER CONFIG=====*/
 
-#define YAW_FILTER 0.5  // Coefficient of the filter for the yaw
-#define WIND_DIRECTION_FILTER 0.5  // Coefficient of the filter for the wind direction
+#define YAW_FILTER 0.7  // Coefficient of the filter for the yaw
+#define WIND_DIRECTION_FILTER 0.8  // Coefficient of the filter for the wind direction
 
 /*=========================*/
 /////////////////////////////
@@ -62,8 +64,6 @@ enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
 #define CMPS_GET_PITCH 0x14
 #define CMPS_GET_ROLL 0x15
 #define CMPS_CALIBRATION_STATUS 0x24
-#define CMPS_RX 10  // RX pin for the CMPS
-#define CMPS_TX 11  // TX pin for the CMPS
 
 /*=========================*/
 /////////////////////////////

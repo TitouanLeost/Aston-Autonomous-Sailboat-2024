@@ -46,10 +46,10 @@ void Observer::updateSensors()
 
 void Observer::fusion()
 { 
-    float yaw = YAW_FILTER * m_cmps->getYawRaw() + (1 - YAW_FILTER) * m_cmps->getYaw();  // Low pass filter for yaw
+    float yaw = angleFilter(m_cmps->getYaw(), m_cmps->getYawRaw(), YAW_FILTER);  // Low pass filter for yaw
     m_cmps->setFilteredYaw(yaw);
 
-    float wind_direction = WIND_DIRECTION_FILTER * m_wd->getRawWindDirection() + (1 - WIND_DIRECTION_FILTER) * m_wd->getWindDirection();  // Low pass filter for wind direction
+    float wind_direction = angleFilter(m_wd->getWindDirection(), m_wd->getRawWindDirection(), WIND_DIRECTION_FILTER);  // Low pass filter for wind direction
     m_wd->setFilteredWindDirection(wind_direction);
 }
 
@@ -57,9 +57,7 @@ void Observer::fusion()
 void Observer::updateTrueWindAngle()
 {
     float SOG = gps()->getSpeed();
-    float COG = gps()->getCourse();
-    if(COG == 99999)
-        COG = cmps()->getYaw();
+    float COG = cmps()->getYaw();
 
     float AWD = ((float)(((int)(wd()->getWindDirection() + cmps()->getYaw()))%360))/180*M_PI;
     float AWS = ws()->getWindSpeed();
@@ -72,6 +70,17 @@ void Observer::updateTrueWindAngle()
 
 
 float Observer::getTrueWindAngle() {return m_true_wind_angle;}
+
+
+float Observer::angleFilter(float filtered, float raw, float alpha)
+{
+    float x = alpha * cos(filtered*M_PI/180) + (1-alpha) * cos(raw*M_PI/180);
+    float y = alpha * sin(filtered*M_PI/180) + (1-alpha) * sin(raw*M_PI/180);
+    float z = atan2(y, x) * 180/M_PI;
+    if(z < 0)
+        z += 360;
+    return z;
+}
 
 
 CMPS12* Observer::cmps() {return m_cmps;}

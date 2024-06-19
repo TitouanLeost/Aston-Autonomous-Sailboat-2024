@@ -10,7 +10,7 @@ Logger::~Logger()
 }
 
 
-void Logger::init(Observer* obs)
+void Logger::init(Observer* obs, Controller* ctrl, RCReceiver* rc)
 {
     if(!SD.begin(SD_PIN)){
         Serial.println("SD card initialization failed");
@@ -19,6 +19,9 @@ void Logger::init(Observer* obs)
     SD.mkdir("LOG");
 
     m_obs = obs;
+    m_ctrl = ctrl;
+    m_rc = rc;
+
     open();
 }
 
@@ -37,6 +40,9 @@ void Logger::update()
     double speed = m_obs->gps()->getSpeed();
     CoordLatLon latlon = m_obs->gps()->getCoordLatLon();
     CoordXY xy = m_obs->gps()->getCoordXY();
+    float rudder_cmd = m_ctrl->algo()->getCmdRudder();
+    float sail_cmd = m_ctrl->algo()->getCmdSail();
+    bool rc_is_receiving = m_rc->status();
 
     write(time); write(",");
     write(yaw); write(",");
@@ -51,7 +57,11 @@ void Logger::update()
     write(latlon.lat); write(",");
     write(latlon.lon); write(",");
     write(xy.x); write(",");
-    write(xy.y); write("\n");
+    write(xy.y); write(",");
+    write(rudder_cmd); write(",");
+    write(sail_cmd); write(",");
+    write(rc_is_receiving); write("\n");
+
     
     m_file.flush();
 }
@@ -69,9 +79,19 @@ void Logger::open()
     m_file = SD.open(m_filename, FILE_WRITE);
 
     write(m_date); write("_"); write(m_time); write("\n");
+
+    CoordLatLon wp[NB_WP] = WP;
+
+    write("Waypoints (nb, radius):\n");
+    write(NB_WP); write(","); write(WP_RADIUS); write("\n");
+    write("Waypoints (lat, lon):\n");
+    for(int i = 0; i < NB_WP; i++){
+        write(wp[i].lat); write(","); write(wp[i].lon); write("\n");
+    }
     write("Time (ms), Yaw Filtered (deg), Yaw Raw (deg), Wind Direction Filtered (deg), ");
     write("Wind Direction Raw (deg), True Wind Direction (deg), Wind Speed (kph), ");
-    write("Satellites, Course (deg), Speed (kph), Latitude (deg), Longitude (deg), X (m), Y (m)\n");
+    write("Satellites, Course (deg), Speed (kph), Latitude (deg), Longitude (deg), X (m), Y (m), ");
+    write("Rudder Cmd (%), Sail Cmd (%), RC Reception\n");
 }
 
 
@@ -90,7 +110,7 @@ void Logger::generateFilename()
     String date = m_date.substring(0, m_date.length() - 2);  // Remove year
     m_time = m_obs->gps()->getTime();
     String time = m_time.substring(0, m_time.length() - 2);  // Remove seconds
-    m_filename = "LOG/";
+    // m_filename = "LOG/";
     m_filename += date;
     m_filename += time;
     m_filename += ".TXT";
@@ -100,5 +120,5 @@ void Logger::generateFilename()
 void Logger::write(float data) {m_file.print(data, 3);}
 void Logger::write(unsigned long int data) {m_file.print(data);}
 void Logger::write(int data) {m_file.print(data);}
-void Logger::write(double data) {m_file.print(data, 5);}
+void Logger::write(double data) {m_file.print(data, 6);}
 void Logger::write(String msg) {m_file.print(msg);}

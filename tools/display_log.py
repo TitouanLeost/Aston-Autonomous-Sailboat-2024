@@ -1,8 +1,13 @@
 import os
+import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.patches as patches
 
 
 def readLog(file):
+    ######################################
+    ########## Initialize lists ##########
+    ######################################
     data = []
     timestamp = []
     yaw = []
@@ -18,8 +23,29 @@ def readLog(file):
     lon = []
     x = []
     y = []
+    rudder_cmd = []
+    sail_cmd = []
+    rc_status = []
+    wp = []
+
+
+    ######################################
+    ########### Read the file ############
+    ######################################
+    file.readline()
+    file.readline()
+
+    line = file.readline()
+    nb_wp, wp_radius = line.split(',')
 
     file.readline()
+
+    for i in range(int(nb_wp)):
+        line = file.readline()
+        wp.append((float(line.split(',')[0]), float(line.split(',')[1])))
+
+    file.readline()
+
     for line in file:
         if line == 'END':
             break
@@ -37,7 +63,10 @@ def readLog(file):
         lat.append(float(line.split(',')[10]))
         lon.append(float(line.split(',')[11]))
         x.append(float(line.split(',')[12]))
-        y.append(float(line.split(',')[13]).strip())
+        y.append(float(line.split(',')[13]))
+        rudder_cmd.append(float(line.split(',')[14]))
+        sail_cmd.append(float(line.split(',')[15]))
+        rc_status.append(int(line.split(',')[16]))
 
     timestamp = [t - timestamp[0] for t in timestamp]
     
@@ -48,6 +77,19 @@ def readLog(file):
     data.append(wind_dir_raw)
     data.append(true_wind_dir)
     data.append(wind_speed)
+    data.append(satellites)
+    data.append(course)
+    data.append(speed)
+    data.append(lat)
+    data.append(lon)
+    data.append(x)
+    data.append(y)
+    data.append(rudder_cmd)
+    data.append(sail_cmd)
+    data.append(rc_status)
+    data.append(wp)
+    data.append(nb_wp)
+    data.append(wp_radius)
 
     return data
 
@@ -98,21 +140,88 @@ def plotWindSpeed(data, date, time):
 
 def plotXY(data, date, time):
     plt.figure('xy')
-    plt.title('X vs Y')
+    plt.title('Boat Path')
     plt.xlabel('X (m)')
     plt.ylabel('Y (m)')
 
-    plt.plot(data[12][:], data[13][:])
-    plt.plot(data[12][0], data[13][0], 'ro', label='Start point')
-    plt.plot(data[12][-1], data[13][-1], 'go', label='End point')
+    val = data[16][0]
+    indice = 0
+    label_added = 0
+    colors = ['blue', 'magenta']
+    labels = ['Boat Path', 'RC Mode']
+    linestyles = ['-', '--']
+    for i, status in enumerate(data[16]):
+        if status != val:
+            plt.plot(data[12][indice:i+1], data[13][indice:i+1], color=colors[val], ls=linestyles[val], label=labels[val] if label_added <= 1 else None)
+            val = status
+            indice = i
+            label_added += 1
 
+    # Plot the remaining data (useful if status doesn't change)
+    plt.plot(data[12][indice:], data[13][indice:], color=colors[val], ls=linestyles[val], label=labels[val] if label_added <= 1 else None)
+
+    label_added = False
     for i, sat in enumerate(data[7][:]):
         if sat < 3:
-            plt.plot(data[12][i], data[13][i], 'rx', label='Satellite lost')
+            if not label_added:
+                plt.plot(data[12][i], data[13][i], 'rx', label='Satellite lost')
+                label_added = True
+            else:
+                plt.plot(data[12][i], data[13][i], 'rx')
+
+    wp_list = data[17]
+    nb_wp = int(data[18])
+    wp_radius = float(data[19])
+    for i in range(nb_wp):
+        x, y = latLonToXY(wp_list[i][0], wp_list[i][1])
+        plt.plot(x, y, 'yo')
+        circle = patches.Circle((x, y), wp_radius, fill=False)
+        plt.gca().add_patch(circle)
 
     plt.legend()
 
     plt.savefig(f'logs/plots/{date}/{time}/xy.png')
+
+
+def plotCmd(data, date, time):
+    plt.figure('cmd')
+    plt.title('Servomotors Commands')
+    plt.xlabel('Time (s)')
+    plt.ylabel('Command (%)')
+    plt.grid()
+
+    val = data[16][0]
+    indice = 0
+    label_added = 0
+    colors = ['blue', 'magenta', 'orange', 'pink']
+    labels = ['Rudder Command', 'RC Mode', 'Sail Command', 'RC Mode']
+    linestyles = ['-', '--']
+    for i, status in enumerate(data[16]):
+        if status != val:
+            plt.plot(data[0][indice:i+1], data[14][indice:i+1], color=colors[val], ls=linestyles[val], label=labels[val] if label_added <= 1 else None)
+            plt.plot(data[0][indice:i+1], data[15][indice:i+1], color=colors[val+2], ls=linestyles[val], label=labels[val+2] if label_added <= 1 else None)
+            val = status
+            indice = i
+            label_added += 1
+
+    # Plot the remaining data (useful if status doesn't change)
+    plt.plot(data[0][indice:], data[14][indice:], color=colors[val], ls=linestyles[val], label=labels[val] if label_added <= 1 else None)
+    plt.plot(data[0][indice:], data[15][indice:], color=colors[val+2], ls=linestyles[val], label=labels[val+2] if label_added <= 1 else None)
+
+    label_added = False
+    for i, sat in enumerate(data[7][:]):
+        if sat < 3:
+            if not label_added:
+                plt.plot(data[0][i], data[14][i], 'rx', label='Satellite lost')
+                plt.plot(data[0][i], data[15][i], 'rx')
+                label_added = True
+            else:
+                plt.plot(data[0][i], data[14][i], 'rx')
+                plt.plot(data[0][i], data[15][i], 'rx')
+
+    plt.legend()
+
+    plt.savefig(f'logs/plots/{date}/{time}/cmd.png')
 
 
 def displayLog(file, date, time):
@@ -125,10 +234,25 @@ def displayLog(file, date, time):
     plotWindDir(data, date, time)
     plotWindSpeed(data, date, time)
     plotXY(data, date, time)
+    plotCmd(data, date, time)
 
     plt.show()
 
     print('Log displayed and saved successfully')
+
+
+def latLonToXY(lat, lon):
+    REF_LAT = 52.486252
+    REF_LON = -1.889658
+    EARTH_RADIUS = 6371000
+
+    if lat == 99999 or lon == 99999:
+        return 0, 0
+
+    x = EARTH_RADIUS * np.cos(lat*np.pi/180) * (lon - REF_LON) * np.pi/180
+    y = EARTH_RADIUS * (lat - REF_LAT) * np.pi/180
+
+    return x, y
 
 
 if __name__ == '__main__':
