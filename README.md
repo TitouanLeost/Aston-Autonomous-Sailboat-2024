@@ -47,7 +47,7 @@ You can now build the project with Arduino IDE. To do this, open the file [Sailb
 
 ## Detailed Structure of the Code
 
-![Full class diagram](docs/diagrams/out/classDiagram/classDiagram.png)
+![Full class diagram](docs/diagrams/out/classDiagram/classDiagram2.png)
 
 ## Additional Tools
 

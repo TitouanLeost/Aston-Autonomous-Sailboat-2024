@@ -1,68 +1,71 @@
 @startuml classDiagram
 
-package Environment <<Frame>> {
+package Environment <<Environment>> { 
 
-    class       GPS {
-        - TinyGPSPlus m_gps
-        + GPS()
-        + ~GPS()
-        + void init()
-        + void update()
-        + double getLat()
-        + double getLon()
-        + double getCourse()
-        + double getSpeed()
-        + int getSatellites()
-        + String getDate()
-        + String getTime()
-        + CoordLatLon getCoordLatLon()
-        + CoordXY getCoordXY()
+    package Sensors <<Sensors>> {
+
+        class       GPS <<Observer>> {
+            - TinyGPSPlus m_gps
+            + GPS()
+            + ~GPS()
+            + void init()
+            + void update()
+            + double getLat()
+            + double getLon()
+            + double getCourse()
+            + double getSpeed()
+            + int getSatellites()
+            + String getDate()
+            + String getTime()
+            + CoordLatLon getCoordLatLon()
+            + CoordXY getCoordXY()
+        }
+
+        class       CMPS12 <<Observer>> {
+            - SoftwareSerial ss_cmps
+            - char m_pitch
+            - char m_roll
+            - float m_yaw
+            - float m_yaw_raw
+            + CMPS12()
+            + ~CMPS12()
+            + void init()
+            + void update()
+            + void setFilteredYaw(float yaw)
+            + float getYaw()
+            + float getYawRaw()
+            + int getPitch()
+            + int getRoll() 
+            - void calibration() 
+        }
+
+        class       WindSpeed <<Observer>> {
+            - volatile int m_nb_rotations
+            - volatile unsigned long m_contact_time
+            - volatile unsigned long m_average_time
+            - volatile double m_wind_speed
+            + WindSpeed()
+            + ~WindSpeed()
+            + void init()
+            + void update()
+            + void rotation()
+            + double getWindSpeed() 
+        }
+
+        class       WindDirection <<Observer>> {
+            - float m_raw_wind_direction
+            - float m_wind_direction
+            + WindSpeed()
+            + ~WindSpeed()
+            + void init()
+            + void update()
+            + void setFilteredWindDirection(float wind_direction)
+            + float getWindDirection()
+            + float getRawWindDirection()    
+        }
     }
 
-    class       CMPS12 {
-        - SoftwareSerial ss_cmps
-        - char m_pitch
-        - char m_roll
-        - float m_yaw
-        - float m_yaw_raw
-        + CMPS12()
-        + ~CMPS12()
-        + void init()
-        + void update()
-        + void calibration()
-        + float getYaw()
-        + float getYawRaw()
-        + int getPitch()
-        + int getRoll()
-        + void setFilteredYaw(float yaw)  
-    }
-
-    class       WindSpeed {
-        - volatile int m_nb_rotations
-        - volatile unsigned long m_contact_time
-        - volatile unsigned long m_average_time
-        - volatile double m_wind_speed
-        + WindSpeed()
-        + ~WindSpeed()
-        + void init()
-        + void update()
-        + void rotation()
-        + double getWindSpeed() 
-    }
-
-    class       WindDirection {
-        - float m_raw_wind_direction
-        - float m_wind_direction
-        + WindSpeed()
-        + ~WindSpeed()
-        + void init()
-        + void update()
-        + float getWindDirection()
-        + float getRawWindDirection()
-        + void setFilteredWindDirection(float wind_direction)    
-    }
-
-    class       ServoMotor {
+    class       ServoMotor <<Command>> {
         - Adafruit_PWMServoDriver* m_servo
         - uint16_t m_pwm_min
         - uint16_t m_pwm_max
@@ -75,27 +78,28 @@ package Environment <<Frame>> {
     }
 }
 
-package Observer <<Frame>> {
+package Observer <<Observer>> {
 
-    class       Observer {
+    class       Observer <<Observer>> {
         - float m_true_wind_angle
         + Observer()
         + ~Observer()
         + void init()
         + void updateSensors()
-        + void Fusion()
-        + void updateTrueWindAngle()
         + float getTrueWindAngle()
         + CMPS12* cmps()
         + GPS* gps()
         + WindDirection* wd()
         + WindSpeed* ws()
+        - void Fusion()
+        - void updateTrueWindAngle()
+        - float angleFilter(float x, float y, float alpha)
     }
 }
 
-package Recorder <<Frame>> {
+package Recorder <<Recorder>> {
 
-    class       Logger {
+    class       Logger <<Observer>> {
         - File m_file
         - String m_filename
         - String m_date
@@ -111,77 +115,147 @@ package Recorder <<Frame>> {
     }
 }
 
-package Supervisor <<Frame>> {
+package Supervisor <<Supervisor>> {
 
-    class       Supervisor {
+    class       Supervisor <<Observer>> {
+        - CoordLatLon m_wp[NB_WP]
         - int m_current_wp
-        - void(Supervisor::*updatePtr)
-        - void(Supervisor::*startPtr)
+        - unsigned long m_algo2_start_time
+        - int m_algo_type
         + Supervisor()
         + ~Supervisor()   
-        + void init(Observer* obs, ControllerInterface* ctrl)
+        + void init(Observer* obs, Controller* ctrl, RCReceiver* rc)
         + void updateMission()
-        + void startLF()    
-        + void updateLF()
-        + bool isWaypointReached() 
+        - void startMission()
+        - void nextWaypoint()
+        - bool isWaypointReached()
+        - bool isAlgo2Finished()
     }
 }
 
-package Command <<Frame>> {
+class       RCReceiver <<Observer>> {
+    - unsigned long m_last_pulse
+    - unsigned long m_rudder_pulse
+    - unsigned long m_rudder_pulse_raw
+    - unsigned long m_sail_pulse
+    - unsigned long m_sail_pulse_raw
+    - unsigned long m_offset_min[NB_CHANNELS]
+    - unsigned long m_offset_max[NB_CHANNELS]
+    - bool m_is_receiving
+    + RCReceiver()
+    + ~RCReceiver()
+    + void init()
+    + void update()
+    + void checkRC()
+    + bool isReceiving()
+    + bool status()
+    + float getCmdRudder()
+    + float getCmdSail()
+    - float convertToPercent(unsigned long pulse, int ch)
+}
 
-    abstract    ControllerInterface {
-        # ServoMotor* m_mr 
-        # ServoMotor* m_ms
-        # AlgorithmInterface* m_algo
-        + ControllerInterface()
-        + ~ControllerInterface()
-        + virtual void init() {static}
-        + virtual void updateServos() {static}
-        + ServoMotor* mr() 
+package Command <<Command>> {
+
+    class       Controller <<Command>> {
+        - ALGO1* m_algo1
+        - ALGO2* m_algo2
+        - bool m_update
+        + Controller()
+        + ~Controller()  
+        + void init()
+        + void updateServos() 
+        + int setAlgo(int type)
+        + void setUpdate(bool update)
+        + ServoMotor* mr()
         + ServoMotor* ms()
         + AlgorithmInterface* algo() 
     }
 
-    class       ControllerLF {
-        + ControllerLF()
-        + ~ControllerLF()  
-        + void init()
-        + void updateServos()  
-    }
-
-    abstract    AlgorithmInterface {
+    abstract    AlgorithmInterface <<Command>> {
         # float m_cmd_rudder
         # float m_cmd_sail
         + AlgorithmInterface()
         + ~AlgorithmInterface() 
         + void init(Observer obs)
         + virtual void updateCmd() {static}
-        + virtual void setLine(CoordLatLon a, CoordLatLon b)
+        + void updateWaypoint(CoordLatLon a, CoordLatLon b)
         + float getCmdRudder()
         + float getCmdSail()
     }
 
-    class       LineFollowing {
-        - int m_q
-        + LineFollowing()
-        + ~LineFollowing()
-        + void updateCmd()
-        + void setLine(CoordLatLon a, CoordLatLon b)    
+    package Algorithms <<Algorithms>> {
+
+        class       LineFollowing <<Command>> {
+            - CoordXY m_a
+            - CoordXY m_b
+            - int m_q
+            + LineFollowing()
+            + ~LineFollowing()
+            + void updateCmd()
+            + void updateWaypoint(CoordLatLon a, CoordLatLon b)
+            - void setLine(CoordLatLon a, CoordLatLon b)    
+        }
+
+        class       StationKeeping <<Command>> {
+            + StationKeeping()
+            + ~StationKeeping()
+            + void updateCmd()    
+        }
+
+        class       NoAlgorithm <<Command>> {
+            + NoAlgorithm()
+            + ~NoAlgorithm()
+            + void updateCmd()    
+        }
     }
 }
 
+Supervisor -[hidden]--> Command.AlgorithmInterface
+Recorder -[hidden]--> Observer
+Observer.Observer -[hidden]--> Sensors
+Command.Controller -[hidden]--> Environment.ServoMotor
+Recorder -[hidden]> Supervisor
+Observer -[hidden]> Command.Controller
+LineFollowing o-[hidden]- StationKeeping
+LineFollowing o-[hidden]- NoAlgorithm
+Environment.Sensors -[hidden]> Environment.ServoMotor
 
-Observer            o-- GPS
-Observer            o-- CMPS12
-Observer            o-- WindSpeed
-Observer            o-- WindDirection
-ControllerInterface o-- ControllerLF
-ControllerInterface o-- ServoMotor
-Logger              o-- Observer
-AlgorithmInterface  o-- Observer
-AlgorithmInterface  o-- LineFollowing
-ControllerInterface o-- AlgorithmInterface
-Supervisor          o-- Observer
-Supervisor          o-- ControllerInterface
+AlgorithmInterface --o Controller : - m_algo
+AlgorithmInterface o-- Observer.Observer : # m_obs
+AlgorithmInterface <|- Algorithms
+
+Supervisor.Supervisor o- RCReceiver : - m_rc
+
+Observer.Observer o-- Environment.Sensors : - m_gps   m_cmps   m_ws   m_wd
+
+Controller o-- Environment.ServoMotor : - m_mr   m_ms
+
+Logger o-- Observer.Observer : - m_obs
+Logger o- RCReceiver : - m_rc
+Logger o-- Controller : - m_ctrl
+
+
+skinparam class {
+    BorderColor<<Command>> DarkOrange
+    BorderColor<<Observer>> ForestGreen
+}
+
+skinparam package {
+    BorderColor<<Environment>> LightSeaGreen
+    BorderColor<<Sensors>> ForestGreen
+    BorderColor<<Observer>> Green
+    BorderColor<<Recorder>> DarkViolet
+    BorderColor<<Supervisor>> Crimson
+    BorderColor<<Command>> DarkOrange
+    BorderColor<<Algorithms>> OrangeRed
+}
+
+hide <<Command>> stereotype
+hide <<Observer>> stereotype
+hide <<Environment>> stereotype
+hide <<Recorder>> stereotype
+hide <<Supervisor>> stereotype
+hide <<Algorithms>> stereotype
+hide <<Sensors>> stereotype
 
 @enduml
