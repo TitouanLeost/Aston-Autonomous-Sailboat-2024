@@ -19,6 +19,7 @@ using namespace std;
  * is divided into two parts: 
  * - the first part is to reach the next waypoint
  * - the second part is to perform a task from this waypoint
+ * 
  * To perform these tasks, the supervisor can select two kinds of algorithms: 
  * type 1 algorithms are used to perform the first part of the mission while
  * type 2 algorithms are used to perform the second part.
