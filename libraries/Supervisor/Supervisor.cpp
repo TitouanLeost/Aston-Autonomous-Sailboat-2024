@@ -41,7 +41,6 @@ void Supervisor::updateMission()
         case false:
             m_ctrl->setUpdate(true);
             if(isWaypointReached()){
-                m_start_time = millis();
                 if (IS_ALGO2_EQUAL_TO(NoAlgorithm))
                     nextWaypoint();
                 else{
