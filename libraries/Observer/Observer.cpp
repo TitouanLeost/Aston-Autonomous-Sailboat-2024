@@ -78,10 +78,8 @@ void Observer::updateTrueWindAngle()
 
 float Observer::angleFilter(float filtered, float raw, float alpha)
 {
-    float x = alpha * cos(filtered*M_PI/180) + (1-alpha) * cos(raw*M_PI/180);
-    float y = alpha * sin(filtered*M_PI/180) + (1-alpha) * sin(raw*M_PI/180);
-    float z = atan2(y, x) * 180/M_PI;
-    if(z < 0)
-        z += 360;
-    return z;
+    filtered = wrap360(filtered + alpha*wrap360(raw - filtered));
+    if(filtered < 0)
+        filtered += 360;
+    return filtered;
 }

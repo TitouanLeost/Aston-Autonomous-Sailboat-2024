@@ -89,14 +89,14 @@ class Observer
         /********************************************************
          * Filter the angle.
          * This function is used to filter the angle between two
-         * values. A higher alpha value will give more weight to 
+         * values. A lower alpha value will give more weight to 
          * the current angle and less to the previous angle.
-         * @param x The current angle
-         * @param y The previous angle
+         * @param filtered The previous filtered angle (0 to 360)
+         * @param raw The current raw angle (0 to 360)
          * @param alpha The filter coefficient
          * @return The filtered angle in degrees (0 to 360)
         ********************************************************/
-        float angleFilter(float x, float y, float alpha);
+        float angleFilter(float filtered, float raw, float alpha);
 
 
         CMPS12* m_cmps;  ///< The CMPS sensor
