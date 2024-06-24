@@ -51,8 +51,8 @@ enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
 /////////////////////////////
 /*=====OBSERVER CONFIG=====*/
 
-#define YAW_FILTER 0.7  // Coefficient of the filter for the yaw
-#define WIND_DIRECTION_FILTER 0.8  // Coefficient of the filter for the wind direction
+#define YAW_FILTER 0.2  // Coefficient of the filter for the yaw
+#define WIND_DIRECTION_FILTER 0.1  // Coefficient of the filter for the wind direction
 
 /*=========================*/
 /////////////////////////////
