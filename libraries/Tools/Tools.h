@@ -2,11 +2,14 @@
 #define TOOLS_H
 
 #include <math.h>
+
 #include <Config.h>
 
 
 CoordXY latLonToXY(CoordLatLon coordLatLon);
 
 float sawtooth(float x);
+
+float wrap360(float x);
 
 #endif

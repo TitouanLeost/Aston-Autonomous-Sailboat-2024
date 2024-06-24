@@ -26,3 +26,9 @@ float sawtooth(float x)
 {
     return 2*atan(tan(x/2));
 }
+
+
+float wrap360(float x)
+{
+    return x - 360*floor((x+180)/360);
+}
