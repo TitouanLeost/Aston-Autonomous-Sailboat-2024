@@ -15,11 +15,11 @@
 
 #define ALGO1 LineFollowing  // Algorithm used to go from waypoint to waypoint (type 1)
 #define ALGO2 StationKeeping  // Algorithm used when a waypoint is reached (type 2)
-#define NB_WP 3  // Number of waypoints
-// List of waypoints (latitude, longitude)
-#define WP { {52.486599, -1.889232}, {52.486302, -1.889515}, {52.486382, -1.889144} }
-#define WP_RADIUS 10  // Radius of the waypoint to validate it
 #define ALGO2_DURATION 10  // Duration (in seconds) of the type 2 algorithm before going to the next waypoint
+
+#define NB_WP 3  // Number of waypoints
+#define WP { {52.486599, -1.889232}, {52.486302, -1.889515}, {52.486382, -1.889144} }  // List of waypoints (latitude, longitude)
+#define WP_RADIUS 10  // Radius of the waypoint to validate it
 
 /*=========================*/
 /////////////////////////////
@@ -29,10 +29,12 @@
 #define SAIL_CH_PIN 2  // Pin for the sail channel
 #define NB_CHANNELS 2  // Number of channels
 enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
+
 #define RUDDER_OFFSET_MIN 1079  // Minimum offset for the rudder
 #define RUDDER_OFFSET_MAX 1975  // Maximum offset for the rudder
 #define SAIL_OFFSET_MIN 1057  // Minimum offset for the sail
 #define SAIL_OFFSET_MAX 1878  // Maximum offset for the sail
+
 #define PULSE_FILTER 0.95  // Coefficient of the filter for the pulse
 
 /*=========================*/
