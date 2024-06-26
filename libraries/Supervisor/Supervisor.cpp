@@ -61,7 +61,7 @@ void Supervisor::startMission()
     m_algo_type = m_ctrl->setAlgo(1);
     CoordLatLon a = m_obs->gps()->getCoordLatLon();
     CoordLatLon b = m_wp[m_current_wp];
-    m_ctrl->algo()->updateWaypoint(a, b);   
+    m_ctrl->algo()->updateWaypoint(a, b); 
 }
 
 

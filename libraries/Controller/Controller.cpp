@@ -26,9 +26,14 @@ void Controller::init(Observer* obs)
     Serial.println("Initializing servo motors...");
     m_mr->init();
     m_ms->init();
+    Serial.println("Servo motors initialized");
+    Serial.println("######################### \n");
+
+    Serial.println("#########################");
+    Serial.println("Initializing algorithms...");   
     m_algo1->init(obs);
     m_algo2->init(obs); 
-    Serial.println("Servo motors initialized");
+    Serial.println("Algorithms initialized");
     Serial.println("######################### \n");
 }
 
