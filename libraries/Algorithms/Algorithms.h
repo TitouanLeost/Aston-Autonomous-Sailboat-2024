@@ -46,7 +46,7 @@ class LineFollowing : public AlgorithmInterface
 
         CoordXY m_a;  ///< The starting point of the line
         CoordXY m_b;  ///< The ending point of the line
-        int m_q;  ///< The sign of the error
+        int m_q = 1;  ///< The sign of the error
 };
 
 
