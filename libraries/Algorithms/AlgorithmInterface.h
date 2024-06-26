@@ -37,7 +37,7 @@ class AlgorithmInterface
          * @param a The previous waypoint
          * @param b The new waypoint to reach
         *************************************************************/
-        void updateWaypoint(CoordLatLon a, CoordLatLon b) {};
+        virtual void updateWaypoint(CoordLatLon a, CoordLatLon b) {};
 
 
         /*************************************************************
