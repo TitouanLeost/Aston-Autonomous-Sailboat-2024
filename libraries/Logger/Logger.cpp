@@ -70,6 +70,7 @@ void Logger::update()
 void Logger::open()
 {
     generateFilename();
+    CoordLatLon wp[NB_WP] = WP;
 
     Serial.println("#########################");
     Serial.print("Opening file: "); Serial.println(m_filename);
@@ -79,9 +80,8 @@ void Logger::open()
     m_file = SD.open(m_filename, FILE_WRITE);
 
     write(m_date); write("_"); write(m_time); write("\n");
-
-    CoordLatLon wp[NB_WP] = WP;
-
+    write("REF_LAT, REF_LON\n");
+    write(REF_LAT); write(","); write(REF_LON); write("\n");
     write("Waypoints (nb, radius):\n");
     write(NB_WP); write(","); write(WP_RADIUS); write("\n");
     write("Waypoints (lat, lon):\n");

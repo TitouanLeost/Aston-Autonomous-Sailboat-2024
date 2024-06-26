@@ -26,6 +26,7 @@ def readLog(file):
     rudder_cmd = []
     sail_cmd = []
     rc_status = []
+    ref = []
     wp = []
 
 
@@ -33,6 +34,12 @@ def readLog(file):
     ########### Read the file ############
     ######################################
     file.readline()
+    file.readline()
+
+    line = file.readline()
+    ref.append(float(line.split(',')[0]))
+    ref.append(float(line.split(',')[1]))
+
     file.readline()
 
     line = file.readline()
@@ -69,7 +76,12 @@ def readLog(file):
         rc_status.append(int(line.split(',')[16]))
 
     timestamp = [t - timestamp[0] for t in timestamp]
-    
+
+
+    ######################################
+    ########### Save the data ############
+    ######################################
+
     data.append(timestamp)
     data.append(yaw)
     data.append(yaw_raw)
@@ -87,6 +99,7 @@ def readLog(file):
     data.append(rudder_cmd)
     data.append(sail_cmd)
     data.append(rc_status)
+    data.append(ref)
     data.append(wp)
     data.append(nb_wp)
     data.append(wp_radius)
@@ -169,11 +182,11 @@ def plotXY(data, date, time):
             else:
                 plt.plot(data[12][i], data[13][i], 'rx')
 
-    wp_list = data[17]
-    nb_wp = int(data[18])
-    wp_radius = float(data[19])
+    wp_list = data[18]
+    nb_wp = int(data[19])
+    wp_radius = float(data[20])
     for i in range(nb_wp):
-        x, y = latLonToXY(wp_list[i][0], wp_list[i][1])
+        x, y = latLonToXY(wp_list[i][0], wp_list[i][1], data[17])
         plt.plot(x, y, 'yo')
         circle = patches.Circle((x, y), wp_radius, fill=False)
         plt.gca().add_patch(circle)
@@ -241,9 +254,9 @@ def displayLog(file, date, time):
     print('Log displayed and saved successfully')
 
 
-def latLonToXY(lat, lon):
-    REF_LAT = 52.486252
-    REF_LON = -1.889658
+def latLonToXY(lat, lon, ref):
+    REF_LAT = ref[0]
+    REF_LON = ref[1]
     EARTH_RADIUS = 6371000
 
     if lat == 99999 or lon == 99999:
@@ -260,3 +273,4 @@ if __name__ == '__main__':
     time = input('Enter the time of the log in the format HHMMSS: ')
     file = open(f'logs/{date}/{time}.txt', 'r')
     displayLog(file, date, time)
+    file.close()
