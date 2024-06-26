@@ -15,7 +15,7 @@ Inheritance diagram for Line\+Following\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=236pt]{classLineFollowing__inherit__graph}
+\includegraphics[width=176pt]{classLineFollowing__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -30,6 +30,10 @@ Collaboration diagram for Line\+Following\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classLineFollowing_a576f5ebc65be9a386e7add1c3263edfa}{Line\+Following}} ()
+\item 
+\mbox{\hyperlink{classLineFollowing_a39ad1b08c1b7d245d4602994e6a8fd35}{$\sim$\+Line\+Following}} ()
+\item 
 void \mbox{\hyperlink{classLineFollowing_a9901fd62d906555c0c4830c46b8f9f03}{update\+Cmd}} ()
 \begin{DoxyCompactList}\small\item\em Update the command. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLineFollowing_acfef33e2bb5dd040ebc5202e7f5957d9}{update\+Waypoint}} (\mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} a, \mbox{\hyperlink{structCoordLatLon}{Coord\+Lat\+Lon}} b)
@@ -42,13 +46,10 @@ void \mbox{\hyperlink{classLineFollowing_a4f536637b6f7f5f19d56fcbeb686d126}{set\
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classLineFollowing_ad0805933931fec9cee2244eb0cd28cde}\label{classLineFollowing_ad0805933931fec9cee2244eb0cd28cde}} 
 \mbox{\hyperlink{structCoordXY}{Coord\+XY}} \mbox{\hyperlink{classLineFollowing_ad0805933931fec9cee2244eb0cd28cde}{m\+\_\+a}}
 \begin{DoxyCompactList}\small\item\em The starting point of the line. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLineFollowing_ae3a7b7df9bd3c998067163ea39748324}\label{classLineFollowing_ae3a7b7df9bd3c998067163ea39748324}} 
 \mbox{\hyperlink{structCoordXY}{Coord\+XY}} \mbox{\hyperlink{classLineFollowing_ae3a7b7df9bd3c998067163ea39748324}{m\+\_\+b}}
 \begin{DoxyCompactList}\small\item\em The ending point of the line. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLineFollowing_af0f29f25ec61edefdfbbd27913af2bc5}\label{classLineFollowing_af0f29f25ec61edefdfbbd27913af2bc5}} 
 int \mbox{\hyperlink{classLineFollowing_af0f29f25ec61edefdfbbd27913af2bc5}{m\+\_\+q}}
 \begin{DoxyCompactList}\small\item\em The sign of the error. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
@@ -58,6 +59,21 @@ int \mbox{\hyperlink{classLineFollowing_af0f29f25ec61edefdfbbd27913af2bc5}{m\+\_
 A class to handle a simple line following algorithm. 
 
 This class allows to follow a line with the boat. The algorithm is based on the use of potential fields. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLineFollowing_a576f5ebc65be9a386e7add1c3263edfa}\label{classLineFollowing_a576f5ebc65be9a386e7add1c3263edfa}} 
+\index{LineFollowing@{LineFollowing}!LineFollowing@{LineFollowing}}
+\index{LineFollowing@{LineFollowing}!LineFollowing@{LineFollowing}}
+\doxysubsubsection{\texorpdfstring{LineFollowing()}{LineFollowing()}}
+{\footnotesize\ttfamily Line\+Following\+::\+Line\+Following (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLineFollowing_a39ad1b08c1b7d245d4602994e6a8fd35}\label{classLineFollowing_a39ad1b08c1b7d245d4602994e6a8fd35}} 
+\index{LineFollowing@{LineFollowing}!````~LineFollowing@{$\sim$LineFollowing}}
+\index{````~LineFollowing@{$\sim$LineFollowing}!LineFollowing@{LineFollowing}}
+\doxysubsubsection{\texorpdfstring{$\sim$LineFollowing()}{~LineFollowing()}}
+{\footnotesize\ttfamily Line\+Following\+::$\sim$\+Line\+Following (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classLineFollowing_a4f536637b6f7f5f19d56fcbeb686d126}\label{classLineFollowing_a4f536637b6f7f5f19d56fcbeb686d126}} 
@@ -110,7 +126,40 @@ This function updates the waypoint to reach.
 \end{DoxyParams}
 
 
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classLineFollowing_ad0805933931fec9cee2244eb0cd28cde}\label{classLineFollowing_ad0805933931fec9cee2244eb0cd28cde}} 
+\index{LineFollowing@{LineFollowing}!m\_a@{m\_a}}
+\index{m\_a@{m\_a}!LineFollowing@{LineFollowing}}
+\doxysubsubsection{\texorpdfstring{m\_a}{m\_a}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCoordXY}{Coord\+XY}} Line\+Following\+::m\+\_\+a\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The starting point of the line. 
+
+\mbox{\Hypertarget{classLineFollowing_ae3a7b7df9bd3c998067163ea39748324}\label{classLineFollowing_ae3a7b7df9bd3c998067163ea39748324}} 
+\index{LineFollowing@{LineFollowing}!m\_b@{m\_b}}
+\index{m\_b@{m\_b}!LineFollowing@{LineFollowing}}
+\doxysubsubsection{\texorpdfstring{m\_b}{m\_b}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCoordXY}{Coord\+XY}} Line\+Following\+::m\+\_\+b\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The ending point of the line. 
+
+\mbox{\Hypertarget{classLineFollowing_af0f29f25ec61edefdfbbd27913af2bc5}\label{classLineFollowing_af0f29f25ec61edefdfbbd27913af2bc5}} 
+\index{LineFollowing@{LineFollowing}!m\_q@{m\_q}}
+\index{m\_q@{m\_q}!LineFollowing@{LineFollowing}}
+\doxysubsubsection{\texorpdfstring{m\_q}{m\_q}}
+{\footnotesize\ttfamily int Line\+Following\+::m\+\_\+q\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The sign of the error. 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-libraries/\+Algorithms/Algorithms.\+h\item 
-libraries/\+Algorithms/Algorithms.\+cpp\end{DoxyCompactItemize}
+libraries/\+Algorithms/\mbox{\hyperlink{Algorithms_8h}{Algorithms.\+h}}\item 
+libraries/\+Algorithms/\mbox{\hyperlink{Algorithms_8cpp}{Algorithms.\+cpp}}\end{DoxyCompactItemize}

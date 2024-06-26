@@ -9,15 +9,6 @@ A class to handle a servo motor.
 
 {\ttfamily \#include $<$Servo\+Motor.\+h$>$}
 
-
-
-Collaboration diagram for Servo\+Motor\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=217pt]{classServoMotor__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -34,16 +25,12 @@ void \mbox{\hyperlink{classServoMotor_a8f4178077763089c129064226361b1e3}{set\+Pe
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classServoMotor_a26ee9b8b4b64b86077cdd4d0dfa72404}\label{classServoMotor_a26ee9b8b4b64b86077cdd4d0dfa72404}} 
 Adafruit\+\_\+\+PWMServo\+Driver $\ast$ \mbox{\hyperlink{classServoMotor_a26ee9b8b4b64b86077cdd4d0dfa72404}{m\+\_\+servo}}
 \begin{DoxyCompactList}\small\item\em The servo motor object. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classServoMotor_a8f29953c127736c9e37fc97a1524cec8}\label{classServoMotor_a8f29953c127736c9e37fc97a1524cec8}} 
 uint16\+\_\+t \mbox{\hyperlink{classServoMotor_a8f29953c127736c9e37fc97a1524cec8}{m\+\_\+pwm\+\_\+min}}
 \begin{DoxyCompactList}\small\item\em The minimum PWM value of the servo motor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classServoMotor_a47e6ec667f3331215abea1b8f09e6263}\label{classServoMotor_a47e6ec667f3331215abea1b8f09e6263}} 
 uint16\+\_\+t \mbox{\hyperlink{classServoMotor_a47e6ec667f3331215abea1b8f09e6263}{m\+\_\+pwm\+\_\+max}}
 \begin{DoxyCompactList}\small\item\em The maximum PWM value of the servo motor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classServoMotor_a4b39c899312ef03273f833a86aae5822}\label{classServoMotor_a4b39c899312ef03273f833a86aae5822}} 
 uint8\+\_\+t \mbox{\hyperlink{classServoMotor_a4b39c899312ef03273f833a86aae5822}{m\+\_\+pin}}
 \begin{DoxyCompactList}\small\item\em The pin of the servo motor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -128,7 +115,50 @@ Set the PWM of the servo motor.
 \end{DoxyParams}
 
 
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classServoMotor_a4b39c899312ef03273f833a86aae5822}\label{classServoMotor_a4b39c899312ef03273f833a86aae5822}} 
+\index{ServoMotor@{ServoMotor}!m\_pin@{m\_pin}}
+\index{m\_pin@{m\_pin}!ServoMotor@{ServoMotor}}
+\doxysubsubsection{\texorpdfstring{m\_pin}{m\_pin}}
+{\footnotesize\ttfamily uint8\+\_\+t Servo\+Motor\+::m\+\_\+pin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The pin of the servo motor. 
+
+\mbox{\Hypertarget{classServoMotor_a47e6ec667f3331215abea1b8f09e6263}\label{classServoMotor_a47e6ec667f3331215abea1b8f09e6263}} 
+\index{ServoMotor@{ServoMotor}!m\_pwm\_max@{m\_pwm\_max}}
+\index{m\_pwm\_max@{m\_pwm\_max}!ServoMotor@{ServoMotor}}
+\doxysubsubsection{\texorpdfstring{m\_pwm\_max}{m\_pwm\_max}}
+{\footnotesize\ttfamily uint16\+\_\+t Servo\+Motor\+::m\+\_\+pwm\+\_\+max\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The maximum PWM value of the servo motor. 
+
+\mbox{\Hypertarget{classServoMotor_a8f29953c127736c9e37fc97a1524cec8}\label{classServoMotor_a8f29953c127736c9e37fc97a1524cec8}} 
+\index{ServoMotor@{ServoMotor}!m\_pwm\_min@{m\_pwm\_min}}
+\index{m\_pwm\_min@{m\_pwm\_min}!ServoMotor@{ServoMotor}}
+\doxysubsubsection{\texorpdfstring{m\_pwm\_min}{m\_pwm\_min}}
+{\footnotesize\ttfamily uint16\+\_\+t Servo\+Motor\+::m\+\_\+pwm\+\_\+min\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The minimum PWM value of the servo motor. 
+
+\mbox{\Hypertarget{classServoMotor_a26ee9b8b4b64b86077cdd4d0dfa72404}\label{classServoMotor_a26ee9b8b4b64b86077cdd4d0dfa72404}} 
+\index{ServoMotor@{ServoMotor}!m\_servo@{m\_servo}}
+\index{m\_servo@{m\_servo}!ServoMotor@{ServoMotor}}
+\doxysubsubsection{\texorpdfstring{m\_servo}{m\_servo}}
+{\footnotesize\ttfamily Adafruit\+\_\+\+PWMServo\+Driver$\ast$ Servo\+Motor\+::m\+\_\+servo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The servo motor object. 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-libraries/\+Servo\+Motor/Servo\+Motor.\+h\item 
-libraries/\+Servo\+Motor/Servo\+Motor.\+cpp\end{DoxyCompactItemize}
+libraries/\+Servo\+Motor/\mbox{\hyperlink{ServoMotor_8h}{Servo\+Motor.\+h}}\item 
+libraries/\+Servo\+Motor/\mbox{\hyperlink{ServoMotor_8cpp}{Servo\+Motor.\+cpp}}\end{DoxyCompactItemize}

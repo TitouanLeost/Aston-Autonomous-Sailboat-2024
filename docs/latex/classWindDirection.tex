@@ -9,17 +9,12 @@ A class to handle the wind direction.
 
 {\ttfamily \#include $<$Wind\+Direction.\+h$>$}
 
-
-
-Collaboration diagram for Wind\+Direction\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=234pt]{classWindDirection__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWindDirection_a0c11a314c106c62967b6f0a08dff4efa}{Wind\+Direction}} ()
+\item 
+\mbox{\hyperlink{classWindDirection_a19f2de86f09e80453780728861a53a7c}{$\sim$\+Wind\+Direction}} ()
 \item 
 void \mbox{\hyperlink{classWindDirection_ae89dd5541d024ba27e8541e0b5bb458f}{init}} ()
 \begin{DoxyCompactList}\small\item\em Initialize the wind direction. \end{DoxyCompactList}\item 
@@ -34,10 +29,8 @@ float \mbox{\hyperlink{classWindDirection_ac1a70f415b8215e269a5f831c18c2446}{get
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classWindDirection_aeec2655c060fbe83344a2f5283fa1518}\label{classWindDirection_aeec2655c060fbe83344a2f5283fa1518}} 
 float \mbox{\hyperlink{classWindDirection_aeec2655c060fbe83344a2f5283fa1518}{m\+\_\+raw\+\_\+wind\+\_\+direction}}
 \begin{DoxyCompactList}\small\item\em Raw wind direction in degrees (0 to 360) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classWindDirection_a9aeca07188672094ed0dd3dc54c07c8d}\label{classWindDirection_a9aeca07188672094ed0dd3dc54c07c8d}} 
 float \mbox{\hyperlink{classWindDirection_a9aeca07188672094ed0dd3dc54c07c8d}{m\+\_\+wind\+\_\+direction}}
 \begin{DoxyCompactList}\small\item\em Filtered wind direction in degrees (0 to 360) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -46,6 +39,21 @@ float \mbox{\hyperlink{classWindDirection_a9aeca07188672094ed0dd3dc54c07c8d}{m\+
 A class to handle the wind direction. 
 
 This class allows to get the wind direction (raw and filtered) in degrees (0 to 360). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWindDirection_a0c11a314c106c62967b6f0a08dff4efa}\label{classWindDirection_a0c11a314c106c62967b6f0a08dff4efa}} 
+\index{WindDirection@{WindDirection}!WindDirection@{WindDirection}}
+\index{WindDirection@{WindDirection}!WindDirection@{WindDirection}}
+\doxysubsubsection{\texorpdfstring{WindDirection()}{WindDirection()}}
+{\footnotesize\ttfamily Wind\+Direction\+::\+Wind\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWindDirection_a19f2de86f09e80453780728861a53a7c}\label{classWindDirection_a19f2de86f09e80453780728861a53a7c}} 
+\index{WindDirection@{WindDirection}!````~WindDirection@{$\sim$WindDirection}}
+\index{````~WindDirection@{$\sim$WindDirection}!WindDirection@{WindDirection}}
+\doxysubsubsection{\texorpdfstring{$\sim$WindDirection()}{~WindDirection()}}
+{\footnotesize\ttfamily Wind\+Direction\+::$\sim$\+Wind\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classWindDirection_ac1a70f415b8215e269a5f831c18c2446}\label{classWindDirection_ac1a70f415b8215e269a5f831c18c2446}} 
@@ -111,7 +119,30 @@ Update the wind direction.
 
 This function reads the analog value of the wind direction sensor and update the raw wind direction. 
 
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWindDirection_aeec2655c060fbe83344a2f5283fa1518}\label{classWindDirection_aeec2655c060fbe83344a2f5283fa1518}} 
+\index{WindDirection@{WindDirection}!m\_raw\_wind\_direction@{m\_raw\_wind\_direction}}
+\index{m\_raw\_wind\_direction@{m\_raw\_wind\_direction}!WindDirection@{WindDirection}}
+\doxysubsubsection{\texorpdfstring{m\_raw\_wind\_direction}{m\_raw\_wind\_direction}}
+{\footnotesize\ttfamily float Wind\+Direction\+::m\+\_\+raw\+\_\+wind\+\_\+direction\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Raw wind direction in degrees (0 to 360) 
+
+\mbox{\Hypertarget{classWindDirection_a9aeca07188672094ed0dd3dc54c07c8d}\label{classWindDirection_a9aeca07188672094ed0dd3dc54c07c8d}} 
+\index{WindDirection@{WindDirection}!m\_wind\_direction@{m\_wind\_direction}}
+\index{m\_wind\_direction@{m\_wind\_direction}!WindDirection@{WindDirection}}
+\doxysubsubsection{\texorpdfstring{m\_wind\_direction}{m\_wind\_direction}}
+{\footnotesize\ttfamily float Wind\+Direction\+::m\+\_\+wind\+\_\+direction\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Filtered wind direction in degrees (0 to 360) 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-libraries/\+Wind\+Direction/Wind\+Direction.\+h\item 
-libraries/\+Wind\+Direction/Wind\+Direction.\+cpp\end{DoxyCompactItemize}
+libraries/\+Wind\+Direction/\mbox{\hyperlink{WindDirection_8h}{Wind\+Direction.\+h}}\item 
+libraries/\+Wind\+Direction/\mbox{\hyperlink{WindDirection_8cpp}{Wind\+Direction.\+cpp}}\end{DoxyCompactItemize}

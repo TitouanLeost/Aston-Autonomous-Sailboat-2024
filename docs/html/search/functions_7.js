@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['observer_171',['Observer',['../classObserver.html#a19c43f80a38a332a6f694783df3c9835',1,'Observer']]],
-  ['open_172',['open',['../classLogger.html#a751cd1a942f2bfce73ec61feaa439d22',1,'Logger']]]
+  ['nextwaypoint_302',['nextWaypoint',['../classSupervisor.html#ac888dad92936051e3842e2d5982bbac1',1,'Supervisor']]],
+  ['noalgorithm_303',['NoAlgorithm',['../classNoAlgorithm.html#aeb7bc22c52d02dd184fb3da07c417985',1,'NoAlgorithm']]]
 ];

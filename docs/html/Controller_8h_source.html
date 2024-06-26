@@ -69,15 +69,15 @@ $(function() {
 <div class="title">Controller.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CONTROLLER_H</span></div>
+<a href="Controller_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CONTROLLER_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CONTROLLER_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Config.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;Algorithms.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;ServoMotor.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="Config_8h.html">Config.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="Algorithms_8h.html">Algorithms.h</a>&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="ServoMotor_8h.html">ServoMotor.h</a>&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -118,13 +118,18 @@ $(function() {
 <div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classController.html#a90f4c244dd5baec8795766a4e776202d">   89</a></span>&#160;        <a class="code" href="classServoMotor.html">ServoMotor</a>* <a class="code" href="classController.html#a90f4c244dd5baec8795766a4e776202d">m_mr</a> = <span class="keyword">nullptr</span>;  </div>
 <div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classController.html#a258b4d77aef4b25d76ec23feb558672d">   90</a></span>&#160;        <a class="code" href="classServoMotor.html">ServoMotor</a>* <a class="code" href="classController.html#a258b4d77aef4b25d76ec23feb558672d">m_ms</a> = <span class="keyword">nullptr</span>;  </div>
 <div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classController.html#a54599cbd0b19c7f303f6d68ee6785e4b">   91</a></span>&#160;        <a class="code" href="classAlgorithmInterface.html">AlgorithmInterface</a>* <a class="code" href="classController.html#a54599cbd0b19c7f303f6d68ee6785e4b">m_algo</a> = <span class="keyword">nullptr</span>;  </div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classController.html#a911d5611485d5e8e7977d65bac6bcac7">   92</a></span>&#160;        ALGO1* <a class="code" href="classController.html#a911d5611485d5e8e7977d65bac6bcac7">m_algo1</a> = <span class="keyword">nullptr</span>;  </div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classController.html#a5745bfb3882314a1c584e36e499e19d2">   93</a></span>&#160;        ALGO2* <a class="code" href="classController.html#a5745bfb3882314a1c584e36e499e19d2">m_algo2</a> = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classController.html#a911d5611485d5e8e7977d65bac6bcac7">   92</a></span>&#160;        <a class="code" href="Config_8h.html#a339ce5a483577869f92805e52ff61719">ALGO1</a>* <a class="code" href="classController.html#a911d5611485d5e8e7977d65bac6bcac7">m_algo1</a> = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classController.html#a5745bfb3882314a1c584e36e499e19d2">   93</a></span>&#160;        <a class="code" href="Config_8h.html#a67886a600e3d2dacc940d326b9970feb">ALGO2</a>* <a class="code" href="classController.html#a5745bfb3882314a1c584e36e499e19d2">m_algo2</a> = <span class="keyword">nullptr</span>;  </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classController.html#ab3159c5fec93e1c5b3155fe3b9a42cec">   95</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classController.html#ab3159c5fec93e1c5b3155fe3b9a42cec">m_update</a> = <span class="keyword">true</span>;  </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aAlgorithms_8h_html"><div class="ttname"><a href="Algorithms_8h.html">Algorithms.h</a></div></div>
+<div class="ttc" id="aConfig_8h_html"><div class="ttname"><a href="Config_8h.html">Config.h</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a339ce5a483577869f92805e52ff61719"><div class="ttname"><a href="Config_8h.html#a339ce5a483577869f92805e52ff61719">ALGO1</a></div><div class="ttdeci">#define ALGO1</div><div class="ttdoc">Algorithm used to go from waypoint to waypoint (type 1)</div><div class="ttdef"><b>Definition:</b> Config.h:16</div></div>
+<div class="ttc" id="aConfig_8h_html_a67886a600e3d2dacc940d326b9970feb"><div class="ttname"><a href="Config_8h.html#a67886a600e3d2dacc940d326b9970feb">ALGO2</a></div><div class="ttdeci">#define ALGO2</div><div class="ttdoc">Algorithm used when a waypoint is reached (type 2)</div><div class="ttdef"><b>Definition:</b> Config.h:17</div></div>
+<div class="ttc" id="aServoMotor_8h_html"><div class="ttname"><a href="ServoMotor_8h.html">ServoMotor.h</a></div></div>
 <div class="ttc" id="aclassAlgorithmInterface_html"><div class="ttname"><a href="classAlgorithmInterface.html">AlgorithmInterface</a></div><div class="ttdoc">A base class to handle all algorithms class.</div><div class="ttdef"><b>Definition:</b> AlgorithmInterface.h:12</div></div>
 <div class="ttc" id="aclassController_html"><div class="ttname"><a href="classController.html">Controller</a></div><div class="ttdoc">A class to handle the controller.</div><div class="ttdef"><b>Definition:</b> Controller.h:19</div></div>
 <div class="ttc" id="aclassController_html_a0ab87934c4f7a266cfdb86e0f36bc1b5"><div class="ttname"><a href="classController.html#a0ab87934c4f7a266cfdb86e0f36bc1b5">Controller::~Controller</a></div><div class="ttdeci">~Controller()</div><div class="ttdoc">Destructor of the class.</div><div class="ttdef"><b>Definition:</b> Controller.cpp:13</div></div>

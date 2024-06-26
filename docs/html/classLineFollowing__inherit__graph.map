@@ -1,4 +1,4 @@
 <map id="LineFollowing" name="LineFollowing">
-<area shape="rect" id="node1" title="A class to handle a simple line following algorithm." alt="" coords="5,277,213,472"/>
-<area shape="rect" id="node2" href="$classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="5,5,213,229"/>
+<area shape="rect" id="node1" title="A class to handle a simple line following algorithm." alt="" coords="19,80,120,107"/>
+<area shape="rect" id="node2" href="$classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="5,5,133,32"/>
 </map>

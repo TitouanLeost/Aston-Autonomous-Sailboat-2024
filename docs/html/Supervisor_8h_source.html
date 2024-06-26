@@ -69,16 +69,16 @@ $(function() {
 <div class="title">Supervisor.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SUPERVISOR_H</span></div>
+<a href="Supervisor_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SUPERVISOR_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SUPERVISOR_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Config.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;Observer.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;Controller.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;RCReceiver.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="Config_8h.html">Config.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="Observer_8h.html">Observer.h</a>&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="Controller_8h.html">Controller.h</a>&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="RCReceiver_8h.html">RCReceiver.h</a>&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
@@ -116,20 +116,25 @@ $(function() {
 <div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classSupervisor.html#a93ba1983187767f6cf14bef4618f05a6">  106</a></span>&#160;        <a class="code" href="classController.html">Controller</a>* m_ctrl = <span class="keyword">nullptr</span>;  </div>
 <div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classSupervisor.html#a1b740515f38cc1daf09ca8bb43f6819d">  107</a></span>&#160;        <a class="code" href="classRCReceiver.html">RCReceiver</a>* m_rc = <span class="keyword">nullptr</span>;  </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classSupervisor.html#a1daf2e02707dd6de64f570d1cc0a3bd0">  109</a></span>&#160;        <a class="code" href="structCoordLatLon.html">CoordLatLon</a> m_wp[NB_WP];  </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classSupervisor.html#a1daf2e02707dd6de64f570d1cc0a3bd0">  109</a></span>&#160;        <a class="code" href="structCoordLatLon.html">CoordLatLon</a> m_wp[<a class="code" href="Config_8h.html#a436f8c0248967c5cc1e7a23f1f8c7853">NB_WP</a>];  </div>
 <div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classSupervisor.html#a1c523ee48c3e532802c3bd6c7975098f">  110</a></span>&#160;        <span class="keywordtype">int</span> m_current_wp = 0;  </div>
 <div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classSupervisor.html#a15327bac45abc1d4aea6272f4f009fd9">  111</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="classSupervisor.html#a15327bac45abc1d4aea6272f4f009fd9">m_algo2_start_time</a>;  </div>
 <div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classSupervisor.html#a1e95179d893450422fd05f65b09142c4">  112</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classSupervisor.html#a1e95179d893450422fd05f65b09142c4">m_algo_type</a>;  </div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aConfig_8h_html"><div class="ttname"><a href="Config_8h.html">Config.h</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a436f8c0248967c5cc1e7a23f1f8c7853"><div class="ttname"><a href="Config_8h.html#a436f8c0248967c5cc1e7a23f1f8c7853">NB_WP</a></div><div class="ttdeci">#define NB_WP</div><div class="ttdoc">Number of waypoints.</div><div class="ttdef"><b>Definition:</b> Config.h:20</div></div>
+<div class="ttc" id="aController_8h_html"><div class="ttname"><a href="Controller_8h.html">Controller.h</a></div></div>
+<div class="ttc" id="aObserver_8h_html"><div class="ttname"><a href="Observer_8h.html">Observer.h</a></div></div>
+<div class="ttc" id="aRCReceiver_8h_html"><div class="ttname"><a href="RCReceiver_8h.html">RCReceiver.h</a></div></div>
 <div class="ttc" id="aclassController_html"><div class="ttname"><a href="classController.html">Controller</a></div><div class="ttdoc">A class to handle the controller.</div><div class="ttdef"><b>Definition:</b> Controller.h:19</div></div>
 <div class="ttc" id="aclassObserver_html"><div class="ttname"><a href="classObserver.html">Observer</a></div><div class="ttdoc">A class to handle the observer.</div><div class="ttdef"><b>Definition:</b> Observer.h:19</div></div>
 <div class="ttc" id="aclassRCReceiver_html"><div class="ttname"><a href="classRCReceiver.html">RCReceiver</a></div><div class="ttdoc">A class to handle the RC receiver.</div><div class="ttdef"><b>Definition:</b> RCReceiver.h:14</div></div>
 <div class="ttc" id="aclassSupervisor_html"><div class="ttname"><a href="classSupervisor.html">Supervisor</a></div><div class="ttdoc">A class to handle the supervisor.</div><div class="ttdef"><b>Definition:</b> Supervisor.h:30</div></div>
 <div class="ttc" id="aclassSupervisor_html_a15327bac45abc1d4aea6272f4f009fd9"><div class="ttname"><a href="classSupervisor.html#a15327bac45abc1d4aea6272f4f009fd9">Supervisor::m_algo2_start_time</a></div><div class="ttdeci">unsigned long m_algo2_start_time</div><div class="ttdoc">The start time of the algorithm 2.</div><div class="ttdef"><b>Definition:</b> Supervisor.h:111</div></div>
 <div class="ttc" id="aclassSupervisor_html_a1e95179d893450422fd05f65b09142c4"><div class="ttname"><a href="classSupervisor.html#a1e95179d893450422fd05f65b09142c4">Supervisor::m_algo_type</a></div><div class="ttdeci">int m_algo_type</div><div class="ttdoc">The type of the algorithm to use (1 or 2)</div><div class="ttdef"><b>Definition:</b> Supervisor.h:112</div></div>
-<div class="ttc" id="astructCoordLatLon_html"><div class="ttname"><a href="structCoordLatLon.html">CoordLatLon</a></div><div class="ttdef"><b>Definition:</b> Config.h:75</div></div>
+<div class="ttc" id="astructCoordLatLon_html"><div class="ttname"><a href="structCoordLatLon.html">CoordLatLon</a></div><div class="ttdoc">A struct to handle the coordinates in latitude and longitude.</div><div class="ttdef"><b>Definition:</b> Config.h:82</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

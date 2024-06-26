@@ -15,11 +15,15 @@ Collaboration diagram for Logger\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{classLogger__coll__graph}
+\includegraphics[width=350pt]{classLogger__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLogger_abc41bfb031d896170c7675fa96a6b30c}{Logger}} ()
+\item 
+\mbox{\hyperlink{classLogger_acb668a9e186a25fbaad2e4af6d1ed00a}{$\sim$\+Logger}} ()
 \item 
 void \mbox{\hyperlink{classLogger_a5e4fa26afc5f26854eec6b342fe32a1c}{init}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$obs, \mbox{\hyperlink{classController}{Controller}} $\ast$ctrl, \mbox{\hyperlink{classRCReceiver}{RCReceiver}} $\ast$rc)
 \begin{DoxyCompactList}\small\item\em Initialize the logger. \end{DoxyCompactList}\item 
@@ -27,7 +31,6 @@ void \mbox{\hyperlink{classLogger_ad905325c0f6a7f835e7e54c66e7300b2}{update}} ()
 \begin{DoxyCompactList}\small\item\em Update the logger. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLogger_a751cd1a942f2bfce73ec61feaa439d22}{open}} ()
 \begin{DoxyCompactList}\small\item\em Open the file. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLogger_afee2bab560c2db0190c980884d33868c}\label{classLogger_afee2bab560c2db0190c980884d33868c}} 
 void \mbox{\hyperlink{classLogger_afee2bab560c2db0190c980884d33868c}{close}} ()
 \begin{DoxyCompactList}\small\item\em Close the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
@@ -48,25 +51,18 @@ void \mbox{\hyperlink{classLogger_ab63629b45ea2911d918e4dab95aaa560}{write}} (St
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classLogger_ad0389fdcd2398d649a0a10184206c621}\label{classLogger_ad0389fdcd2398d649a0a10184206c621}} 
 \mbox{\hyperlink{classObserver}{Observer}} $\ast$ \mbox{\hyperlink{classLogger_ad0389fdcd2398d649a0a10184206c621}{m\+\_\+obs}}
 \begin{DoxyCompactList}\small\item\em The observer to log the data from. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLogger_af7fcae2289b88079ffc23b2bd45491e5}\label{classLogger_af7fcae2289b88079ffc23b2bd45491e5}} 
 \mbox{\hyperlink{classController}{Controller}} $\ast$ \mbox{\hyperlink{classLogger_af7fcae2289b88079ffc23b2bd45491e5}{m\+\_\+ctrl}}
 \begin{DoxyCompactList}\small\item\em The controller to log the data from. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLogger_a906259c9629d5c61d9141b69a2819985}\label{classLogger_a906259c9629d5c61d9141b69a2819985}} 
 \mbox{\hyperlink{classRCReceiver}{RCReceiver}} $\ast$ \mbox{\hyperlink{classLogger_a906259c9629d5c61d9141b69a2819985}{m\+\_\+rc}}
 \begin{DoxyCompactList}\small\item\em The RC receiver to log the data from. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLogger_ad0c9afd37fac48d1c120240dd77c5e5c}\label{classLogger_ad0c9afd37fac48d1c120240dd77c5e5c}} 
 File \mbox{\hyperlink{classLogger_ad0c9afd37fac48d1c120240dd77c5e5c}{m\+\_\+file}}
 \begin{DoxyCompactList}\small\item\em The file to write the data. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLogger_ad192b845e6d76a70fe0546e3a24d61a8}\label{classLogger_ad192b845e6d76a70fe0546e3a24d61a8}} 
 String \mbox{\hyperlink{classLogger_ad192b845e6d76a70fe0546e3a24d61a8}{m\+\_\+filename}}
 \begin{DoxyCompactList}\small\item\em The filename. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLogger_ab128e8eb74984d189430545e560b7645}\label{classLogger_ab128e8eb74984d189430545e560b7645}} 
 String \mbox{\hyperlink{classLogger_ab128e8eb74984d189430545e560b7645}{m\+\_\+date}}
 \begin{DoxyCompactList}\small\item\em The date of the experiment. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLogger_ae6ba5df7936e5da02e5251394bc1523e}\label{classLogger_ae6ba5df7936e5da02e5251394bc1523e}} 
 String \mbox{\hyperlink{classLogger_ae6ba5df7936e5da02e5251394bc1523e}{m\+\_\+time}}
 \begin{DoxyCompactList}\small\item\em The time of the experiment. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -76,7 +72,32 @@ A class to handle the data logging.
 
 This class allows to log data from the sensors of the boat. 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLogger_abc41bfb031d896170c7675fa96a6b30c}\label{classLogger_abc41bfb031d896170c7675fa96a6b30c}} 
+\index{Logger@{Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Logger()}{Logger()}}
+{\footnotesize\ttfamily Logger\+::\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLogger_acb668a9e186a25fbaad2e4af6d1ed00a}\label{classLogger_acb668a9e186a25fbaad2e4af6d1ed00a}} 
+\index{Logger@{Logger}!````~Logger@{$\sim$Logger}}
+\index{````~Logger@{$\sim$Logger}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{$\sim$Logger()}{~Logger()}}
+{\footnotesize\ttfamily Logger\+::$\sim$\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLogger_afee2bab560c2db0190c980884d33868c}\label{classLogger_afee2bab560c2db0190c980884d33868c}} 
+\index{Logger@{Logger}!close@{close}}
+\index{close@{close}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Logger\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the file. 
+
 \mbox{\Hypertarget{classLogger_ae39867c8897c1ee675e5181576438402}\label{classLogger_ae39867c8897c1ee675e5181576438402}} 
 \index{Logger@{Logger}!generateFilename@{generateFilename}}
 \index{generateFilename@{generateFilename}!Logger@{Logger}}
@@ -203,7 +224,80 @@ Write data to the file.
 \end{DoxyParams}
 
 
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classLogger_af7fcae2289b88079ffc23b2bd45491e5}\label{classLogger_af7fcae2289b88079ffc23b2bd45491e5}} 
+\index{Logger@{Logger}!m\_ctrl@{m\_ctrl}}
+\index{m\_ctrl@{m\_ctrl}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{m\_ctrl}{m\_ctrl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classController}{Controller}}$\ast$ Logger\+::m\+\_\+ctrl\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The controller to log the data from. 
+
+\mbox{\Hypertarget{classLogger_ab128e8eb74984d189430545e560b7645}\label{classLogger_ab128e8eb74984d189430545e560b7645}} 
+\index{Logger@{Logger}!m\_date@{m\_date}}
+\index{m\_date@{m\_date}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{m\_date}{m\_date}}
+{\footnotesize\ttfamily String Logger\+::m\+\_\+date\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The date of the experiment. 
+
+\mbox{\Hypertarget{classLogger_ad0c9afd37fac48d1c120240dd77c5e5c}\label{classLogger_ad0c9afd37fac48d1c120240dd77c5e5c}} 
+\index{Logger@{Logger}!m\_file@{m\_file}}
+\index{m\_file@{m\_file}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{m\_file}{m\_file}}
+{\footnotesize\ttfamily File Logger\+::m\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The file to write the data. 
+
+\mbox{\Hypertarget{classLogger_ad192b845e6d76a70fe0546e3a24d61a8}\label{classLogger_ad192b845e6d76a70fe0546e3a24d61a8}} 
+\index{Logger@{Logger}!m\_filename@{m\_filename}}
+\index{m\_filename@{m\_filename}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{m\_filename}{m\_filename}}
+{\footnotesize\ttfamily String Logger\+::m\+\_\+filename\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The filename. 
+
+\mbox{\Hypertarget{classLogger_ad0389fdcd2398d649a0a10184206c621}\label{classLogger_ad0389fdcd2398d649a0a10184206c621}} 
+\index{Logger@{Logger}!m\_obs@{m\_obs}}
+\index{m\_obs@{m\_obs}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{m\_obs}{m\_obs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObserver}{Observer}}$\ast$ Logger\+::m\+\_\+obs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The observer to log the data from. 
+
+\mbox{\Hypertarget{classLogger_a906259c9629d5c61d9141b69a2819985}\label{classLogger_a906259c9629d5c61d9141b69a2819985}} 
+\index{Logger@{Logger}!m\_rc@{m\_rc}}
+\index{m\_rc@{m\_rc}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{m\_rc}{m\_rc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRCReceiver}{RCReceiver}}$\ast$ Logger\+::m\+\_\+rc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The RC receiver to log the data from. 
+
+\mbox{\Hypertarget{classLogger_ae6ba5df7936e5da02e5251394bc1523e}\label{classLogger_ae6ba5df7936e5da02e5251394bc1523e}} 
+\index{Logger@{Logger}!m\_time@{m\_time}}
+\index{m\_time@{m\_time}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{m\_time}{m\_time}}
+{\footnotesize\ttfamily String Logger\+::m\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The time of the experiment. 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-libraries/\+Logger/Logger.\+h\item 
-libraries/\+Logger/Logger.\+cpp\end{DoxyCompactItemize}
+libraries/\+Logger/\mbox{\hyperlink{Logger_8h}{Logger.\+h}}\item 
+libraries/\+Logger/\mbox{\hyperlink{Logger_8cpp}{Logger.\+cpp}}\end{DoxyCompactItemize}

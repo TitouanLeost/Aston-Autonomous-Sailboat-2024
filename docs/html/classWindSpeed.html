@@ -74,20 +74,15 @@ $(function() {
  <a href="classWindSpeed.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="WindSpeed_8h_source.html">WindSpeed.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for WindSpeed:</div>
-<div class="dyncontent">
-<div class="center"><img src="classWindSpeed__coll__graph.png" border="0" usemap="#aWindSpeed_coll__map" alt="Collaboration graph"/></div>
-<map name="aWindSpeed_coll__map" id="aWindSpeed_coll__map">
-<area shape="rect" title="A class to handle the wind speed." alt="" coords="5,5,188,244"/>
-</map>
-</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a72c0928a320e3cf8bd72323c23b3b623"><td class="memItemLeft" align="right" valign="top"><a id="a72c0928a320e3cf8bd72323c23b3b623"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a72c0928a320e3cf8bd72323c23b3b623">init</a> ()</td></tr>
-<tr class="memdesc:a72c0928a320e3cf8bd72323c23b3b623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the different variables of the class. <br /></td></tr>
+<tr class="memitem:a333639e0d29a9f64b016ca28723f7138"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a333639e0d29a9f64b016ca28723f7138">WindSpeed</a> ()</td></tr>
+<tr class="separator:a333639e0d29a9f64b016ca28723f7138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e42430326dd1a71f204b147f62d8b45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a3e42430326dd1a71f204b147f62d8b45">~WindSpeed</a> ()</td></tr>
+<tr class="separator:a3e42430326dd1a71f204b147f62d8b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c0928a320e3cf8bd72323c23b3b623"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a72c0928a320e3cf8bd72323c23b3b623">init</a> ()</td></tr>
+<tr class="memdesc:a72c0928a320e3cf8bd72323c23b3b623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the different variables of the class.  <a href="classWindSpeed.html#a72c0928a320e3cf8bd72323c23b3b623">More...</a><br /></td></tr>
 <tr class="separator:a72c0928a320e3cf8bd72323c23b3b623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4450257f2640e6baf7f28d2bfc8a28ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a4450257f2640e6baf7f28d2bfc8a28ca">update</a> ()</td></tr>
 <tr class="memdesc:a4450257f2640e6baf7f28d2bfc8a28ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the wind speed if the anemometer is not rotating.  <a href="classWindSpeed.html#a4450257f2640e6baf7f28d2bfc8a28ca">More...</a><br /></td></tr>
@@ -101,27 +96,58 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a27944932ecbf8c9e758c0c7eee1ed37e"><td class="memItemLeft" align="right" valign="top"><a id="a27944932ecbf8c9e758c0c7eee1ed37e"></a>
-volatile int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a27944932ecbf8c9e758c0c7eee1ed37e">m_nb_rotations</a></td></tr>
-<tr class="memdesc:a27944932ecbf8c9e758c0c7eee1ed37e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of rotations of the anemometer. <br /></td></tr>
+<tr class="memitem:a27944932ecbf8c9e758c0c7eee1ed37e"><td class="memItemLeft" align="right" valign="top">volatile int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a27944932ecbf8c9e758c0c7eee1ed37e">m_nb_rotations</a></td></tr>
+<tr class="memdesc:a27944932ecbf8c9e758c0c7eee1ed37e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of rotations of the anemometer.  <a href="classWindSpeed.html#a27944932ecbf8c9e758c0c7eee1ed37e">More...</a><br /></td></tr>
 <tr class="separator:a27944932ecbf8c9e758c0c7eee1ed37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b6f9e2a3454b3ea5e29360dc4ebab51"><td class="memItemLeft" align="right" valign="top"><a id="a1b6f9e2a3454b3ea5e29360dc4ebab51"></a>
-volatile unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a1b6f9e2a3454b3ea5e29360dc4ebab51">m_contact_time</a></td></tr>
-<tr class="memdesc:a1b6f9e2a3454b3ea5e29360dc4ebab51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum time between two rotations (avoid false detection) <br /></td></tr>
+<tr class="memitem:a1b6f9e2a3454b3ea5e29360dc4ebab51"><td class="memItemLeft" align="right" valign="top">volatile unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a1b6f9e2a3454b3ea5e29360dc4ebab51">m_contact_time</a></td></tr>
+<tr class="memdesc:a1b6f9e2a3454b3ea5e29360dc4ebab51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum time between two rotations (avoid false detection)  <a href="classWindSpeed.html#a1b6f9e2a3454b3ea5e29360dc4ebab51">More...</a><br /></td></tr>
 <tr class="separator:a1b6f9e2a3454b3ea5e29360dc4ebab51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ccf58124817fdd31d51b92b1caaf9a5"><td class="memItemLeft" align="right" valign="top"><a id="a9ccf58124817fdd31d51b92b1caaf9a5"></a>
-volatile unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a9ccf58124817fdd31d51b92b1caaf9a5">m_average_time</a></td></tr>
-<tr class="memdesc:a9ccf58124817fdd31d51b92b1caaf9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time to calculate the average wind speed. <br /></td></tr>
+<tr class="memitem:a9ccf58124817fdd31d51b92b1caaf9a5"><td class="memItemLeft" align="right" valign="top">volatile unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a9ccf58124817fdd31d51b92b1caaf9a5">m_average_time</a></td></tr>
+<tr class="memdesc:a9ccf58124817fdd31d51b92b1caaf9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time to calculate the average wind speed.  <a href="classWindSpeed.html#a9ccf58124817fdd31d51b92b1caaf9a5">More...</a><br /></td></tr>
 <tr class="separator:a9ccf58124817fdd31d51b92b1caaf9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54e086370e4342ebebb537f145f66d67"><td class="memItemLeft" align="right" valign="top"><a id="a54e086370e4342ebebb537f145f66d67"></a>
-volatile double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a54e086370e4342ebebb537f145f66d67">m_wind_speed</a></td></tr>
-<tr class="memdesc:a54e086370e4342ebebb537f145f66d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wind speed in kph. <br /></td></tr>
+<tr class="memitem:a54e086370e4342ebebb537f145f66d67"><td class="memItemLeft" align="right" valign="top">volatile double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindSpeed.html#a54e086370e4342ebebb537f145f66d67">m_wind_speed</a></td></tr>
+<tr class="memdesc:a54e086370e4342ebebb537f145f66d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wind speed in kph.  <a href="classWindSpeed.html#a54e086370e4342ebebb537f145f66d67">More...</a><br /></td></tr>
 <tr class="separator:a54e086370e4342ebebb537f145f66d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class to handle the wind speed. </p>
 <p>This class allows to get the wind speed in kph. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a333639e0d29a9f64b016ca28723f7138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a333639e0d29a9f64b016ca28723f7138">&#9670;&nbsp;</a></span>WindSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WindSpeed::WindSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e42430326dd1a71f204b147f62d8b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e42430326dd1a71f204b147f62d8b45">&#9670;&nbsp;</a></span>~WindSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WindSpeed::~WindSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="abc6a2e5e2c29298dc26a45d0ea154ba6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc6a2e5e2c29298dc26a45d0ea154ba6">&#9670;&nbsp;</a></span>getWindSpeed()</h2>
 
@@ -139,6 +165,25 @@ volatile double&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 
 <p>Get the wind speed. </p>
 <dl class="section return"><dt>Returns</dt><dd>The wind speed in kph </dd></dl>
+
+</div>
+</div>
+<a id="a72c0928a320e3cf8bd72323c23b3b623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c0928a320e3cf8bd72323c23b3b623">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WindSpeed::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the different variables of the class. </p>
 
 </div>
 </div>
@@ -182,9 +227,106 @@ volatile double&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9ccf58124817fdd31d51b92b1caaf9a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ccf58124817fdd31d51b92b1caaf9a5">&#9670;&nbsp;</a></span>m_average_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile unsigned long WindSpeed::m_average_time</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Time to calculate the average wind speed. </p>
+
+</div>
+</div>
+<a id="a1b6f9e2a3454b3ea5e29360dc4ebab51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6f9e2a3454b3ea5e29360dc4ebab51">&#9670;&nbsp;</a></span>m_contact_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile unsigned long WindSpeed::m_contact_time</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Minimum time between two rotations (avoid false detection) </p>
+
+</div>
+</div>
+<a id="a27944932ecbf8c9e758c0c7eee1ed37e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27944932ecbf8c9e758c0c7eee1ed37e">&#9670;&nbsp;</a></span>m_nb_rotations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile int WindSpeed::m_nb_rotations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of rotations of the anemometer. </p>
+
+</div>
+</div>
+<a id="a54e086370e4342ebebb537f145f66d67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54e086370e4342ebebb537f145f66d67">&#9670;&nbsp;</a></span>m_wind_speed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile double WindSpeed::m_wind_speed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wind speed in kph. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>libraries/WindSpeed/<a class="el" href="WindSpeed_8h_source.html">WindSpeed.h</a></li>
-<li>libraries/WindSpeed/WindSpeed.cpp</li>
+<li>libraries/WindSpeed/<a class="el" href="WindSpeed_8cpp.html">WindSpeed.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

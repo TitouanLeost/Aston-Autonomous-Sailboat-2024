@@ -1,4 +1,22 @@
 var searchData=
 [
-  ['fusion_12',['fusion',['../classObserver.html#a59fe48a81a3ab8abb4a16aabb7301eab',1,'Observer']]]
+  ['calibration_12',['calibration',['../classCMPS12.html#a6e1ce39b4f977a2787f78f66eae06a46',1,'CMPS12']]],
+  ['checkrc_13',['checkRC',['../classRCReceiver.html#a88e823d109bc777fc1c1b2ba703e260c',1,'RCReceiver']]],
+  ['close_14',['close',['../classLogger.html#afee2bab560c2db0190c980884d33868c',1,'Logger']]],
+  ['cmps_15',['cmps',['../classObserver.html#a1d5614599457ae3484d2cdae5bc408ab',1,'Observer']]],
+  ['cmps12_16',['CMPS12',['../classCMPS12.html',1,'CMPS12'],['../classCMPS12.html#a95ab7ee773046a4327d5dd7857655c31',1,'CMPS12::CMPS12()']]],
+  ['cmps12_2ecpp_17',['CMPS12.cpp',['../CMPS12_8cpp.html',1,'']]],
+  ['cmps12_2eh_18',['CMPS12.h',['../CMPS12_8h.html',1,'']]],
+  ['cmps_5fcalibration_5fstatus_19',['CMPS_CALIBRATION_STATUS',['../Config_8h.html#a462f06f4bcb6fab1feacb72ab9666ba0',1,'Config.h']]],
+  ['cmps_5fget_5fangle16_20',['CMPS_GET_ANGLE16',['../Config_8h.html#abf671d339cd188ebc2c4b97998797df7',1,'Config.h']]],
+  ['cmps_5fget_5fangle8_21',['CMPS_GET_ANGLE8',['../Config_8h.html#a140f7ab2e170f8eff21edd540fbd7d4f',1,'Config.h']]],
+  ['cmps_5fget_5fpitch_22',['CMPS_GET_PITCH',['../Config_8h.html#a829cc71b2c9a79993d853707e1d48b58',1,'Config.h']]],
+  ['cmps_5fget_5froll_23',['CMPS_GET_ROLL',['../Config_8h.html#a996fdaf13152e709a27e6df70c84410a',1,'Config.h']]],
+  ['config_2eh_24',['Config.h',['../Config_8h.html',1,'']]],
+  ['controller_25',['Controller',['../classController.html#a95c56822d667e94b031451729ce069a9',1,'Controller::Controller()'],['../classController.html',1,'Controller']]],
+  ['controller_2ecpp_26',['Controller.cpp',['../Controller_8cpp.html',1,'']]],
+  ['controller_2eh_27',['Controller.h',['../Controller_8h.html',1,'']]],
+  ['converttopercent_28',['convertToPercent',['../classRCReceiver.html#af86c8e54b436e1bce374ca5f71299803',1,'RCReceiver']]],
+  ['coordlatlon_29',['CoordLatLon',['../structCoordLatLon.html',1,'']]],
+  ['coordxy_30',['CoordXY',['../structCoordXY.html',1,'']]]
 ];

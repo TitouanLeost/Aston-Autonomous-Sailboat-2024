@@ -25,10 +25,8 @@ Collaboration diagram for Observer\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classObserver_a450645e61c136826f09940a1334c7f34}{$\sim$\+Observer}} ()
 \begin{DoxyCompactList}\small\item\em Destructor of the class. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classObserver_a326081cb1a9d77bdbbb23dd9c41a6653}\label{classObserver_a326081cb1a9d77bdbbb23dd9c41a6653}} 
 void \mbox{\hyperlink{classObserver_a326081cb1a9d77bdbbb23dd9c41a6653}{init}} ()
 \begin{DoxyCompactList}\small\item\em Initialize the sensors. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classObserver_a4c3f8cebcb8c6acea453d607805aa553}\label{classObserver_a4c3f8cebcb8c6acea453d607805aa553}} 
 void \mbox{\hyperlink{classObserver_a4c3f8cebcb8c6acea453d607805aa553}{update\+Sensors}} ()
 \begin{DoxyCompactList}\small\item\em Update the sensors and process the data. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classObserver_a00e2177ad350135790e4522c5d33db8b}{get\+True\+Wind\+Angle}} ()
@@ -46,27 +44,21 @@ float \mbox{\hyperlink{classObserver_a00e2177ad350135790e4522c5d33db8b}{get\+Tru
 \item 
 void \mbox{\hyperlink{classObserver_a59fe48a81a3ab8abb4a16aabb7301eab}{fusion}} ()
 \begin{DoxyCompactList}\small\item\em Process the data. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classObserver_a438c4349adbdfc8cee2b46d1bf345364}\label{classObserver_a438c4349adbdfc8cee2b46d1bf345364}} 
 void \mbox{\hyperlink{classObserver_a438c4349adbdfc8cee2b46d1bf345364}{update\+True\+Wind\+Angle}} ()
 \begin{DoxyCompactList}\small\item\em Update the true wind angle. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{classObserver_ade8f65fcd2aa9cc881705d9c62f7d721}{angle\+Filter}} (float x, float y, float alpha)
+float \mbox{\hyperlink{classObserver_afea09bc1c3d4e0a0d864a2831d353857}{angle\+Filter}} (float filtered, float raw, float alpha)
 \begin{DoxyCompactList}\small\item\em Filter the angle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classObserver_a08ab89a85a79acf5be580e461d96e8c1}\label{classObserver_a08ab89a85a79acf5be580e461d96e8c1}} 
 \mbox{\hyperlink{classCMPS12}{CMPS12}} $\ast$ \mbox{\hyperlink{classObserver_a08ab89a85a79acf5be580e461d96e8c1}{m\+\_\+cmps}}
 \begin{DoxyCompactList}\small\item\em The CMPS sensor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classObserver_ab9fb1acf7f4ac1097e6701471f7896a7}\label{classObserver_ab9fb1acf7f4ac1097e6701471f7896a7}} 
 \mbox{\hyperlink{classGPS}{GPS}} $\ast$ \mbox{\hyperlink{classObserver_ab9fb1acf7f4ac1097e6701471f7896a7}{m\+\_\+gps}}
 \begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classGPS}{GPS}} sensor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classObserver_ab6e9afcb09cf1d1bf3d42d708a859eba}\label{classObserver_ab6e9afcb09cf1d1bf3d42d708a859eba}} 
 \mbox{\hyperlink{classWindSpeed}{Wind\+Speed}} $\ast$ \mbox{\hyperlink{classObserver_ab6e9afcb09cf1d1bf3d42d708a859eba}{m\+\_\+ws}}
 \begin{DoxyCompactList}\small\item\em The wind speed sensor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classObserver_acb0038c4cef3bde40b06985a94a22a9c}\label{classObserver_acb0038c4cef3bde40b06985a94a22a9c}} 
 \mbox{\hyperlink{classWindDirection}{Wind\+Direction}} $\ast$ \mbox{\hyperlink{classObserver_acb0038c4cef3bde40b06985a94a22a9c}{m\+\_\+wd}}
 \begin{DoxyCompactList}\small\item\em The wind direction sensor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classObserver_a1e1574602983dec0aa081603bd36d2c8}\label{classObserver_a1e1574602983dec0aa081603bd36d2c8}} 
 float \mbox{\hyperlink{classObserver_a1e1574602983dec0aa081603bd36d2c8}{m\+\_\+true\+\_\+wind\+\_\+angle}}
 \begin{DoxyCompactList}\small\item\em The true wind angle in degrees (0 to 360) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -100,21 +92,21 @@ Destructor of the class.
 This destructor deletes the pointers to the sensors to free up memory space. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classObserver_ade8f65fcd2aa9cc881705d9c62f7d721}\label{classObserver_ade8f65fcd2aa9cc881705d9c62f7d721}} 
+\mbox{\Hypertarget{classObserver_afea09bc1c3d4e0a0d864a2831d353857}\label{classObserver_afea09bc1c3d4e0a0d864a2831d353857}} 
 \index{Observer@{Observer}!angleFilter@{angleFilter}}
 \index{angleFilter@{angleFilter}!Observer@{Observer}}
 \doxysubsubsection{\texorpdfstring{angleFilter()}{angleFilter()}}
-{\footnotesize\ttfamily float Observer\+::angle\+Filter (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily float Observer\+::angle\+Filter (\begin{DoxyParamCaption}\item[{float}]{filtered,  }\item[{float}]{raw,  }\item[{float}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Filter the angle. 
 
-This function is used to filter the angle between two values. A higher alpha value will give more weight to the current angle and less to the previous angle. 
+This function is used to filter the angle between two values. A lower alpha value will give more weight to the current angle and less to the previous angle. 
 \begin{DoxyParams}{Parameters}
-{\em x} & The current angle \\
+{\em filtered} & The previous filtered angle (0 to 360) \\
 \hline
-{\em y} & The previous angle \\
+{\em raw} & The current raw angle (0 to 360) \\
 \hline
 {\em alpha} & The filter coefficient \\
 \hline
@@ -171,6 +163,36 @@ Get the \mbox{\hyperlink{classGPS}{GPS}} sensor.
 \begin{DoxyReturn}{Returns}
 A pointer to the \mbox{\hyperlink{classGPS}{GPS}} 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classObserver_a326081cb1a9d77bdbbb23dd9c41a6653}\label{classObserver_a326081cb1a9d77bdbbb23dd9c41a6653}} 
+\index{Observer@{Observer}!init@{init}}
+\index{init@{init}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Observer\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the sensors. 
+
+\mbox{\Hypertarget{classObserver_a4c3f8cebcb8c6acea453d607805aa553}\label{classObserver_a4c3f8cebcb8c6acea453d607805aa553}} 
+\index{Observer@{Observer}!updateSensors@{updateSensors}}
+\index{updateSensors@{updateSensors}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{updateSensors()}{updateSensors()}}
+{\footnotesize\ttfamily void Observer\+::update\+Sensors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the sensors and process the data. 
+
+\mbox{\Hypertarget{classObserver_a438c4349adbdfc8cee2b46d1bf345364}\label{classObserver_a438c4349adbdfc8cee2b46d1bf345364}} 
+\index{Observer@{Observer}!updateTrueWindAngle@{updateTrueWindAngle}}
+\index{updateTrueWindAngle@{updateTrueWindAngle}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{updateTrueWindAngle()}{updateTrueWindAngle()}}
+{\footnotesize\ttfamily void Observer\+::update\+True\+Wind\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the true wind angle. 
+
 \mbox{\Hypertarget{classObserver_a2690c25f7ab8bff9e152c3f5ee64a9c1}\label{classObserver_a2690c25f7ab8bff9e152c3f5ee64a9c1}} 
 \index{Observer@{Observer}!wd@{wd}}
 \index{wd@{wd}!Observer@{Observer}}
@@ -199,7 +221,60 @@ A pointer to the wind speed sensor
 \end{DoxyReturn}
 
 
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classObserver_a08ab89a85a79acf5be580e461d96e8c1}\label{classObserver_a08ab89a85a79acf5be580e461d96e8c1}} 
+\index{Observer@{Observer}!m\_cmps@{m\_cmps}}
+\index{m\_cmps@{m\_cmps}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{m\_cmps}{m\_cmps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCMPS12}{CMPS12}}$\ast$ Observer\+::m\+\_\+cmps\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The CMPS sensor. 
+
+\mbox{\Hypertarget{classObserver_ab9fb1acf7f4ac1097e6701471f7896a7}\label{classObserver_ab9fb1acf7f4ac1097e6701471f7896a7}} 
+\index{Observer@{Observer}!m\_gps@{m\_gps}}
+\index{m\_gps@{m\_gps}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{m\_gps}{m\_gps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGPS}{GPS}}$\ast$ Observer\+::m\+\_\+gps\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The \mbox{\hyperlink{classGPS}{GPS}} sensor. 
+
+\mbox{\Hypertarget{classObserver_a1e1574602983dec0aa081603bd36d2c8}\label{classObserver_a1e1574602983dec0aa081603bd36d2c8}} 
+\index{Observer@{Observer}!m\_true\_wind\_angle@{m\_true\_wind\_angle}}
+\index{m\_true\_wind\_angle@{m\_true\_wind\_angle}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{m\_true\_wind\_angle}{m\_true\_wind\_angle}}
+{\footnotesize\ttfamily float Observer\+::m\+\_\+true\+\_\+wind\+\_\+angle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The true wind angle in degrees (0 to 360) 
+
+\mbox{\Hypertarget{classObserver_acb0038c4cef3bde40b06985a94a22a9c}\label{classObserver_acb0038c4cef3bde40b06985a94a22a9c}} 
+\index{Observer@{Observer}!m\_wd@{m\_wd}}
+\index{m\_wd@{m\_wd}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{m\_wd}{m\_wd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWindDirection}{Wind\+Direction}}$\ast$ Observer\+::m\+\_\+wd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The wind direction sensor. 
+
+\mbox{\Hypertarget{classObserver_ab6e9afcb09cf1d1bf3d42d708a859eba}\label{classObserver_ab6e9afcb09cf1d1bf3d42d708a859eba}} 
+\index{Observer@{Observer}!m\_ws@{m\_ws}}
+\index{m\_ws@{m\_ws}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{m\_ws}{m\_ws}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWindSpeed}{Wind\+Speed}}$\ast$ Observer\+::m\+\_\+ws\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The wind speed sensor. 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-libraries/\+Observer/Observer.\+h\item 
-libraries/\+Observer/Observer.\+cpp\end{DoxyCompactItemize}
+libraries/\+Observer/\mbox{\hyperlink{Observer_8h}{Observer.\+h}}\item 
+libraries/\+Observer/\mbox{\hyperlink{Observer_8cpp}{Observer.\+cpp}}\end{DoxyCompactItemize}

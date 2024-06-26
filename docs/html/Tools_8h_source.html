@@ -69,20 +69,30 @@ $(function() {
 <div class="title">Tools.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TOOLS_H</span></div>
+<a href="Tools_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TOOLS_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TOOLS_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Config.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="Config_8h.html">Config.h</a>&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<a class="code" href="structCoordXY.html">CoordXY</a> latLonToXY(<a class="code" href="structCoordLatLon.html">CoordLatLon</a> coordLatLon);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">float</span> sawtooth(<span class="keywordtype">float</span> x);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructCoordLatLon_html"><div class="ttname"><a href="structCoordLatLon.html">CoordLatLon</a></div><div class="ttdef"><b>Definition:</b> Config.h:75</div></div>
-<div class="ttc" id="astructCoordXY_html"><div class="ttname"><a href="structCoordXY.html">CoordXY</a></div><div class="ttdef"><b>Definition:</b> Config.h:81</div></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<a class="code" href="structCoordXY.html">CoordXY</a> <a class="code" href="Tools_8h.html#ab883397c9179248f09a0344a96cc2237">latLonToXY</a>(<a class="code" href="structCoordLatLon.html">CoordLatLon</a> coordLatLon);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">float</span> <a class="code" href="Tools_8h.html#a2b09d24c6e822f1d92a65c9372a55336">sawtooth</a>(<span class="keywordtype">float</span> x);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">float</span> <a class="code" href="Tools_8h.html#aa092e35fa2e672c507f8850194be1112">wrap360</a>(<span class="keywordtype">float</span> x);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aConfig_8h_html"><div class="ttname"><a href="Config_8h.html">Config.h</a></div></div>
+<div class="ttc" id="aTools_8h_html_a2b09d24c6e822f1d92a65c9372a55336"><div class="ttname"><a href="Tools_8h.html#a2b09d24c6e822f1d92a65c9372a55336">sawtooth</a></div><div class="ttdeci">float sawtooth(float x)</div><div class="ttdoc">Sawtooth function.</div><div class="ttdef"><b>Definition:</b> Tools.cpp:25</div></div>
+<div class="ttc" id="aTools_8h_html_aa092e35fa2e672c507f8850194be1112"><div class="ttname"><a href="Tools_8h.html#aa092e35fa2e672c507f8850194be1112">wrap360</a></div><div class="ttdeci">float wrap360(float x)</div><div class="ttdoc">Wrap a value between -180 and 180.</div><div class="ttdef"><b>Definition:</b> Tools.cpp:31</div></div>
+<div class="ttc" id="aTools_8h_html_ab883397c9179248f09a0344a96cc2237"><div class="ttname"><a href="Tools_8h.html#ab883397c9179248f09a0344a96cc2237">latLonToXY</a></div><div class="ttdeci">CoordXY latLonToXY(CoordLatLon coordLatLon)</div><div class="ttdoc">Convert a latitude and a longitude to a XY coordinate.</div><div class="ttdef"><b>Definition:</b> Tools.cpp:3</div></div>
+<div class="ttc" id="astructCoordLatLon_html"><div class="ttname"><a href="structCoordLatLon.html">CoordLatLon</a></div><div class="ttdoc">A struct to handle the coordinates in latitude and longitude.</div><div class="ttdef"><b>Definition:</b> Config.h:82</div></div>
+<div class="ttc" id="astructCoordXY_html"><div class="ttname"><a href="structCoordXY.html">CoordXY</a></div><div class="ttdoc">A struct to handle the coordinates in meters.</div><div class="ttdef"><b>Definition:</b> Config.h:91</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

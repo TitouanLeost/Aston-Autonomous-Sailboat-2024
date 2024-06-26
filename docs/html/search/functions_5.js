@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['mr_168',['mr',['../classController.html#a35912b31e25c109e8eb94424f9a35d33',1,'Controller']]],
-  ['ms_169',['ms',['../classController.html#a454c194eb3ccb1c656b2d3071206c8d6',1,'Controller']]]
+  ['latlontoxy_297',['latLonToXY',['../Tools_8cpp.html#ab883397c9179248f09a0344a96cc2237',1,'latLonToXY(CoordLatLon coordLatLon):&#160;Tools.cpp'],['../Tools_8h.html#ab883397c9179248f09a0344a96cc2237',1,'latLonToXY(CoordLatLon coordLatLon):&#160;Tools.cpp']]],
+  ['linefollowing_298',['LineFollowing',['../classLineFollowing.html#a576f5ebc65be9a386e7add1c3263edfa',1,'LineFollowing']]],
+  ['logger_299',['Logger',['../classLogger.html#abc41bfb031d896170c7675fa96a6b30c',1,'Logger']]]
 ];

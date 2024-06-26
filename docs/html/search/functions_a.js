@@ -1,10 +1,16 @@
 var searchData=
 [
-  ['update_185',['update',['../classCMPS12.html#a56626c06ae6f9abeb527e15ce3c6a38d',1,'CMPS12::update()'],['../classGPS.html#a5b903e61f93bc5db0d9f78bec35730d4',1,'GPS::update()'],['../classLogger.html#ad905325c0f6a7f835e7e54c66e7300b2',1,'Logger::update()'],['../classRCReceiver.html#a9d37db920eca762b438ded31ad457d6e',1,'RCReceiver::update()'],['../classWindDirection.html#ae2b2f9427d95e60def46e68aee2bd5fe',1,'WindDirection::update()'],['../classWindSpeed.html#a4450257f2640e6baf7f28d2bfc8a28ca',1,'WindSpeed::update()']]],
-  ['updatecmd_186',['updateCmd',['../classAlgorithmInterface.html#a0a050d4c5fdb7d31cd8be30b4f4d0306',1,'AlgorithmInterface::updateCmd()'],['../classLineFollowing.html#a9901fd62d906555c0c4830c46b8f9f03',1,'LineFollowing::updateCmd()'],['../classStationKeeping.html#ab6b85be5199197dc52af5a5857f77bb1',1,'StationKeeping::updateCmd()'],['../classNoAlgorithm.html#a55c6cb0039330461c176924d2b404a9a',1,'NoAlgorithm::updateCmd()']]],
-  ['updatemission_187',['updateMission',['../classSupervisor.html#a6b2a3d699a9dbb4a3286b707bd5483dd',1,'Supervisor']]],
-  ['updatesensors_188',['updateSensors',['../classObserver.html#a4c3f8cebcb8c6acea453d607805aa553',1,'Observer']]],
-  ['updateservos_189',['updateServos',['../classController.html#acdc2b51b02237f3ca486108b7ac391f1',1,'Controller']]],
-  ['updatetruewindangle_190',['updateTrueWindAngle',['../classObserver.html#a438c4349adbdfc8cee2b46d1bf345364',1,'Observer']]],
-  ['updatewaypoint_191',['updateWaypoint',['../classAlgorithmInterface.html#a499e78628bd93d0643a9dcaec5124ad7',1,'AlgorithmInterface::updateWaypoint()'],['../classLineFollowing.html#acfef33e2bb5dd040ebc5202e7f5957d9',1,'LineFollowing::updateWaypoint()']]]
+  ['sawtooth_308',['sawtooth',['../Tools_8cpp.html#a2b09d24c6e822f1d92a65c9372a55336',1,'sawtooth(float x):&#160;Tools.cpp'],['../Tools_8h.html#a2b09d24c6e822f1d92a65c9372a55336',1,'sawtooth(float x):&#160;Tools.cpp']]],
+  ['servomotor_309',['ServoMotor',['../classServoMotor.html#a4a0548ee1f438521c67449c7ab7056be',1,'ServoMotor']]],
+  ['setalgo_310',['setAlgo',['../classController.html#aebde57336a28e61b6330bafb859fb2cd',1,'Controller']]],
+  ['setfilteredwinddirection_311',['setFilteredWindDirection',['../classWindDirection.html#acc5876b17eb8f35ba09a95be00df095a',1,'WindDirection']]],
+  ['setfilteredyaw_312',['setFilteredYaw',['../classCMPS12.html#a54d0af35e38aec3d35b7395e8173e8fb',1,'CMPS12']]],
+  ['setline_313',['setLine',['../classLineFollowing.html#a4f536637b6f7f5f19d56fcbeb686d126',1,'LineFollowing']]],
+  ['setpercent_314',['setPercent',['../classServoMotor.html#a8f4178077763089c129064226361b1e3',1,'ServoMotor']]],
+  ['setpwm_315',['setPWM',['../classServoMotor.html#a955e3ddeca6a6cfac5cc34021d93ae2f',1,'ServoMotor']]],
+  ['setupdate_316',['setUpdate',['../classController.html#aa7cf7b84be24c987dfa1ba6e5af65e13',1,'Controller']]],
+  ['startmission_317',['startMission',['../classSupervisor.html#a9855dc686a3b3ee59ab086c31e570ed0',1,'Supervisor']]],
+  ['stationkeeping_318',['StationKeeping',['../classStationKeeping.html#ae882b8e2f293912785af6e1c97ea5bf3',1,'StationKeeping']]],
+  ['status_319',['status',['../classRCReceiver.html#a0f3d399d0450f8b41b259542e5f9aee5',1,'RCReceiver']]],
+  ['supervisor_320',['Supervisor',['../classSupervisor.html#a9d7eafc36b5429092ba0f758bc7841c4',1,'Supervisor']]]
 ];

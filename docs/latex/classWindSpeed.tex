@@ -9,19 +9,13 @@ A class to handle the wind speed.
 
 {\ttfamily \#include $<$Wind\+Speed.\+h$>$}
 
-
-
-Collaboration diagram for Wind\+Speed\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=217pt]{classWindSpeed__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classWindSpeed_a72c0928a320e3cf8bd72323c23b3b623}\label{classWindSpeed_a72c0928a320e3cf8bd72323c23b3b623}} 
+\mbox{\hyperlink{classWindSpeed_a333639e0d29a9f64b016ca28723f7138}{Wind\+Speed}} ()
+\item 
+\mbox{\hyperlink{classWindSpeed_a3e42430326dd1a71f204b147f62d8b45}{$\sim$\+Wind\+Speed}} ()
+\item 
 void \mbox{\hyperlink{classWindSpeed_a72c0928a320e3cf8bd72323c23b3b623}{init}} ()
 \begin{DoxyCompactList}\small\item\em Initialize the different variables of the class. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classWindSpeed_a4450257f2640e6baf7f28d2bfc8a28ca}{update}} ()
@@ -33,16 +27,12 @@ double \mbox{\hyperlink{classWindSpeed_abc6a2e5e2c29298dc26a45d0ea154ba6}{get\+W
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classWindSpeed_a27944932ecbf8c9e758c0c7eee1ed37e}\label{classWindSpeed_a27944932ecbf8c9e758c0c7eee1ed37e}} 
 volatile int \mbox{\hyperlink{classWindSpeed_a27944932ecbf8c9e758c0c7eee1ed37e}{m\+\_\+nb\+\_\+rotations}}
 \begin{DoxyCompactList}\small\item\em Number of rotations of the anemometer. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classWindSpeed_a1b6f9e2a3454b3ea5e29360dc4ebab51}\label{classWindSpeed_a1b6f9e2a3454b3ea5e29360dc4ebab51}} 
 volatile unsigned long \mbox{\hyperlink{classWindSpeed_a1b6f9e2a3454b3ea5e29360dc4ebab51}{m\+\_\+contact\+\_\+time}}
 \begin{DoxyCompactList}\small\item\em Minimum time between two rotations (avoid false detection) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classWindSpeed_a9ccf58124817fdd31d51b92b1caaf9a5}\label{classWindSpeed_a9ccf58124817fdd31d51b92b1caaf9a5}} 
 volatile unsigned long \mbox{\hyperlink{classWindSpeed_a9ccf58124817fdd31d51b92b1caaf9a5}{m\+\_\+average\+\_\+time}}
 \begin{DoxyCompactList}\small\item\em Time to calculate the average wind speed. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classWindSpeed_a54e086370e4342ebebb537f145f66d67}\label{classWindSpeed_a54e086370e4342ebebb537f145f66d67}} 
 volatile double \mbox{\hyperlink{classWindSpeed_a54e086370e4342ebebb537f145f66d67}{m\+\_\+wind\+\_\+speed}}
 \begin{DoxyCompactList}\small\item\em Wind speed in kph. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -51,6 +41,21 @@ volatile double \mbox{\hyperlink{classWindSpeed_a54e086370e4342ebebb537f145f66d6
 A class to handle the wind speed. 
 
 This class allows to get the wind speed in kph. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWindSpeed_a333639e0d29a9f64b016ca28723f7138}\label{classWindSpeed_a333639e0d29a9f64b016ca28723f7138}} 
+\index{WindSpeed@{WindSpeed}!WindSpeed@{WindSpeed}}
+\index{WindSpeed@{WindSpeed}!WindSpeed@{WindSpeed}}
+\doxysubsubsection{\texorpdfstring{WindSpeed()}{WindSpeed()}}
+{\footnotesize\ttfamily Wind\+Speed\+::\+Wind\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWindSpeed_a3e42430326dd1a71f204b147f62d8b45}\label{classWindSpeed_a3e42430326dd1a71f204b147f62d8b45}} 
+\index{WindSpeed@{WindSpeed}!````~WindSpeed@{$\sim$WindSpeed}}
+\index{````~WindSpeed@{$\sim$WindSpeed}!WindSpeed@{WindSpeed}}
+\doxysubsubsection{\texorpdfstring{$\sim$WindSpeed()}{~WindSpeed()}}
+{\footnotesize\ttfamily Wind\+Speed\+::$\sim$\+Wind\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classWindSpeed_abc6a2e5e2c29298dc26a45d0ea154ba6}\label{classWindSpeed_abc6a2e5e2c29298dc26a45d0ea154ba6}} 
@@ -66,6 +71,16 @@ Get the wind speed.
 \begin{DoxyReturn}{Returns}
 The wind speed in kph 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classWindSpeed_a72c0928a320e3cf8bd72323c23b3b623}\label{classWindSpeed_a72c0928a320e3cf8bd72323c23b3b623}} 
+\index{WindSpeed@{WindSpeed}!init@{init}}
+\index{init@{init}!WindSpeed@{WindSpeed}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Wind\+Speed\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the different variables of the class. 
+
 \mbox{\Hypertarget{classWindSpeed_a27d5aa3f6d42cb5783ca1fb422a8ce5f}\label{classWindSpeed_a27d5aa3f6d42cb5783ca1fb422a8ce5f}} 
 \index{WindSpeed@{WindSpeed}!rotation@{rotation}}
 \index{rotation@{rotation}!WindSpeed@{WindSpeed}}
@@ -88,7 +103,50 @@ Update the wind speed if the anemometer is not rotating.
 
 This function sets the wind speed to 0 if the anemometer is not rotating for more than 5 seconds. 
 
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWindSpeed_a9ccf58124817fdd31d51b92b1caaf9a5}\label{classWindSpeed_a9ccf58124817fdd31d51b92b1caaf9a5}} 
+\index{WindSpeed@{WindSpeed}!m\_average\_time@{m\_average\_time}}
+\index{m\_average\_time@{m\_average\_time}!WindSpeed@{WindSpeed}}
+\doxysubsubsection{\texorpdfstring{m\_average\_time}{m\_average\_time}}
+{\footnotesize\ttfamily volatile unsigned long Wind\+Speed\+::m\+\_\+average\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Time to calculate the average wind speed. 
+
+\mbox{\Hypertarget{classWindSpeed_a1b6f9e2a3454b3ea5e29360dc4ebab51}\label{classWindSpeed_a1b6f9e2a3454b3ea5e29360dc4ebab51}} 
+\index{WindSpeed@{WindSpeed}!m\_contact\_time@{m\_contact\_time}}
+\index{m\_contact\_time@{m\_contact\_time}!WindSpeed@{WindSpeed}}
+\doxysubsubsection{\texorpdfstring{m\_contact\_time}{m\_contact\_time}}
+{\footnotesize\ttfamily volatile unsigned long Wind\+Speed\+::m\+\_\+contact\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Minimum time between two rotations (avoid false detection) 
+
+\mbox{\Hypertarget{classWindSpeed_a27944932ecbf8c9e758c0c7eee1ed37e}\label{classWindSpeed_a27944932ecbf8c9e758c0c7eee1ed37e}} 
+\index{WindSpeed@{WindSpeed}!m\_nb\_rotations@{m\_nb\_rotations}}
+\index{m\_nb\_rotations@{m\_nb\_rotations}!WindSpeed@{WindSpeed}}
+\doxysubsubsection{\texorpdfstring{m\_nb\_rotations}{m\_nb\_rotations}}
+{\footnotesize\ttfamily volatile int Wind\+Speed\+::m\+\_\+nb\+\_\+rotations\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of rotations of the anemometer. 
+
+\mbox{\Hypertarget{classWindSpeed_a54e086370e4342ebebb537f145f66d67}\label{classWindSpeed_a54e086370e4342ebebb537f145f66d67}} 
+\index{WindSpeed@{WindSpeed}!m\_wind\_speed@{m\_wind\_speed}}
+\index{m\_wind\_speed@{m\_wind\_speed}!WindSpeed@{WindSpeed}}
+\doxysubsubsection{\texorpdfstring{m\_wind\_speed}{m\_wind\_speed}}
+{\footnotesize\ttfamily volatile double Wind\+Speed\+::m\+\_\+wind\+\_\+speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wind speed in kph. 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-libraries/\+Wind\+Speed/Wind\+Speed.\+h\item 
-libraries/\+Wind\+Speed/Wind\+Speed.\+cpp\end{DoxyCompactItemize}
+libraries/\+Wind\+Speed/\mbox{\hyperlink{WindSpeed_8h}{Wind\+Speed.\+h}}\item 
+libraries/\+Wind\+Speed/\mbox{\hyperlink{WindSpeed_8cpp}{Wind\+Speed.\+cpp}}\end{DoxyCompactItemize}

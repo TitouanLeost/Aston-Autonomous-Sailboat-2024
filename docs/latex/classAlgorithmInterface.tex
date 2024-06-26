@@ -15,7 +15,7 @@ Inheritance diagram for Algorithm\+Interface\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classAlgorithmInterface__inherit__graph}
+\includegraphics[width=347pt]{classAlgorithmInterface__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -30,6 +30,10 @@ Collaboration diagram for Algorithm\+Interface\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classAlgorithmInterface_a310849a46180634c873831469e591dc1}{Algorithm\+Interface}} ()
+\item 
+\mbox{\hyperlink{classAlgorithmInterface_a63de72d01da811a4ea9f6a2f9ca00896}{$\sim$\+Algorithm\+Interface}} ()
+\item 
 void \mbox{\hyperlink{classAlgorithmInterface_a624f37e1804e52df3fa3de018574c971}{init}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$obs)
 \begin{DoxyCompactList}\small\item\em Initialize the algorithm. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classAlgorithmInterface_a0a050d4c5fdb7d31cd8be30b4f4d0306}{update\+Cmd}} ()=0
@@ -43,13 +47,10 @@ float \mbox{\hyperlink{classAlgorithmInterface_a579a0643b0be6ecdd5ebe743a4e66abd
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAlgorithmInterface_a23bb5a336dc6f653adc446e9ffab5ff2}\label{classAlgorithmInterface_a23bb5a336dc6f653adc446e9ffab5ff2}} 
 \mbox{\hyperlink{classObserver}{Observer}} $\ast$ \mbox{\hyperlink{classAlgorithmInterface_a23bb5a336dc6f653adc446e9ffab5ff2}{m\+\_\+obs}} = nullptr
 \begin{DoxyCompactList}\small\item\em The observer used. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classAlgorithmInterface_af8252ee9952d85c3fe3368b53032d175}\label{classAlgorithmInterface_af8252ee9952d85c3fe3368b53032d175}} 
 float \mbox{\hyperlink{classAlgorithmInterface_af8252ee9952d85c3fe3368b53032d175}{m\+\_\+cmd\+\_\+rudder}} = 0.\+5
 \begin{DoxyCompactList}\small\item\em The rudder command (0.\+0 to 1.\+0) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classAlgorithmInterface_a9286c325e033231e91edfe62db29cdeb}\label{classAlgorithmInterface_a9286c325e033231e91edfe62db29cdeb}} 
 float \mbox{\hyperlink{classAlgorithmInterface_a9286c325e033231e91edfe62db29cdeb}{m\+\_\+cmd\+\_\+sail}} = 0.\+5
 \begin{DoxyCompactList}\small\item\em The sail command (0.\+0 to 1.\+0) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -58,6 +59,21 @@ float \mbox{\hyperlink{classAlgorithmInterface_a9286c325e033231e91edfe62db29cdeb
 A base class to handle all algorithms class. 
 
 This class contains basic functions for all algorithms to use. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAlgorithmInterface_a310849a46180634c873831469e591dc1}\label{classAlgorithmInterface_a310849a46180634c873831469e591dc1}} 
+\index{AlgorithmInterface@{AlgorithmInterface}!AlgorithmInterface@{AlgorithmInterface}}
+\index{AlgorithmInterface@{AlgorithmInterface}!AlgorithmInterface@{AlgorithmInterface}}
+\doxysubsubsection{\texorpdfstring{AlgorithmInterface()}{AlgorithmInterface()}}
+{\footnotesize\ttfamily Algorithm\+Interface\+::\+Algorithm\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classAlgorithmInterface_a63de72d01da811a4ea9f6a2f9ca00896}\label{classAlgorithmInterface_a63de72d01da811a4ea9f6a2f9ca00896}} 
+\index{AlgorithmInterface@{AlgorithmInterface}!````~AlgorithmInterface@{$\sim$AlgorithmInterface}}
+\index{````~AlgorithmInterface@{$\sim$AlgorithmInterface}!AlgorithmInterface@{AlgorithmInterface}}
+\doxysubsubsection{\texorpdfstring{$\sim$AlgorithmInterface()}{~AlgorithmInterface()}}
+{\footnotesize\ttfamily Algorithm\+Interface\+::$\sim$\+Algorithm\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classAlgorithmInterface_ad1ed069605f52ab787dab5caf5cd69fc}\label{classAlgorithmInterface_ad1ed069605f52ab787dab5caf5cd69fc}} 
@@ -134,6 +150,39 @@ This function update the waypoint to reach. It requires a specific implementatio
 \end{DoxyParams}
 
 
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classAlgorithmInterface_af8252ee9952d85c3fe3368b53032d175}\label{classAlgorithmInterface_af8252ee9952d85c3fe3368b53032d175}} 
+\index{AlgorithmInterface@{AlgorithmInterface}!m\_cmd\_rudder@{m\_cmd\_rudder}}
+\index{m\_cmd\_rudder@{m\_cmd\_rudder}!AlgorithmInterface@{AlgorithmInterface}}
+\doxysubsubsection{\texorpdfstring{m\_cmd\_rudder}{m\_cmd\_rudder}}
+{\footnotesize\ttfamily float Algorithm\+Interface\+::m\+\_\+cmd\+\_\+rudder = 0.\+5\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The rudder command (0.\+0 to 1.\+0) 
+
+\mbox{\Hypertarget{classAlgorithmInterface_a9286c325e033231e91edfe62db29cdeb}\label{classAlgorithmInterface_a9286c325e033231e91edfe62db29cdeb}} 
+\index{AlgorithmInterface@{AlgorithmInterface}!m\_cmd\_sail@{m\_cmd\_sail}}
+\index{m\_cmd\_sail@{m\_cmd\_sail}!AlgorithmInterface@{AlgorithmInterface}}
+\doxysubsubsection{\texorpdfstring{m\_cmd\_sail}{m\_cmd\_sail}}
+{\footnotesize\ttfamily float Algorithm\+Interface\+::m\+\_\+cmd\+\_\+sail = 0.\+5\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The sail command (0.\+0 to 1.\+0) 
+
+\mbox{\Hypertarget{classAlgorithmInterface_a23bb5a336dc6f653adc446e9ffab5ff2}\label{classAlgorithmInterface_a23bb5a336dc6f653adc446e9ffab5ff2}} 
+\index{AlgorithmInterface@{AlgorithmInterface}!m\_obs@{m\_obs}}
+\index{m\_obs@{m\_obs}!AlgorithmInterface@{AlgorithmInterface}}
+\doxysubsubsection{\texorpdfstring{m\_obs}{m\_obs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObserver}{Observer}}$\ast$ Algorithm\+Interface\+::m\+\_\+obs = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The observer used. 
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-libraries/\+Algorithms/Algorithm\+Interface.\+h\end{DoxyCompactItemize}
+libraries/\+Algorithms/\mbox{\hyperlink{AlgorithmInterface_8h}{Algorithm\+Interface.\+h}}\end{DoxyCompactItemize}
