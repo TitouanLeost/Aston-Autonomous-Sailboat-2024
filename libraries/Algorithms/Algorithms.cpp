@@ -46,7 +46,7 @@ void LineFollowing::updateCmd()
 
 void LineFollowing::updateWaypoint(CoordLatLon a, CoordLatLon b)
 {
-    setLine(a, b);
+    LineFollowing::setLine(a, b);
 }
 
 
@@ -69,7 +69,6 @@ StationKeeping::~StationKeeping(){}
 
 void StationKeeping::updateCmd()
 {
-    Serial.println("StationKeeping::updateCmd()");
     m_cmd_rudder = 0.6;
     m_cmd_sail = 0.4;
 }
