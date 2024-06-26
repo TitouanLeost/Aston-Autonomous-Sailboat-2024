@@ -29,11 +29,11 @@ void setup() {
     // The first two while loops are passed when the RC Receiver is wired on the Arduino board.
     // The last two while loops are passed when the remote controller is switched on then off.
     // It allows to wired all the sensors on the board directly in the boat and then launch the program only when the user is ready.
-    // while(!rc.isReceiving());
-    // while(rc.isReceiving());
-    // while(!rc.isReceiving());
-    // while(rc.isReceiving());
-    delay(2000);
+    while(!rc.isReceiving());
+    while(rc.isReceiving());
+    while(!rc.isReceiving());
+    while(rc.isReceiving());
+    // delay(2000);
 
 
     obs.init();
@@ -53,43 +53,43 @@ void loop() {
     ctrl.updateServos();
     logger.update();
 
-    if (millis() - last_time > 200) {
-        Serial.print("Yaw (filtered): ");
-        Serial.print(obs.cmps()->getYaw());
-        Serial.print("     Yaw (raw): ");
-        Serial.print(obs.cmps()->getYawRaw());
-        Serial.print("     Pitch: ");
-        Serial.print(obs.cmps()->getPitch());
-        Serial.print("     Roll: ");
-        Serial.println(obs.cmps()->getRoll());
+    // if (millis() - last_time > 200) {
+    //     Serial.print("Yaw (filtered): ");
+    //     Serial.print(obs.cmps()->getYaw());
+    //     Serial.print("     Yaw (raw): ");
+    //     Serial.print(obs.cmps()->getYawRaw());
+    //     Serial.print("     Pitch: ");
+    //     Serial.print(obs.cmps()->getPitch());
+    //     Serial.print("     Roll: ");
+    //     Serial.println(obs.cmps()->getRoll());
 
-        // Serial.print("Satellites: ");
-        // Serial.print(obs.gps()->getSatellites());
-        // Serial.print("     Lat: ");
-        // Serial.print(obs.gps()->getLat(), 6);
-        // Serial.print("     Lon: ");
-        // Serial.print(obs.gps()->getLon(), 6);
-        // Serial.print("     Course: ");
-        // Serial.print(obs.gps()->getCourse());
-        // Serial.print("     Speed: ");
-        // Serial.print(obs.gps()->getSpeed());
-        // Serial.print("     Date: ");
-        // Serial.print(obs.gps()->getDate());
-        // Serial.print("     Time: ");
-        // Serial.println(obs.gps()->getTime());
+    //     Serial.print("Satellites: ");
+    //     Serial.print(obs.gps()->getSatellites());
+    //     Serial.print("     Lat: ");
+    //     Serial.print(obs.gps()->getLat(), 6);
+    //     Serial.print("     Lon: ");
+    //     Serial.print(obs.gps()->getLon(), 6);
+    //     Serial.print("     Course: ");
+    //     Serial.print(obs.gps()->getCourse());
+    //     Serial.print("     Speed: ");
+    //     Serial.print(obs.gps()->getSpeed());
+    //     Serial.print("     Date: ");
+    //     Serial.print(obs.gps()->getDate());
+    //     Serial.print("     Time: ");
+    //     Serial.println(obs.gps()->getTime());
 
-        Serial.print("Wind speed: ");
-        Serial.print(obs.ws()->getWindSpeed());
-        Serial.print("     Wind direction (filtered): ");
-        Serial.print(obs.wd()->getWindDirection());
-        Serial.print("     Wind direction (raw): ");
-        Serial.print(obs.wd()->getRawWindDirection());
-        Serial.print("     True wind direction: ");
-        Serial.println(obs.getTrueWindAngle());
+    //     Serial.print("Wind speed: ");
+    //     Serial.print(obs.ws()->getWindSpeed());
+    //     Serial.print("     Wind direction (filtered): ");
+    //     Serial.print(obs.wd()->getWindDirection());
+    //     Serial.print("     Wind direction (raw): ");
+    //     Serial.print(obs.wd()->getRawWindDirection());
+    //     Serial.print("     True wind direction: ");
+    //     Serial.println(obs.getTrueWindAngle());
 
-        Serial.println("------------------------------- \n");
+    //     Serial.println("------------------------------- \n");
 
-        last_time = millis();
-    }
+    //     last_time = millis();
+    // }
 
 }
