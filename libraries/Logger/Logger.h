@@ -43,6 +43,9 @@ class Logger
         void update();
 
 
+        void setUpdate(bool update);
+
+
         /***********************************************************
          * Open the file.
          * Generates the filename by calling the generateFilename()
@@ -104,6 +107,7 @@ class Logger
         String m_filename;  ///< The filename
         String m_date;  ///< The date of the experiment
         String m_time;  ///< The time of the experiment
+        bool m_update = true;  ///< The update flag
 };
 
 

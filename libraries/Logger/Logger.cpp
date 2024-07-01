@@ -28,6 +28,9 @@ void Logger::init(Observer* obs, Controller* ctrl, RCReceiver* rc)
 
 void Logger::update()
 {
+    if(!m_update)
+        return;
+        
     unsigned long int time = millis();
     float yaw = m_obs->cmps()->getYaw();
     float yaw_raw = m_obs->cmps()->getYawRaw();
@@ -64,6 +67,12 @@ void Logger::update()
 
     
     m_file.flush();
+}
+
+
+void Logger::setUpdate(bool update)
+{
+    m_update = update;
 }
 
 
