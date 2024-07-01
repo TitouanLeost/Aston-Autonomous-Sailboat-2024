@@ -6,11 +6,31 @@ The purpose of this project is to provide a framework for testing different type
 
 ## Hardware
 
+### Circuit Board/Shields  
+
+| Name      | Image                               | E-commerce site              | Power Requirements           |
+|-----------|-------------------------------------|------------------------------|------------------------------|
+| Arduino Mega 2560 | ![Arduino Mega](images/arduino_mega.webp) | [Arduino Store](https://store.arduino.cc/products/arduino-mega-2560-rev3) | 7-12V |
+| Grove - Mega Shield | ![Grove - Mega Shield](images/grove_mega_shield.webp) | [Solarobotics](https://www.solarbotics.com/product/29148) | N/A |
+| Adafruit 16 x 12-bit PWM & Servo Shield | ![Adafruit Servo Shield](images/adafruit_servo_shield.jpg) | [Adafruit](https://www.adafruit.com/product/1411) | N/A |
+
 ### Actuators
 
 
 ### Sensors
 
+| Name      | Image                               | E-commerce site              | Power Requirements           |
+|-----------|-------------------------------------|------------------------------|------------------------------|
+| CMPS12    | ![CMPS12](images/CMPS12.jpg) | [CMPS12](https://www.robot-electronics.co.uk/cmps12-tilt-compensated-magnetic-compass.html) | 3.3-5V 18mA |
+| Grove GPS v1.2 | ![Grove GPS](images/grove_gps.png) | [Seeedstudio](https://www.seeedstudio.com/Grove-GPS-Module.html) | 3.3-5V |
+| Anemometer - SKU 7911 | ![Anemometer](images/anemometer.png) | [Davis Instrument](https://www.davisinstruments.com/products/anemometer-for-weather-monitor-or-wizard) | N/A |
+
+### Extra
+
+| Name      | Image                               | E-commerce site              | Power Requirements           |
+|-----------|-------------------------------------|------------------------------|------------------------------|
+| FlySky FS-R6B | ![RC Receiver](images/rc_receiver.webp) | [FlySky](https://www.flysky-cn.com/fsr6b) | 4-6.5V DC |
+| MicroSD Card Adapter | ![MicroSD Card Adapter](images/microsd_card_adapter.png) | [Amazon](https://www.amazon.co.uk/dp/B06XHJTGGC?ref_=as_li_ss_tl&language=en_US&linkCode=gg4&linkId=5d0b70740d5b8a9d8b8933d4734d6995&tag=zlufy-20) | 5V |
 
 ### Wiring
 
@@ -112,10 +132,10 @@ The file [Config.h](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-20
 
 - **REF_LAT** and **REF_LON**
 - **WP** and **NB_WP**
-- **RUDDER_OFFSET_MIN** and **RUDDER_OFFSET_MAX**
-- **SAIL_OFFSET_MIN** and **SAIL_OFFSET_MAX**
+- **RUDDER_PWMMIN** and **RUDDER_PWMMAX**
+- **SAIL_PWMMIN** and **SAIL_PWMMAX**
 
-To set the rudder and sail offset, you will need to test your servomotors with different signals and determine the PWM required for each extreme position of the rudder and the sail.
+To set the rudder and sail PWM, you will need to test your servomotors with different signals and determine the PWM required for each extreme position of the rudder and the sail.
 
 
 
@@ -125,7 +145,7 @@ In the [tools](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tr
 
 ### Reading Log from an SD Card
 
-First of all [read_sd_card.ino](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tree/main/tools/read_sd_card/read_sd_card.ino) allows you to **read a file on an SD card connected to the Arduino board**. This is usefull if you can't load the SD card directly into your computer or if you want to save time. **You will need to fill the name of your file wich will be "LOG/DDMMhhmm.txt"** *(DD: day, MM: month, hh: hour, mm: minute of the beginning of the experiment)*.  
+First of all [read_sd_card.ino](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tree/main/tools/read_sd_card/read_sd_card.ino) allows you to **read a file on an SD card connected to the Arduino board**. This is usefull if you can't load the SD card directly into your computer or if you want to save time. **You will need to fill the name of your file wich will be "DDMMhhmm.txt"** *(DD: day, MM: month, hh: hour, mm: minute of the beginning of the experiment)*.  
 Then, **you can execute [sd_card_reading.py](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tree/main/tools/sd_card_reading.py)** to **save the log** in a file which will be **located in /logs/DDMMYY/hhmmss.txt** *(YY: year, ss: second of the beginning of the experiment)*.  
 
 ---
