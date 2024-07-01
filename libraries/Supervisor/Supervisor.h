@@ -8,6 +8,7 @@
 #include <Observer.h>
 #include <Controller.h>
 #include <RCReceiver.h>
+#include <Logger.h>
 
 using namespace std;
 
@@ -52,7 +53,7 @@ class Supervisor
          * @param ctrl A pointer to the controller used
          * @param rc A pointer to the RC receiver used
         *************************************************************/
-        void init(Observer* obs, Controller* ctrl, RCReceiver* rc);
+        void init(Observer* obs, Controller* ctrl, RCReceiver* rc, Logger* logger);
 
         /*************************************************************
          * Update the mission.
@@ -105,11 +106,13 @@ class Supervisor
         Observer* m_obs = nullptr;  ///< The observer used
         Controller* m_ctrl = nullptr;  ///< The controller used
         RCReceiver* m_rc = nullptr;  ///< The RC receiver used
+        Logger* m_logger = nullptr;  ///< The logger used
 
         CoordLatLon m_wp[NB_WP];  ///< The list of waypoints
         int m_current_wp = 0;  ///< The current waypoint index
         unsigned long m_algo2_start_time;  ///< The start time of the algorithm 2
         int m_algo_type;  ///< The type of the algorithm to use (1 or 2)
+        bool m_mission_finished = false;  ///< The status of the mission
 };
 
 #endif

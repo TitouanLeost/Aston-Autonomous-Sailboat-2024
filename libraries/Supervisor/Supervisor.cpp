@@ -18,11 +18,12 @@ Supervisor::~Supervisor()
 }
 
 
-void Supervisor::init(Observer* obs, Controller* ctrl, RCReceiver* rc)
+void Supervisor::init(Observer* obs, Controller* ctrl, RCReceiver* rc, Logger* logger)
 {
     m_obs = obs;
     m_ctrl = ctrl;
     m_rc = rc;
+    m_logger = logger;
 
     startMission();
 }
@@ -39,17 +40,24 @@ void Supervisor::updateMission()
             break;
 
         case false:
+            if(m_mission_finished)
+                break;
+
             m_ctrl->setUpdate(true);
             if(isWaypointReached()){
+                Serial.println("############## Waypoint reached");
                 if (IS_ALGO2_EQUAL_TO(NoAlgorithm))
                     nextWaypoint();
                 else{
+                    Serial.println("############### Zut");
                     m_algo_type = m_ctrl->setAlgo(2);
                     m_algo2_start_time = millis();
                 }
             }
-            if(isAlgo2Finished())
+            if(isAlgo2Finished()) {
+                Serial.println("################# Algo 2 finished");
                 nextWaypoint();
+            }
 
             break;
     }
@@ -68,12 +76,24 @@ void Supervisor::startMission()
 void Supervisor::nextWaypoint()
 {
     m_current_wp++;
-    if(m_algo_type == 2) 
-        m_algo_type = m_ctrl->setAlgo(1);
+    if(m_current_wp == NB_WP) {
+        Serial.println("################ Mission finished");
+        m_mission_finished = true;
+        m_ctrl->setUpdate(false);
+        m_ctrl->mr()->setPercent(0.5);
+        m_ctrl->ms()->setPercent(0.5);
+        m_logger->close();
+    }
+    else {
+        Serial.println("############# Next waypoint");
 
-    CoordLatLon a = m_wp[m_current_wp-1];
-    CoordLatLon b = m_wp[m_current_wp];
-    m_ctrl->algo()->updateWaypoint(a, b);
+        if(m_algo_type == 2) 
+            m_algo_type = m_ctrl->setAlgo(1);
+
+        CoordLatLon a = m_wp[m_current_wp-1];
+        CoordLatLon b = m_wp[m_current_wp];
+        m_ctrl->algo()->updateWaypoint(a, b);
+    }
 }
 
 
