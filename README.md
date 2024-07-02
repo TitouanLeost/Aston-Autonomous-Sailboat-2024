@@ -10,7 +10,7 @@ The purpose of this project is to provide a framework for testing different type
 
 | Name      | Image                               | E-commerce site              | Power Requirements           |
 |-----------|-------------------------------------|------------------------------|------------------------------|
-| Arduino Mega 2560 | <img src="images/arduino_mega.webp" alt="Arduino Mega" height="200"/> | [Arduino Store](https://store.arduino.cc/products/arduino-mega-2560-rev3) | 7-12V |
+| Arduino Mega 2560 | <img src="images/arduino_mega.png" alt="Arduino Mega" height="150"/> | [Arduino Store](https://store.arduino.cc/products/arduino-mega-2560-rev3) | 7-12V |
 | Grove - Mega Shield | ![Grove - Mega Shield](images/grove_mega_shield.webp) | [Solarobotics](https://www.solarbotics.com/product/29148) | N/A |
 | Adafruit 16 x 12-bit PWM & Servo Shield | ![Adafruit Servo Shield](images/adafruit_servo_shield.jpg) | [Adafruit](https://www.adafruit.com/product/1411) | N/A |
 
