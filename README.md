@@ -10,9 +10,9 @@ The purpose of this project is to provide a framework for testing different type
 
 | Name      | Image                               | E-commerce site              | Power Requirements           |
 |-----------|-------------------------------------|------------------------------|------------------------------|
-| Arduino Mega 2560 | <img src="images/arduino_mega.png" alt="Arduino Mega" height="150"/> | [Arduino Store](https://store.arduino.cc/products/arduino-mega-2560-rev3) | 7-12V |
-| Grove - Mega Shield | ![Grove - Mega Shield](images/grove_mega_shield.webp) | [Solarobotics](https://www.solarbotics.com/product/29148) | N/A |
-| Adafruit 16 x 12-bit PWM & Servo Shield | ![Adafruit Servo Shield](images/adafruit_servo_shield.jpg) | [Adafruit](https://www.adafruit.com/product/1411) | N/A |
+| Arduino Mega 2560 | <p align="center"><img src="images/arduino_mega.png" alt="Arduino Mega" height="150"/></p> | [Arduino Store](https://store.arduino.cc/products/arduino-mega-2560-rev3) | 7-12V |
+| Grove - Mega Shield | <p align="center"><img src="images/grove_mega_shield.jpg" alt="Grove Mega Shield" height="150"/></p> | [Solarobotics](https://www.solarbotics.com/product/29148) | N/A |
+| Adafruit 16 x 12-bit PWM & Servo Shield | <p align="center"><img src="images/adafruit_servo_shield.jpg" alt="Adafruit Servo Shield" height="150"/></p> | [Adafruit](https://www.adafruit.com/product/1411) | N/A |
 
 ### Actuators
 
@@ -21,16 +21,16 @@ The purpose of this project is to provide a framework for testing different type
 
 | Name      | Image                               | E-commerce site              | Power Requirements           |
 |-----------|-------------------------------------|------------------------------|------------------------------|
-| CMPS12    | ![CMPS12](images/CMPS12.jpg) | [CMPS12](https://www.robot-electronics.co.uk/cmps12-tilt-compensated-magnetic-compass.html) | 3.3-5V 18mA |
-| Grove GPS v1.2 | ![Grove GPS](images/grove_gps.png) | [Seeedstudio](https://www.seeedstudio.com/Grove-GPS-Module.html) | 3.3-5V |
-| Anemometer - SKU 7911 | ![Anemometer](images/anemometer.png) | [Davis Instrument](https://www.davisinstruments.com/products/anemometer-for-weather-monitor-or-wizard) | N/A |
+| CMPS12    | <p align="center"><img src="images/CMPS12.jpg" alt="CMPS12" height="150"/></p> | [CMPS12](https://www.robot-electronics.co.uk/cmps12-tilt-compensated-magnetic-compass.html) | 3.3-5V 18mA |
+| Grove GPS v1.2 | <p align="center"><img src="images/grove_gps.png" alt="Grove GPS" height="150"/></p> | [Seeedstudio](https://www.seeedstudio.com/Grove-GPS-Module.html) | 3.3-5V |
+| Anemometer - SKU 7911 | <p align="center"><img src="images/anemometer.png" alt="Anemometer" height="150"/></p> | [Davis Instrument](https://www.davisinstruments.com/products/anemometer-for-weather-monitor-or-wizard) | N/A |
 
 ### Extra
 
 | Name      | Image                               | E-commerce site              | Power Requirements           |
 |-----------|-------------------------------------|------------------------------|------------------------------|
-| FlySky FS-R6B | ![RC Receiver](images/rc_receiver.webp) | [FlySky](https://www.flysky-cn.com/fsr6b) | 4-6.5V DC |
-| MicroSD Card Adapter | ![MicroSD Card Adapter](images/microsd_card_adapter.png) | [Amazon](https://www.amazon.co.uk/dp/B06XHJTGGC?ref_=as_li_ss_tl&language=en_US&linkCode=gg4&linkId=5d0b70740d5b8a9d8b8933d4734d6995&tag=zlufy-20) | 5V |
+| FlySky FS-R6B | <p align="center"><img src="images/rc_receiver.png" alt="FlySky FS-R6B" height="150"/></p> | [FlySky](https://www.flysky-cn.com/fsr6b) | 4-6.5V DC |
+| MicroSD Card Adapter | <p align="center"><img src="images/microsd_card_adapter.png" alt="MicroSD Card Adapter" height="150"/></p> | [Amazon](https://www.amazon.co.uk/dp/B06XHJTGGC?ref_=as_li_ss_tl&language=en_US&linkCode=gg4&linkId=5d0b70740d5b8a9d8b8933d4734d6995&tag=zlufy-20) | 5V |
 
 ### Wiring
 
