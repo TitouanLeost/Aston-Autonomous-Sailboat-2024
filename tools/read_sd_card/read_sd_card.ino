@@ -2,14 +2,14 @@
 #include <SPI.h>
 
 
-String filename = "LOG/06010003.TXT";  // Put the name of the file you want to read here at the format "LOG/DDMMhhmm.TXT"
+String filename = "TEST.TXT";  // Put the name of the file you want to read here at the format "LOG/DDMMhhmm.TXT"
 File myFile;
 
 int pinCS = 53;
 
 void setup() {
       
-    Serial.begin(9600);
+    Serial.begin(31250);
     pinMode(pinCS, OUTPUT);
 
     // SD Card Initialization
