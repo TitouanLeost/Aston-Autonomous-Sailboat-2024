@@ -29,12 +29,10 @@ void setup() {
     // The first two while loops are passed when the RC Receiver is wired on the Arduino board.
     // The last two while loops are passed when the remote controller is switched on then off.
     // It allows to wired all the sensors on the board directly in the boat and then launch the program only when the user is ready.
-    // while(!rc.isReceiving());
-    // while(rc.isReceiving());
-    // while(!rc.isReceiving());
-    // while(rc.isReceiving());
-    delay(2000);
-
+    while(!rc.isReceiving());
+    while(rc.isReceiving());
+    while(!rc.isReceiving());
+    while(rc.isReceiving());
 
     obs.init();
     ctrl.init(&obs);
@@ -86,6 +84,11 @@ void loop() {
         Serial.print(obs.wd()->getRawWindDirection());
         Serial.print("     True wind direction: ");
         Serial.println(obs.getTrueWindAngle());
+
+        Serial.print("Cmd rudder: ");
+        Serial.print(ctrl.algo()->getCmdRudder());
+        Serial.print("     Cmd sail: ");
+        Serial.println(ctrl.algo()->getCmdSail());
 
         Serial.println("------------------------------- \n");
 

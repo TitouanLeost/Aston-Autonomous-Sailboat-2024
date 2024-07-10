@@ -49,7 +49,7 @@ void Supervisor::updateMission()
                 if (IS_ALGO2_EQUAL_TO(NoAlgorithm))
                     nextWaypoint();
                 else{
-                    Serial.println("############### Zut");
+                    Serial.println("############### Algo 2 started");
                     m_algo_type = m_ctrl->setAlgo(2);
                     m_algo2_start_time = millis();
                 }

@@ -6,19 +6,28 @@
 
 #define EARTH_RADIUS 6371000  ///< Earth radius in meters
 
-#define REF_LAT 52.486252  ///< Reference latitude
-#define REF_LON -1.889658  ///< Reference longitude
+// #define REF_LAT 52.485957  ///< Reference latitude
+// #define REF_LON -1.889699  ///< Reference longitude
+// #define REF_LAT 52.486825  ///< Reference latitude
+// #define REF_LON -1.889144  ///< Reference longitude
+// #define REF_LAT 52.508147  ///< Reference latitude
+// #define REF_LON -1.923532  ///< Reference longitude
+#define REF_LAT 52.429020  ///< Reference latitude
+#define REF_LON -1.947089  ///< Reference longitude
 
 /*=========================*/
 /////////////////////////////
 /*======MISSION CONFIG=====*/
 
 #define ALGO1 LineFollowing  ///< Algorithm used to go from waypoint to waypoint (type 1)
-#define ALGO2 StationKeeping  ///< Algorithm used when a waypoint is reached (type 2)
+#define ALGO2 NoAlgorithm  ///< Algorithm used when a waypoint is reached (type 2)
 #define ALGO2_DURATION 10  ///< Duration (in seconds) of the type 2 algorithm before going to the next waypoint
 
-#define NB_WP 3  ///< Number of waypoints
-#define WP { {52.486599, -1.889232}, {52.486302, -1.889515}, {52.486382, -1.889144} }  ///< List of waypoints (latitude, longitude)
+#define NB_WP 1  ///< Number of waypoints
+// #define WP { {52.508767, -1.922796}, {52.508238, -1.923212}, {52.507977, -1.922481} }  ///< List of waypoints (latitude, longitude)
+// #define WP { {52.486909, -1.888763}, {52.487112, -1.888623}, {52.487257, -1.889003} }  ///< List of waypoints (latitude, longitude)
+// #define WP { {52.486236, -1.889611}, {52.486009, -1.889514}, {52.486145, -1.888959} }  ///< List of waypoints (latitude, longitude)
+#define WP { {52.429661, -1.945140} }  ///< List of waypoints (latitude, longitude)
 #define WP_RADIUS 10  ///< Radius of the waypoint to validate it
 
 /*=========================*/
@@ -46,7 +55,7 @@ enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
 #define ANGLE_RUDDER_MAX M_PI/4  ///< Maximum angle of the rudder
 #define ANGLE_SAIL_MAX M_PI/2  ///< Maximum angle of the sail
 
-#define R 50  ///< Cutoff distance from the line
+#define R 12  ///< Cutoff distance from the line
 #define GAMMA M_PI/4  ///< Incidence angle
 #define ZETA M_PI/4  ///< Close haul angle
 #define BETA 0.3
@@ -109,7 +118,7 @@ struct CoordXY
 
 #define SERVO_RUDDER_PIN 0  ///< Pin for the rudder servo
 #define RUDDER_PWMMIN 200  ///< Minimum PWM for the rudder servo
-#define RUDDER_PWMMAX 380  ///< Maximum PWM for the rudder servo
+#define RUDDER_PWMMAX 410  ///< Maximum PWM for the rudder servo
 
 #define SERVO_SAIL_PIN 1  ///< Pin for the sail servo
 #define SAIL_PWMMIN 245  ///< Minimum PWM for the sail servo
