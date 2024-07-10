@@ -26,8 +26,8 @@ void RCReceiver::init()
 
 void RCReceiver::update()
 {
-    m_rudder_pulse_raw = pulseIn(RUDDER_CH_PIN, HIGH, 10000);
-    m_sail_pulse_raw = pulseIn(SAIL_CH_PIN, HIGH, 10000);
+    m_rudder_pulse_raw = pulseIn(RUDDER_CH_PIN, HIGH);
+    m_sail_pulse_raw = pulseIn(SAIL_CH_PIN, HIGH);
 
     m_rudder_pulse = PULSE_FILTER * m_rudder_pulse + (1 - PULSE_FILTER) * m_rudder_pulse_raw;
     m_sail_pulse = PULSE_FILTER * m_sail_pulse + (1 - PULSE_FILTER) * m_sail_pulse_raw;
