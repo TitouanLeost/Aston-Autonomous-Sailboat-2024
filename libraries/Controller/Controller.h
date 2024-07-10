@@ -86,6 +86,8 @@ class Controller
         AlgorithmInterface* algo();
 
     private:
+        void testServo();
+
         ServoMotor* m_mr = nullptr;  ///< The rudder servo motorm
         ServoMotor* m_ms = nullptr;  ///< The sail servo motor
         AlgorithmInterface* m_algo = nullptr;  ///< The algorithm used
