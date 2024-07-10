@@ -1,13 +1,10 @@
 #include <Logger.h>
 
 
-Logger::Logger(){}
+Logger::Logger() {}
 
 
-Logger::~Logger()
-{
-    close();
-}
+Logger::~Logger() {}
 
 
 void Logger::init(Observer* obs, Controller* ctrl, RCReceiver* rc)
@@ -16,7 +13,6 @@ void Logger::init(Observer* obs, Controller* ctrl, RCReceiver* rc)
         Serial.println("SD card initialization failed");
         while(1);
     }
-    SD.mkdir("LOG");
 
     m_obs = obs;
     m_ctrl = ctrl;
@@ -70,12 +66,6 @@ void Logger::update()
 }
 
 
-void Logger::setUpdate(bool update)
-{
-    m_update = update;
-}
-
-
 void Logger::open()
 {
     generateFilename();
@@ -108,8 +98,8 @@ void Logger::close()
 {
     m_file.flush();
     m_file.close();
-    Serial.println("File closed");
     m_filename = "";
+    m_update = false;
 }
 
 
@@ -119,10 +109,10 @@ void Logger::generateFilename()
     String date = m_date.substring(0, m_date.length() - 2);  // Remove year
     m_time = m_obs->gps()->getTime();
     String time = m_time.substring(0, m_time.length() - 2);  // Remove seconds
-    // m_filename = "LOG/";
-    m_filename += date;
-    m_filename += time;
-    m_filename += ".TXT";
+    // m_filename += date;
+    // m_filename += time;
+    // m_filename += ".TXT";
+    m_filename = "TEST.TXT";
 }
 
 

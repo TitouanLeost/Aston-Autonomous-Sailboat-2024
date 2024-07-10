@@ -43,9 +43,6 @@ class Logger
         void update();
 
 
-        void setUpdate(bool update);
-
-
         /***********************************************************
          * Open the file.
          * Generates the filename by calling the generateFilename()
