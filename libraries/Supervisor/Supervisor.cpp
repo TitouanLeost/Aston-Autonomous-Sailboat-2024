@@ -45,17 +45,14 @@ void Supervisor::updateMission()
 
             m_ctrl->setUpdate(true);
             if(isWaypointReached()){
-                Serial.println("############## Waypoint reached");
                 if (IS_ALGO2_EQUAL_TO(NoAlgorithm))
                     nextWaypoint();
                 else{
-                    Serial.println("############### Algo 2 started");
                     m_algo_type = m_ctrl->setAlgo(2);
                     m_algo2_start_time = millis();
                 }
             }
             if(isAlgo2Finished()) {
-                Serial.println("################# Algo 2 finished");
                 nextWaypoint();
             }
 
@@ -77,7 +74,6 @@ void Supervisor::nextWaypoint()
 {
     m_current_wp++;
     if(m_current_wp == NB_WP) {
-        Serial.println("################ Mission finished");
         m_mission_finished = true;
         m_ctrl->setUpdate(false);
         m_ctrl->mr()->setPercent(0.5);
@@ -85,8 +81,6 @@ void Supervisor::nextWaypoint()
         m_logger->close();
     }
     else {
-        Serial.println("############# Next waypoint");
-
         if(m_algo_type == 2) 
             m_algo_type = m_ctrl->setAlgo(1);
 
