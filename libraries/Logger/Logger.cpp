@@ -18,13 +18,16 @@ void Logger::init(Observer* obs, Controller* ctrl, RCReceiver* rc)
     m_ctrl = ctrl;
     m_rc = rc;
 
+    m_update = true;
+    m_last_time = millis();
+
     open();
 }
 
 
 void Logger::update()
 {
-    if(!m_update)
+    if((!m_update) || ((millis() - m_last_time) < LOG_INTERVAL))
         return;
         
     unsigned long int time = millis();

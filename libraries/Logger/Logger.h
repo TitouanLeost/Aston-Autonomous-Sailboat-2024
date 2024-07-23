@@ -104,7 +104,8 @@ class Logger
         String m_filename;  ///< The filename
         String m_date;  ///< The date of the experiment
         String m_time;  ///< The time of the experiment
-        bool m_update = true;  ///< The update flag
+        bool m_update;  ///< The update flag
+        unsigned long m_last_time;  ///< The last time the data were logged
 };
 
 
