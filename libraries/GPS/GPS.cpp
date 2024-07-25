@@ -10,20 +10,20 @@ GPS::~GPS(){}
 void GPS::init()
 {
     Serial.println(" -> Initializing GPS...");
+    
     SERIAL_GPS.begin(9600);
     while(SERIAL_GPS.available() == 0);
-    while(getDate().length() != 6 || getTime() == "-1" || getDate() == "060180"){
+    while(m_gps.sentencesWithFix() <= 20)
         update();
-    }
+
     Serial.println(" => GPS initialized");
 }
 
 
 void GPS::update()
 {
-    while(SERIAL_GPS.available() > 0){
+    while(SERIAL_GPS.available() > 0)
         m_gps.encode(SERIAL_GPS.read());
-    }
 }
 
 
@@ -37,28 +37,29 @@ int GPS::getSatellites() {return m_gps.satellites.value();}
 
 
 String GPS::getDate(){
-    uint32_t date = m_gps.date.isValid() ? m_gps.date.value() : -1;
+    if(!m_gps.date.isValid())
+        return "-1";
+
+    uint32_t date = m_gps.date.value();
     String dateStr = String(date);
-    if (dateStr.length() == 5) {
+    if (dateStr.length() == 5)
         dateStr = "0" + dateStr;
-    }
+
     return dateStr;  
 }
 
 
 String GPS::getTime(){
-    if(m_gps.time.isValid()){
-        String timeStr;
-        String h = String(m_gps.time.hour());
-        String m = String(m_gps.time.minute());
-        String s = String(m_gps.time.second());
-
-        timeStr = (h.length() == 1 ? "0" + h : h) + (m.length() == 1 ? "0" + m : m) + (s.length() == 1 ? "0" + s : s);
-        return timeStr;
-    }
-    else{
+    if(!m_gps.time.isValid())
         return "-1";
-    }
+
+    String timeStr;
+    String h = String(m_gps.time.hour());
+    String m = String(m_gps.time.minute());
+    String s = String(m_gps.time.second());
+
+    timeStr = (h.length() == 1 ? "0" + h : h) + (m.length() == 1 ? "0" + m : m) + (s.length() == 1 ? "0" + s : s);
+    return timeStr;
 }
 
 
