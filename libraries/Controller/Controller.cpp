@@ -39,7 +39,7 @@ void Controller::init(Observer* obs)
     Serial.println("#########################");
     Serial.println("Initializing algorithms...");   
     m_algo1->init(obs);
-    m_algo2->init(obs); 
+    m_algo2->init(obs);
     Serial.println("Algorithms initialized");
     Serial.println("######################### \n");
 }
@@ -47,11 +47,12 @@ void Controller::init(Observer* obs)
 
 void Controller::updateServos()
 {
-    if(m_update){
-        m_algo->updateCmd();
-        m_mr->setPercent(m_algo->getCmdRudder());
-        m_ms->setPercent(m_algo->getCmdSail());
-    }
+    if(!m_update)
+        return;
+    
+    m_algo->updateCmd();
+    m_mr->setPercent(m_algo->getCmdRudder());
+    m_ms->setPercent(m_algo->getCmdSail());
 }
 
 

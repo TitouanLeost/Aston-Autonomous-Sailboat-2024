@@ -86,6 +86,11 @@ class Controller
         AlgorithmInterface* algo();
 
     private:
+        /***********************************************************
+         * Test the servo motors.
+         * This function tests the two servo motors by moving them
+         * from 50 to 100%, then 100 to 0% and back to 50%.
+        ***********************************************************/
         void testServo();
 
         ServoMotor* m_mr = nullptr;  ///< The rudder servo motorm
