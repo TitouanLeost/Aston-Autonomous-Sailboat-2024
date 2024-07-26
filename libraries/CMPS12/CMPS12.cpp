@@ -1,10 +1,10 @@
 #include "CMPS12.h"
 
 
-CMPS12::CMPS12(){}
+CMPS12::CMPS12() {}
 
 
-CMPS12::~CMPS12(){}
+CMPS12::~CMPS12() {}
 
 
 void CMPS12::init()
@@ -55,11 +55,12 @@ int CMPS12::getRoll() {return m_roll;}
 void CMPS12::calibration()
 {
     Serial.println(" -> Checking calibration status...");
+
     SERIAL_CMPS.write(CMPS_CALIBRATION_STATUS);
     while(SERIAL_CMPS.available() < 1);
     unsigned char status = SERIAL_CMPS.read();
-    while(int(status) != 255){
+    while(int(status) != 255)
         status = SERIAL_CMPS.read();
-    }
+
     Serial.println(" => Calibration done");
 }
