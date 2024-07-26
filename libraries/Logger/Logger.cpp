@@ -63,8 +63,7 @@ void Logger::update()
     write(rudder_cmd); write(",");
     write(sail_cmd); write(",");
     write(rc_is_receiving); write("\n");
-
-    
+ 
     m_file.flush();
 }
 
