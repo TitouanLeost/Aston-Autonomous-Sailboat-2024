@@ -1,10 +1,10 @@
 #include <RCReceiver.h>
 
 
-RCReceiver::RCReceiver(){}
+RCReceiver::RCReceiver() {}
 
 
-RCReceiver::~RCReceiver(){}
+RCReceiver::~RCReceiver() {}
 
 
 void RCReceiver::init()
