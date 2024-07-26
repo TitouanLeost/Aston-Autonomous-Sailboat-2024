@@ -23,10 +23,12 @@ void Observer::init()
 {
     Serial.println("#########################");
     Serial.println("Initializing sensors...");
+
     m_cmps->init();
     m_gps->init();
     m_ws->init();
     m_wd->init();
+
     Serial.println("Sensors initialized");
     Serial.println("######################### \n");
 }
@@ -81,5 +83,6 @@ float Observer::angleFilter(float filtered, float raw, float alpha)
     filtered = wrap360(filtered + alpha*wrap360(raw - filtered));
     if(filtered < 0)
         filtered += 360;
+        
     return filtered;
 }
