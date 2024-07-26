@@ -1,10 +1,10 @@
 #include <WindDirection.h>
 
 
-WindDirection::WindDirection(){}
+WindDirection::WindDirection() {}
 
 
-WindDirection::~WindDirection(){}
+WindDirection::~WindDirection() {}
 
 
 void WindDirection::init()

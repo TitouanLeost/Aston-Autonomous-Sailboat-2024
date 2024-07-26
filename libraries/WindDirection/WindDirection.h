@@ -2,6 +2,7 @@
 #define WINDDIRECTION_H
 
 #include <Arduino.h>
+
 #include <Config.h>
 
 
