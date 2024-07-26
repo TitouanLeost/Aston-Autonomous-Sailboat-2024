@@ -170,6 +170,18 @@ def plotWindSpeed(data, date, time):
     plt.savefig(f'logs/plots/{date}/{time}/wind_speed.png')
 
 
+def plotBoatSpeed(data, date, time):
+    plt.figure('boat_speed')
+    plt.title('Boat Speed vs Time')
+    plt.xlabel('Time (s)')
+    plt.ylabel('Boat Speed (kph)')
+    plt.grid()
+
+    plt.plot(data[0][:], data[9][:])
+
+    plt.savefig(f'logs/plots/{date}/{time}/boat_speed.png')
+
+
 def plotXY(data, date, time):
     plt.figure('xy')
     plt.title('Boat Path')
@@ -348,6 +360,7 @@ def displayLog(file, date, time, video=False):
     plotYaw(data, date, time)
     plotWindDir(data, date, time)
     plotWindSpeed(data, date, time)
+    plotBoatSpeed(data, date, time)
     plotXY(data, date, time)
     plotCmd(data, date, time)
 
