@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pulse_5ffilter_420',['PULSE_FILTER',['../Config_8h.html#a9b11a7a6237150a9c1be5a369dcbcdba',1,'Config.h']]]
+  ['nb_5fchannels_428',['NB_CHANNELS',['../Config_8h.html#a4559069a0477805f310137e5a551b7a0',1,'Config.h']]],
+  ['nb_5fwp_429',['NB_WP',['../Config_8h.html#a436f8c0248967c5cc1e7a23f1f8c7853',1,'Config.h']]]
 ];

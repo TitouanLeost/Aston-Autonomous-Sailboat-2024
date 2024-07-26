@@ -1,17 +1,9 @@
 var searchData=
 [
-  ['_7ealgorithminterface_334',['~AlgorithmInterface',['../classAlgorithmInterface.html#a63de72d01da811a4ea9f6a2f9ca00896',1,'AlgorithmInterface']]],
-  ['_7ecmps12_335',['~CMPS12',['../classCMPS12.html#af0449a63b51a289dbe659d0dcc699dac',1,'CMPS12']]],
-  ['_7econtroller_336',['~Controller',['../classController.html#a0ab87934c4f7a266cfdb86e0f36bc1b5',1,'Controller']]],
-  ['_7egps_337',['~GPS',['../classGPS.html#afe84b00ea93254fcb8b84a0f2b240c9d',1,'GPS']]],
-  ['_7elinefollowing_338',['~LineFollowing',['../classLineFollowing.html#a39ad1b08c1b7d245d4602994e6a8fd35',1,'LineFollowing']]],
-  ['_7elogger_339',['~Logger',['../classLogger.html#acb668a9e186a25fbaad2e4af6d1ed00a',1,'Logger']]],
-  ['_7enoalgorithm_340',['~NoAlgorithm',['../classNoAlgorithm.html#adebc0ef421cccfaffb7d863d46397976',1,'NoAlgorithm']]],
-  ['_7eobserver_341',['~Observer',['../classObserver.html#a450645e61c136826f09940a1334c7f34',1,'Observer']]],
-  ['_7ercreceiver_342',['~RCReceiver',['../classRCReceiver.html#ae4408c1ed2c5f2e05e96e61b8e7501a3',1,'RCReceiver']]],
-  ['_7eservomotor_343',['~ServoMotor',['../classServoMotor.html#a13ae02109c52def30f2ab15a8114436c',1,'ServoMotor']]],
-  ['_7estationkeeping_344',['~StationKeeping',['../classStationKeeping.html#afab7cf236d234405e9ff00babefce366',1,'StationKeeping']]],
-  ['_7esupervisor_345',['~Supervisor',['../classSupervisor.html#af601035bf11ba7ab70529f4dba14a391',1,'Supervisor']]],
-  ['_7ewinddirection_346',['~WindDirection',['../classWindDirection.html#a19f2de86f09e80453780728861a53a7c',1,'WindDirection']]],
-  ['_7ewindspeed_347',['~WindSpeed',['../classWindSpeed.html#a3e42430326dd1a71f204b147f62d8b45',1,'WindSpeed']]]
+  ['wd_334',['wd',['../classObserver.html#a2690c25f7ab8bff9e152c3f5ee64a9c1',1,'Observer']]],
+  ['winddirection_335',['WindDirection',['../classWindDirection.html#a0c11a314c106c62967b6f0a08dff4efa',1,'WindDirection']]],
+  ['windspeed_336',['WindSpeed',['../classWindSpeed.html#a333639e0d29a9f64b016ca28723f7138',1,'WindSpeed']]],
+  ['wrap360_337',['wrap360',['../Tools_8cpp.html#aa092e35fa2e672c507f8850194be1112',1,'wrap360(float x):&#160;Tools.cpp'],['../Tools_8h.html#aa092e35fa2e672c507f8850194be1112',1,'wrap360(float x):&#160;Tools.cpp']]],
+  ['write_338',['write',['../classLogger.html#a097aec995c0928eb8ac003a056d2cf3e',1,'Logger::write(float data)'],['../classLogger.html#aadc565fb066ed16d8dac70ce52683c12',1,'Logger::write(unsigned long int data)'],['../classLogger.html#ad5585dd1199e80d1b701456c705c4338',1,'Logger::write(int data)'],['../classLogger.html#a4d277ee173ae25e47dc371702642b9e6',1,'Logger::write(double data)'],['../classLogger.html#ab63629b45ea2911d918e4dab95aaa560',1,'Logger::write(String msg)']]],
+  ['ws_339',['ws',['../classObserver.html#a77f85698a1ae0aa016400ccc4a0bce5d',1,'Observer']]]
 ];

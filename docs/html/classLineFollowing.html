@@ -120,9 +120,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a624f37e1804e52df3fa3de018574c971 inherit pub_methods_classAlgorithmInterface"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithmInterface.html#a624f37e1804e52df3fa3de018574c971">init</a> (<a class="el" href="classObserver.html">Observer</a> *obs)</td></tr>
 <tr class="memdesc:a624f37e1804e52df3fa3de018574c971 inherit pub_methods_classAlgorithmInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the algorithm.  <a href="classAlgorithmInterface.html#a624f37e1804e52df3fa3de018574c971">More...</a><br /></td></tr>
 <tr class="separator:a624f37e1804e52df3fa3de018574c971 inherit pub_methods_classAlgorithmInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a499e78628bd93d0643a9dcaec5124ad7 inherit pub_methods_classAlgorithmInterface"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithmInterface.html#a499e78628bd93d0643a9dcaec5124ad7">updateWaypoint</a> (<a class="el" href="structCoordLatLon.html">CoordLatLon</a> a, <a class="el" href="structCoordLatLon.html">CoordLatLon</a> b)</td></tr>
-<tr class="memdesc:a499e78628bd93d0643a9dcaec5124ad7 inherit pub_methods_classAlgorithmInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the waypoint.  <a href="classAlgorithmInterface.html#a499e78628bd93d0643a9dcaec5124ad7">More...</a><br /></td></tr>
-<tr class="separator:a499e78628bd93d0643a9dcaec5124ad7 inherit pub_methods_classAlgorithmInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1ed069605f52ab787dab5caf5cd69fc inherit pub_methods_classAlgorithmInterface"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithmInterface.html#ad1ed069605f52ab787dab5caf5cd69fc">getCmdRudder</a> ()</td></tr>
 <tr class="memdesc:ad1ed069605f52ab787dab5caf5cd69fc inherit pub_methods_classAlgorithmInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rudder command.  <a href="classAlgorithmInterface.html#ad1ed069605f52ab787dab5caf5cd69fc">More...</a><br /></td></tr>
 <tr class="separator:ad1ed069605f52ab787dab5caf5cd69fc inherit pub_methods_classAlgorithmInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,7 +141,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ae3a7b7df9bd3c998067163ea39748324"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCoordXY.html">CoordXY</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineFollowing.html#ae3a7b7df9bd3c998067163ea39748324">m_b</a></td></tr>
 <tr class="memdesc:ae3a7b7df9bd3c998067163ea39748324"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ending point of the line.  <a href="classLineFollowing.html#ae3a7b7df9bd3c998067163ea39748324">More...</a><br /></td></tr>
 <tr class="separator:ae3a7b7df9bd3c998067163ea39748324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0f29f25ec61edefdfbbd27913af2bc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineFollowing.html#af0f29f25ec61edefdfbbd27913af2bc5">m_q</a></td></tr>
+<tr class="memitem:af0f29f25ec61edefdfbbd27913af2bc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineFollowing.html#af0f29f25ec61edefdfbbd27913af2bc5">m_q</a> = 1</td></tr>
 <tr class="memdesc:af0f29f25ec61edefdfbbd27913af2bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sign of the error.  <a href="classLineFollowing.html#af0f29f25ec61edefdfbbd27913af2bc5">More...</a><br /></td></tr>
 <tr class="separator:af0f29f25ec61edefdfbbd27913af2bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -280,6 +277,9 @@ Additional Inherited Members</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void LineFollowing::updateWaypoint </td>
@@ -299,6 +299,11 @@ Additional Inherited Members</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Update the waypoint. </p>
@@ -309,6 +314,8 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented from <a class="el" href="classAlgorithmInterface.html#a20aab56a3755b07eb9410730833a2315">AlgorithmInterface</a>.</p>
 
 </div>
 </div>
@@ -371,7 +378,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int LineFollowing::m_q</td>
+          <td class="memname">int LineFollowing::m_q = 1</td>
         </tr>
       </table>
   </td>

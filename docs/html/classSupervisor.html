@@ -80,17 +80,18 @@ Collaboration diagram for Supervisor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSupervisor__coll__graph.png" border="0" usemap="#aSupervisor_coll__map" alt="Collaboration graph"/></div>
 <map name="aSupervisor_coll__map" id="aSupervisor_coll__map">
-<area shape="rect" title="A class to handle the supervisor." alt="" coords="285,377,369,404"/>
-<area shape="rect" href="classObserver.html" title="A class to handle the observer." alt="" coords="197,95,271,121"/>
-<area shape="rect" href="classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="119,184,247,211"/>
-<area shape="rect" href="classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="44,5,133,32"/>
-<area shape="rect" href="classGPS.html" title="A class to handle the GPS." alt="" coords="158,5,209,32"/>
-<area shape="rect" href="classWindDirection.html" title="A class to handle the wind direction." alt="" coords="233,5,337,32"/>
-<area shape="rect" href="classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="361,5,435,32"/>
-<area shape="rect" href="classController.html" title="A class to handle the controller." alt="" coords="144,288,223,315"/>
-<area shape="rect" href="classServoMotor.html" title="A class to handle a servo motor." alt="" coords="5,184,95,211"/>
-<area shape="rect" href="structCoordLatLon.html" title="A struct to handle the coordinates in latitude and longitude." alt="" coords="322,288,418,315"/>
-<area shape="rect" href="classRCReceiver.html" title="A class to handle the RC receiver." alt="" coords="443,288,537,315"/>
+<area shape="rect" title="A class to handle the supervisor." alt="" coords="207,467,291,493"/>
+<area shape="rect" href="classObserver.html" title="A class to handle the observer." alt="" coords="207,95,282,121"/>
+<area shape="rect" href="classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="181,184,309,211"/>
+<area shape="rect" href="classLogger.html" title="A class to handle the data logging." alt="" coords="119,377,181,404"/>
+<area shape="rect" href="classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="55,5,144,32"/>
+<area shape="rect" href="classGPS.html" title="A class to handle the GPS." alt="" coords="169,5,219,32"/>
+<area shape="rect" href="classWindDirection.html" title="A class to handle the wind direction." alt="" coords="243,5,347,32"/>
+<area shape="rect" href="classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="371,5,446,32"/>
+<area shape="rect" href="classController.html" title="A class to handle the controller." alt="" coords="208,288,287,315"/>
+<area shape="rect" href="classServoMotor.html" title="A class to handle a servo motor." alt="" coords="333,184,423,211"/>
+<area shape="rect" href="structCoordLatLon.html" title="A struct to handle the coordinates in latitude and longitude." alt="" coords="498,377,594,404"/>
+<area shape="rect" href="classRCReceiver.html" title="A class to handle the RC receiver." alt="" coords="5,288,100,315"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -102,9 +103,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af601035bf11ba7ab70529f4dba14a391"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupervisor.html#af601035bf11ba7ab70529f4dba14a391">~Supervisor</a> ()</td></tr>
 <tr class="memdesc:af601035bf11ba7ab70529f4dba14a391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of the class.  <a href="classSupervisor.html#af601035bf11ba7ab70529f4dba14a391">More...</a><br /></td></tr>
 <tr class="separator:af601035bf11ba7ab70529f4dba14a391"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21aa9d0f2a7c7761c6658232e040566d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupervisor.html#a21aa9d0f2a7c7761c6658232e040566d">init</a> (<a class="el" href="classObserver.html">Observer</a> *obs, <a class="el" href="classController.html">Controller</a> *ctrl, <a class="el" href="classRCReceiver.html">RCReceiver</a> *rc)</td></tr>
-<tr class="memdesc:a21aa9d0f2a7c7761c6658232e040566d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the supervisor.  <a href="classSupervisor.html#a21aa9d0f2a7c7761c6658232e040566d">More...</a><br /></td></tr>
-<tr class="separator:a21aa9d0f2a7c7761c6658232e040566d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabc15e29aa7104fc87733b7518e05bea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupervisor.html#aabc15e29aa7104fc87733b7518e05bea">init</a> (<a class="el" href="classObserver.html">Observer</a> *obs, <a class="el" href="classController.html">Controller</a> *ctrl, <a class="el" href="classRCReceiver.html">RCReceiver</a> *rc, <a class="el" href="classLogger.html">Logger</a> *logger)</td></tr>
+<tr class="memdesc:aabc15e29aa7104fc87733b7518e05bea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the supervisor.  <a href="classSupervisor.html#aabc15e29aa7104fc87733b7518e05bea">More...</a><br /></td></tr>
+<tr class="separator:aabc15e29aa7104fc87733b7518e05bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b2a3d699a9dbb4a3286b707bd5483dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupervisor.html#a6b2a3d699a9dbb4a3286b707bd5483dd">updateMission</a> ()</td></tr>
 <tr class="memdesc:a6b2a3d699a9dbb4a3286b707bd5483dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the mission.  <a href="classSupervisor.html#a6b2a3d699a9dbb4a3286b707bd5483dd">More...</a><br /></td></tr>
 <tr class="separator:a6b2a3d699a9dbb4a3286b707bd5483dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,6 +136,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a1b740515f38cc1daf09ca8bb43f6819d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRCReceiver.html">RCReceiver</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupervisor.html#a1b740515f38cc1daf09ca8bb43f6819d">m_rc</a> = nullptr</td></tr>
 <tr class="memdesc:a1b740515f38cc1daf09ca8bb43f6819d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The RC receiver used.  <a href="classSupervisor.html#a1b740515f38cc1daf09ca8bb43f6819d">More...</a><br /></td></tr>
 <tr class="separator:a1b740515f38cc1daf09ca8bb43f6819d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044a7b70a96aa774640194278bf1e22b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLogger.html">Logger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupervisor.html#a044a7b70a96aa774640194278bf1e22b">m_logger</a> = nullptr</td></tr>
+<tr class="memdesc:a044a7b70a96aa774640194278bf1e22b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The logger used.  <a href="classSupervisor.html#a044a7b70a96aa774640194278bf1e22b">More...</a><br /></td></tr>
+<tr class="separator:a044a7b70a96aa774640194278bf1e22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1daf2e02707dd6de64f570d1cc0a3bd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCoordLatLon.html">CoordLatLon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupervisor.html#a1daf2e02707dd6de64f570d1cc0a3bd0">m_wp</a> [<a class="el" href="Config_8h.html#a436f8c0248967c5cc1e7a23f1f8c7853">NB_WP</a>]</td></tr>
 <tr class="memdesc:a1daf2e02707dd6de64f570d1cc0a3bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of waypoints.  <a href="classSupervisor.html#a1daf2e02707dd6de64f570d1cc0a3bd0">More...</a><br /></td></tr>
 <tr class="separator:a1daf2e02707dd6de64f570d1cc0a3bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +151,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a1e95179d893450422fd05f65b09142c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupervisor.html#a1e95179d893450422fd05f65b09142c4">m_algo_type</a></td></tr>
 <tr class="memdesc:a1e95179d893450422fd05f65b09142c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the algorithm to use (1 or 2)  <a href="classSupervisor.html#a1e95179d893450422fd05f65b09142c4">More...</a><br /></td></tr>
 <tr class="separator:a1e95179d893450422fd05f65b09142c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b160293441d96f7761829f4ca5bc306"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupervisor.html#a6b160293441d96f7761829f4ca5bc306">m_mission_finished</a> = false</td></tr>
+<tr class="memdesc:a6b160293441d96f7761829f4ca5bc306"><td class="mdescLeft">&#160;</td><td class="mdescRight">The status of the mission.  <a href="classSupervisor.html#a6b160293441d96f7761829f4ca5bc306">More...</a><br /></td></tr>
+<tr class="separator:a6b160293441d96f7761829f4ca5bc306"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class to handle the supervisor. </p>
@@ -197,8 +204,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a21aa9d0f2a7c7761c6658232e040566d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21aa9d0f2a7c7761c6658232e040566d">&#9670;&nbsp;</a></span>init()</h2>
+<a id="aabc15e29aa7104fc87733b7518e05bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabc15e29aa7104fc87733b7518e05bea">&#9670;&nbsp;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,7 +226,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classRCReceiver.html">RCReceiver</a> *&#160;</td>
-          <td class="paramname"><em>rc</em>&#160;</td>
+          <td class="paramname"><em>rc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLogger.html">Logger</a> *&#160;</td>
+          <td class="paramname"><em>logger</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -467,6 +480,54 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The current waypoint index. </p>
+
+</div>
+</div>
+<a id="a044a7b70a96aa774640194278bf1e22b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a044a7b70a96aa774640194278bf1e22b">&#9670;&nbsp;</a></span>m_logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLogger.html">Logger</a>* Supervisor::m_logger = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The logger used. </p>
+
+</div>
+</div>
+<a id="a6b160293441d96f7761829f4ca5bc306"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b160293441d96f7761829f4ca5bc306">&#9670;&nbsp;</a></span>m_mission_finished</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Supervisor::m_mission_finished = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The status of the mission. </p>
 
 </div>
 </div>

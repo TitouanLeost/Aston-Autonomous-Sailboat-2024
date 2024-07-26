@@ -73,49 +73,50 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SERVO_MOTOR_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Adafruit_PWMServoDriver.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="Config_8h.html">Config.h</a>&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="Config_8h.html">Config.h</a>&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classServoMotor.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classServoMotor.html">ServoMotor</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classServoMotor.html#a4a0548ee1f438521c67449c7ab7056be">ServoMotor</a>(uint8_t pin, uint16_t pwm_min, uint16_t pwm_max);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classServoMotor.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classServoMotor.html">ServoMotor</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="classServoMotor.html#a4a0548ee1f438521c67449c7ab7056be">ServoMotor</a>(uint8_t pin, uint16_t pwm_min, uint16_t pwm_max);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classServoMotor.html#a13ae02109c52def30f2ab15a8114436c">~ServoMotor</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classServoMotor.html#a13ae02109c52def30f2ab15a8114436c">~ServoMotor</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classServoMotor.html#a71f50f25913d7c8b49e96a86e8189e01">init</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classServoMotor.html#a71f50f25913d7c8b49e96a86e8189e01">init</a>();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classServoMotor.html#a955e3ddeca6a6cfac5cc34021d93ae2f">setPWM</a>(uint16_t pwm);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classServoMotor.html#a955e3ddeca6a6cfac5cc34021d93ae2f">setPWM</a>(uint16_t pwm);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classServoMotor.html#a8f4178077763089c129064226361b1e3">setPercent</a>(<span class="keywordtype">float</span> percent);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classServoMotor.html#a26ee9b8b4b64b86077cdd4d0dfa72404">   56</a></span>&#160;        Adafruit_PWMServoDriver* <a class="code" href="classServoMotor.html#a26ee9b8b4b64b86077cdd4d0dfa72404">m_servo</a>;  </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classServoMotor.html#a8f29953c127736c9e37fc97a1524cec8">   57</a></span>&#160;        uint16_t <a class="code" href="classServoMotor.html#a8f29953c127736c9e37fc97a1524cec8">m_pwm_min</a>;  </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classServoMotor.html#a47e6ec667f3331215abea1b8f09e6263">   58</a></span>&#160;        uint16_t <a class="code" href="classServoMotor.html#a47e6ec667f3331215abea1b8f09e6263">m_pwm_max</a>;  </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classServoMotor.html#a4b39c899312ef03273f833a86aae5822">   59</a></span>&#160;        uint8_t <a class="code" href="classServoMotor.html#a4b39c899312ef03273f833a86aae5822">m_pin</a>;  </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classServoMotor.html#a8f4178077763089c129064226361b1e3">setPercent</a>(<span class="keywordtype">float</span> percent);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classServoMotor.html#a26ee9b8b4b64b86077cdd4d0dfa72404">   57</a></span>&#160;        Adafruit_PWMServoDriver* <a class="code" href="classServoMotor.html#a26ee9b8b4b64b86077cdd4d0dfa72404">m_servo</a>;  </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classServoMotor.html#a8f29953c127736c9e37fc97a1524cec8">   58</a></span>&#160;        uint16_t <a class="code" href="classServoMotor.html#a8f29953c127736c9e37fc97a1524cec8">m_pwm_min</a>;  </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classServoMotor.html#a47e6ec667f3331215abea1b8f09e6263">   59</a></span>&#160;        uint16_t <a class="code" href="classServoMotor.html#a47e6ec667f3331215abea1b8f09e6263">m_pwm_max</a>;  </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classServoMotor.html#a4b39c899312ef03273f833a86aae5822">   60</a></span>&#160;        uint8_t <a class="code" href="classServoMotor.html#a4b39c899312ef03273f833a86aae5822">m_pin</a>;  </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aConfig_8h_html"><div class="ttname"><a href="Config_8h.html">Config.h</a></div></div>
-<div class="ttc" id="aclassServoMotor_html"><div class="ttname"><a href="classServoMotor.html">ServoMotor</a></div><div class="ttdoc">A class to handle a servo motor.</div><div class="ttdef"><b>Definition:</b> ServoMotor.h:14</div></div>
+<div class="ttc" id="aclassServoMotor_html"><div class="ttname"><a href="classServoMotor.html">ServoMotor</a></div><div class="ttdoc">A class to handle a servo motor.</div><div class="ttdef"><b>Definition:</b> ServoMotor.h:15</div></div>
 <div class="ttc" id="aclassServoMotor_html_a13ae02109c52def30f2ab15a8114436c"><div class="ttname"><a href="classServoMotor.html#a13ae02109c52def30f2ab15a8114436c">ServoMotor::~ServoMotor</a></div><div class="ttdeci">~ServoMotor()</div><div class="ttdoc">Destructor of the class.</div><div class="ttdef"><b>Definition:</b> ServoMotor.cpp:13</div></div>
-<div class="ttc" id="aclassServoMotor_html_a26ee9b8b4b64b86077cdd4d0dfa72404"><div class="ttname"><a href="classServoMotor.html#a26ee9b8b4b64b86077cdd4d0dfa72404">ServoMotor::m_servo</a></div><div class="ttdeci">Adafruit_PWMServoDriver * m_servo</div><div class="ttdoc">The servo motor object.</div><div class="ttdef"><b>Definition:</b> ServoMotor.h:56</div></div>
-<div class="ttc" id="aclassServoMotor_html_a47e6ec667f3331215abea1b8f09e6263"><div class="ttname"><a href="classServoMotor.html#a47e6ec667f3331215abea1b8f09e6263">ServoMotor::m_pwm_max</a></div><div class="ttdeci">uint16_t m_pwm_max</div><div class="ttdoc">The maximum PWM value of the servo motor.</div><div class="ttdef"><b>Definition:</b> ServoMotor.h:58</div></div>
+<div class="ttc" id="aclassServoMotor_html_a26ee9b8b4b64b86077cdd4d0dfa72404"><div class="ttname"><a href="classServoMotor.html#a26ee9b8b4b64b86077cdd4d0dfa72404">ServoMotor::m_servo</a></div><div class="ttdeci">Adafruit_PWMServoDriver * m_servo</div><div class="ttdoc">The servo motor object.</div><div class="ttdef"><b>Definition:</b> ServoMotor.h:57</div></div>
+<div class="ttc" id="aclassServoMotor_html_a47e6ec667f3331215abea1b8f09e6263"><div class="ttname"><a href="classServoMotor.html#a47e6ec667f3331215abea1b8f09e6263">ServoMotor::m_pwm_max</a></div><div class="ttdeci">uint16_t m_pwm_max</div><div class="ttdoc">The maximum PWM value of the servo motor.</div><div class="ttdef"><b>Definition:</b> ServoMotor.h:59</div></div>
 <div class="ttc" id="aclassServoMotor_html_a4a0548ee1f438521c67449c7ab7056be"><div class="ttname"><a href="classServoMotor.html#a4a0548ee1f438521c67449c7ab7056be">ServoMotor::ServoMotor</a></div><div class="ttdeci">ServoMotor(uint8_t pin, uint16_t pwm_min, uint16_t pwm_max)</div><div class="ttdoc">Constructor of the class.</div><div class="ttdef"><b>Definition:</b> ServoMotor.cpp:4</div></div>
-<div class="ttc" id="aclassServoMotor_html_a4b39c899312ef03273f833a86aae5822"><div class="ttname"><a href="classServoMotor.html#a4b39c899312ef03273f833a86aae5822">ServoMotor::m_pin</a></div><div class="ttdeci">uint8_t m_pin</div><div class="ttdoc">The pin of the servo motor.</div><div class="ttdef"><b>Definition:</b> ServoMotor.h:59</div></div>
+<div class="ttc" id="aclassServoMotor_html_a4b39c899312ef03273f833a86aae5822"><div class="ttname"><a href="classServoMotor.html#a4b39c899312ef03273f833a86aae5822">ServoMotor::m_pin</a></div><div class="ttdeci">uint8_t m_pin</div><div class="ttdoc">The pin of the servo motor.</div><div class="ttdef"><b>Definition:</b> ServoMotor.h:60</div></div>
 <div class="ttc" id="aclassServoMotor_html_a71f50f25913d7c8b49e96a86e8189e01"><div class="ttname"><a href="classServoMotor.html#a71f50f25913d7c8b49e96a86e8189e01">ServoMotor::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initialize the servo motor.</div><div class="ttdef"><b>Definition:</b> ServoMotor.cpp:19</div></div>
-<div class="ttc" id="aclassServoMotor_html_a8f29953c127736c9e37fc97a1524cec8"><div class="ttname"><a href="classServoMotor.html#a8f29953c127736c9e37fc97a1524cec8">ServoMotor::m_pwm_min</a></div><div class="ttdeci">uint16_t m_pwm_min</div><div class="ttdoc">The minimum PWM value of the servo motor.</div><div class="ttdef"><b>Definition:</b> ServoMotor.h:57</div></div>
+<div class="ttc" id="aclassServoMotor_html_a8f29953c127736c9e37fc97a1524cec8"><div class="ttname"><a href="classServoMotor.html#a8f29953c127736c9e37fc97a1524cec8">ServoMotor::m_pwm_min</a></div><div class="ttdeci">uint16_t m_pwm_min</div><div class="ttdoc">The minimum PWM value of the servo motor.</div><div class="ttdef"><b>Definition:</b> ServoMotor.h:58</div></div>
 <div class="ttc" id="aclassServoMotor_html_a8f4178077763089c129064226361b1e3"><div class="ttname"><a href="classServoMotor.html#a8f4178077763089c129064226361b1e3">ServoMotor::setPercent</a></div><div class="ttdeci">void setPercent(float percent)</div><div class="ttdoc">Set the PWM of the servo motor with a percent.</div><div class="ttdef"><b>Definition:</b> ServoMotor.cpp:38</div></div>
 <div class="ttc" id="aclassServoMotor_html_a955e3ddeca6a6cfac5cc34021d93ae2f"><div class="ttname"><a href="classServoMotor.html#a955e3ddeca6a6cfac5cc34021d93ae2f">ServoMotor::setPWM</a></div><div class="ttdeci">void setPWM(uint16_t pwm)</div><div class="ttdoc">Set the PWM of the servo motor.</div><div class="ttdef"><b>Definition:</b> ServoMotor.cpp:27</div></div>
 </div><!-- fragment --></div><!-- contents -->

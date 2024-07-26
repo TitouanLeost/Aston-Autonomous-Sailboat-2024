@@ -111,9 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0a050d4c5fdb7d31cd8be30b4f4d0306"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithmInterface.html#a0a050d4c5fdb7d31cd8be30b4f4d0306">updateCmd</a> ()=0</td></tr>
 <tr class="memdesc:a0a050d4c5fdb7d31cd8be30b4f4d0306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the command.  <a href="classAlgorithmInterface.html#a0a050d4c5fdb7d31cd8be30b4f4d0306">More...</a><br /></td></tr>
 <tr class="separator:a0a050d4c5fdb7d31cd8be30b4f4d0306"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a499e78628bd93d0643a9dcaec5124ad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithmInterface.html#a499e78628bd93d0643a9dcaec5124ad7">updateWaypoint</a> (<a class="el" href="structCoordLatLon.html">CoordLatLon</a> a, <a class="el" href="structCoordLatLon.html">CoordLatLon</a> b)</td></tr>
-<tr class="memdesc:a499e78628bd93d0643a9dcaec5124ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the waypoint.  <a href="classAlgorithmInterface.html#a499e78628bd93d0643a9dcaec5124ad7">More...</a><br /></td></tr>
-<tr class="separator:a499e78628bd93d0643a9dcaec5124ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20aab56a3755b07eb9410730833a2315"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithmInterface.html#a20aab56a3755b07eb9410730833a2315">updateWaypoint</a> (<a class="el" href="structCoordLatLon.html">CoordLatLon</a> a, <a class="el" href="structCoordLatLon.html">CoordLatLon</a> b)</td></tr>
+<tr class="memdesc:a20aab56a3755b07eb9410730833a2315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the waypoint.  <a href="classAlgorithmInterface.html#a20aab56a3755b07eb9410730833a2315">More...</a><br /></td></tr>
+<tr class="separator:a20aab56a3755b07eb9410730833a2315"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1ed069605f52ab787dab5caf5cd69fc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithmInterface.html#ad1ed069605f52ab787dab5caf5cd69fc">getCmdRudder</a> ()</td></tr>
 <tr class="memdesc:ad1ed069605f52ab787dab5caf5cd69fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rudder command.  <a href="classAlgorithmInterface.html#ad1ed069605f52ab787dab5caf5cd69fc">More...</a><br /></td></tr>
 <tr class="separator:ad1ed069605f52ab787dab5caf5cd69fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -308,8 +308,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a499e78628bd93d0643a9dcaec5124ad7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a499e78628bd93d0643a9dcaec5124ad7">&#9670;&nbsp;</a></span>updateWaypoint()</h2>
+<a id="a20aab56a3755b07eb9410730833a2315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20aab56a3755b07eb9410730833a2315">&#9670;&nbsp;</a></span>updateWaypoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -318,7 +318,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void AlgorithmInterface::updateWaypoint </td>
+          <td class="memname">virtual void AlgorithmInterface::updateWaypoint </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structCoordLatLon.html">CoordLatLon</a>&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -337,7 +337,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -350,6 +350,8 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented in <a class="el" href="classLineFollowing.html#acfef33e2bb5dd040ebc5202e7f5957d9">LineFollowing</a>.</p>
 
 </div>
 </div>
