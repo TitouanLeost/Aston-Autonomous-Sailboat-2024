@@ -2,7 +2,7 @@
 #include <SPI.h>
 
 
-String filename = "TEST.TXT";  // Put the name of the file you want to read here at the format "LOG/DDMMhhmm.TXT"
+String filename = "TEST.TXT";  // Put the name of the file you want to read here at the format "DDMMhhmm.TXT"
 File myFile;
 
 int pinCS = 53;
