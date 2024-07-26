@@ -30,7 +30,7 @@ void GPS::update()
 double GPS::getLat() {return m_gps.location.isValid() ? m_gps.location.lat() : 99999;}
 double GPS::getLon() {return m_gps.location.isValid() ? m_gps.location.lng() : 99999;}
 
-double GPS::getCourse() {return m_gps.course.isValid() ? m_gps.course.deg() : -1;}
+double GPS::getCourse() {return ((m_gps.course.isValid()) && (m_gps.course <= 360)) ? m_gps.course.deg() : -1;}
 double GPS::getSpeed() {return m_gps.speed.isValid() ? m_gps.speed.kmph() : 0;}
 
 int GPS::getSatellites() {return m_gps.satellites.value();}
