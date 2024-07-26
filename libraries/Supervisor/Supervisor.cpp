@@ -52,9 +52,9 @@ void Supervisor::updateMission()
                     m_algo2_start_time = millis();
                 }
             }
-            if(isAlgo2Finished()) {
+            
+            if(isAlgo2Finished())
                 nextWaypoint();
-            }
 
             break;
     }
