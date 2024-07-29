@@ -36,6 +36,8 @@ The purpose of this project is to provide a framework for testing different type
 
 ![Wiring diagram](images/wiring_diagram/wiring.png)
 
+You can find this image [here](images/wiring_diagram/wiring.png)
+
 
 
 ## Quickstart Guide
