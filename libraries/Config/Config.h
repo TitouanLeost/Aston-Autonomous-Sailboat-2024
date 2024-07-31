@@ -69,6 +69,8 @@ enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
 #define CMPS_GET_ROLL 0x15  ///< Command to get the roll
 #define CMPS_CALIBRATION_STATUS 0x24  ///< Command to get the calibration status of the CMPS12
 
+#define CMPS_SAVE_CALIBRATION true  ///< Command to save the calibration profile of the CMPS12 (true or false)
+
 /*=========================*/
 /////////////////////////////
 /*========GPS CONFIG=======*/
