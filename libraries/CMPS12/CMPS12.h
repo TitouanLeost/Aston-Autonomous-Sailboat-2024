@@ -2,7 +2,6 @@
 #define CMPS12_H
 
 #include <Arduino.h>
-#include <SoftwareSerial.h>
 
 #include <Config.h>
 
@@ -73,6 +72,7 @@ class CMPS12
         char m_roll;  ///< The roll of the boat in degrees (-90 to 90)
         float m_yaw;  ///< The filtered yaw of the boat in degrees (0 to 360)
         float m_yaw_raw;  ///< The raw yaw of the boat in degrees (0 to 360)
+        int m_cpt = 0;  ///< A counter to check the calibration status
 };
 
 #endif

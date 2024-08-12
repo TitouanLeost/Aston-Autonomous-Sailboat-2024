@@ -54,49 +54,30 @@ int CMPS12::getRoll() {return m_roll;}
 
 void CMPS12::calibration()
 {
-    if(CMPS_SAVE_CALIBRATION){
-        Serial.println("   -> Erasing calibration profile...");
-
-        SERIAL_CMPS.write(0xE0);
-        while(SERIAL_CMPS.available() < 1);
-        SERIAL_CMPS.read();
-        SERIAL_CMPS.write(0xE5);
-        while(SERIAL_CMPS.available() < 1);
-        SERIAL_CMPS.read();
-        SERIAL_CMPS.write(0xE2);
-        while(SERIAL_CMPS.available() < 1);
-        SERIAL_CMPS.read();
-
-        Serial.println("   => Calibration profile erased");
-    }
+    SERIAL_CMPS.write(0xE0);
+    while(SERIAL_CMPS.available() < 1);
+    Serial.println(SERIAL_CMPS.read());
+    SERIAL_CMPS.write(0xE5);
+    while(SERIAL_CMPS.available() < 1);
+    Serial.println(SERIAL_CMPS.read());
+    SERIAL_CMPS.write(0xE2);
+    while(SERIAL_CMPS.available() < 1);
+    Serial.println(SERIAL_CMPS.read());
 
     Serial.println("   -> Checking calibration status...");
 
     SERIAL_CMPS.write(CMPS_CALIBRATION_STATUS);
     while(SERIAL_CMPS.available() < 1);
     unsigned char status = SERIAL_CMPS.read();
-    while(int(status) != 255) {
+
+    while(m_cpt < 50 or status != 255) {
         SERIAL_CMPS.write(CMPS_CALIBRATION_STATUS);
         while(SERIAL_CMPS.available() < 1);
         status = SERIAL_CMPS.read();
         Serial.println(int(status));
+        if(status == 255)
+            m_cpt += 1;
     }
 
     Serial.println("   => Calibration done");
-
-    if(CMPS_SAVE_CALIBRATION){
-        Serial.println("   -> Saving calibration profile...");
-
-        SERIAL_CMPS.write(0xF0);
-        while(SERIAL_CMPS.available() < 1);
-        SERIAL_CMPS.read();
-        SERIAL_CMPS.write(0xF5);
-        while(SERIAL_CMPS.available() < 1);
-        SERIAL_CMPS.read();
-        SERIAL_CMPS.write(0xF6);
-        while(SERIAL_CMPS.available() < 1);
-        SERIAL_CMPS.read();
-
-        Serial.println("   => Calibration profile saved");
-    }
 }
