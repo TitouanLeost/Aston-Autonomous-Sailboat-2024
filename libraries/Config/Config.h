@@ -17,9 +17,9 @@
 #define ALGO2 NoAlgorithm  ///< Algorithm used when a waypoint is reached (type 2)
 #define ALGO2_DURATION 10  ///< Duration (in seconds) of the type 2 algorithm before going to the next waypoint
 
-#define NB_WP 2  ///< Number of waypoints
-#define WP { {52.429335, -1.946895}, {52.429536, -1.944911} }  ///< List of waypoints (latitude, longitude)
-#define WP_RADIUS 10  ///< Radius of the waypoint to validate it
+#define NB_WP 1  ///< Number of waypoints
+#define WP { {52.429536, -1.944911} }  ///< List of waypoints (latitude, longitude)
+#define WP_RADIUS 12  ///< Radius of the waypoint to validate it
 
 /*=========================*/
 /////////////////////////////
@@ -55,7 +55,7 @@ enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
 /////////////////////////////
 /*=====OBSERVER CONFIG=====*/
 
-#define YAW_FILTER 0.1  ///< Coefficient of the filter for the yaw
+#define YAW_FILTER 0.2  ///< Coefficient of the filter for the yaw
 #define WIND_DIRECTION_FILTER 0.1  ///< Coefficient of the filter for the wind direction
 
 /*=========================*/
@@ -68,8 +68,6 @@ enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
 #define CMPS_GET_PITCH 0x14  ///< Command to get the pitch
 #define CMPS_GET_ROLL 0x15  ///< Command to get the roll
 #define CMPS_CALIBRATION_STATUS 0x24  ///< Command to get the calibration status of the CMPS12
-
-#define CMPS_SAVE_CALIBRATION true  ///< Command to save the calibration profile of the CMPS12 (true or false)
 
 /*=========================*/
 /////////////////////////////
