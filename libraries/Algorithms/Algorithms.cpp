@@ -47,7 +47,7 @@ void LineFollowing::updateCmd()
     Serial.println("angle_target: " + String(angle_target*180/M_PI) + " angle_nominal: " + String(angle_nominal*180/M_PI) + " angle_actual: " + String(angle_actual*180/M_PI));
 
     if((cos(angle_truewind - angle_nominal) + cos(ZETA) < 0) or (abs(e) < R and cos(angle_truewind - angle_target) + cos(ZETA) < 0)) {
-        angle_actual = pi + angle_truewind - m_q*ZETA;
+        angle_actual = M_PI + angle_truewind - m_q*ZETA;
 
         Serial.println("m_q: " + String(m_q));
         Serial.println("angle_actual (if): " + String(angle_actual*180/M_PI));
