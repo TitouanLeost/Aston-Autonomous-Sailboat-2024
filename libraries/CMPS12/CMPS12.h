@@ -4,6 +4,7 @@
 #include <Arduino.h>
 
 #include <Config.h>
+#include <ServoMotor.h>
 
 
 /***********************************************************************************************
@@ -73,6 +74,9 @@ class CMPS12
         float m_yaw;  ///< The filtered yaw of the boat in degrees (0 to 360)
         float m_yaw_raw;  ///< The raw yaw of the boat in degrees (0 to 360)
         int m_cpt = 0;  ///< A counter to check the calibration status
+
+        ServoMotor* m_mr = nullptr;
+        ServoMotor* m_ms = nullptr;
 };
 
 #endif

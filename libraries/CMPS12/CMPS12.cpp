@@ -9,10 +9,18 @@ CMPS12::~CMPS12() {}
 
 void CMPS12::init()
 {
+    m_mr = new ServoMotor(SERVO_RUDDER_PIN, RUDDER_PWMMIN, RUDDER_PWMMAX);
+    m_ms = new ServoMotor(SERVO_SAIL_PIN, SAIL_PWMMIN, SAIL_PWMMAX);
+    m_mr->init();
+    m_ms->init();
+
     Serial.println(" -> Initializing CMPS12...");
     SERIAL_CMPS.begin(9600);
     calibration();
     Serial.println(" => CMPS12 initialized");
+
+    delete m_mr;
+    delete m_ms;
 
     m_yaw = 0;
     m_yaw_raw = 0;
@@ -71,6 +79,8 @@ void CMPS12::calibration()
     unsigned char status = SERIAL_CMPS.read();
 
     while(m_cpt < 50 or status != 255) {
+        m_mr->setPercent(float(status)/255.0);
+        m_ms->setPercent(0.5);
         SERIAL_CMPS.write(CMPS_CALIBRATION_STATUS);
         while(SERIAL_CMPS.available() < 1);
         status = SERIAL_CMPS.read();
