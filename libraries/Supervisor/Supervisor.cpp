@@ -44,7 +44,8 @@ void Supervisor::updateMission()
                 break;
 
             m_ctrl->setUpdate(true);
-            if(isWaypointReached()){
+            if(!m_waypoint_is_reached && isWaypointReached()){
+                m_waypoint_is_reached = true;
                 if (IS_ALGO2_EQUAL_TO(NoAlgorithm))
                     nextWaypoint();
                 else{
@@ -66,12 +67,13 @@ void Supervisor::startMission()
     m_algo_type = m_ctrl->setAlgo(1);
     CoordLatLon a = m_obs->gps()->getCoordLatLon();
     CoordLatLon b = m_wp[m_current_wp];
-    m_ctrl->algo()->updateWaypoint(a, b); 
+    m_ctrl->algo()->updateWaypoint(a, b);
 }
 
 
 void Supervisor::nextWaypoint()
 {
+    m_waypoint_is_reached = false;
     m_current_wp++;
     if(m_current_wp == NB_WP) {
         m_mission_finished = true;
@@ -81,7 +83,7 @@ void Supervisor::nextWaypoint()
         m_logger->close();
     }
     else {
-        if(m_algo_type == 2) 
+        if(m_algo_type == 2)
             m_algo_type = m_ctrl->setAlgo(1);
 
         CoordLatLon a = m_wp[m_current_wp-1];

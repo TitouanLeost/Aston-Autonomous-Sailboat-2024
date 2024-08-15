@@ -110,6 +110,7 @@ class Supervisor
 
         CoordLatLon m_wp[NB_WP];  ///< The list of waypoints
         int m_current_wp = 0;  ///< The current waypoint index
+        bool m_waypoint_is_reached = false;  ///< The status of the waypoint
         unsigned long m_algo2_start_time;  ///< The start time of the algorithm 2
         int m_algo_type;  ///< The type of the algorithm to use (1 or 2)
         bool m_mission_finished = false;  ///< The status of the mission
