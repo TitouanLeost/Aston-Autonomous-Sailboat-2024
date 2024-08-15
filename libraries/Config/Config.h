@@ -14,12 +14,12 @@
 /*======MISSION CONFIG=====*/
 
 #define ALGO1 LineFollowing  ///< Algorithm used to go from waypoint to waypoint (type 1)
-#define ALGO2 NoAlgorithm  ///< Algorithm used when a waypoint is reached (type 2)
+#define ALGO2 StationKeeping  ///< Algorithm used when a waypoint is reached (type 2)
 #define ALGO2_DURATION 10  ///< Duration (in seconds) of the type 2 algorithm before going to the next waypoint
 
-#define NB_WP 1  ///< Number of waypoints
-#define WP { {52.429536, -1.944911} }  ///< List of waypoints (latitude, longitude)
-#define WP_RADIUS 12  ///< Radius of the waypoint to validate it
+#define NB_WP 3  ///< Number of waypoints
+#define WP { {52.486333, -1.889420}, {52.485990, -1.889547}, {52.486070, -1.888934} }  ///< List of waypoints (latitude, longitude)
+#define WP_RADIUS 10  ///< Radius of the waypoint to validate it
 
 /*=========================*/
 /////////////////////////////
@@ -121,6 +121,8 @@ struct CoordXY
 
 #define SD_PIN 53  ///< Pin for the SD card
 
+#define AUTO_FILENAME false  ///< If true, the filename will be the date and time of the beginning of the mission
+#define FILENAME "TEST"  ///< Name of the file if AUTO_FILENAME is set to false. The filename can have a maximum of 8 characters
 #define LOG_INTERVAL 100  ///< Interval (in milliseconds) between each log
 
 /*=========================*/

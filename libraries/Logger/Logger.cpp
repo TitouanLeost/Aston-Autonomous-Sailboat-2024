@@ -100,21 +100,25 @@ void Logger::close()
 {
     m_file.flush();
     m_file.close();
-    m_filename = "";
     m_update = false;
 }
 
 
 void Logger::generateFilename()
 {
+    if(!AUTO_FILENAME){
+        m_filename = FILENAME;
+        m_filename += ".TXT";
+        return;
+    }
+
     m_date = m_obs->gps()->getDate();
     String date = m_date.substring(0, m_date.length() - 2);  // Remove year
     m_time = m_obs->gps()->getTime();
     String time = m_time.substring(0, m_time.length() - 2);  // Remove seconds
-    // m_filename += date;
-    // m_filename += time;
-    // m_filename += ".TXT";
-    m_filename = "TEST.TXT";
+    m_filename += date;
+    m_filename += time;
+    m_filename += ".TXT";
 }
 
 
