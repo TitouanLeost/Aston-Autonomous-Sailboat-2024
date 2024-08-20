@@ -11,9 +11,9 @@ Another option for this project is to use a **Raspberry Pi** combined with a **N
 
 | Name      | Image                               | E-commerce site              | Power Requirements           |
 |-----------|-------------------------------------|------------------------------|------------------------------|
-| Arduino Mega 2560 | <p align="center"><img src="images/arduino_mega2.png" alt="Arduino Mega" height="150"/></p> | [Arduino Store](https://store.arduino.cc/products/arduino-mega-2560-rev3) | 7-12V |
-| Grove - Mega Shield | <p align="center"><img src="images/grove_mega_shield2.png" alt="Grove Mega Shield" height="150"/></p> | [Solarobotics](https://www.solarbotics.com/product/29148) | N/A |
-| Adafruit 16 x 12-bit PWM & Servo Shield | <p align="center"><img src="images/adafruit_servo_shield.png" alt="Adafruit Servo Shield" height="150"/></p> | [Adafruit](https://www.adafruit.com/product/1411) | N/A |
+| Arduino Mega 2560 | <p align="center"><img src="images/hardware/arduino_mega2.png" alt="Arduino Mega" height="150"/></p> | [Arduino Store](https://store.arduino.cc/products/arduino-mega-2560-rev3) | 7-12V |
+| Grove - Mega Shield | <p align="center"><img src="images/hardware/grove_mega_shield2.png" alt="Grove Mega Shield" height="150"/></p> | [Solarobotics](https://www.solarbotics.com/product/29148) | N/A |
+| Adafruit 16 x 12-bit PWM & Servo Shield | <p align="center"><img src="images/hardware/adafruit_servo_shield.png" alt="Adafruit Servo Shield" height="150"/></p> | [Adafruit](https://www.adafruit.com/product/1411) | N/A |
 
 ### Actuators
 
@@ -22,16 +22,16 @@ Another option for this project is to use a **Raspberry Pi** combined with a **N
 
 | Name      | Image                               | E-commerce site              | Power Requirements           |
 |-----------|-------------------------------------|------------------------------|------------------------------|
-| CMPS12    | <p align="center"><img src="images/CMPS122.png" alt="CMPS12" height="150"/></p> | [CMPS12](https://www.robot-electronics.co.uk/cmps12-tilt-compensated-magnetic-compass.html) | 3.3-5V 18mA |
-| Grove GPS v1.2 | <p align="center"><img src="images/grove_gps.png" alt="Grove GPS" height="150"/></p> | [Seeedstudio](https://www.seeedstudio.com/Grove-GPS-Module.html) | 3.3-5V |
-| Anemometer - SKU 7911 | <p align="center"><img src="images/anemometer2.png" alt="Anemometer" height="150"/></p> | [Davis Instrument](https://www.davisinstruments.com/products/anemometer-for-weather-monitor-or-wizard) | N/A |
+| CMPS12    | <p align="center"><img src="images/hardware/CMPS122.png" alt="CMPS12" height="150"/></p> | [CMPS12](https://www.robot-electronics.co.uk/cmps12-tilt-compensated-magnetic-compass.html) | 3.3-5V 18mA |
+| Grove GPS v1.2 | <p align="center"><img src="images/hardware/grove_gps.png" alt="Grove GPS" height="150"/></p> | [Seeedstudio](https://www.seeedstudio.com/Grove-GPS-Module.html) | 3.3-5V |
+| Anemometer - SKU 7911 | <p align="center"><img src="images/hardware/anemometer2.png" alt="Anemometer" height="150"/></p> | [Davis Instrument](https://www.davisinstruments.com/products/anemometer-for-weather-monitor-or-wizard) | N/A |
 
 ### Extra
 
 | Name      | Image                               | E-commerce site              | Power Requirements           |
 |-----------|-------------------------------------|------------------------------|------------------------------|
-| FlySky FS-R6B | <p align="center"><img src="images/rc_receiver.png" alt="FlySky FS-R6B" height="150"/></p> | [FlySky](https://www.flysky-cn.com/fsr6b) | 4-6.5V DC |
-| MicroSD Card Adapter | <p align="center"><img src="images/microsd_card_adapter2.png" alt="MicroSD Card Adapter" height="150"/></p> | [Amazon](https://www.amazon.co.uk/dp/B06XHJTGGC?ref_=as_li_ss_tl&language=en_US&linkCode=gg4&linkId=5d0b70740d5b8a9d8b8933d4734d6995&tag=zlufy-20) | 5V |
+| FlySky FS-R6B | <p align="center"><img src="images/hardware/rc_receiver.png" alt="FlySky FS-R6B" height="150"/></p> | [FlySky](https://www.flysky-cn.com/fsr6b) | 4-6.5V DC |
+| MicroSD Card Adapter | <p align="center"><img src="images/hardware/microsd_card_adapter2.png" alt="MicroSD Card Adapter" height="150"/></p> | [Amazon](https://www.amazon.co.uk/dp/B06XHJTGGC?ref_=as_li_ss_tl&language=en_US&linkCode=gg4&linkId=5d0b70740d5b8a9d8b8933d4734d6995&tag=zlufy-20) | 5V |
 
 ### Wiring
 
@@ -52,7 +52,6 @@ The following arduino libraries are required:
 * TinyGPSPlus (v1.0.3)
 * Adafruit PWM Servo Driver Library (v3.0.2)
 * SD (v1.2.4)
-* SoftwareSerial *[installed by default with Arduino IDE]*
 * Wire *[installed by default with Arduino IDE]*
 * SPI *[installed by default with Arduino IDE]*
 
@@ -75,7 +74,7 @@ You can now build the project with Arduino IDE. To do this, open the file [Sailb
 
 ### Experiment
 
-Once everything is ready, you can place all the components inside the boat's hull. Then, to start the mission, turn the remote controller on and off once, and the code will execute.
+Once everything is ready, you can place all the components inside the boat's hull. Then, to start the mission, turn the remote controller on and off twice, and the code will execute. You will then need to calibrate the CMPS12 by making a few random movements with the boat. It is important that the CMPS12 is inside the hull during calibration; do not attempt to calibrate it outside the boat. The rudder will move according to the CMPS12's calibration status, shifting from the right (not calibrated) to the left (fully calibrated). Once the calibration is done, the other sensors will initialize automatically. Finally, you will see the two servomotors move between their extreme positions. After that, the boat is ready to go in the water. 
 
 
 
@@ -112,7 +111,11 @@ This block manages the mission's progress. Based on a list of waypoints defined 
 
 This block is responsible for recording all useful data into a file for subsequent analysis.
 
-### Class Diagram
+### Simplified Class Diagram
+
+![Simplified class diagram](<images/simplified_class_diagram/Diagramme vierge.svg>)
+
+### Full Class Diagram
 
 ![Full class diagram](docs/diagrams/out/classDiagram/classDiagram2.png)
 
@@ -152,7 +155,12 @@ In the [tools](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tr
 
 ### Reading Log from an SD Card
 
-First of all [read_sd_card.ino](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tree/main/tools/read_sd_card/read_sd_card.ino) allows you to **read a file on an SD card connected to the Arduino board**. This is usefull if you can't load the SD card directly into your computer or if you want to save time. **You will need to fill the name of your file wich will be "DDMMhhmm.txt"** *(DD: day, MM: month, hh: hour, mm: minute of the beginning of the experiment)*.  
+First of all [read_sd_card.ino](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tree/main/tools/read_sd_card/read_sd_card.ino) allows you to **read a file on an SD card connected to the Arduino board**. This is usefull if you can't load the SD card directly into your computer. **You will need to fill the name of your file wich will be either "DDMMhhmm.txt"** *(DD: day, MM: month, hh: hour, mm: minute of the beginning of the experiment)* **or the name you defined in [Config.h](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tree/main/libraries/Config/Config.h) at the line 125** if AUTO_FILENAME is set to *false*:
+```c++
+#define AUTO_FILENAME false
+#define FILENAME "Filename" // Name of the file if AUTO_FILENAME is set to false. The filename can have a maximum of 8 characters
+```
+
 Then, **you can execute [sd_card_reading.py](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tree/main/tools/sd_card_reading.py)** to **save the log** in a file which will be **located in /logs/DDMMYY/hhmmss.txt** *(YY: year, ss: second of the beginning of the experiment)*.  
 
 ---
