@@ -99,16 +99,16 @@ Macros</h2></td></tr>
 <tr class="memitem:a339ce5a483577869f92805e52ff61719"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a339ce5a483577869f92805e52ff61719">ALGO1</a>&#160;&#160;&#160;<a class="el" href="classLineFollowing.html">LineFollowing</a></td></tr>
 <tr class="memdesc:a339ce5a483577869f92805e52ff61719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Algorithm used to go from waypoint to waypoint (type 1)  <a href="Config_8h.html#a339ce5a483577869f92805e52ff61719">More...</a><br /></td></tr>
 <tr class="separator:a339ce5a483577869f92805e52ff61719"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67886a600e3d2dacc940d326b9970feb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a67886a600e3d2dacc940d326b9970feb">ALGO2</a>&#160;&#160;&#160;<a class="el" href="classNoAlgorithm.html">NoAlgorithm</a></td></tr>
+<tr class="memitem:a67886a600e3d2dacc940d326b9970feb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a67886a600e3d2dacc940d326b9970feb">ALGO2</a>&#160;&#160;&#160;<a class="el" href="classStationKeeping.html">StationKeeping</a></td></tr>
 <tr class="memdesc:a67886a600e3d2dacc940d326b9970feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Algorithm used when a waypoint is reached (type 2)  <a href="Config_8h.html#a67886a600e3d2dacc940d326b9970feb">More...</a><br /></td></tr>
 <tr class="separator:a67886a600e3d2dacc940d326b9970feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a148ab86d621478d0ef710de8e1cfd579"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a148ab86d621478d0ef710de8e1cfd579">ALGO2_DURATION</a>&#160;&#160;&#160;10</td></tr>
 <tr class="memdesc:a148ab86d621478d0ef710de8e1cfd579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duration (in seconds) of the type 2 algorithm before going to the next waypoint.  <a href="Config_8h.html#a148ab86d621478d0ef710de8e1cfd579">More...</a><br /></td></tr>
 <tr class="separator:a148ab86d621478d0ef710de8e1cfd579"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a436f8c0248967c5cc1e7a23f1f8c7853"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a436f8c0248967c5cc1e7a23f1f8c7853">NB_WP</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:a436f8c0248967c5cc1e7a23f1f8c7853"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a436f8c0248967c5cc1e7a23f1f8c7853">NB_WP</a>&#160;&#160;&#160;3</td></tr>
 <tr class="memdesc:a436f8c0248967c5cc1e7a23f1f8c7853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of waypoints.  <a href="Config_8h.html#a436f8c0248967c5cc1e7a23f1f8c7853">More...</a><br /></td></tr>
 <tr class="separator:a436f8c0248967c5cc1e7a23f1f8c7853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c73b81722187c48d6186148091162fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a2c73b81722187c48d6186148091162fb">WP</a>&#160;&#160;&#160;{ {52.429335, -1.946895}, {52.429536, -1.944911} }</td></tr>
+<tr class="memitem:a2c73b81722187c48d6186148091162fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a2c73b81722187c48d6186148091162fb">WP</a>&#160;&#160;&#160;{ {52.486333, -1.889420}, {52.485990, -1.889547}, {52.486070, -1.888934} }</td></tr>
 <tr class="memdesc:a2c73b81722187c48d6186148091162fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of waypoints (latitude, longitude)  <a href="Config_8h.html#a2c73b81722187c48d6186148091162fb">More...</a><br /></td></tr>
 <tr class="separator:a2c73b81722187c48d6186148091162fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a647725f263f4c68668f3537055e24e04"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a647725f263f4c68668f3537055e24e04">WP_RADIUS</a>&#160;&#160;&#160;10</td></tr>
@@ -154,9 +154,9 @@ Macros</h2></td></tr>
 <tr class="memdesc:ac0b8a39ee95411b8fa1276a783f4c921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close haul angle.  <a href="Config_8h.html#ac0b8a39ee95411b8fa1276a783f4c921">More...</a><br /></td></tr>
 <tr class="separator:ac0b8a39ee95411b8fa1276a783f4c921"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b996515309fc3c03449912bb33046e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a1b996515309fc3c03449912bb33046e3">BETA</a>&#160;&#160;&#160;0.3</td></tr>
-<tr class="memdesc:a1b996515309fc3c03449912bb33046e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Angle of the sail when the wind is perpendicular to the boat.  <a href="Config_8h.html#a1b996515309fc3c03449912bb33046e3">More...</a><br /></td></tr>
+<tr class="memdesc:a1b996515309fc3c03449912bb33046e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Angle of the sail when the wind is perpendicular to the boat (in radians)  <a href="Config_8h.html#a1b996515309fc3c03449912bb33046e3">More...</a><br /></td></tr>
 <tr class="separator:a1b996515309fc3c03449912bb33046e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d20f68531fe1759f3703f5064575f8d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a1d20f68531fe1759f3703f5064575f8d">YAW_FILTER</a>&#160;&#160;&#160;0.1</td></tr>
+<tr class="memitem:a1d20f68531fe1759f3703f5064575f8d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a1d20f68531fe1759f3703f5064575f8d">YAW_FILTER</a>&#160;&#160;&#160;0.2</td></tr>
 <tr class="memdesc:a1d20f68531fe1759f3703f5064575f8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coefficient of the filter for the yaw.  <a href="Config_8h.html#a1d20f68531fe1759f3703f5064575f8d">More...</a><br /></td></tr>
 <tr class="separator:a1d20f68531fe1759f3703f5064575f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad62ff2573529c7c7c56bda64123a66f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ad62ff2573529c7c7c56bda64123a66f1">WIND_DIRECTION_FILTER</a>&#160;&#160;&#160;0.1</td></tr>
@@ -215,6 +215,12 @@ Macros</h2></td></tr>
 <tr class="memitem:a7b57da84038e8126c8c971576bb74220"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a7b57da84038e8126c8c971576bb74220">SD_PIN</a>&#160;&#160;&#160;53</td></tr>
 <tr class="memdesc:a7b57da84038e8126c8c971576bb74220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pin for the SD card.  <a href="Config_8h.html#a7b57da84038e8126c8c971576bb74220">More...</a><br /></td></tr>
 <tr class="separator:a7b57da84038e8126c8c971576bb74220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c241280dfe658ea3af9fbbab2ab2ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a29c241280dfe658ea3af9fbbab2ab2ed">AUTO_FILENAME</a>&#160;&#160;&#160;false</td></tr>
+<tr class="memdesc:a29c241280dfe658ea3af9fbbab2ab2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the filename will be the date and time of the beginning of the mission.  <a href="Config_8h.html#a29c241280dfe658ea3af9fbbab2ab2ed">More...</a><br /></td></tr>
+<tr class="separator:a29c241280dfe658ea3af9fbbab2ab2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de29f7c8bbf1a81cc6e71ac602032d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a8de29f7c8bbf1a81cc6e71ac602032d3">FILENAME</a>&#160;&#160;&#160;&quot;TEST&quot;</td></tr>
+<tr class="memdesc:a8de29f7c8bbf1a81cc6e71ac602032d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the file if AUTO_FILENAME is set to false. The filename can have a maximum of 8 characters.  <a href="Config_8h.html#a8de29f7c8bbf1a81cc6e71ac602032d3">More...</a><br /></td></tr>
+<tr class="separator:a8de29f7c8bbf1a81cc6e71ac602032d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecd01b0f0235e4441473ef26ea0254d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#aecd01b0f0235e4441473ef26ea0254d1">LOG_INTERVAL</a>&#160;&#160;&#160;100</td></tr>
 <tr class="memdesc:aecd01b0f0235e4441473ef26ea0254d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interval (in milliseconds) between each log.  <a href="Config_8h.html#aecd01b0f0235e4441473ef26ea0254d1">More...</a><br /></td></tr>
 <tr class="separator:aecd01b0f0235e4441473ef26ea0254d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,7 +256,7 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ALGO2&#160;&#160;&#160;<a class="el" href="classNoAlgorithm.html">NoAlgorithm</a></td>
+          <td class="memname">#define ALGO2&#160;&#160;&#160;<a class="el" href="classStationKeeping.html">StationKeeping</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -307,6 +313,22 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="a29c241280dfe658ea3af9fbbab2ab2ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c241280dfe658ea3af9fbbab2ab2ed">&#9670;&nbsp;</a></span>AUTO_FILENAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_FILENAME&#160;&#160;&#160;false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If true, the filename will be the date and time of the beginning of the mission. </p>
+
+</div>
+</div>
 <a id="a1b996515309fc3c03449912bb33046e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b996515309fc3c03449912bb33046e3">&#9670;&nbsp;</a></span>BETA</h2>
 
@@ -319,7 +341,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Angle of the sail when the wind is perpendicular to the boat. </p>
+<p>Angle of the sail when the wind is perpendicular to the boat (in radians) </p>
 
 </div>
 </div>
@@ -419,6 +441,22 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="a8de29f7c8bbf1a81cc6e71ac602032d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de29f7c8bbf1a81cc6e71ac602032d3">&#9670;&nbsp;</a></span>FILENAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILENAME&#160;&#160;&#160;&quot;TEST&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Name of the file if AUTO_FILENAME is set to false. The filename can have a maximum of 8 characters. </p>
+
+</div>
+</div>
 <a id="a8659b9de3e544ff142b153b076f30fd5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8659b9de3e544ff142b153b076f30fd5">&#9670;&nbsp;</a></span>GAMMA</h2>
 
@@ -474,7 +512,7 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define NB_WP&#160;&#160;&#160;2</td>
+          <td class="memname">#define NB_WP&#160;&#160;&#160;3</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -872,7 +910,7 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define WP&#160;&#160;&#160;{ {52.429335, -1.946895}, {52.429536, -1.944911} }</td>
+          <td class="memname">#define WP&#160;&#160;&#160;{ {52.486333, -1.889420}, {52.485990, -1.889547}, {52.486070, -1.888934} }</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -904,7 +942,7 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define YAW_FILTER&#160;&#160;&#160;0.1</td>
+          <td class="memname">#define YAW_FILTER&#160;&#160;&#160;0.2</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -75,6 +75,15 @@ $(function() {
  <a href="classCMPS12.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="CMPS12_8h_source.html">CMPS12.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for CMPS12:</div>
+<div class="dyncontent">
+<div class="center"><img src="classCMPS12__coll__graph.png" border="0" usemap="#aCMPS12_coll__map" alt="Collaboration graph"/></div>
+<map name="aCMPS12_coll__map" id="aCMPS12_coll__map">
+<area shape="rect" title="A class to handle the CMPS12." alt="" coords="13,109,87,136"/>
+<area shape="rect" href="classServoMotor.html" title="A class to handle a servo motor." alt="" coords="5,5,95,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -124,6 +133,15 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a896aea3cfa05b3015bc1bda7ad64536f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCMPS12.html#a896aea3cfa05b3015bc1bda7ad64536f">m_yaw_raw</a></td></tr>
 <tr class="memdesc:a896aea3cfa05b3015bc1bda7ad64536f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The raw yaw of the boat in degrees (0 to 360)  <a href="classCMPS12.html#a896aea3cfa05b3015bc1bda7ad64536f">More...</a><br /></td></tr>
 <tr class="separator:a896aea3cfa05b3015bc1bda7ad64536f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d9565e8ac531615b96fa0daac9acf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCMPS12.html#ae1d9565e8ac531615b96fa0daac9acf1">m_cnt</a> = 0</td></tr>
+<tr class="memdesc:ae1d9565e8ac531615b96fa0daac9acf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A counter to check the calibration status.  <a href="classCMPS12.html#ae1d9565e8ac531615b96fa0daac9acf1">More...</a><br /></td></tr>
+<tr class="separator:ae1d9565e8ac531615b96fa0daac9acf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e0f996e2f366501f430f167992bf9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classServoMotor.html">ServoMotor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCMPS12.html#a88e0f996e2f366501f430f167992bf9b">m_mr</a> = nullptr</td></tr>
+<tr class="memdesc:a88e0f996e2f366501f430f167992bf9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rudder servo motor.  <a href="classCMPS12.html#a88e0f996e2f366501f430f167992bf9b">More...</a><br /></td></tr>
+<tr class="separator:a88e0f996e2f366501f430f167992bf9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae70c97a134fb35db16cf73b6ffdf6e66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classServoMotor.html">ServoMotor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCMPS12.html#ae70c97a134fb35db16cf73b6ffdf6e66">m_ms</a> = nullptr</td></tr>
+<tr class="memdesc:ae70c97a134fb35db16cf73b6ffdf6e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sail servo motor.  <a href="classCMPS12.html#ae70c97a134fb35db16cf73b6ffdf6e66">More...</a><br /></td></tr>
+<tr class="separator:ae70c97a134fb35db16cf73b6ffdf6e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class to handle the <a class="el" href="classCMPS12.html" title="A class to handle the CMPS12.">CMPS12</a>. </p>
@@ -337,6 +355,78 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae1d9565e8ac531615b96fa0daac9acf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1d9565e8ac531615b96fa0daac9acf1">&#9670;&nbsp;</a></span>m_cnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CMPS12::m_cnt = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A counter to check the calibration status. </p>
+
+</div>
+</div>
+<a id="a88e0f996e2f366501f430f167992bf9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88e0f996e2f366501f430f167992bf9b">&#9670;&nbsp;</a></span>m_mr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classServoMotor.html">ServoMotor</a>* CMPS12::m_mr = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The rudder servo motor. </p>
+
+</div>
+</div>
+<a id="ae70c97a134fb35db16cf73b6ffdf6e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae70c97a134fb35db16cf73b6ffdf6e66">&#9670;&nbsp;</a></span>m_ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classServoMotor.html">ServoMotor</a>* CMPS12::m_ms = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The sail servo motor. </p>
+
+</div>
+</div>
 <a id="aee3bc2e6bf07aad50646bc5911e0951e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee3bc2e6bf07aad50646bc5911e0951e">&#9670;&nbsp;</a></span>m_pitch</h2>
 

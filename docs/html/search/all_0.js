@@ -10,5 +10,6 @@ var searchData=
   ['algorithms_2eh_7',['Algorithms.h',['../Algorithms_8h.html',1,'']]],
   ['angle_5frudder_5fmax_8',['ANGLE_RUDDER_MAX',['../Config_8h.html#a50df3de3d655a1aaaa1661a1512f9b01',1,'Config.h']]],
   ['angle_5fsail_5fmax_9',['ANGLE_SAIL_MAX',['../Config_8h.html#ad73d68bcac503131ad2664102427e3cd',1,'Config.h']]],
-  ['anglefilter_10',['angleFilter',['../classObserver.html#afea09bc1c3d4e0a0d864a2831d353857',1,'Observer']]]
+  ['anglefilter_10',['angleFilter',['../classObserver.html#afea09bc1c3d4e0a0d864a2831d353857',1,'Observer']]],
+  ['auto_5ffilename_11',['AUTO_FILENAME',['../Config_8h.html#a29c241280dfe658ea3af9fbbab2ab2ed',1,'Config.h']]]
 ];

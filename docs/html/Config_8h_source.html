@@ -84,11 +84,11 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/*======MISSION CONFIG=====*/</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="Config_8h.html#a339ce5a483577869f92805e52ff61719">   16</a></span>&#160;<span class="preprocessor">#define ALGO1 LineFollowing  </span></div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="Config_8h.html#a67886a600e3d2dacc940d326b9970feb">   17</a></span>&#160;<span class="preprocessor">#define ALGO2 NoAlgorithm  </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="Config_8h.html#a67886a600e3d2dacc940d326b9970feb">   17</a></span>&#160;<span class="preprocessor">#define ALGO2 StationKeeping  </span></div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="Config_8h.html#a148ab86d621478d0ef710de8e1cfd579">   18</a></span>&#160;<span class="preprocessor">#define ALGO2_DURATION 10  </span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="Config_8h.html#a436f8c0248967c5cc1e7a23f1f8c7853">   20</a></span>&#160;<span class="preprocessor">#define NB_WP 2  </span></div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="Config_8h.html#a2c73b81722187c48d6186148091162fb">   21</a></span>&#160;<span class="preprocessor">#define WP { {52.429335, -1.946895}, {52.429536, -1.944911} }  </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="Config_8h.html#a436f8c0248967c5cc1e7a23f1f8c7853">   20</a></span>&#160;<span class="preprocessor">#define NB_WP 3  </span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="Config_8h.html#a2c73b81722187c48d6186148091162fb">   21</a></span>&#160;<span class="preprocessor">#define WP { {52.486333, -1.889420}, {52.485990, -1.889547}, {52.486070, -1.888934} }  </span></div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="Config_8h.html#a647725f263f4c68668f3537055e24e04">   22</a></span>&#160;<span class="preprocessor">#define WP_RADIUS 10  </span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/*=========================*/</span></div>
@@ -120,79 +120,83 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="Config_8h.html#a1b996515309fc3c03449912bb33046e3">   52</a></span>&#160;<span class="preprocessor">#define BETA 0.3  </span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">/*=====OBSERVER CONFIG=====*/</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="Config_8h.html#a1d20f68531fe1759f3703f5064575f8d">   58</a></span>&#160;<span class="preprocessor">#define YAW_FILTER 0.1  </span></div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="Config_8h.html#ad62ff2573529c7c7c56bda64123a66f1">   59</a></span>&#160;<span class="preprocessor">#define WIND_DIRECTION_FILTER 0.1  </span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/*======CMPS12 CONFIG======*/</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="Config_8h.html#a4a8dabc1714236213670843febd082a3">   65</a></span>&#160;<span class="preprocessor">#define SERIAL_CMPS Serial3  </span></div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="Config_8h.html#a140f7ab2e170f8eff21edd540fbd7d4f">   66</a></span>&#160;<span class="preprocessor">#define CMPS_GET_ANGLE8 0x12  </span></div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="Config_8h.html#abf671d339cd188ebc2c4b97998797df7">   67</a></span>&#160;<span class="preprocessor">#define CMPS_GET_ANGLE16 0x13  </span></div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="Config_8h.html#a829cc71b2c9a79993d853707e1d48b58">   68</a></span>&#160;<span class="preprocessor">#define CMPS_GET_PITCH 0x14  </span></div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="Config_8h.html#a996fdaf13152e709a27e6df70c84410a">   69</a></span>&#160;<span class="preprocessor">#define CMPS_GET_ROLL 0x15  </span></div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="Config_8h.html#a462f06f4bcb6fab1feacb72ab9666ba0">   70</a></span>&#160;<span class="preprocessor">#define CMPS_CALIBRATION_STATUS 0x24  </span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">/*========GPS CONFIG=======*/</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="Config_8h.html#a440fe4dd9e60bb53879023850f7d1866">   76</a></span>&#160;<span class="preprocessor">#define SERIAL_GPS Serial2  </span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">/*=====OBSERVER CONFIG=====*/</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="Config_8h.html#a1d20f68531fe1759f3703f5064575f8d">   60</a></span>&#160;<span class="preprocessor">#define YAW_FILTER 0.2  </span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="Config_8h.html#ad62ff2573529c7c7c56bda64123a66f1">   61</a></span>&#160;<span class="preprocessor">#define WIND_DIRECTION_FILTER 0.1  </span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">/*======CMPS12 CONFIG======*/</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="Config_8h.html#a4a8dabc1714236213670843febd082a3">   67</a></span>&#160;<span class="preprocessor">#define SERIAL_CMPS Serial3  </span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="Config_8h.html#a140f7ab2e170f8eff21edd540fbd7d4f">   68</a></span>&#160;<span class="preprocessor">#define CMPS_GET_ANGLE8 0x12  </span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="Config_8h.html#abf671d339cd188ebc2c4b97998797df7">   69</a></span>&#160;<span class="preprocessor">#define CMPS_GET_ANGLE16 0x13  </span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="Config_8h.html#a829cc71b2c9a79993d853707e1d48b58">   70</a></span>&#160;<span class="preprocessor">#define CMPS_GET_PITCH 0x14  </span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="Config_8h.html#a996fdaf13152e709a27e6df70c84410a">   71</a></span>&#160;<span class="preprocessor">#define CMPS_GET_ROLL 0x15  </span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="Config_8h.html#a462f06f4bcb6fab1feacb72ab9666ba0">   72</a></span>&#160;<span class="preprocessor">#define CMPS_CALIBRATION_STATUS 0x24  </span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">/*========GPS CONFIG=======*/</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="structCoordLatLon.html">   81</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structCoordLatLon.html">CoordLatLon</a></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="structCoordLatLon.html#ac89e851f95c351131fd6b0672c261109">   83</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structCoordLatLon.html#ac89e851f95c351131fd6b0672c261109">lat</a>;  </div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="structCoordLatLon.html#a1b7188526f96fc575b1c19f2cc45007a">   84</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structCoordLatLon.html#a1b7188526f96fc575b1c19f2cc45007a">lon</a>;  </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="structCoordXY.html">   90</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structCoordXY.html">CoordXY</a></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="structCoordXY.html#aadb525e158c6788978e2cddeaff52cc6">   92</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structCoordXY.html#aadb525e158c6788978e2cddeaff52cc6">x</a>;  </div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="structCoordXY.html#ad8e030c6c0e5c1be5200e20288173456">   93</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structCoordXY.html#ad8e030c6c0e5c1be5200e20288173456">y</a>;  </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">/*====ANEMOMETER CONFIG====*/</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="Config_8h.html#ad6ba00b8606783ba5324e74a17be4c33">  100</a></span>&#160;<span class="preprocessor">#define SERIAL_WIND Serial1  </span></div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="Config_8h.html#ac071ccc4a89c63dc5e49ba682de4af75">  101</a></span>&#160;<span class="preprocessor">#define WIND_SPEED_PIN 19  </span></div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="Config_8h.html#ad2d0ed213f95f3c1d444a686f841c24a">  102</a></span>&#160;<span class="preprocessor">#define WIND_DIRECTION_PIN A14  </span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">/*=======SERVO CONFIG======*/</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="Config_8h.html#a7d9c36e285f4f83cc8d30e9ccfe403af">  108</a></span>&#160;<span class="preprocessor">#define SERVO_FREQ 50</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="Config_8h.html#a440fe4dd9e60bb53879023850f7d1866">   78</a></span>&#160;<span class="preprocessor">#define SERIAL_GPS Serial2  </span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="structCoordLatLon.html">   83</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structCoordLatLon.html">CoordLatLon</a></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="structCoordLatLon.html#ac89e851f95c351131fd6b0672c261109">   85</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structCoordLatLon.html#ac89e851f95c351131fd6b0672c261109">lat</a>;  </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="structCoordLatLon.html#a1b7188526f96fc575b1c19f2cc45007a">   86</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structCoordLatLon.html#a1b7188526f96fc575b1c19f2cc45007a">lon</a>;  </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="structCoordXY.html">   92</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structCoordXY.html">CoordXY</a></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="structCoordXY.html#aadb525e158c6788978e2cddeaff52cc6">   94</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structCoordXY.html#aadb525e158c6788978e2cddeaff52cc6">x</a>;  </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="structCoordXY.html#ad8e030c6c0e5c1be5200e20288173456">   95</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structCoordXY.html#ad8e030c6c0e5c1be5200e20288173456">y</a>;  </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">/*====ANEMOMETER CONFIG====*/</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="Config_8h.html#ad6ba00b8606783ba5324e74a17be4c33">  102</a></span>&#160;<span class="preprocessor">#define SERIAL_WIND Serial1  </span></div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="Config_8h.html#ac071ccc4a89c63dc5e49ba682de4af75">  103</a></span>&#160;<span class="preprocessor">#define WIND_SPEED_PIN 19  </span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="Config_8h.html#ad2d0ed213f95f3c1d444a686f841c24a">  104</a></span>&#160;<span class="preprocessor">#define WIND_DIRECTION_PIN A14  </span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">/*=======SERVO CONFIG======*/</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="Config_8h.html#a3bd40b3a79e53850990f576929e98ce0">  110</a></span>&#160;<span class="preprocessor">#define SERVO_RUDDER_PIN 0  </span></div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="Config_8h.html#a9267b19e0c268b517cfd957c49185451">  111</a></span>&#160;<span class="preprocessor">#define RUDDER_PWMMIN 200  </span></div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="Config_8h.html#a370d310f220f5d8d98faa104d2aa5d3f">  112</a></span>&#160;<span class="preprocessor">#define RUDDER_PWMMAX 410  </span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="Config_8h.html#a37e3260e94763be357a895587ed90851">  114</a></span>&#160;<span class="preprocessor">#define SERVO_SAIL_PIN 1  </span></div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="Config_8h.html#a0f87a6033d373a365621313630e3fc05">  115</a></span>&#160;<span class="preprocessor">#define SAIL_PWMMIN 250  </span></div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="Config_8h.html#ab36ef2f35b7837ff4e964254b9af51bc">  116</a></span>&#160;<span class="preprocessor">#define SAIL_PWMMAX 400  </span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">/*======LOGGER CONFIG======*/</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="Config_8h.html#a7b57da84038e8126c8c971576bb74220">  122</a></span>&#160;<span class="preprocessor">#define SD_PIN 53  </span></div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="Config_8h.html#a7d9c36e285f4f83cc8d30e9ccfe403af">  110</a></span>&#160;<span class="preprocessor">#define SERVO_FREQ 50</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="Config_8h.html#a3bd40b3a79e53850990f576929e98ce0">  112</a></span>&#160;<span class="preprocessor">#define SERVO_RUDDER_PIN 0  </span></div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="Config_8h.html#a9267b19e0c268b517cfd957c49185451">  113</a></span>&#160;<span class="preprocessor">#define RUDDER_PWMMIN 200  </span></div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="Config_8h.html#a370d310f220f5d8d98faa104d2aa5d3f">  114</a></span>&#160;<span class="preprocessor">#define RUDDER_PWMMAX 410  </span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="Config_8h.html#a37e3260e94763be357a895587ed90851">  116</a></span>&#160;<span class="preprocessor">#define SERVO_SAIL_PIN 1  </span></div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="Config_8h.html#a0f87a6033d373a365621313630e3fc05">  117</a></span>&#160;<span class="preprocessor">#define SAIL_PWMMIN 250  </span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="Config_8h.html#ab36ef2f35b7837ff4e964254b9af51bc">  118</a></span>&#160;<span class="preprocessor">#define SAIL_PWMMAX 400  </span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">/*======LOGGER CONFIG======*/</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="Config_8h.html#aecd01b0f0235e4441473ef26ea0254d1">  124</a></span>&#160;<span class="preprocessor">#define LOG_INTERVAL 100  </span></div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="Config_8h.html#a7b57da84038e8126c8c971576bb74220">  124</a></span>&#160;<span class="preprocessor">#define SD_PIN 53  </span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">/*=========================*/</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="Config_8h.html#a29c241280dfe658ea3af9fbbab2ab2ed">  126</a></span>&#160;<span class="preprocessor">#define AUTO_FILENAME false  </span></div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="Config_8h.html#a8de29f7c8bbf1a81cc6e71ac602032d3">  127</a></span>&#160;<span class="preprocessor">#define FILENAME &quot;TEST&quot;</span>  </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="Config_8h.html#aecd01b0f0235e4441473ef26ea0254d1">  128</a></span>&#160;<span class="preprocessor">#define LOG_INTERVAL 100  </span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">/*=========================*/</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aConfig_8h_html_aa02dcc915580bf31566436a82df38620"><div class="ttname"><a href="Config_8h.html#aa02dcc915580bf31566436a82df38620">RC_CHANNELS</a></div><div class="ttdeci">RC_CHANNELS</div><div class="ttdef"><b>Definition:</b> Config.h:31</div></div>
 <div class="ttc" id="aConfig_8h_html_aa02dcc915580bf31566436a82df38620a5dd9f4abf6d8aaf147d395c145d88c62"><div class="ttname"><a href="Config_8h.html#aa02dcc915580bf31566436a82df38620a5dd9f4abf6d8aaf147d395c145d88c62">SAIL_CH</a></div><div class="ttdeci">@ SAIL_CH</div><div class="ttdef"><b>Definition:</b> Config.h:31</div></div>
 <div class="ttc" id="aConfig_8h_html_aa02dcc915580bf31566436a82df38620a98689796e04860dc48769123485902cf"><div class="ttname"><a href="Config_8h.html#aa02dcc915580bf31566436a82df38620a98689796e04860dc48769123485902cf">RUDDER_CH</a></div><div class="ttdeci">@ RUDDER_CH</div><div class="ttdef"><b>Definition:</b> Config.h:31</div></div>
-<div class="ttc" id="astructCoordLatLon_html"><div class="ttname"><a href="structCoordLatLon.html">CoordLatLon</a></div><div class="ttdoc">A struct to handle the coordinates in latitude and longitude.</div><div class="ttdef"><b>Definition:</b> Config.h:82</div></div>
-<div class="ttc" id="astructCoordLatLon_html_a1b7188526f96fc575b1c19f2cc45007a"><div class="ttname"><a href="structCoordLatLon.html#a1b7188526f96fc575b1c19f2cc45007a">CoordLatLon::lon</a></div><div class="ttdeci">double lon</div><div class="ttdoc">Longitude.</div><div class="ttdef"><b>Definition:</b> Config.h:84</div></div>
-<div class="ttc" id="astructCoordLatLon_html_ac89e851f95c351131fd6b0672c261109"><div class="ttname"><a href="structCoordLatLon.html#ac89e851f95c351131fd6b0672c261109">CoordLatLon::lat</a></div><div class="ttdeci">double lat</div><div class="ttdoc">Latitude.</div><div class="ttdef"><b>Definition:</b> Config.h:83</div></div>
-<div class="ttc" id="astructCoordXY_html"><div class="ttname"><a href="structCoordXY.html">CoordXY</a></div><div class="ttdoc">A struct to handle the coordinates in meters.</div><div class="ttdef"><b>Definition:</b> Config.h:91</div></div>
-<div class="ttc" id="astructCoordXY_html_aadb525e158c6788978e2cddeaff52cc6"><div class="ttname"><a href="structCoordXY.html#aadb525e158c6788978e2cddeaff52cc6">CoordXY::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">x coordinate in meters</div><div class="ttdef"><b>Definition:</b> Config.h:92</div></div>
-<div class="ttc" id="astructCoordXY_html_ad8e030c6c0e5c1be5200e20288173456"><div class="ttname"><a href="structCoordXY.html#ad8e030c6c0e5c1be5200e20288173456">CoordXY::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">y coordinate in meters</div><div class="ttdef"><b>Definition:</b> Config.h:93</div></div>
+<div class="ttc" id="astructCoordLatLon_html"><div class="ttname"><a href="structCoordLatLon.html">CoordLatLon</a></div><div class="ttdoc">A struct to handle the coordinates in latitude and longitude.</div><div class="ttdef"><b>Definition:</b> Config.h:84</div></div>
+<div class="ttc" id="astructCoordLatLon_html_a1b7188526f96fc575b1c19f2cc45007a"><div class="ttname"><a href="structCoordLatLon.html#a1b7188526f96fc575b1c19f2cc45007a">CoordLatLon::lon</a></div><div class="ttdeci">double lon</div><div class="ttdoc">Longitude.</div><div class="ttdef"><b>Definition:</b> Config.h:86</div></div>
+<div class="ttc" id="astructCoordLatLon_html_ac89e851f95c351131fd6b0672c261109"><div class="ttname"><a href="structCoordLatLon.html#ac89e851f95c351131fd6b0672c261109">CoordLatLon::lat</a></div><div class="ttdeci">double lat</div><div class="ttdoc">Latitude.</div><div class="ttdef"><b>Definition:</b> Config.h:85</div></div>
+<div class="ttc" id="astructCoordXY_html"><div class="ttname"><a href="structCoordXY.html">CoordXY</a></div><div class="ttdoc">A struct to handle the coordinates in meters.</div><div class="ttdef"><b>Definition:</b> Config.h:93</div></div>
+<div class="ttc" id="astructCoordXY_html_aadb525e158c6788978e2cddeaff52cc6"><div class="ttname"><a href="structCoordXY.html#aadb525e158c6788978e2cddeaff52cc6">CoordXY::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">x coordinate in meters</div><div class="ttdef"><b>Definition:</b> Config.h:94</div></div>
+<div class="ttc" id="astructCoordXY_html_ad8e030c6c0e5c1be5200e20288173456"><div class="ttname"><a href="structCoordXY.html#ad8e030c6c0e5c1be5200e20288173456">CoordXY::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">y coordinate in meters</div><div class="ttdef"><b>Definition:</b> Config.h:95</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

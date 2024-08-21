@@ -80,18 +80,18 @@ Collaboration diagram for Supervisor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSupervisor__coll__graph.png" border="0" usemap="#aSupervisor_coll__map" alt="Collaboration graph"/></div>
 <map name="aSupervisor_coll__map" id="aSupervisor_coll__map">
-<area shape="rect" title="A class to handle the supervisor." alt="" coords="207,467,291,493"/>
-<area shape="rect" href="classObserver.html" title="A class to handle the observer." alt="" coords="207,95,282,121"/>
-<area shape="rect" href="classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="181,184,309,211"/>
-<area shape="rect" href="classLogger.html" title="A class to handle the data logging." alt="" coords="119,377,181,404"/>
-<area shape="rect" href="classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="55,5,144,32"/>
-<area shape="rect" href="classGPS.html" title="A class to handle the GPS." alt="" coords="169,5,219,32"/>
-<area shape="rect" href="classWindDirection.html" title="A class to handle the wind direction." alt="" coords="243,5,347,32"/>
-<area shape="rect" href="classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="371,5,446,32"/>
-<area shape="rect" href="classController.html" title="A class to handle the controller." alt="" coords="208,288,287,315"/>
-<area shape="rect" href="classServoMotor.html" title="A class to handle a servo motor." alt="" coords="333,184,423,211"/>
-<area shape="rect" href="structCoordLatLon.html" title="A struct to handle the coordinates in latitude and longitude." alt="" coords="498,377,594,404"/>
-<area shape="rect" href="classRCReceiver.html" title="A class to handle the RC receiver." alt="" coords="5,288,100,315"/>
+<area shape="rect" title="A class to handle the supervisor." alt="" coords="227,559,311,585"/>
+<area shape="rect" href="classObserver.html" title="A class to handle the observer." alt="" coords="209,200,283,227"/>
+<area shape="rect" href="classAlgorithmInterface.html" title="A base class to handle all algorithms class." alt="" coords="201,291,329,317"/>
+<area shape="rect" href="classLogger.html" title="A class to handle the data logging." alt="" coords="139,469,201,496"/>
+<area shape="rect" href="classWindSpeed.html" title="A class to handle the wind speed." alt="" coords="5,109,95,136"/>
+<area shape="rect" href="classGPS.html" title="A class to handle the GPS." alt="" coords="119,109,170,136"/>
+<area shape="rect" href="classWindDirection.html" title="A class to handle the wind direction." alt="" coords="194,109,298,136"/>
+<area shape="rect" href="classCMPS12.html" title="A class to handle the CMPS12." alt="" coords="322,109,397,136"/>
+<area shape="rect" href="classServoMotor.html" title="A class to handle a servo motor." alt="" coords="352,5,441,32"/>
+<area shape="rect" href="classController.html" title="A class to handle the controller." alt="" coords="228,380,307,407"/>
+<area shape="rect" href="structCoordLatLon.html" title="A struct to handle the coordinates in latitude and longitude." alt="" coords="403,469,499,496"/>
+<area shape="rect" href="classRCReceiver.html" title="A class to handle the RC receiver." alt="" coords="25,380,120,407"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -145,6 +145,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a1c523ee48c3e532802c3bd6c7975098f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupervisor.html#a1c523ee48c3e532802c3bd6c7975098f">m_current_wp</a> = 0</td></tr>
 <tr class="memdesc:a1c523ee48c3e532802c3bd6c7975098f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current waypoint index.  <a href="classSupervisor.html#a1c523ee48c3e532802c3bd6c7975098f">More...</a><br /></td></tr>
 <tr class="separator:a1c523ee48c3e532802c3bd6c7975098f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad26b0790df7d5b898d5ce84b1f3f5d43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupervisor.html#ad26b0790df7d5b898d5ce84b1f3f5d43">m_waypoint_is_reached</a> = false</td></tr>
+<tr class="memdesc:ad26b0790df7d5b898d5ce84b1f3f5d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">The status of the waypoint.  <a href="classSupervisor.html#ad26b0790df7d5b898d5ce84b1f3f5d43">More...</a><br /></td></tr>
+<tr class="separator:ad26b0790df7d5b898d5ce84b1f3f5d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15327bac45abc1d4aea6272f4f009fd9"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupervisor.html#a15327bac45abc1d4aea6272f4f009fd9">m_algo2_start_time</a></td></tr>
 <tr class="memdesc:a15327bac45abc1d4aea6272f4f009fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The start time of the algorithm 2.  <a href="classSupervisor.html#a15327bac45abc1d4aea6272f4f009fd9">More...</a><br /></td></tr>
 <tr class="separator:a15327bac45abc1d4aea6272f4f009fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,7 +202,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destructor of the class. </p>
-<p>This destructor deletes the pointers to the observer, controller, and RC receiver to free up memory space. </p>
+<p>This destructor deletes the pointers to the observer, controller, the RC receiver and the logger to free up memory space. </p>
 
 </div>
 </div>
@@ -243,11 +246,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialize the supervisor. </p>
-<p>This function initializes the supervisor with the observer, the controller, and the RC receiver. It also starts the mission by calling the <a class="el" href="classSupervisor.html#a9855dc686a3b3ee59ab086c31e570ed0" title="Start the mission.">startMission()</a> method. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This function initializes the supervisor with the observer, the controller, the RC receiverand the logger. It also starts the mission by calling the <a class="el" href="classSupervisor.html#a9855dc686a3b3ee59ab086c31e570ed0" title="Start the mission.">startMission()</a> method. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">obs</td><td>A pointer to the observer used </td></tr>
     <tr><td class="paramname">ctrl</td><td>A pointer to the controller used </td></tr>
     <tr><td class="paramname">rc</td><td>A pointer to the RC receiver used </td></tr>
+    <tr><td class="paramname">logger</td><td>A pointer to the logger used </td></tr>
   </table>
   </dd>
 </dl>
@@ -576,6 +580,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The RC receiver used. </p>
+
+</div>
+</div>
+<a id="ad26b0790df7d5b898d5ce84b1f3f5d43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad26b0790df7d5b898d5ce84b1f3f5d43">&#9670;&nbsp;</a></span>m_waypoint_is_reached</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Supervisor::m_waypoint_is_reached = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The status of the waypoint. </p>
 
 </div>
 </div>

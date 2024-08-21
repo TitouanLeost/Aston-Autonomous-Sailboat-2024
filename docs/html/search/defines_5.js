@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['is_5falgo2_5fequal_5fto_426',['IS_ALGO2_EQUAL_TO',['../Supervisor_8cpp.html#a5381936b54fd55c466fa18f3927524ad',1,'Supervisor.cpp']]]
+  ['gamma_433',['GAMMA',['../Config_8h.html#a8659b9de3e544ff142b153b076f30fd5',1,'Config.h']]]
 ];

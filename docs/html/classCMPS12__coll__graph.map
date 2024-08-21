@@ -1,3 +1,4 @@
 <map id="CMPS12" name="CMPS12">
-<area shape="rect" id="node1" title="A class to handle the CMPS12." alt="" coords="5,5,153,273"/>
+<area shape="rect" id="node1" title="A class to handle the CMPS12." alt="" coords="13,109,87,136"/>
+<area shape="rect" id="node2" href="$classServoMotor.html" title="A class to handle a servo motor." alt="" coords="5,5,95,32"/>
 </map>
