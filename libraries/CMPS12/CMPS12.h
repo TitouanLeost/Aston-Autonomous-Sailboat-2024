@@ -73,10 +73,10 @@ class CMPS12
         char m_roll;  ///< The roll of the boat in degrees (-90 to 90)
         float m_yaw;  ///< The filtered yaw of the boat in degrees (0 to 360)
         float m_yaw_raw;  ///< The raw yaw of the boat in degrees (0 to 360)
-        int m_cpt = 0;  ///< A counter to check the calibration status
+        int m_cnt = 0;  ///< A counter to check the calibration status
 
-        ServoMotor* m_mr = nullptr;
-        ServoMotor* m_ms = nullptr;
+        ServoMotor* m_mr = nullptr;  ///< The rudder servo motor
+        ServoMotor* m_ms = nullptr;  ///< The sail servo motor
 };
 
 #endif

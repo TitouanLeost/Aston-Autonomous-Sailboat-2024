@@ -12,7 +12,7 @@
 /*****************************************************************************
  * A class to handle the controller.
  * This class contains functions to initialize and update the servo motors
- * based on the data from the algorithmz used for the mission. The
+ * based on the data from the algorithm(s) used for the mission. The
  * algorithms to use are defined in Config.h.
 *****************************************************************************/
 class Controller
@@ -93,7 +93,7 @@ class Controller
         ***********************************************************/
         void testServo();
 
-        ServoMotor* m_mr = nullptr;  ///< The rudder servo motorm
+        ServoMotor* m_mr = nullptr;  ///< The rudder servo motor
         ServoMotor* m_ms = nullptr;  ///< The sail servo motor
         AlgorithmInterface* m_algo = nullptr;  ///< The algorithm used
         ALGO1* m_algo1 = nullptr;  ///< The type 1 algorithm used

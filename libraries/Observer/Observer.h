@@ -76,7 +76,7 @@ class Observer
     private:
         /********************************************************
          * Process the data.
-         * This function is used to filtered the data from the
+         * This function is used to filter the data from the
          * CMPS and the wind direction sensor.
         ********************************************************/
         void fusion();

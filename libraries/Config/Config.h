@@ -49,7 +49,9 @@ enum RC_CHANNELS {RUDDER_CH, SAIL_CH};
 #define R 12  ///< Cutoff distance from the line
 #define GAMMA M_PI/4  ///< Incidence angle
 #define ZETA M_PI/4  ///< Close haul angle
-#define BETA 0.3  ///< Angle of the sail when the wind is perpendicular to the boat
+#define BETA 0.3  ///< Angle of the sail when the wind is perpendicular to the boat (in radians)
+
+/*=========================*/
 
 /*=========================*/
 /////////////////////////////

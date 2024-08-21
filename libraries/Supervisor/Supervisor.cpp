@@ -15,6 +15,7 @@ Supervisor::~Supervisor()
     delete m_obs;
     delete m_ctrl;
     delete m_rc;
+    delete m_logger;
 }
 
 

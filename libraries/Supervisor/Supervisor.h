@@ -40,18 +40,20 @@ class Supervisor
         /*************************************************************
          * Destructor of the class.
          * This destructor deletes the pointers to the observer,
-         * controller, and RC receiver to free up memory space.
+         * controller, the RC receiver and the logger to free up 
+         * memory space.
         *************************************************************/
         ~Supervisor();
         
         /*************************************************************
          * Initialize the supervisor.
          * This function initializes the supervisor with the observer,
-         * the controller, and the RC receiver. It also starts the
-         * mission by calling the startMission() method.
+         * the controller, the RC receiverand the logger. It also 
+         * starts the mission by calling the startMission() method.
          * @param obs A pointer to the observer used
          * @param ctrl A pointer to the controller used
          * @param rc A pointer to the RC receiver used
+         * @param logger A pointer to the logger used
         *************************************************************/
         void init(Observer* obs, Controller* ctrl, RCReceiver* rc, Logger* logger);
 
@@ -102,6 +104,7 @@ class Supervisor
          * false otherwise
         *************************************************************/
         bool isAlgo2Finished();
+
 
         Observer* m_obs = nullptr;  ///< The observer used
         Controller* m_ctrl = nullptr;  ///< The controller used

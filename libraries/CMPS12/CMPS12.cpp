@@ -78,7 +78,7 @@ void CMPS12::calibration()
     while(SERIAL_CMPS.available() < 1);
     unsigned char status = SERIAL_CMPS.read();
 
-    while(m_cpt < 50 or status != 255) {
+    while(m_cnt < 50 or status != 255) {
         m_mr->setPercent(float(status)/255.0);
         m_ms->setPercent(0.5);
         SERIAL_CMPS.write(CMPS_CALIBRATION_STATUS);
@@ -86,7 +86,7 @@ void CMPS12::calibration()
         status = SERIAL_CMPS.read();
         Serial.println(int(status));
         if(status == 255)
-            m_cpt += 1;
+            m_cnt += 1;
     }
 
     Serial.println("   => Calibration done");

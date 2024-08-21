@@ -16,9 +16,8 @@ class ServoMotor
     public:
         /*******************************************************************
          * Constructor of the class.
-         * This constructor initializes the servo motor, the minimum PWM 
-         * value and the maximum PWM value, and the pin used by the servo 
-         * motor.
+         * This constructor initializes the servo motor, the minimum and 
+         * maximum PWM values, and the pin used by the servo motor.
          * @param pin The pin of the servo motor
          * @param pwm_min The minimum PWM value of the servo motor
          * @param pwm_max The maximum PWM value of the servo motor

@@ -75,14 +75,14 @@ class RCReceiver
         float convertToPercent(unsigned long pulse, int ch);
 
 
-        unsigned long m_last_pulse;  // Last time a pulse was received
-        unsigned long m_rudder_pulse;  // Filtered pulse of the rudder
-        unsigned long m_rudder_pulse_raw;  // Raw pulse of the rudder
-        unsigned long m_sail_pulse;  // Filtered pulse of the sail
-        unsigned long m_sail_pulse_raw;  // Raw pulse of the sail
-        unsigned long m_offset_min[NB_CHANNELS];  // Minimum offset of the channels
-        unsigned long m_offset_max[NB_CHANNELS];  // Maximum offset of the channels
-        bool m_is_receiving;  // True if the RC receiver is receiving
+        unsigned long m_last_pulse;  ///< Last time a pulse was received
+        unsigned long m_rudder_pulse;  ///< Filtered pulse of the rudder
+        unsigned long m_rudder_pulse_raw;  ///< Raw pulse of the rudder
+        unsigned long m_sail_pulse;  ///< Filtered pulse of the sail
+        unsigned long m_sail_pulse_raw;  ///< Raw pulse of the sail
+        unsigned long m_offset_min[NB_CHANNELS];  ///< Minimum offset of the channels
+        unsigned long m_offset_max[NB_CHANNELS];  ///< Maximum offset of the channels
+        bool m_is_receiving;  ///< True if the RC receiver is receiving
 };
 
 #endif

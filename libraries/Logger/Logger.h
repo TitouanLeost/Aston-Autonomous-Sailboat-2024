@@ -62,7 +62,8 @@ class Logger
          * Generates the filename with the date and the time.
          * Only the day and month for the date and the hour and
          * minute for the time are used to keep a file name of
-         * 8 caracters (maximum length allowed).
+         * 8 caracters (maximum length allowed). Alternatively, a
+         * predefined filename can be used.
         ***********************************************************/
         void generateFilename();
 
