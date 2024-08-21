@@ -51,48 +51,48 @@ void loop() {
     ctrl.updateServos();
     logger.update();
 
-    if (millis() - last_time > 200) {
-        Serial.print("Yaw (filtered): ");
-        Serial.print(obs.cmps()->getYaw());
-        Serial.print("     Yaw (raw): ");
-        Serial.print(obs.cmps()->getYawRaw());
-        Serial.print("     Pitch: ");
-        Serial.print(obs.cmps()->getPitch());
-        Serial.print("     Roll: ");
-        Serial.println(obs.cmps()->getRoll());
+    // if (millis() - last_time > 200) {
+    //     Serial.print("Yaw (filtered): ");
+    //     Serial.print(obs.cmps()->getYaw());
+    //     Serial.print("     Yaw (raw): ");
+    //     Serial.print(obs.cmps()->getYawRaw());
+    //     Serial.print("     Pitch: ");
+    //     Serial.print(obs.cmps()->getPitch());
+    //     Serial.print("     Roll: ");
+    //     Serial.println(obs.cmps()->getRoll());
 
-        Serial.print("Satellites: ");
-        Serial.print(obs.gps()->getSatellites());
-        Serial.print("     Lat: ");
-        Serial.print(obs.gps()->getLat(), 6);
-        Serial.print("     Lon: ");
-        Serial.print(obs.gps()->getLon(), 6);
-        Serial.print("     Course: ");
-        Serial.print(obs.gps()->getCourse());
-        Serial.print("     Speed: ");
-        Serial.print(obs.gps()->getSpeed());
-        Serial.print("     Date: ");
-        Serial.print(obs.gps()->getDate());
-        Serial.print("     Time: ");
-        Serial.println(obs.gps()->getTime());
+    //     Serial.print("Satellites: ");
+    //     Serial.print(obs.gps()->getSatellites());
+    //     Serial.print("     Lat: ");
+    //     Serial.print(obs.gps()->getLat(), 6);
+    //     Serial.print("     Lon: ");
+    //     Serial.print(obs.gps()->getLon(), 6);
+    //     Serial.print("     Course: ");
+    //     Serial.print(obs.gps()->getCourse());
+    //     Serial.print("     Speed: ");
+    //     Serial.print(obs.gps()->getSpeed());
+    //     Serial.print("     Date: ");
+    //     Serial.print(obs.gps()->getDate());
+    //     Serial.print("     Time: ");
+    //     Serial.println(obs.gps()->getTime());
 
-        Serial.print("Wind speed: ");
-        Serial.print(obs.ws()->getWindSpeed());
-        Serial.print("     Wind direction (filtered): ");
-        Serial.print(obs.wd()->getWindDirection());
-        Serial.print("     Wind direction (raw): ");
-        Serial.print(obs.wd()->getRawWindDirection());
-        Serial.print("     True wind direction: ");
-        Serial.println(obs.getTrueWindAngle());
+    //     Serial.print("Wind speed: ");
+    //     Serial.print(obs.ws()->getWindSpeed());
+    //     Serial.print("     Wind direction (filtered): ");
+    //     Serial.print(obs.wd()->getWindDirection());
+    //     Serial.print("     Wind direction (raw): ");
+    //     Serial.print(obs.wd()->getRawWindDirection());
+    //     Serial.print("     True wind direction: ");
+    //     Serial.println(obs.getTrueWindAngle());
 
-        Serial.print("Cmd rudder: ");
-        Serial.print(ctrl.algo()->getCmdRudder());
-        Serial.print("     Cmd sail: ");
-        Serial.println(ctrl.algo()->getCmdSail());
+    //     Serial.print("Cmd rudder: ");
+    //     Serial.print(ctrl.algo()->getCmdRudder());
+    //     Serial.print("     Cmd sail: ");
+    //     Serial.println(ctrl.algo()->getCmdSail());
 
-        Serial.println("------------------------------- \n");
+    //     Serial.println("------------------------------- \n");
 
-        last_time = millis();
-    }
+    //     last_time = millis();
+    // }
 
 }

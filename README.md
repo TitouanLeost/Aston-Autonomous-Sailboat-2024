@@ -155,7 +155,7 @@ In the [tools](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tr
 
 ### Reading Log from an SD Card
 
-First of all [read_sd_card.ino](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tree/main/tools/read_sd_card/read_sd_card.ino) allows you to **read a file on an SD card connected to the Arduino board**. This is usefull if you can't load the SD card directly into your computer. **You will need to fill the name of your file wich will be either "DDMMhhmm.txt"** *(DD: day, MM: month, hh: hour, mm: minute of the beginning of the experiment)* **or the name you defined in [Config.h](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tree/main/libraries/Config/Config.h) at the line 125** if AUTO_FILENAME is set to *false*:
+First of all [read_sd_card.ino](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tree/main/tools/read_sd_card/read_sd_card.ino) allows you to **read a file on an SD card connected to the Arduino board**. This is usefull if you can't load the SD card directly into your computer. **You will need to fill the name of your file wich will be either "DDMMhhmm.txt"** *(DD: day, MM: month, hh: hour, mm: minute of the beginning of the experiment)* **or the name you defined in [Config.h](https://github.com/TitouanLeost/Aston-Autonomous-Sailboat-2024/tree/main/libraries/Config/Config.h) at the line 126** if AUTO_FILENAME is set to *false*:
 ```c++
 #define AUTO_FILENAME false
 #define FILENAME "Filename" // Name of the file if AUTO_FILENAME is set to false. The filename can have a maximum of 8 characters
