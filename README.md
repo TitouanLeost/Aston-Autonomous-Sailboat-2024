@@ -17,12 +17,16 @@ Another option for this project is to use a **Raspberry Pi** combined with a **N
 
 ### Actuators
 
+| Name      | Image                               | E-commerce site              | Power Requirements           |
+|-----------|-------------------------------------|------------------------------|------------------------------|
+| HS-5645MG | <p align="center"><img src="images/hardware/HS-5645MG.png" alt="HS-5645MG" height="150"/></p> | [Hitec](https://hitecrcd.com/products/servos/digital/sport-digital/hs-5645mg/product3) | 4.8V ~ 6V |
+| HS-785HB | <p align="center"><img src="images/hardware/HS-785HB.png" alt="HS-785HB" height="150"/></p> | [Hitec](https://hitecrcd.com/products/servos/analog/boat-analog/hs-785hb-3.5/product) | 4.8V ~ 6V |
 
 ### Sensors
 
 | Name      | Image                               | E-commerce site              | Power Requirements           |
 |-----------|-------------------------------------|------------------------------|------------------------------|
-| CMPS12    | <p align="center"><img src="images/hardware/CMPS122.png" alt="CMPS12" height="150"/></p> | [CMPS12](https://www.robot-electronics.co.uk/cmps12-tilt-compensated-magnetic-compass.html) | 3.3-5V 18mA |
+| CMPS12    | <p align="center"><img src="images/hardware/CMPS122.png" alt="CMPS12" height="150"/></p> | [Robot electronics](https://www.robot-electronics.co.uk/cmps12-tilt-compensated-magnetic-compass.html) | 3.3-5V 18mA |
 | Grove GPS v1.2 | <p align="center"><img src="images/hardware/grove_gps.png" alt="Grove GPS" height="150"/></p> | [Seeedstudio](https://www.seeedstudio.com/Grove-GPS-Module.html) | 3.3-5V |
 | Anemometer - SKU 7911 | <p align="center"><img src="images/hardware/anemometer2.png" alt="Anemometer" height="150"/></p> | [Davis Instrument](https://www.davisinstruments.com/products/anemometer-for-weather-monitor-or-wizard) | N/A |
 
