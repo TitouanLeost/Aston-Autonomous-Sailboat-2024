@@ -26,8 +26,7 @@ void setup() {
     attachInterrupt(digitalPinToInterrupt(RUDDER_CH_PIN), checkRC, CHANGE);
     delay(2000);
     // This bloc of code is used to wait for the RC receiver to be ready.
-    // The first two while loops are passed when the RC Receiver is wired on the Arduino board.
-    // The last two while loops are passed when the remote controller is switched on then off.
+    // The four while loops are passed when the remote controller is switched on then off two times.
     // It allows to wired all the sensors on the board directly in the boat and then launch the program only when the user is ready.
     while(!rc.isReceiving());
     while(rc.isReceiving());
