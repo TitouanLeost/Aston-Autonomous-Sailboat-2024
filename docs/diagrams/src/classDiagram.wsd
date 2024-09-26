@@ -22,11 +22,11 @@ package Environment <<Environment>> {
         }
 
         class       CMPS12 <<Observer>> {
-            - SoftwareSerial ss_cmps
             - char m_pitch
             - char m_roll
             - float m_yaw
             - float m_yaw_raw
+            - int m_cnt
             + CMPS12()
             + ~CMPS12()
             + void init()
@@ -34,7 +34,7 @@ package Environment <<Environment>> {
             + void setFilteredYaw(float yaw)
             + float getYaw()
             + float getYawRaw()
-            + int getPitch()
+            + int getPitch()            - SoftwareSerial ss_cmps
             + int getRoll() 
             - void calibration() 
         }
@@ -93,7 +93,7 @@ package Observer <<Observer>> {
         + WindSpeed* ws()
         - void Fusion()
         - void updateTrueWindAngle()
-        - float angleFilter(float x, float y, float alpha)
+        - float angleFilter(float filtered, float raw, float alpha)
     }
 }
 
@@ -104,13 +104,17 @@ package Recorder <<Recorder>> {
         - String m_filename
         - String m_date
         - String m_time
+        - unsigned long m_last_time
         + Logger()
         + ~Logger()
-        + void init(Observer obs)
+        + void init(Observer* obs, Controller* ctrl, RCReceiver* rc)
         + void update()
+        + void open()
+        + void close()
         - void generateFilename()
         - void write(float data)
         - void write(unsigned long int data)
+        - void write(double data)
         - void write(String msg)
     }
 }
@@ -120,11 +124,13 @@ package Supervisor <<Supervisor>> {
     class       Supervisor <<Observer>> {
         - CoordLatLon m_wp[NB_WP]
         - int m_current_wp
+        - bool m_waypoint_is_reached
         - unsigned long m_algo2_start_time
         - int m_algo_type
+        - bool m_mission_finished
         + Supervisor()
         + ~Supervisor()   
-        + void init(Observer* obs, Controller* ctrl, RCReceiver* rc)
+        + void init(Observer* obs, Controller* ctrl, RCReceiver* rc, Logger* logger)
         + void updateMission()
         - void startMission()
         - void nextWaypoint()
@@ -162,13 +168,14 @@ package Command <<Command>> {
         - bool m_update
         + Controller()
         + ~Controller()  
-        + void init()
+        + void init(Observer* obs)
         + void updateServos() 
         + int setAlgo(int type)
         + void setUpdate(bool update)
         + ServoMotor* mr()
         + ServoMotor* ms()
-        + AlgorithmInterface* algo() 
+        + AlgorithmInterface* algo()
+        - void testServo()
     }
 
     abstract    AlgorithmInterface <<Command>> {
@@ -176,7 +183,7 @@ package Command <<Command>> {
         # float m_cmd_sail
         + AlgorithmInterface()
         + ~AlgorithmInterface() 
-        + void init(Observer obs)
+        + void init(Observer* obs)
         + virtual void updateCmd() {static}
         + void updateWaypoint(CoordLatLon a, CoordLatLon b)
         + float getCmdRudder()
