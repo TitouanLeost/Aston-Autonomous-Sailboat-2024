@@ -90,8 +90,8 @@ void Logger::open()
         write(wp[i].lat); write(","); write(wp[i].lon); write("\n");
     }
     write("Time (ms), Yaw Filtered (deg), Yaw Raw (deg), Wind Direction Filtered (deg), ");
-    write("Wind Direction Raw (deg), True Wind Direction (deg), Wind Speed (kph), ");
-    write("Satellites, Course (deg), Speed (kph), Latitude (deg), Longitude (deg), X (m), Y (m), ");
+    write("Wind Direction Raw (deg), True Wind Direction (deg), Wind Speed (km/h), ");
+    write("Satellites, Course (deg), Speed (km/h), Latitude (deg), Longitude (deg), X (m), Y (m), ");
     write("Rudder Cmd (%), Sail Cmd (%), RC Reception\n");
 }
 
