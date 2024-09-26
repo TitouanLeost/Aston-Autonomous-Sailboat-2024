@@ -3,7 +3,7 @@
 The purpose of this project is to provide a framework for testing different types of algorithms to **control an autonomous sailboat**. To do this, the code is loaded onto an **Arduino MEGA 2560**. The boat is controlled using two servomotors, one of which adjusts the maximum sail angle while the other controls the rudder angle. A series of sensors (IMU, GPS, anemometer) inform the Arduino of the boat's status.   
 Another option for this project is to use a **Raspberry Pi** combined with a **Navio 2** board. Although this option is not the main focus of this project, you can find a wiring diagram for the **Raspberry Pi** version [here](images/wiring_diagram/wiring_raspberry.png). This version requires much less wiring and is therefore more compact, but it is also more expensive and complex.
 
-
+![boat](images/boat.png)
 
 ## Hardware
 
