@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import matplotlib.animation as animation 
+from matplotlib.legend_handler import HandlerPatch
 
 
 def readLog(file):
@@ -126,64 +127,78 @@ def latLonToXY(lat, lon, ref):
     return x, y
 
 
+def plot_segments(x, y, label, color, ls='-', lw=1.5):
+    y_segments = np.split(y, np.where(np.abs(np.diff(y)) > 250)[0] + 1)
+    x_segments = np.split(x, np.where(np.abs(np.diff(y)) > 250)[0] + 1)
+    for i, (xs, ys) in enumerate(zip(x_segments, y_segments)):
+        plt.plot(xs, ys, c=color, ls=ls, lw=lw, label=label)
+        label = None
+        if i < len(x_segments) - 1:
+            plt.plot([x_segments[i][-1], x_segments[i+1][0]], [y_segments[i][-1], y_segments[i+1][0]], c=color, ls=ls, lw=lw, alpha=0.2)
+
+
 def plotYaw(data, date, time):
-    plt.figure('yaw')
+    plt.figure('yaw', figsize=(16, 9), dpi=100)
     plt.title('Yaw vs Time')
     plt.xlabel('Time (s)')
     plt.ylabel('Yaw (°)')
     plt.grid()
 
-    plt.plot(data[0][:], data[2][:], label='Yaw raw')
-    plt.plot(data[0][:], data[1][:], label='Yaw filtered')
-    plt.plot(data[0][:], data[8][:], label='GPS Course')
+    plt.axhline(y=360, color='grey', ls=(0, (7, 3)))
+    plt.axhline(y=0, color='grey', ls=(0, (7, 3)))
+    plot_segments(data[0][:], data[2][:], 'Yaw raw', '#1f77b4')
+    plot_segments(data[0][:], data[1][:], 'Yaw filtered', '#ff7f0e')
+    plot_segments(data[0][:], data[8][:], 'GPS Course', '#2ca02c', ls='-.', lw=2)
 
     plt.legend()
 
-    plt.savefig(f'logs/plots/{date}/{time}/yaw.png')
+    plt.savefig(f'logs/plots/{date}/{time}/yaw.svg')
 
 
 def plotWindDir(data, date, time):
-    plt.figure('wind_dir')
+    plt.figure('wind_dir', figsize=(16, 9), dpi=100)
     plt.title('Wind Direction vs Time')
     plt.xlabel('Time (s)')
     plt.ylabel('Wind Direction (°)')
     plt.grid()
 
-    plt.plot(data[0][:], data[4][:], label='Wind Direction raw')
-    plt.plot(data[0][:], data[3][:], label='Wind Direction filtered')
-    plt.plot(data[0][:], data[5][:], label='True Wind Direction')
+    plt.axhline(y=360, color='grey', linestyle=(0, (7, 3)))
+    plt.axhline(y=0, color='grey', linestyle=(0, (7, 3)))
+    plot_segments(data[0][:], data[4][:], 'Wind Direction raw', '#1f77b4')
+    plot_segments(data[0][:], data[3][:], 'Wind Direction filtered', '#ff7f0e')
+    plot_segments(data[0][:], data[5][:], 'True Wind Direction', '#2ca02c', ls='-.', lw=2)
 
     plt.legend()
 
-    plt.savefig(f'logs/plots/{date}/{time}/wind_dir.png')
+    plt.savefig(f'logs/plots/{date}/{time}/wind_dir.svg')
 
 
 def plotWindSpeed(data, date, time):
-    plt.figure('wind_speed')
+    plt.figure('wind_speed',  figsize=(16, 9), dpi=100)
     plt.title('Wind Speed vs Time')
     plt.xlabel('Time (s)')
-    plt.ylabel('Wind Speed (kph)')
+    plt.ylabel('Wind Speed (km/h)')
     plt.grid()
 
     plt.plot(data[0][:], data[6][:])
 
-    plt.savefig(f'logs/plots/{date}/{time}/wind_speed.png')
+    plt.savefig(f'logs/plots/{date}/{time}/wind_speed.svg')
 
 
 def plotBoatSpeed(data, date, time):
-    plt.figure('boat_speed')
+    plt.figure('boat_speed',  figsize=(16, 9), dpi=100)
     plt.title('Boat Speed vs Time')
     plt.xlabel('Time (s)')
-    plt.ylabel('Boat Speed (kph)')
+    plt.ylabel('Boat Speed (km/h)')
     plt.grid()
 
     plt.plot(data[0][:], data[9][:])
 
-    plt.savefig(f'logs/plots/{date}/{time}/boat_speed.png')
+    plt.savefig(f'logs/plots/{date}/{time}/boat_speed.svg')
 
 
 def plotXY(data, date, time):
-    plt.figure('xy')
+    plt.figure('xy', figsize=(16, 9), dpi=100)
     plt.title('Boat Path')
     plt.xlabel('X (m)')
     plt.ylabel('Y (m)')
@@ -204,6 +219,9 @@ def plotXY(data, date, time):
     # Plot the remaining data (useful if status doesn't change)
     plt.plot(data[12][indice:], data[13][indice:], color=colors[val], ls=linestyles[val], label=labels[val] if label_added <= 1 else None)
 
+    # Plot the starting position
+    plt.plot(data[12][0], data[13][0], 'go', label='Starting position')
+
     # Waypoints display
     wp_list = data[18]
     nb_wp = int(data[19])
@@ -219,61 +237,76 @@ def plotXY(data, date, time):
             plt.plot([data[12][0], wp_list[i][0]], [data[13][0], wp_list[i][1]], 'g')
 
     label_added = False
+    gnss_lost = []
+    last_index = -10
     for i, sat in enumerate(data[7][:]):
-        if sat < 3:
-            if not label_added:
-                plt.plot(data[12][i], data[13][i], 'rx', label='Satellite lost')
-                label_added = True
-            else:
-                plt.plot(data[12][i], data[13][i], 'rx')
+        if sat < 4:
+            if i != last_index + 1:
+                gnss_lost.append([])
+            gnss_lost[-1].append(i)
+            last_index = i
 
-    plt.legend()
+    for sublist in gnss_lost:
+        plt.plot(data[12][sublist[0]], data[13][sublist[0]], 'rx')
+        plt.plot(data[12][sublist[-1]], data[13][sublist[-1]], 'rx')
+        plt.plot([data[12][i] for i in sublist], [data[13][i] for i in sublist], 'r', lw=2, label='GNSS lost' if not label_added else None)
+        label_added = True
 
-    plt.savefig(f'logs/plots/{date}/{time}/xy.png')
+    plt.gca().set_aspect('equal', adjustable='box')
+
+    plt.legend(loc='best')
+
+    plt.savefig(f'logs/plots/{date}/{time}/xy.svg')
 
 
 def plotCmd(data, date, time):
-    plt.figure('cmd')
+    plt.figure('cmd',  figsize=(16, 9), dpi=100)
     plt.title('Servomotors Commands')
     plt.xlabel('Time (s)')
     plt.ylabel('Command (%)')
     plt.grid()
 
+    plt.axhline(y=1, color='grey', linestyle=(0, (7, 3)))
+    plt.axhline(y=0, color='grey', linestyle=(0, (7, 3)))
+
     val = data[16][0]
     indice = 0
     label_added = 0
-    colors = ['blue', 'magenta', 'orange', 'pink']
+    colors = ['blue', 'magenta', 'orange', 'magenta']
     labels = ['Rudder Command', 'RC Mode', 'Sail Command', 'RC Mode']
-    linestyles = ['-', '--']
+    linestyles = ['-', '-.', (0, (10, 3)), '-.']
     for i, status in enumerate(data[16]):
         if status != val:
             plt.plot(data[0][indice:i+1], data[14][indice:i+1], color=colors[val], ls=linestyles[val], label=labels[val] if label_added <= 1 else None)
-            plt.plot(data[0][indice:i+1], data[15][indice:i+1], color=colors[val+2], ls=linestyles[val], label=labels[val+2] if label_added <= 1 else None)
+            plt.plot(data[0][indice:i+1], data[15][indice:i+1], color=colors[val+2], ls=linestyles[val+2], label=labels[val+2] if (label_added <= 1 and status != 0) else None)
             val = status
             indice = i
             label_added += 1
 
     # Plot the remaining data (useful if status doesn't change)
     plt.plot(data[0][indice:], data[14][indice:], color=colors[val], ls=linestyles[val], label=labels[val] if label_added <= 1 else None)
-    plt.plot(data[0][indice:], data[15][indice:], color=colors[val+2], ls=linestyles[val], label=labels[val+2] if label_added <= 1 else None)
+    plt.plot(data[0][indice:], data[15][indice:], color=colors[val+2], ls=linestyles[val+2], label=labels[val+2] if label_added <= 1 else None)
 
     label_added = False
+    gnss_loss = []
+    last_index = -10
     for i, sat in enumerate(data[7][:]):
-        if sat < 3:
-            if not label_added:
-                plt.plot(data[0][i], data[14][i], 'rx', label='Satellite lost')
-                plt.plot(data[0][i], data[15][i], 'rx')
-                label_added = True
-            else:
-                plt.plot(data[0][i], data[14][i], 'rx')
-                plt.plot(data[0][i], data[15][i], 'rx')
+        if sat < 4:
+            if i != last_index + 1:
+                gnss_loss.append([])
+            gnss_loss[-1].append(i)
+            last_index = i
+
+    for sublist in gnss_loss:
+        plt.axvspan(data[0][sublist[0]], data[0][sublist[-1]], color='red', alpha=0.2, label='GNSS lost' if not label_added else None)
+        label_added = True
 
     plt.legend()
 
-    plt.savefig(f'logs/plots/{date}/{time}/cmd.png')
+    plt.savefig(f'logs/plots/{date}/{time}/cmd.svg')
 
 
-def create_vid(data, date, time):
+def createVid(data, date, time):
     x = data[12]
     y = data[13]
     wp_list = data[18]
@@ -309,22 +342,30 @@ def create_vid(data, date, time):
     ax.add_patch(arrow_north)
     ax.text(0.93, 0.95, 'North', transform=ax.transAxes, ha='center', va='center', fontsize=12, color='black')
 
+    # Add the wind direction arrow
+    wind_arrow = patches.FancyArrowPatch((0, 0), (0, 0), mutation_scale=20, color='blue', arrowstyle='->', transform=ax.transAxes)
+    ax.add_patch(wind_arrow)
+
     # Initialize the animation
     full_path, = ax.plot([], [], lw = 2, c='grey', alpha=0.5, label='Boat path')
     path, = ax.plot([], [], lw = 2, c='r')
     last_point, = ax.plot([], [], 'ko')
-    lost_sat, = ax.plot([], [], 'rx', label='Lost satellites')
-    wind_text = ax.text(0.03, 0.97, '', transform=ax.transAxes, ha='left', va='top', fontsize=8, c='k', bbox=dict(facecolor='red', alpha=0.5))
+    gnss_lost, = ax.plot([], [], 'r', label='GNSS lost')
+    wind_text = ax.text(0.03, 0.97, '', transform=ax.transAxes, ha='left', va='top', fontsize=8, c='k', bbox=dict(facecolor='white', alpha=0.7))
+
 
     def init():
         full_path.set_data([], [])
         path.set_data([], [])
         last_point.set_data([], [])
-        lost_sat.set_data([], [])
-        return full_path, path, last_point, lost_sat
+        gnss_lost.set_data([], [])
+        wind_arrow.set_positions((0, 0), (0, 0))
+        return full_path, path, last_point, gnss_lost, wind_arrow
+
 
     xdata, ydata = [], []
     xsat, ysat = [], []
+
 
     def animate(i):
         xdata.append(x[i])
@@ -332,16 +373,31 @@ def create_vid(data, date, time):
         full_path.set_data(xdata, ydata)
         path.set_data(xdata[-20:], ydata[-20:])
         last_point.set_data(x[i], y[i])
-        if sat[i] < 3:
+        if sat[i] < 4:
             xsat.append(x[i])
             ysat.append(y[i])
-            lost_sat.set_data(xsat, ysat)
+            gnss_lost.set_data(xsat, ysat)
 
-        wind_text.set_text(f'Wind direction: {wd[i]}°\nWind speed: {ws[i]:.2f} kph\nTime: {timestamp[i]:.1f}s')
+        # Update wind direction
+        wind_angle = np.deg2rad(wd[i])
+        x_arrow = (x[i] - xmin)/(xmax - xmin)
+        y_arrow = (y[i] - ymin)/(ymax - ymin)
+        wind_arrow.set_positions((x_arrow, y_arrow), (x_arrow + 0.1 * np.cos(wind_angle), y_arrow + 0.1 * np.sin(wind_angle)))
 
-        return full_path, path, last_point, lost_sat
+        wind_text.set_text(f'Wind speed: {ws[i]:.2f} km/h\nTime: {timestamp[i]:.1f}s')
+
+        return full_path, path, last_point, gnss_lost, wind_text, wind_arrow
     
-    ax.legend(loc='lower left')
+
+    def make_legend_arrow(legend, orig_handle, xdescent, ydescent, width, height, fontsize):
+        p = patches.FancyArrow(0, 0.5 * height, width, 0, length_includes_head=True, head_width=0.75 * height)
+        return p
+
+
+    custom_lines = [patches.FancyArrowPatch((0, 0), (0.1, 0), mutation_scale=20, color='blue')]
+    ax.legend(handles=[full_path, gnss_lost, custom_lines[0]], labels=['Boat path', 'GNSS lost', 'Wind direction'], loc='lower left', handler_map={patches.FancyArrowPatch: HandlerPatch(patch_func=make_legend_arrow)})
+
+    plt.gca().set_aspect('equal', adjustable='box')
 
     # calling the animation function	 
     anim = animation.FuncAnimation(fig, animate, init_func = init, 
@@ -370,7 +426,7 @@ def displayLog(file, date, time, video=False):
 
     if video:
         print('Creating video...')
-        create_vid(data, date, time)
+        createVid(data, date, time)
         print(f'Video created and saved successfully as logs/plots/{date}/{time}/videoxy.mp4')
 
 
